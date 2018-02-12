@@ -29,21 +29,12 @@ def is_no_wind(beaufort_wind_class):
         return False
 
 
-def my_round(value, display_digit=0):
-    '''Rounds to arbitrary decimal places.
-    '''
-    ratio = 10 ** display_digit
-    return (value * ratio * 2 + 1) // 2 / ratio
-
-
 if __name__ == '__main__':
     # Input
     wind_degree, wind_run_meter_per_minute = input().split(" ")
 
-    # Convert to wind run
     wind_strength = to_beaufort_wind_class(int(wind_run_meter_per_minute))
 
-    # Convert to direction
     if is_no_wind(wind_strength):
         wind_direction = "C"
     else:
