@@ -5,6 +5,7 @@
 # Observation of wind speed.
 
 
+# FIXME: Not beautiful.
 def to_direction(degree):
     if 11.25 <= degree < 33.75:
         return "NNE"
@@ -40,6 +41,7 @@ def to_direction(degree):
         return "N"
 
 
+# XXX: flaoting point error may be occar.
 def to_beaufort_wind_class(wind_speed):
     if 0.0 <= wind_speed <= 0.2:
         return 0
