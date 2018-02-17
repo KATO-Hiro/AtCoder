@@ -5,7 +5,7 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
-|AtCoder Beginner Contest 001|◯|◯|△|--|
+|AtCoder Beginner Contest 001|◯|◯|△|✕|
 
 Captions:
 
@@ -13,4 +13,6 @@ Captions:
 
     △: With the help of commetary.
 
-    --: Unsolved or not yet started.
+    ✕: Unsolved.
+
+    --: Not yet started.
