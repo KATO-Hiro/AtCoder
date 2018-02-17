@@ -11,6 +11,6 @@ Captions:
 
     ◯: By myself.
 
-    △: With the  help of commetary.
+    △: With the help of commetary.
 
     --: Unsolved or not yet started.
