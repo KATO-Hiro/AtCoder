@@ -16,23 +16,24 @@ if __name__ == '__main__':
         for j in range(N):
             route[i][j] = line[j]
 
-    # Init
-    row_count = 2
-    column_count = N
+    candy_count_max = 0
 
-    candy_count = 0
-    start_point_candy_count = route[0][0]
-    end_point_candy_count = route[row_count - 1][column_count - 1]
+    # HACK: Not beautiful.
+    # See: https://img.atcoder.jp/arc090/editorial.pdf
+    # p.7
+    for i in range(N):
+        candy_count = 0
 
-    # Route choice.
-    partly_candy_count = np.sum(route, axis=1)
-    route1 = partly_candy_count[0] + end_point_candy_count
-    route2 = partly_candy_count[1] + start_point_candy_count
+        for j in range(i + 1):
+            candy_count += route[0][j]
 
-    if route1 >= route2:
-        candy_count = route1
-    else:
-        candy_count = route2
+        candy_count += route[1][i]
+
+        for j in range(i + 1, N):
+            candy_count += route[1][j]
+
+        if candy_count > candy_count_max:
+            candy_count_max = candy_count
 
     # Output
-    print(candy_count)
+    print(candy_count_max)
