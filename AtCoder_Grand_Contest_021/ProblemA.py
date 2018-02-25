@@ -35,6 +35,7 @@ def sum_digit(number: int, candidate_value: int):
 if __name__ == '__main__':
     number = int(input())
 
+    # HACK: More smarter.
     # See: https://img.atcoder.jp/agc021/editorial.pdf
     most_significant_digit = get_most_significant_digit(number)
     digit_count = count_digit(number)
