@@ -11,6 +11,8 @@ def sum_digit(number: int):
 if __name__ == '__main__':
     number = int(input())
 
+    # See: https://img.atcoder.jp/agc021/editorial.pdf
+
     sum_max = 0
 
     while number > 0:
