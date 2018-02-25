@@ -5,9 +5,7 @@
 
 
 def sum_digit(number: int):
-    string = str(number)
-    array = list(map(int, list(string)))
-    return sum(array)
+    return len(str(number))
 
 
 if __name__ == '__main__':
