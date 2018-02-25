@@ -3,8 +3,6 @@
 # AtCoder Grand Contest
 # Problem A
 
-# import math
-
 
 def sum_digit(number: int):
     string = str(number)
