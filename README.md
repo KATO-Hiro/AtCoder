@@ -8,6 +8,10 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 001|◯|◯|△|✕|
 |AtCoder Beginner Contest 088|◯|◯|✕|✕|
 
+|Contest name\Problems|A|B|C|D|E|F|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|AtCoder Grand Contest 021|△|--|--|--|--|--|
+
 Captions:
 
     ◯: By myself.
