@@ -37,6 +37,7 @@ def identify_a_and_b_from(grid_values):
     return a, b
 
 
+# HACK: More smartly.
 def satisfy_takahashi_information(grid_values, a, b):
     result = 'Yes'
 
