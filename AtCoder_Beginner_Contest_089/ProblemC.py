@@ -33,6 +33,8 @@ if __name__ == '__main__':
     for string in initial_strings:
         matching_strings_count[string] += 1
 
+    # TODO: Calc combination.
+
     if count >= 3:
         print(matching_strings_count)
     else:
