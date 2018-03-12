@@ -6,6 +6,7 @@ Represents a repository of accepted results.
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
 |AtCoder Beginner Contest 001|◯|◯|△|✕|
+|AtCoder Beginner Contest 072|◯|◯|--|--|
 |AtCoder Beginner Contest 073|◯|◯|--|--|
 |AtCoder Beginner Contest 074|◯|◯|--|--|
 |AtCoder Beginner Contest 075|◯|◯|--|--|
