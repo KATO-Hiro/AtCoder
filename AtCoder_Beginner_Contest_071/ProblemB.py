@@ -14,9 +14,10 @@ None
 
 if __name__ == '__main__':
     S = sorted(set(list(input())))
-    alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-                 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
-                 'y', 'z']
+
+    # See:
+    # https://beta.atcoder.jp/contests/abc071/submissions/2194657
+    alphabets = [chr(ord('a') + i) for i in range(26)]
 
     if len(S) == 26:
         print('None')
