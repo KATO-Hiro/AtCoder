@@ -1,10 +1,10 @@
 '''input
-5 2
-7
-10 0
-100
 31415 9265
 287927211
+10 0
+100
+5 2
+7
 '''
 
 # -*- coding: utf-8 -*-
@@ -16,16 +16,14 @@ if __name__ == '__main__':
     number, k = list(map(int, input().split()))
     count = 0
 
-    # HACK: Not beautiful.
+    # See:
+    # https://img.atcoder.jp/arc091/editorial.pdf
+    # https://beta.atcoder.jp/contests/abc090/submissions/2193514
+    for b in range(1, number + 1):
+        p, r = divmod(number, b)
+        count += p * max(0, b - k) + max(0, r - k + 1)
+
     if k == 0:
-        print(number ** 2)
-    else:
-        for b in range(1, number + 1):
-            p = (number + 1) // b
-            r = number - (p * b)
-            count += p * max(0, b - k)
+        count -= number
 
-            if (number + 1) % b != 0:
-                count += max(0, r - k + 1)
-
-        print(count)
+    print(count)
