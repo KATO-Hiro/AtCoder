@@ -6,8 +6,8 @@ Represents a repository of accepted results.
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
 |AtCoder Beginner Contest 001|◯|◯|△|✕|
-|atcoder beginner contest 065|◯|--|--|--|
-|atcoder beginner contest 066|◯|◯|--|--|
+|AtCoder Beginner Contest 065|◯|--|--|--|
+|AtCoder Beginner Contest 066|◯|◯|--|--|
 |AtCoder Beginner Contest 067|◯|◯|--|--|
 |AtCoder Beginner Contest 068|◯|◯|--|--|
 |AtCoder Beginner Contest 069|◯|◯|--|--|
