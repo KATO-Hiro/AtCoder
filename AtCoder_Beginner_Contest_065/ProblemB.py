@@ -37,12 +37,11 @@ if __name__ == '__main__':
     count = 1
     result = button_rules[count]
 
-    # HACK: More smarter.
-    while (result != 2) and (count < 10 ** 5):
+    while (result != 2) and (count < button_count):
         result = button_rules[result]
         count += 1
 
-    if count < 10 ** 5:
+    if count < button_count:
         print(count)
     else:
         print(-1)
