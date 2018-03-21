@@ -57,6 +57,7 @@ if __name__ == '__main__':
         s.append(line[1])
         f.append(line[2])
 
+    # See: https://img.atcoder.jp/abc084/editorial.pdf
     for i in range(station_count):
         elapsed_time = 0
 
