@@ -57,5 +57,4 @@ if __name__ == '__main__':
 
     for i in range(height):
         line = input()
-        print(line)
-        print(line)
+        print(line + '\n' + line)
