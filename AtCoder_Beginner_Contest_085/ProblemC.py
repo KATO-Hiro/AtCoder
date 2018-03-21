@@ -20,26 +20,13 @@
 
 if __name__ == '__main__':
     bill_count, total_yen = list(map(int, input().split()))
-    bill_max = 2000
 
-    five_thousand_yen_count = 0
-    one_thousand_yen_count = 0
+    # See:https://beta.atcoder.jp/contests/abc085/submissions/1967109
 
-    for z in range(bill_max + 1):
-        for y in range(bill_max + 1):
-            if (5 * y + 9 * z) == (10 * bill_count - total_yen / (10 ** 3)):
-                five_thousand_yen_count = y
-                one_thousand_yen_count = z
-                break
-
-    ten_thousand_yen_count = bill_count - (five_thousand_yen_count + one_thousand_yen_count)
-
-    condition = ((10 * ten_thousand_yen_count) + (5 * five_thousand_yen_count) + one_thousand_yen_count) == (total_yen / 1000)
-    condition1 = ten_thousand_yen_count >= 0
-    condition2 = five_thousand_yen_count >= 0
-    condition3 = one_thousand_yen_count >= 0
-
-    if condition and condition1 and condition2 and condition3:
-        print(str(ten_thousand_yen_count) + ' ' + str(five_thousand_yen_count) + ' ' + str(one_thousand_yen_count))
+    for i in range(bill_count + 1):
+        for j in range(bill_count - i + 1):
+            if (10 * i + 5 * j + (bill_count - i - j)) == total_yen // 1000:
+                print(i, j, bill_count - i - j)
+                exit()
     else:
         print('-1 -1 -1')
