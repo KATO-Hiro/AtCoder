@@ -6,8 +6,8 @@
 12 13 1
 
 4174
-4174
-4174
+4175
+4175
 25
 0
 
@@ -57,23 +57,41 @@ if __name__ == '__main__':
         s.append(line[1])
         f.append(line[2])
 
-    total_elapsed_times = list()
-
-    # HACK: More smarter.
     for i in range(station_count):
-        if i < station_count - 1:
-            total_elapsed_times.append(s[i])
-        else:
-            total_elapsed_times.append(0)
+        elapsed_time = 0
 
-    for j in range(station_count - 1):
-        for k in range(j, station_count - 1):
-            if (total_elapsed_times[j] >= s[k]) and (total_elapsed_times[j] % f[k] == 0):
-                total_elapsed_times[j] += c[k]
+        for j in range(i, station_count - 1):
+            if elapsed_time < s[j]:
+                elapsed_time = s[j]
+            elif (elapsed_time % f[j]) == 0:
+                pass
             else:
-                total_elapsed_times[j] = 0
-                total_elapsed_times[j] += s[k]
-                total_elapsed_times[j] += c[k]
+                elapsed_time = elapsed_time + f[j] - (elapsed_time % f[j])
 
-    for total_elapsed_time in total_elapsed_times:
-        print(total_elapsed_time)
+            elapsed_time += c[j]
+
+        print(elapsed_time)
+
+    # total_elapsed_times = list()
+
+    # # HACK: More smarter.
+    # for i in range(station_count):
+    #     if i < station_count - 1:
+    #         total_elapsed_times.append(s[i])
+    #     else:
+    #         total_elapsed_times.append(0)
+
+    # for j in range(station_count - 1):
+
+    #     for k in range(j, station_count - 1):
+    #         if total_elapsed_times[j] < s[k]:
+    #             total_elapsed_times[j] = s[k]
+    #         elif total_elapsed_times[j] % f[j] == 0:
+    #             pass
+    #         else:
+    #             total_elapsed_times[j] += f[k] - (total_elapsed_times[j] % f[k])
+
+    #         total_elapsed_times[j] += c[k]
+
+    # for total_elapsed_time in total_elapsed_times:
+    #     print(total_elapsed_time)
