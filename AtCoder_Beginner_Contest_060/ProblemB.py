@@ -25,7 +25,7 @@ if __name__ == '__main__':
     a, b, c = map(int, input().split())
     count = 1
 
-    while count < 10001:
+    while count < (b + 1):
         if ((a * count) % b) == c:
             print('YES')
             exit()
