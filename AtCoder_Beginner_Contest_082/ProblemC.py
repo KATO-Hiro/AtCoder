@@ -35,9 +35,9 @@ if __name__ == '__main__':
     counted_a = Counter(a)
 
     for x in counted_a:
-            if counted_a[x] >= x:
-                count += counted_a[x] - x
-            else:
-                count += counted_a[x]
+        if counted_a[x] >= x:
+            count += counted_a[x] - x
+        else:
+            count += counted_a[x]
 
     print(count)
