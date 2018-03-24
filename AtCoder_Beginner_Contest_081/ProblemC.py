@@ -23,15 +23,7 @@ if __name__ == '__main__':
 
     ball_count, kind_count = map(int, input().split())
     ball_numbers = Counter(list(map(int, input().split())))
-    sorted_ball_numbers = sorted(ball_numbers.items(), key=lambda x: x[1])
     ball_number_key_count = len(ball_numbers.keys())
 
-    need_rewritten_count = 0
-    diff_count = ball_number_key_count - kind_count
-
-    if diff_count > 0:
-        for i, (key, value) in enumerate(sorted_ball_numbers):
-            if diff_count > i:
-                need_rewritten_count += value
-
-    print(need_rewritten_count)
+    sorted_ball_numbers = sorted(ball_numbers.values())
+    print(sum(sorted_ball_numbers[:-kind_count]))
