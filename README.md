@@ -49,7 +49,7 @@ Captions:
 
     ◯: By myself.
 
-    △: With the help of commetary.
+    △: With the help of commentary.
 
     ✕: Unsolved.
 
