@@ -74,7 +74,6 @@ def dfs(my_schedule, others_schedule, benefit_table, benefit_total, pos):
 if __name__ == '__main__':
     shop_count = int(input())
     others_schedule = [list(map(int, input().split())) for _ in range(shop_count)]
-    # working_days = [shop_working_table[i].count(1) for i in range(shop_count)]
     benefit_table = [list(map(int, input().split())) for _ in range(shop_count)]
 
     benefit_total = -1000000000
@@ -83,16 +82,3 @@ if __name__ == '__main__':
     # See: https://www.youtube.com/watch?v=GWhYUxeDe70
     benefit_total = dfs(my_schedule, others_schedule, benefit_table, benefit_total, 0)
     print(benefit_total)
-
-    # benefit_total = 0
-    # including_closed = [max(benefit_table[j][:working_days[j] + 1]) for j in range(shop_count)]
-    # open_only = [max(benefit_table[j][1:working_days[j] + 1]) for j in range(shop_count)]
-
-    # for k in range(shop_count):
-    #     if k == open_only.index(max(open_only)):
-    #         benefit_total += max(open_only)
-    #     else:
-    #         benefit_total += max(including_closed[k], open_only[k])
-
-    # FIXME: some tests have failed.
-    # print(benefit_total)
