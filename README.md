@@ -51,6 +51,7 @@ Represents a repository of accepted results.
 |Contest name\Problems|A|B|C|D|E|F|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |AtCoder Grand Contest 021|△|--|--|--|--|--|
+|AtCoder Grand Contest 022|△|--|--|--|--|--|
 
 Captions:
 
