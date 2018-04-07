@@ -50,7 +50,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 089|◯|◯|△|--|
 |AtCoder Beginner Contest 090|◯|◯|◯|△|
 |AtCoder Beginner Contest 091|◯|◯|△|--|
-|AtCoder Beginner Contest 092|◯|◯|--|--|
+|AtCoder Beginner Contest 092|◯|◯|△|--|
 |AtCoder Beginner Contest 093|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|
