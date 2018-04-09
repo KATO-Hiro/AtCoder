@@ -13,8 +13,7 @@ Yes
 # Problem A
 
 if __name__ == '__main__':
-    candies = list(map(int, input().split()))
-    candies = sorted(candies)
+    candies = sorted(list(map(int, input().split())))
 
     first = sum(candies[:2])
     second = candies[2]
