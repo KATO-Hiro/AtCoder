@@ -39,7 +39,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 076|◯|◯|--|--|
 |AtCoder Beginner Contest 077|◯|◯|--|--|
 |AtCoder Beginner Contest 078|◯|◯|--|--|
-|AtCoder Beginner Contest 079|◯|◯|--|--|
+|AtCoder Beginner Contest 079|◯|◯|◯|--|
 |AtCoder Beginner Contest 080|◯|◯|△|--|
 |AtCoder Beginner Contest 081|◯|◯|◯|--|
 |AtCoder Beginner Contest 082|◯|◯|△|--|
