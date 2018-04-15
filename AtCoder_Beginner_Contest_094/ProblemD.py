@@ -32,14 +32,7 @@ if __name__ == '__main__':
     # See:
     # https://www.youtube.com/watch?v=RwWljbtCrPA
     # https://img.atcoder.jp/arc095/editorial.pdf
-    diff = float('inf')
-    center = 0
-
-    for ai in a:
-        current_diff = abs(a_max / 2 - ai)
-
-        if current_diff < diff:
-            diff = current_diff
-            center = ai
-
-    print(str(a_max) + ' ' + str(center))
+    # https://beta.atcoder.jp/contests/abc094/submissions/2354745
+    k = [abs(a_max / 2 - ai) for ai in a]
+    center = k.index(min(k))
+    print(a_max, a[center])
