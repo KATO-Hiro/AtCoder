@@ -29,7 +29,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 060|◯|◯|--|--|
 |AtCoder Beginner Contest 061|◯|◯|--|--|
 |AtCoder Beginner Contest 062|◯|◯|--|--|
-|AtCoder Beginner Contest 063|◯|◯|--|--|
+|AtCoder Beginner Contest 063|◯|◯|△|--|
 |AtCoder Beginner Contest 064|◯|◯|--|--|
 |AtCoder Beginner Contest 065|◯|◯|--|--|
 |AtCoder Beginner Contest 066|◯|◯|--|--|
@@ -41,7 +41,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 072|◯|◯|--|--|
 |AtCoder Beginner Contest 073|◯|◯|◯|--|
 |AtCoder Beginner Contest 074|◯|◯|--|--|
-|AtCoder Beginner Contest 075|◯|◯|△|--|
+|AtCoder Beginner Contest 075|◯|◯|--|--|
 |AtCoder Beginner Contest 076|◯|◯|--|--|
 |AtCoder Beginner Contest 077|◯|◯|△|--|
 |AtCoder Beginner Contest 078|◯|◯|△|--|
