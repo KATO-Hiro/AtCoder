@@ -31,15 +31,21 @@
 # Problem C
 
 
-def dfs(x: int):
-    if visited[x]:
-        return
+def is_visited(graph):
+    visited = [False] * len(graph[0])
 
-    visited[x] = True
+    def dfs(x: int):
+        if visited[x]:
+            return
 
-    for i in range(n):
-        if graph[x][i]:
-            dfs(i)
+        visited[x] = True
+
+        for i in range(n):
+            if graph[x][i]:
+                dfs(i)
+
+    dfs(0)
+    return visited
 
 
 if __name__ == '__main__':
@@ -64,10 +70,7 @@ if __name__ == '__main__':
         graph[a[j]][b[j]] = False
         graph[b[j]][a[j]] = False
 
-        visited = [False] * len(graph[0])
-        dfs(0)
-
-        if False in visited:
+        if False in is_visited(graph):
             bridge_count += 1
 
         graph[a[j]][b[j]] = True
