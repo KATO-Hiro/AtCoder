@@ -31,12 +31,9 @@ Zero
 if __name__ == '__main__':
     a, b = list(map(int, input().split()))
 
-    if a >= 1:
-        print('Positive')
-    elif a * b <= 0:
+    if a * b <= 0:
         print('Zero')
-    elif b <= -1:
-        if (a - b + 1) % 2 == 0:
-            print('Positive')
-        else:
-            print('Negative')
+    elif (a >= 1) or ((b <= -1) and ((b - a + 1) % 2 == 0)):
+        print('Positive')
+    else:
+        print('Negative')
