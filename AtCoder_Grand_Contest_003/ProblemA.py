@@ -23,19 +23,12 @@ No
 
 
 if __name__ == '__main__':
-    from collections import Counter
-
-    s = Counter(input())
+    s = input()
 
     # See:
     # http://agc003.contest.atcoder.jp/data/agc/003/editorial.pdf
-    if ('S' in s.keys()) and ('N' not in s.keys()):
-        print('No')
-    elif ('N' in s.keys()) and ('S' not in s.keys()):
-        print('No')
-    elif ('W' in s.keys()) and ('E' not in s.keys()):
-        print('No')
-    elif ('E' in s.keys()) and ('W' not in s.keys()):
+    # https://beta.atcoder.jp/contests/agc003/submissions/849782
+    if (('S' in s) ^ ('N' in s)) or (('W' in s) ^ ('E' in s)):
         print('No')
     else:
         print('Yes')
