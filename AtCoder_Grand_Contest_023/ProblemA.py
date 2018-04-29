@@ -20,15 +20,15 @@
 
 
 if __name__ == '__main__':
+    from itertools import accumulate
     from collections import Counter
 
     n = int(input())
     a = [0] + list(map(int, input().split()))
-    s = [0] * len(a)
 
     # See:
     # https://www.youtube.com/watch?v=8BHBFMrZ8VM
-    for i in range(1, n + 1):
-        s[i] += s[i - 1] + a[i]
+    # https://beta.atcoder.jp/contests/agc023/submissions/2431021
+    s = list(accumulate(a))
 
     print(sum([si * (si - 1) // 2 for si in Counter(s).values()]))
