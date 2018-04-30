@@ -27,7 +27,4 @@
 
 if __name__ == '__main__':
     n, a, b = list(map(int, input().split()))
-    min_value = a * (n - 1) + b
-    max_value = a + b * (n - 1)
-
-    print(max(max_value - min_value + 1, 0))
+    print(max((b - a) * (n - 2) + 1, 0))
