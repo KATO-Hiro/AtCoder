@@ -13,7 +13,7 @@
 
 4
 1100 1900 2799 4800
-4 4
+3 4
 
 '''
 
@@ -24,30 +24,16 @@
 
 if __name__ == '__main__':
     n = int(input())
-    a = list(map(int, input().split()))
+    a = list(map(lambda x: int(x) // 400, input().split()))
     colors = [0] * 9
-    rate = [1, 400, 800, 1200, 1600, 2000, 2400, 2800, 3200, 4801]
 
-    for ai in a:
-        for k in range(9):
-            if rate[k] <= ai < rate[k + 1]:
-                colors[k] += 1
-                break
+    # See:
+    # https://beta.atcoder.jp/contests/abc064/submissions/2416018
+    for i in a:
+        if i < 8:
+            colors[i] = 1
+        else:
+            colors[8] += 1
 
-    count = 0
-
-    for i in range(7):
-        if colors[i] > 0:
-            count += 1
-
-    red = colors[7]
-    legend = colors[8]
-
-    if (red == 0) and (legend == 0):
-        print(count, count)
-    elif (red > 0) and (legend == 0):
-        print(count + 1, count + 1)
-    elif (red == 0) and (legend > 0):
-        print(count + 1, count + legend)
-    else:
-        print(count + 1, count + 1 + legend)
+    kind = sum(colors[:8])
+    print(max(kind, 1), kind + colors[8])
