@@ -36,7 +36,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 063|◯|◯|△|--|
 |AtCoder Beginner Contest 064|◯|◯|◯|--|
 |AtCoder Beginner Contest 065|◯|◯|--|--|
-|AtCoder Beginner Contest 066|◯|◯|--|--|
+|AtCoder Beginner Contest 066|◯|◯|◯|--|
 |AtCoder Beginner Contest 067|◯|◯|--|--|
 |AtCoder Beginner Contest 068|◯|◯|--|--|
 |AtCoder Beginner Contest 069|◯|◯|--|--|
