@@ -1,7 +1,6 @@
 '''input
 5 10
 0 3 5 7 100
-17
 27
 
 4 10
@@ -43,14 +42,11 @@ if __name__ == '__main__':
     total_t = 0
     previous_t = ts[0]
 
+    # See:
+    # https://atcoder.jp/img/arc073/editorial.pdf
     for i in range(1, n + 1):
         current_t = ts[i]
-
-        if (previous_t + intervel) > current_t:
-            total_t += max(0, current_t - previous_t)
-        else:
-            total_t += intervel
-
+        total_t += min(current_t - previous_t, intervel)
         previous_t = current_t
 
     print(total_t)
