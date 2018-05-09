@@ -16,15 +16,12 @@ No
 # Problem A
 
 if __name__ == '__main__':
+    import re
     s = input()
-    cf = 'CF'
-    count = 0
 
-    for si in s:
-        if count == 0 and si == cf[0]:
-            count += 1
-        elif count == 1 and si == cf[1]:
-            print('Yes')
-            exit()
-
-    print('No')
+    # See:
+    # https://beta.atcoder.jp/contests/code-festival-2016-qualc/submissions/942114
+    if re.search('C.*F', s):
+        print('Yes')
+    else:
+        print('No')
