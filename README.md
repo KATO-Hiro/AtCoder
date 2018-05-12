@@ -85,6 +85,7 @@ Represents a repository of accepted results.
 |CODE FESTIVAL 2016 qual C|◯|--|--|--|--|None|
 |CODE FESTIVAL 2017 qual A|◯|--|--|--|--|--|
 |CODE FESTIVAL 2017 qual B|◯|--|--|--|--|--|
+|CODE FESTIVAL 2017 qual C|◯|--|--|--|--|--|
 
 Captions:
 
