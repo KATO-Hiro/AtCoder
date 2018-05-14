@@ -67,7 +67,8 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 094|◯|◯|◯|△|
 |AtCoder Beginner Contest 095|◯|◯|◯|--|
 |AtCoder Beginner Contest 096|◯|◯|◯|△|
-|AtCoder Beginner Contest 097|--|--|--|--|
+|AtCoder Beginner Contest 097|◯|◯|--|--|
+|AtCoder Beginner Contest 098|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -84,6 +85,7 @@ Represents a repository of accepted results.
 |CODE FESTIVAL 2016 qual C|◯|--|--|--|--|None|
 |CODE FESTIVAL 2017 qual A|◯|--|--|--|--|--|
 |CODE FESTIVAL 2017 qual B|◯|--|--|--|--|--|
+|CODE FESTIVAL 2017 qual C|◯|--|--|--|--|--|
 |CODE THANKS FESTIVAL 2017 A|◯|--|--|--|--|--|
 
 Captions:
