@@ -24,7 +24,7 @@ if __name__ == '__main__':
     extracted = list()
     s_len = len(s)
 
-    for i in range(1, s_len + 1):
+    for i in range(1, min(k, s_len) + 1):
         start = 0
         ended = i
 
