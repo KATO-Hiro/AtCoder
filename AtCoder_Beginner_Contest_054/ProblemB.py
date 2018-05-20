@@ -56,11 +56,12 @@ if __name__ == '__main__':
         for j in range(n - m + 1):
             is_exist = True
 
+            # See:
+            # https://beta.atcoder.jp/contests/abc054/submissions/1103264
             for dx in range(m):
-                for dy in range(m):
-                    if a[i + dx][j + dy] != b[dx][dy]:
-                        is_exist = False
-                        break
+                if a[i + dx][j:j + m] != b[dx]:
+                    is_exist = False
+                    break
 
             if is_exist:
                 print('Yes')
