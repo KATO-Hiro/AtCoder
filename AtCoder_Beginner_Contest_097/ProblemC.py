@@ -21,21 +21,13 @@ andat
 if __name__ == '__main__':
     s = input()
     k = int(input())
-    extracted = list()
+    extracted = set()
     s_len = len(s)
 
+    # See:
+    # https://beta.atcoder.jp/contests/abc097/submissions/2497319
     for i in range(1, min(k, s_len) + 1):
-        start = 0
-        ended = i
-
         for j in range(s_len - i + 1):
-            sub_str = s[start:ended]
+            extracted.add(s[j:i + j])
 
-            if sub_str not in extracted:
-                extracted.append(sub_str)
-
-            start += 1
-            ended += 1
-
-    sorted_extracted = sorted(extracted)
-    print(sorted_extracted[k - 1])
+    print(sorted(extracted)[k - 1])
