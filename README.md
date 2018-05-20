@@ -24,7 +24,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 051|◯|◯|--|--|
 |AtCoder Beginner Contest 052|◯|◯|△|--|
 |AtCoder Beginner Contest 053|◯|◯|--|--|
-|AtCoder Beginner Contest 054|◯|--|--|--|
+|AtCoder Beginner Contest 054|◯|△|--|--|
 |AtCoder Beginner Contest 055|◯|◯|--|--|
 |AtCoder Beginner Contest 056|◯|◯|◯|--|
 |AtCoder Beginner Contest 057|◯|◯|◯|--|
