@@ -60,6 +60,7 @@ if __name__ == '__main__':
                 for dy in range(m):
                     if a[i + dx][j + dy] != b[dx][dy]:
                         is_exist = False
+                        break
 
             if is_exist:
                 print('Yes')
