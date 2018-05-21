@@ -92,6 +92,7 @@ Represents a repository of accepted results.
 |NJPC 2017|◯|--|--|--|--|--|
 |DWANGO #3 qual|◯|--|--|--|--|--|
 |DWANGO #4 qual|◯|--|--|--|--|--|
+|SoundHound Inc. Programming Contest 2018 Spring|◯|--|--|--|--|--|
 
 Captions:
 
