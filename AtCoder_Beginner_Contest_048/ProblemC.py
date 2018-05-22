@@ -36,10 +36,9 @@ if __name__ == '__main__':
         a[0] -= count
 
     for i in range(n - 1):
-        summed = a[i] + a[i + 1]
+        diff = a[i] + a[i + 1] - x
 
-        if summed > x:
-            diff = summed - x
+        if diff > 0:
             count += diff
             a[i + 1] -= diff
 
