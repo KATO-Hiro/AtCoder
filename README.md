@@ -81,6 +81,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 021|△|--|--|--|--|--|
 |AtCoder Grand Contest 022|△|--|--|--|--|--|
 |AtCoder Grand Contest 023|△|--|--|--|--|--|
+|AtCoder Grand Contest 024|◯|--|--|--|--|--|
 |CODE FESTIVAL 2016 qual A|◯|--|--|--|--|None|
 |CODE FESTIVAL 2016 qual B|◯|--|--|--|--|None|
 |CODE FESTIVAL 2016 qual C|◯|--|--|--|--|None|
