@@ -93,6 +93,7 @@ Represents a repository of accepted results.
 |DWANGO #3 qual|◯|--|--|--|--|--|
 |DWANGO #4 qual|◯|--|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Spring|◯|--|--|--|--|--|
+|Tenka1 Programmer Beginner Contest|◯|--|--|--|--|--|
 
 Captions:
 
