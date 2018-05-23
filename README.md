@@ -76,6 +76,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 002|◯|--|--|--|--|--|
 |AtCoder Grand Contest 003|△|--|--|--|--|--|
 |AtCoder Grand Contest 004|◯|--|--|--|--|--|
+|AtCoder Grand Contest 006|△|--|--|--|--|--|
 |AtCoder Grand Contest 007|△|--|--|--|--|--|
 |AtCoder Grand Contest 015|◯|--|--|--|--|--|
 |AtCoder Grand Contest 021|△|--|--|--|--|--|
