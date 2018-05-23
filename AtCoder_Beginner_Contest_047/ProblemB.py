@@ -27,20 +27,19 @@
 
 if __name__ == '__main__':
     w, h, n = list(map(int, input().split()))
-    xya = [list(map(int, input().split())) for _ in range(n)]
-    w_min = 0
-    w_max = w
-    h_min = 0
-    h_max = h
+    w_min, w_max = 0, w
+    h_min, h_max = 0, h
 
-    for x, y, a in xya:
-        if (a == 1) and (x > w_min):
-            w_min = x
-        elif (a == 2) and (x < w_max):
-            w_max = x
-        elif (a == 3) and (y > h_min):
-            h_min = y
-        elif (a == 4) and (y < h_max):
-            h_max = y
+    for _ in range(n):
+        x, y, a = list(map(int, input().split()))
+
+        if a == 1:
+            w_min = max(x, w_min)
+        elif a == 2:
+            w_max = min(x, w_max)
+        elif a == 3:
+            h_min = max(y, h_min)
+        elif a == 4:
+            h_max = min(y, h_max)
 
     print(max(w_max - w_min, 0) * max(h_max - h_min, 0))
