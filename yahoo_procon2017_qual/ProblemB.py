@@ -20,6 +20,4 @@ if __name__ == '__main__':
 
     n, k = list(map(int, input().split()))
     a = sorted(list(map(int, input().split())))
-    added = [1] * (k - 1)
-
-    print(max(accumulate(a[:k])) + sum(accumulate(added)))
+    print(max(accumulate(a[:k])) + (k * (k - 1) // 2))

@@ -13,9 +13,10 @@ YES
 # Problem A
 
 if __name__ == '__main__':
-    s = input()
+    s = sorted(input())
+    yahoo = sorted('yahoo')
 
-    if s.count('y') == 1 and s.count('a') == 1 and s.count('h') == 1 and s.count('o') == 2:
+    if s == yahoo:
         print('YES')
     else:
         print('NO')
