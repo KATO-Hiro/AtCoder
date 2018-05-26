@@ -21,7 +21,7 @@
 if __name__ == '__main__':
     w, h = list(map(int, input().split()))
 
-    if w // 16 * 9 == h:
+    if w * 9 == h * 16:
         print('16:9')
-    elif w // 4 * 3 == h:
+    elif w * 3 == h * 4:
         print('4:3')
