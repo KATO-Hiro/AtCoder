@@ -100,6 +100,7 @@ Represents a repository of accepted results.
 |Tenka1 Programmer Beginner Contest|◯|--|--|--|--|--|
 |yahoo procon2017 qual|◯|◯|--|--|--|None|
 |yahoo procon2018 qual|◯|◯|--|--|--|None|
+|ddcc2017 qual|◯|◯|--|--|None|None|
 
 Captions:
 
