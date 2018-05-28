@@ -9,7 +9,7 @@
 
 # -*- coding: utf-8 -*-
 
-# ddcc2017 qual
+# ddcc2016 qual
 # Problem A
 
 if __name__ == '__main__':
