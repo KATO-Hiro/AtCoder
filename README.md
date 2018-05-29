@@ -29,7 +29,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 055|◯|◯|--|--|
 |AtCoder Beginner Contest 056|◯|◯|◯|--|
 |AtCoder Beginner Contest 057|◯|◯|◯|--|
-|AtCoder Beginner Contest 058|◯|◯|--|--|
+|AtCoder Beginner Contest 058|◯|◯|◯|--|
 |AtCoder Beginner Contest 059|◯|◯|--|--|
 |AtCoder Beginner Contest 060|◯|◯|◯|--|
 |AtCoder Beginner Contest 061|◯|◯|△|--|
