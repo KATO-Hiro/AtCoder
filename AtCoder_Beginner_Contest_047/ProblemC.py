@@ -18,14 +18,11 @@ WWWWWW
 if __name__ == '__main__':
     s = input()
     count = 0
-    previous = s[0]
 
-    for i in range(1, len(s)):
-        current = s[i]
-
-        if previous != current:
+    # See:
+    # https://beta.atcoder.jp/contests/abc047/submissions/1007244
+    for i in range(len(s) - 1):
+        if s[i] != s[i + 1]:
             count += 1
-
-        previous = current
 
     print(count)
