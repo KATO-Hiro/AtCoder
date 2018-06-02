@@ -97,7 +97,7 @@ Represents a repository of accepted results.
 |NJPC 2017|◯|--|--|--|--|--|
 |DWANGO #3 qual|◯|--|--|--|--|--|
 |DWANGO #4 qual|◯|--|--|--|--|--|
-|SoundHound Inc. Programming Contest 2018 Spring|◯|--|--|--|--|--|
+|SoundHound Inc. Programming Contest 2018 Spring|◯|◯|--|--|--|--|
 |Tenka1 Programmer Beginner Contest|◯|--|--|--|--|--|
 |yahoo procon2017 qual|◯|◯|--|--|--|None|
 |yahoo procon2018 qual|◯|◯|--|--|--|None|
