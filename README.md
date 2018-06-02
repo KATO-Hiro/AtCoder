@@ -103,6 +103,7 @@ Represents a repository of accepted results.
 |yahoo procon2018 qual|◯|◯|--|--|--|None|
 |ddcc2016 qual|◯|--|--|--|None|None|
 |ddcc2017 qual|◯|◯|--|--|None|None|
+|bitflyer2018 qual|◯|◯|--|--|--|None|
 
 Captions:
 
