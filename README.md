@@ -98,7 +98,7 @@ Represents a repository of accepted results.
 |DWANGO #3 qual|◯|--|--|--|--|--|
 |DWANGO #4 qual|◯|--|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Spring|◯|◯|--|--|--|--|
-|Tenka1 Programmer Beginner Contest|◯|--|--|--|--|--|
+|Tenka1 Programmer Beginner Contest|◯|◯|--|--|--|--|
 |yahoo procon2017 qual|◯|◯|--|--|--|None|
 |yahoo procon2018 qual|◯|◯|--|--|--|None|
 |ddcc2016 qual|◯|--|--|--|None|None|
