@@ -1,0 +1,39 @@
+'''input
+2
+1 1000000000
+1000000000 1
+1000000001
+
+3
+4 7
+2 9
+6 2
+8
+
+5
+1 10
+3 6
+5 2
+4 4
+2 8
+7
+
+'''
+
+# -*- coding: utf-8 -*-
+
+# Tenka1 Programmer Beginner Contest
+# Problem B
+
+if __name__ == '__main__':
+    n = int(input())
+    a = [0 for _ in range(n)]
+    b = [0 for _ in range(n)]
+
+    for i in range(n):
+        ai, bi = list(map(int, input().split()))
+        a[i] = ai
+        b[i] = bi
+
+    a_max = max(a)
+    print(a_max + b[a.index(a_max)])
