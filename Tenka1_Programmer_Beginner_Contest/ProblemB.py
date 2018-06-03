@@ -27,14 +27,16 @@
 
 if __name__ == '__main__':
     n = int(input())
-    worst_rank = -1
-    worst_score = float('inf')
+    worst_rank, worst_score = 0, 0
 
     # See:
     # https://beta.atcoder.jp/contests/tenka1-2017-beginner/submissions/1637273
+    # https://beta.atcoder.jp/contests/tenka1-2017-beginner/submissions/1655004
     for i in range(n):
-        ai, bi = list(map(int, input().split()))
-        worst_rank = max(worst_rank, ai)
-        worst_score = min(worst_score, bi)
+        ai, bi = map(int, input().split())
+
+        if ai > worst_rank:
+            worst_rank = ai
+            worst_score = bi
 
     print(worst_rank + worst_score)
