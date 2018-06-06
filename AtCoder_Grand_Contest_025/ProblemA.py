@@ -13,23 +13,11 @@
 # Problem A
 
 
-def sum_digit(number):
-    string = str(number)
-    array = list(map(int, list(string)))
-    return sum(array)
-
-
 if __name__ == '__main__':
     n = int(input())
-    a = 0
-    digit_sum_min = 1000000
-
-    for i in range(1, n):
-        a = i
-        b = n - a
-
-        sum_a = sum_digit(a)
-        sum_b = sum_digit(b)
-        digit_sum_min = min(digit_sum_min, sum_a + sum_b)
-
-    print(digit_sum_min)
+    # See:
+    # https://www.youtube.com/watch?v=Ommfmx2wtuY
+    if (n == 10) or (n == 100) or (n == 1000) or (n == 10000) or (n == 100000):
+        print(10)
+    else:
+        print(sum(list(map(int, list(str(n))))))
