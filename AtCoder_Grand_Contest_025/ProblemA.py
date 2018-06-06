@@ -14,10 +14,12 @@
 
 
 if __name__ == '__main__':
-    n = int(input())
+    n = list(map(int, list(input())))
+
     # See:
     # https://www.youtube.com/watch?v=Ommfmx2wtuY
-    if (n == 10) or (n == 100) or (n == 1000) or (n == 10000) or (n == 100000):
+    # https://beta.atcoder.jp/contests/agc025/submissions/2607113
+    if n[0] == 1 and sum(n) == 1:
         print(10)
     else:
-        print(sum(list(map(int, list(str(n))))))
+        print(sum(n))
