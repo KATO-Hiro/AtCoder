@@ -39,7 +39,7 @@ No
 
 # -*- coding: utf-8 -*-
 
-# CODE FESTIVAL 2016 qual A
+# CODE FESTIVAL 2016 qual B
 # Problem B
 
 if __name__ == '__main__':
