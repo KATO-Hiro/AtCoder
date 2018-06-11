@@ -71,7 +71,8 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 096|◯|◯|◯|△|
 |AtCoder Beginner Contest 097|◯|◯|△|--|
 |AtCoder Beginner Contest 098|◯|◯|◯|--|
-|AtCoder Beginner Contest 099|--|--|--|--|
+|AtCoder Beginner Contest 099|◯|◯|--|--|
+|AtCoder Beginner Contest 100|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
