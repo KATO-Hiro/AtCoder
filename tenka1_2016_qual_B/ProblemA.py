@@ -14,10 +14,6 @@ def f(n: int):
 
 
 if __name__ == '__main__':
-    current_number = 20
-
-    for i in range(3):
-        result = f(current_number)
-        current_number = result
-
-    print(result)
+    # See:
+    # https://beta.atcoder.jp/contests/tenka1-2016-qualb/submissions/1991012
+    print(f(f(f(20))))
