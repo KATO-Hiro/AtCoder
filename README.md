@@ -108,6 +108,7 @@ Represents a repository of accepted results.
 |ddcc2017 qual|◯|◯|◯|--|None|None|
 |bitflyer2018 qual|◯|◯|--|--|--|None|
 |tenka1 2016 qual A|◯|--|--|--|--|None|
+|tenka1 2016 qual B|◯|--|--|--|--|None|
 
 Captions:
 
