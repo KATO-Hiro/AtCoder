@@ -83,6 +83,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 005|△|--|--|--|--|--|
 |AtCoder Grand Contest 006|△|--|--|--|--|--|
 |AtCoder Grand Contest 007|△|--|--|--|--|--|
+|AtCoder Grand Contest 010|◯|--|--|--|--|--|
 |AtCoder Grand Contest 012|◯|--|--|--|--|--|
 |AtCoder Grand Contest 015|◯|--|--|--|--|--|
 |AtCoder Grand Contest 021|△|--|--|--|--|--|
