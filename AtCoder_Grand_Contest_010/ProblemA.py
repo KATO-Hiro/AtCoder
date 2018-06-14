@@ -21,25 +21,7 @@ YES
 
 if __name__ == '__main__':
     n = int(input())
-    a = list(map(int, input().split()))
-    odd_count = 0
-
-    for ai in a:
-        if ai % 2 == 1:
-            odd_count += 1
-
-    even_count = n - odd_count
-
-    if odd_count % 2 == 1:
-        if even_count > 0:
-            print('NO')
-            exit()
-        elif even_count == 0 and odd_count == 1:
-            print('NO')
-            exit()
-        else:
-            print('YES')
-            exit()
-    else:
+    if sum(list(map(int, input().split()))) % 2 == 0:
         print('YES')
-        exit()
+    else:
+        print('NO')
