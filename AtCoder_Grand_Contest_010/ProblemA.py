@@ -21,6 +21,8 @@ YES
 
 if __name__ == '__main__':
     n = int(input())
+
+    # https://atcoder.jp/img/agc010/editorial.pdf
     if sum(list(map(int, input().split()))) % 2 == 0:
         print('YES')
     else:
