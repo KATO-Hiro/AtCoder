@@ -3,11 +3,9 @@
 
 
 if __name__ == '__main__':
-    from collections import Counter
+    n = list(map(int, input()))
 
-    for key, value in Counter(list(map(int, input()))).items():
-        if value == 4:
-            print('SAME')
-            exit()
-
-    print('DIFFERENT')
+    if len(set(n)) == 1:
+        print('SAME')
+    else:
+        print('DIFFERENT')
