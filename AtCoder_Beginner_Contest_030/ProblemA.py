@@ -18,9 +18,11 @@ TAKAHASHI
 if __name__ == '__main__':
     a, b, c, d = list(map(int, input().split()))
 
-    if ((b / a) - (d / c)) > 0.0:
+    # See:
+    # https://www.slideshare.net/chokudai/abc030
+    if (b * c) - (d * a) > 0:
         print('TAKAHASHI')
-    elif ((d / c) - (b / a)) > 0.0:
+    elif (d * a) - (b * c) > 0:
         print('AOKI')
-    elif abs((b / a) - (d / c)) < 10 ** (-8):
+    else:
         print('DRAW')
