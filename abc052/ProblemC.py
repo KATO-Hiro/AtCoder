@@ -19,29 +19,19 @@
 
 
 # See:
-# https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%A9%E3%83%88%E3%82%B9%E3%83%86%E3%83%8D%E3%82%B9%E3%81%AE%E7%AF%A9
+# https://beta.atcoder.jp/contests/abc052/submissions/2246922
 def get_prime_dict(number: int) -> dict:
     ''' number: 2 or greater.
     '''
     from collections import OrderedDict
-    from math import sqrt
 
     prime_dict = OrderedDict()
     j = 2
     prime_dict[j] = 0
-    number_list = [int(i) for i in range(2, number + 1)]
 
-    while number_list[0] <= int(sqrt(number)):
-        for i in number_list:
-            if i % j == 0:
-                number_list.remove(i)
-
-        j = number_list[0]
-        prime_dict[j] = 0
-
-    for prime in number_list:
-        prime_dict[prime] = 0
-
+    for i in range(2, number + 1):
+        if all(i % j != 0 for j in prime_dict.keys()):
+            prime_dict[i] = 0
     return prime_dict
 
 
