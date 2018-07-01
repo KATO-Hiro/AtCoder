@@ -84,7 +84,8 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 099|◯|◯|--|--|
 |AtCoder Beginner Contest 100|◯|◯|◯|△|
 |AtCoder Beginner Contest 101|◯|◯|◯|--|
-|AtCoder Beginner Contest 102|--|--|--|--|
+|AtCoder Beginner Contest 102|◯|◯|--|--|
+|AtCoder Beginner Contest 103|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
