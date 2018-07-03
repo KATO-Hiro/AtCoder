@@ -17,20 +17,9 @@
 
 if __name__ == '__main__':
     n = int(input())
-    count = 0
-    number = [8, 4, 2, 1]
-    pos = 0
-    combinations = list()
+    print(n)
 
-    while n != 0 and n >= 0:
-        while n >= number[pos]:
-            n -= number[pos]
-            combinations.append(number[pos])
-            count += 1
-
-        pos += 1
-
-    print(count)
-
-    for combination in combinations:
-        print(combination)
+    # See:
+    # https://www.slideshare.net/chokudai/abc021
+    for _ in range(n):
+        print(1)
