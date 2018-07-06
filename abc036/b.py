@@ -24,5 +24,5 @@ if __name__ == '__main__':
     for i in range(n):
         for j in range(n - 1, -1, -1):
             mod_s[i][j] = s[j][i]
-            tmp_s = ''.join(map(str, mod_s[i]))
+        tmp_s = ''.join(map(str, mod_s[i]))
         print(tmp_s[::-1])
