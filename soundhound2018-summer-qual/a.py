@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+
+
+if __name__ == '__main__':
+    a, b = list(map(int, input().split()))
+
+    if a + b == 15:
+        print('+')
+    elif a * b == 15:
+        print('*')
+    else:
+        print('x')
