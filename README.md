@@ -23,7 +23,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 031|◯|--|--|--|
 |AtCoder Beginner Contest 032|△|--|--|--|
 |AtCoder Beginner Contest 033|◯|--|--|--|
-|AtCoder Beginner Contest 034|◯|--|--|--|
+|AtCoder Beginner Contest 034|◯|◯|--|--|
 |AtCoder Beginner Contest 035|◯|--|--|--|
 |AtCoder Beginner Contest 036|◯|◯|--|--|
 |AtCoder Beginner Contest 037|◯|◯|◯|--|
