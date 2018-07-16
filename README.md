@@ -7,6 +7,7 @@ Represents a repository of accepted results.
 |:--:|:--:|:--:|:--:|:--:|
 |AtCoder Beginner Contest 001|◯|◯|△|✕|
 |AtCoder Beginner Contest 002|◯|◯|◯|--|
+|AtCoder Beginner Contest 012|◯|--|--|--|
 |AtCoder Beginner Contest 013|◯|--|--|--|
 |AtCoder Beginner Contest 014|◯|--|--|--|
 |AtCoder Beginner Contest 015|◯|--|--|--|
