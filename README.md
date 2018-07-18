@@ -119,6 +119,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 023|△|--|--|--|--|--|
 |AtCoder Grand Contest 024|◯|--|--|--|--|--|
 |AtCoder Grand Contest 025|◯|--|--|--|--|--|
+|AtCoder Grand Contest 026|◯|--|--|--|--|--|
 |CODE FESTIVAL 2016 qual A|◯|△|--|--|--|None|
 |CODE FESTIVAL 2016 qual B|◯|◯|--|--|--|None|
 |CODE FESTIVAL 2016 qual C|◯|--|--|--|--|None|
