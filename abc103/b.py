@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-def main():
-    pass
-
-
 if __name__ == '__main__':
     s = input()
     t = input()
@@ -18,4 +14,3 @@ if __name__ == '__main__':
             exit()
 
     print('No')
-    # main()
