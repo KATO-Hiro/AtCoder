@@ -115,6 +115,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 010|◯|--|--|--|--|--|
 |AtCoder Grand Contest 012|◯|--|--|--|--|--|
 |AtCoder Grand Contest 015|◯|--|--|--|--|--|
+|AtCoder Grand Contest 017|△|--|--|--|--|--|
 |AtCoder Grand Contest 021|△|--|--|--|--|--|
 |AtCoder Grand Contest 022|△|--|--|--|--|--|
 |AtCoder Grand Contest 023|△|--|--|--|--|--|
