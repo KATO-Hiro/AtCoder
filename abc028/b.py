@@ -4,22 +4,10 @@
 
 def main():
     s = input()
-    values = [0] * 6
 
-    for si in s:
-        if si == 'A':
-            values[0] += 1
-        elif si == 'B':
-            values[1] += 1
-        elif si == 'C':
-            values[2] += 1
-        elif si == 'D':
-            values[3] += 1
-        elif si == 'E':
-            values[4] += 1
-        elif si == 'F':
-            values[5] += 1
-
+    # See:
+    # https://beta.atcoder.jp/contests/abc028/submissions/1915254
+    values = [s.count(si) for si in 'ABCDEF']
     print(' '.join(map(str, values)))
 
 
