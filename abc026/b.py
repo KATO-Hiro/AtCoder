@@ -6,16 +6,11 @@ def main():
     from math import pi
 
     n = int(input())
-    r = sorted([int(input()) for _ in range(n)], reverse=True)
-    summed_r = 0
+    r = sorted([int(input()) ** 2 for _ in range(n)], reverse=True)
 
-    for index, ri in enumerate(r):
-        if index % 2 == 0:
-            summed_r += ri ** 2
-        else:
-            summed_r -= ri ** 2
-
-    print(summed_r * pi)
+    # See:
+    # https://beta.atcoder.jp/contests/abc026/submissions/2761208
+    print((sum(r[::2]) - sum(r[1::2])) * pi)
 
 
 if __name__ == '__main__':
