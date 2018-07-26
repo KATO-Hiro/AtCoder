@@ -21,7 +21,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 022|◯|--|--|--|
 |AtCoder Beginner Contest 023|◯|--|--|--|
 |AtCoder Beginner Contest 024|◯|--|--|--|
-|AtCoder Beginner Contest 025|◯|--|--|--|
+|AtCoder Beginner Contest 025|◯|◯|--|--|
 |AtCoder Beginner Contest 026|◯|◯|--|--|
 |AtCoder Beginner Contest 027|◯|--|--|--|
 |AtCoder Beginner Contest 028|◯|◯|--|--|
