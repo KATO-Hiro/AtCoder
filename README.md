@@ -136,6 +136,7 @@ Represents a repository of accepted results.
 |DWANGO #4 qual|◯|--|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Spring|◯|◯|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Summer|◯|◯|--|--|--|--|
+|SoundHound Inc. Programming Contest 2018 Summer final|◯|--|--|--|--|None|
 |Tenka1 Programmer Beginner Contest|◯|◯|--|--|--|--|
 |yahoo procon2017 qual|◯|◯|--|--|--|None|
 |yahoo procon2018 qual|◯|◯|--|--|--|None|
