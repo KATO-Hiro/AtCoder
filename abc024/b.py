@@ -7,11 +7,10 @@ def main():
     a = [int(input()) for _ in range(n)]
     duration = t
 
+    # See:
+    # https://beta.atcoder.jp/contests/abc024/submissions/2841120
     for i in range(1, n):
-        if a[i - 1] + t > a[i]:
-            duration += a[i] - a[i - 1]
-        else:
-            duration += t
+        duration += min(t, a[i] - a[i - 1])
 
     print(duration)
 
