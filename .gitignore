@@ -99,3 +99,14 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Visual Studio Code
+.history/
+.vscode/
+
+# atcoder_samplecase_localtest
+samplecase/
+compile/
+patcoder.py
+login.txt
+setting.ini
