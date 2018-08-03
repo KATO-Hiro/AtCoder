@@ -104,6 +104,10 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 103|◯|◯|◯|△|
 |AtCoder Beginner Contest 104|--|--|--|--|
 
+|Contest name\Problems|A|B|C|D|
+|:--:|:--:|:--:|:--:|:--:|
+|AtCoder Regular Contest 055|◯|--|--|--|
+
 |Contest name\Problems|A|B|C|D|E|F|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |AtCoder Grand Contest 001|◯|--|--|--|--|--|
