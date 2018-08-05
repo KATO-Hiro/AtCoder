@@ -102,7 +102,8 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 101|◯|◯|◯|--|
 |AtCoder Beginner Contest 102|◯|◯|△|--|
 |AtCoder Beginner Contest 103|◯|◯|◯|△|
-|AtCoder Beginner Contest 104|--|--|--|--|
+|AtCoder Beginner Contest 104|◯|◯|--|--|
+|AtCoder Beginner Contest 105|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
