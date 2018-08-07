@@ -4,22 +4,11 @@
 def main():
     s = input()
     a, b, c, d = list(map(int, input().split()))
-    result = ''
 
-    s1 = s[:a]
-    s2 = s[a:b]
-    s3 = s[b:c]
-    s4 = s[c:d]
-    s5 = s[d:]
-
-    if a == 0:
-        s1 = '"' + s1
-    else:
-        s1 += '"'
-
-    result = s1 + s2 + '"' + s3 + '"' + s4 + '"' + s5
-
-    print(result)
+    # See:
+    # https://beta.atcoder.jp/contests/arc049/submissions/1406025
+    q = '"'
+    print(s[:a] + q + s[a:b] + q + s[b:c] + q + s[c:d] + q + s[d:])
 
 
 if __name__ == '__main__':
