@@ -3,13 +3,11 @@
 
 def main():
     n = int(input())
-    p, q = divmod(n, 9)
+    p, q = divmod(n - 1, 9)
 
-    if q == 0:
-        result = [9] * p
-    else:
-        result = [q] * (p + 1)
-
+    # See:
+    # https://www.slideshare.net/chokudai/arc046
+    result = [q + 1] * (p + 1)
     print(''.join(map(str, result)))
 
 
