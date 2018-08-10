@@ -2,18 +2,15 @@
 
 
 def main():
-    s = input().split()
-    result = list()
+    s = input()
+    words = {'Left': '<', 'Right': '>', 'AtCoder': 'A'}
 
-    for si in s:
-        if si == 'Left':
-            result.append('<')
-        elif si == 'Right':
-            result.append('>')
-        else:
-            result.append('A')
+    # See:
+    # https://www.slideshare.net/chokudai/arc045
+    for key, value in words.items():
+        s = s.replace(key, value)
 
-    print(' '.join(map(str, result)))
+    print(s)
 
 
 if __name__ == '__main__':
