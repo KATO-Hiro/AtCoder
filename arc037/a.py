@@ -7,8 +7,7 @@ def main():
     study_hours = 0
 
     for mi in m:
-        if mi < 80:
-            study_hours += 80 - mi
+        study_hours += max(0, 80 - mi)
 
     print(study_hours)
 
