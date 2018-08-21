@@ -3,12 +3,14 @@
 
 def main():
     s = input()
-    n = len(s)
+    t = s[::-1]
 
-    for i in range(n):
-        if s[i] == s[n - i - 1]:
+    # See:
+    # https://www.slideshare.net/chokudai/arc035
+    for si, ti in zip(s, t):
+        if (si == ti):
             pass
-        elif s[i] == '*' or s[n - i - 1] == '*':
+        elif (si == '*') or (ti == '*'):
             pass
         else:
             print('NO')
