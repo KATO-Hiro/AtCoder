@@ -2,7 +2,7 @@
 
 
 def main():
-    from math import sqrt
+    from math import hypot
 
     x1, y1, r = list(map(int, input().split()))
     x2, y2, x3, y3 = list(map(int, input().split()))
@@ -12,20 +12,12 @@ def main():
     else:
         print('YES')
 
-    x = r ** 2 - (y1 - y2) ** 2
-    y = r ** 2 - (x1 - x2) ** 2
-
-    if x < 0 or y < 0:
+    # See:
+    # https://beta.atcoder.jp/contests/arc051/submissions/1187476
+    if hypot(x1 - x2, y1 - y2) > r or hypot(x1 - x3, y1 - y3) > r or hypot(x1 - x2, y1 - y3) > r or hypot(x1 - x3, y1 - y2) > r:
         print('YES')
-        exit()
-
-    sqrt_x = sqrt(x)
-    sqrt_y = sqrt(y)
-
-    if (x1 - sqrt_x <= x2) and (x3 <= x1 + sqrt_x) and (y1 - sqrt_y <= y2) and (y3 <= y1 + sqrt_y):
-        print('NO')
     else:
-        print('YES')
+        print('NO')
 
 
 if __name__ == '__main__':
