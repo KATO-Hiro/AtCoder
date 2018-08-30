@@ -9,11 +9,13 @@ def main():
     for i in range(n - k + 1):
         left = x[i]
         right = x[i + k - 1]
+        abs_left = abs(left)
+        abs_right = abs(right)
 
         if left * right >= 0:
-            ans = min(ans, max(abs(left), abs(right)))
+            ans = min(ans, max(abs_left, abs_right))
         else:
-            ans = min(ans, 2 * abs(left) + abs(right), abs(left) + 2 * abs(right))
+            ans = min(ans, 2 * abs_left + abs_right, abs_left + 2 * abs_right)
 
     print(ans)
 
