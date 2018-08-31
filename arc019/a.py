@@ -3,13 +3,12 @@
 
 def main():
     s = input()
-    alphabets = {'O': '0', 'D': '0', 'I': '1', 'Z': '2', 'S': '5', 'B': '8'}
 
-    for mod, ori in alphabets.items():
-        if mod in s:
-            s = s.replace(mod, ori)
-
-    print(s)
+    # See:
+    # https://beta.atcoder.jp/contests/arc019/submissions/2489032
+    # https://docs.python.jp/3/library/stdtypes.html#str.translate
+    # https://docs.python.jp/3/library/stdtypes.html#str.maketrans
+    print(s.translate(str.maketrans('ODIZSB', '001258')))
 
 
 if __name__ == '__main__':
