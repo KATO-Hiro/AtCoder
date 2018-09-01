@@ -118,6 +118,7 @@ Represents a repository of accepted results.
 |:--:|:--:|:--:|:--:|:--:|
 |AtCoder Regular Contest 018|◯|--|--|--|
 |AtCoder Regular Contest 019|◯|--|--|--|
+|AtCoder Regular Contest 020|◯|◯|--|--|
 |Atcoder Regular Contest 031|◯|--|--|--|
 |Atcoder Regular Contest 032|◯|--|--|--|
 |Atcoder Regular Contest 033|◯|--|--|--|
