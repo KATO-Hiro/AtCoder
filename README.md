@@ -174,6 +174,7 @@ Represents a repository of accepted results.
 |CODE FESTIVAL 2017 qual A|◯|--|--|--|--|--|
 |CODE FESTIVAL 2017 qual B|◯|◯|--|--|--|--|
 |CODE FESTIVAL 2017 qual C|◯|◯|--|--|--|--|
+|CODE FESTIVAL 2017 final|◯|--|--|--|--|--|
 |CODE THANKS FESTIVAL 2017 A|◯|◯|--|--|--|--|
 |COLOCON Colopl programming contest 2018 qual A|◯|◯|--|--|--|--|
 |NJPC 2017|◯|--|--|--|--|--|
