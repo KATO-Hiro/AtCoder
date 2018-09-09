@@ -20,7 +20,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 013|◯|--|--|--|
 |AtCoder Beginner Contest 014|◯|--|--|--|
 |AtCoder Beginner Contest 015|◯|--|--|--|
-|AtCoder Beginner Contest 016|◯|--|--|--|
+|AtCoder Beginner Contest 016|◯|◯|--|--|
 |AtCoder Beginner Contest 017|◯|--|--|--|
 |AtCoder Beginner Contest 018|◯|--|--|--|
 |AtCoder Beginner Contest 019|◯|--|--|--|
