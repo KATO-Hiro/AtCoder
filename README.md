@@ -131,6 +131,7 @@ Represents a repository of accepted results.
 |Atcoder Regular Contest 036|◯|--|--|--|
 |AtCoder Regular Contest 037|◯|--|--|--|
 |AtCoder Regular Contest 038|◯|--|--|--|
+|AtCoder Regular Contest 039|◯|--|--|--|
 |AtCoder Regular Contest 040|◯|--|--|--|
 |AtCoder Regular Contest 041|◯|--|--|--|
 |AtCoder Regular Contest 042|◯|--|--|--|
