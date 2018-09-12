@@ -2,18 +2,16 @@
 
 
 def main():
+    from itertools import groupby
+
     s = input()
-    count = 1
-    dummy = '0'
-    mod_s = s + dummy
     ans = ''
 
-    for i in range(1, len(mod_s)):
-        if mod_s[i] == mod_s[i - 1]:
-            count += 1
-        else:
-            ans += mod_s[i - 1] + str(count)
-            count = 1
+    # See:
+    # https://docs.python.jp/3/library/itertools.html#itertools.groupby
+    # https://beta.atcoder.jp/contests/abc019/submissions/3002673
+    for key, group in groupby(s):
+        ans += key + str(len(list(group)))
 
     print(ans)
 
