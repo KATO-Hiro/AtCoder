@@ -2,19 +2,15 @@
 
 
 def main():
-    x = list(reversed(input()))
-    i = 0
+    from re import fullmatch
+    x = input()
 
-    while i < len(x):
-        if x[i] in ['o', 'k', 'u']:
-            i += 1
-        elif x[i:i + 2] == ['h', 'c']:
-            i += 2
-        else:
-            print('NO')
-            exit()
-
-    print('YES')
+    # See:
+    # https://beta.atcoder.jp/contests/abc017/submissions/2788653
+    if fullmatch('(ch|[oku])*', x):
+        print('YES')
+    else:
+        print('NO')
 
 
 if __name__ == '__main__':
