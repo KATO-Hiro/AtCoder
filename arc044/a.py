@@ -1,34 +1,17 @@
 # -*- coding: utf-8 -*-
 
 
-def is_prime(number: int) -> bool:
-    '''
-        See:
-        https://qiita.com/srtk86/items/874639e361917e5016d4
-    '''
-
-    from math import sqrt
-
-    if number == 1:
-        return False
-
-    for i in range(2, int(sqrt(number)) + 1):
-        if number % i == 0:
-            return False
-
-    return True
-
-
 def main():
     n = int(input())
-    digit = int(str(n)[-1])
 
-    if is_prime(n):
+    # See:
+    # https://www.slideshare.net/chokudai/arc044
+    if n in [2, 3, 5]:
         print('Prime')
-    elif digit % 2 != 0 and digit != 5 and sum(map(int, list(str(n)))) % 3 != 0 and n != 1:
-        print('Prime')
-    else:
+    elif (n == 1) or (n % 2 == 0) or (n % 3 == 0) or (n % 5 == 0):
         print('Not Prime')
+    else:
+        print('Prime')
 
 
 if __name__ == '__main__':
