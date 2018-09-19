@@ -123,6 +123,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 018|◯|--|--|--|
 |AtCoder Regular Contest 019|◯|--|--|--|
 |AtCoder Regular Contest 020|◯|◯|--|--|
+|AtCoder Regular Contest 025|◯|--|--|--|
 |AtCoder Regular Contest 026|◯|◯|--|--|
 |AtCoder Regular Contest 027|◯|--|--|--|
 |Atcoder Regular Contest 031|◯|--|--|--|
