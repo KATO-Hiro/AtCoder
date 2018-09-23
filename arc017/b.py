@@ -2,24 +2,25 @@
 
 
 def main():
-    from itertools import accumulate
-
     n, k = map(int, input().split())
     a = [int(input()) for _ in range(n)]
-    is_decreased = [0 for _ in range(n)]
     ans = 0
+    increment_count = 0
+    prev_a = 0
 
-    for j in range(1, n):
-        if a[j] <= a[j - 1]:
-            is_decreased[j] = 1
+    # See:
+    # https://www.slideshare.net/chokudai/arc017
+    # https://beta.atcoder.jp/contests/arc017/submissions/1591520
+    for i in range(n):
+        if a[i] > prev_a:
+            increment_count += 1
+        else:
+            increment_count = 1
 
-    summed = list(accumulate([0] + is_decreased))
-
-    for i in range(n - k + 1):
-        diff = summed[i + k] - summed[i + 1]
-
-        if diff == 0:
+        if increment_count >= k:
             ans += 1
+
+        prev_a = a[i]
 
     print(ans)
 
