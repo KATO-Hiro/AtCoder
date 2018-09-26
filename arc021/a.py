@@ -3,18 +3,19 @@
 
 def main():
     a = [list(map(int, input().split())) for _ in range(4)]
-
-    for i in range(4):
-        for j in range(3):
-            if a[i][j] == a[i][j + 1]:
-                print('CONTINUE')
-                exit()
+    dx = [1, -1, 0, 0]
+    dy = [0, 0, -1, 1]
 
     for x in range(4):
-        for y in range(3):
-            if a[y][x] == a[y + 1][x]:
-                print('CONTINUE')
-                exit()
+        for y in range(4):
+            for i in range(4):
+                new_x = x + dx[i]
+                new_y = y + dy[i]
+
+                if 0 <= new_x <= 3 and 0 <= new_y <= 3:
+                    if a[x][y] == a[new_x][new_y]:
+                        print('CONTINUE')
+                        exit()
 
     print('GAMEOVER')
 
