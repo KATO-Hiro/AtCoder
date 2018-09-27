@@ -3,21 +3,14 @@
 
 def main():
     n, a, b = map(int, input().split())
-    count = 0
+    mod = n % (a + b)
 
-    while n > 0:
-        if count % 2 == 0:
-            n -= a
-            if n <= 0:
-                print('Ant')
-                exit()
-        else:
-            n -= b
-            if n <= 0:
-                print('Bug')
-                exit()
-
-        count += 1
+    # See:
+    # https://beta.atcoder.jp/contests/arc028/submissions/1678588
+    if 0 < mod <= a:
+        print('Ant')
+    else:
+        print('Bug')
 
 
 if __name__ == '__main__':
