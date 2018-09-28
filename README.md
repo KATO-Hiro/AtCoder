@@ -119,6 +119,7 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
+|AtCoder Regular Contest 014|◯|--|--|--|
 |AtCoder Regular Contest 015|◯|--|--|--|
 |AtCoder Regular Contest 016|◯|◯|--|--|
 |AtCoder Regular Contest 017|◯|◯|--|--|
