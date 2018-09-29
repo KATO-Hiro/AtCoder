@@ -3,7 +3,10 @@
 
 def main():
     s = input()
-    print(s[0].upper() + s[1:].lower())
+
+    # See:
+    # https://docs.python.jp/3/library/stdtypes.html
+    print(s.title())
 
 
 if __name__ == '__main__':
