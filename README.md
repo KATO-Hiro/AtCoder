@@ -210,6 +210,7 @@ Represents a repository of accepted results.
 |bitflyer2018 final open|◯|--|--|--|--|--|
 |tenka1 2016 qual A|◯|--|--|--|--|None|
 |tenka1 2016 qual B|◯|--|--|--|--|None|
+|KUPC2018|◯|◯|◯|--|--|--|
 
 Captions:
 
