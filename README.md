@@ -116,7 +116,8 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 109|◯|◯|◯|--|
 |AtCoder Beginner Contest 110|◯|◯|◯|--|
 |AtCoder Beginner Contest 111|◯|◯|--|--|
-|AtCoder Beginner Contest 112|--|--|--|--|
+|AtCoder Beginner Contest 112|◯|◯|--|--|
+|AtCoder Beginner Contest 113|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
