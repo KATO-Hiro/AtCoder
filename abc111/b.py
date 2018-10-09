@@ -4,8 +4,10 @@
 def main():
     n = int(input())
 
-    for i in range(100, 1000):
-        if i % 111 == 0 and i >= n:
+    # See:
+    # https://www.youtube.com/watch?v=fYS-rAUSD5o
+    for i in range(111, 1000, 111):
+        if i >= n:
             print(i)
             exit()
 
