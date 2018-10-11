@@ -8,17 +8,14 @@ def main():
 
     matched_count = len(set(e) & set(l))
 
+    # See:
+    # https://beta.atcoder.jp/contests/arc006/submissions/3183342
     if matched_count == 6:
         print(1)
-    elif matched_count == 5:
-        if b in l:
-            print(2)
-        else:
-            print(3)
-    elif matched_count == 4:
-        print(4)
-    elif matched_count == 3:
-        print(5)
+    elif matched_count == 5 and b in l:
+        print(2)
+    elif matched_count >= 3:
+        print(8 - matched_count)
     else:
         print(0)
 
