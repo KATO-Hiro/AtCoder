@@ -121,6 +121,8 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
+|AtCoder Regular Contest 005|◯|--|--|--|
+|AtCoder Regular Contest 006|◯|--|--|--|
 |AtCoder Regular Contest 007|◯|--|--|--|
 |AtCoder Regular Contest 008|◯|--|--|--|
 |AtCoder Regular Contest 009|◯|--|--|--|
