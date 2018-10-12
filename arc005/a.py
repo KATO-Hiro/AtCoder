@@ -6,15 +6,13 @@ def main():
     w = list(map(str, input().split()))
     count = 0
 
+    # See:
+    # https://beta.atcoder.jp/contests/arc005/submissions/1555860
     for wi in w:
         if '.' in wi:
             wi = wi.replace('.', '')
 
-        if wi == 'TAKAHASHIKUN':
-            count += 1
-        elif wi == 'Takahashikun':
-            count += 1
-        elif wi == 'takahashikun':
+        if wi in ('TAKAHASHIKUN', 'Takahashikun', 'takahashikun'):
             count += 1
 
     print(count)
