@@ -15,16 +15,8 @@ def main():
     s = input()
     t = input()
     size = lcm(n, m)
-    dn = size // n
-    dm = size // m
-    part_s = list()
-    part_t = list()
-
-    for i in range(0, n, dm):
-        part_s.append(s[i])
-
-    for i in range(0, m, dn):
-        part_t.append(t[i])
+    part_s = [s[i] for i in range(0, n, size // m)]
+    part_t = [t[j] for j in range(0, m, size // n)]
 
     for si, ti in zip(part_s, part_t):
         if si != ti:
