@@ -17,18 +17,14 @@ def main():
     size = lcm(n, m)
     dn = size // n
     dm = size // m
-    part_s = [s[0]]
-    part_t = [t[0]]
-    i = dm
-    j = dn
+    part_s = list()
+    part_t = list()
 
-    while i < n:
+    for i in range(0, n, dm):
         part_s.append(s[i])
-        i += dm
 
-    while j < m:
-        part_t.append(t[j])
-        j += dn
+    for i in range(0, m, dn):
+        part_t.append(t[i])
 
     for si, ti in zip(part_s, part_t):
         if si != ti:
