@@ -2,16 +2,13 @@
 
 
 def main():
-    from collections import Counter
-
     n = int(input())
-    c = Counter(list(input()))
-    count_min = min(c.values())
+    c = input()
 
-    if len(c.keys()) != 4:
-        count_min = 0
-
-    print(max(c.values()), count_min)
+    # See:
+    # https://beta.atcoder.jp/contests/arc001/submissions/1613525
+    count_strings = [c.count(str(i)) for i in range(1, 5)]
+    print(max(count_strings), min(count_strings))
 
 
 if __name__ == '__main__':
