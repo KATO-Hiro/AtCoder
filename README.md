@@ -226,6 +226,7 @@ Represents a repository of accepted results.
 |tenka1 2016 qual B|◯|--|--|--|--|None|
 |KUPC2017|◯|--|--|--|--|--|
 |KUPC2018|◯|◯|◯|--|--|--|
+|QUPC2018|◯|--|--|--|--|--|
 
 Captions:
 
