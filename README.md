@@ -11,8 +11,8 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 004|◯|◯|--|--|
 |AtCoder Beginner Contest 005|◯|◯|--|--|
 |AtCoder Beginner Contest 006|◯|--|--|--|
-|AtCoder Beginner Contest 007|◯|--|--|--|
-|AtCoder Beginner Contest 008|◯|--|--|--|
+|AtCoder Beginner Contest 007|◯|◯|--|--|
+|AtCoder Beginner Contest 008|◯|◯|--|--|
 |AtCoder Beginner Contest 009|◯|◯|--|--|
 |AtCoder Beginner Contest 010|◯|◯|--|--|
 |AtCoder Beginner Contest 011|◯|◯|--|--|
