@@ -4,7 +4,10 @@
 def main():
     n = int(input())
     a = sorted(list(map(int, input().split())))
-    print(' '.join(map(str, a)))
+
+    # See:
+    # https://beta.atcoder.jp/contests/chokudai_S001/submissions/3108858
+    print(*a)
 
 
 if __name__ == '__main__':
