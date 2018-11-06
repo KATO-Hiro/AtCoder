@@ -231,6 +231,7 @@ Represents a repository of accepted results.
 |KUPC2018|◯|◯|◯|--|--|--|
 |QUPC2018|◯|--|--|--|--|--|
 |Maximum-Cup2018|◯|--|--|--|--|--|
+|MUJIN2016|◯|--|--|--|--|None|
 |Chokudai SpeedRun 001|◯|◯|◯|◯|◯|--|
 |tkppc2|◯|--|--|--|--|--|
 
