@@ -235,6 +235,7 @@ Represents a repository of accepted results.
 |MUJIN2016|◯|--|--|--|--|None|
 |Chokudai SpeedRun 001|◯|◯|◯|◯|◯|--|
 |tkppc2|◯|--|--|--|--|--|
+|Discovery 2016 qual|◯|--|--|--|None|None|
 
 Captions:
 
