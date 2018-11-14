@@ -2,14 +2,17 @@
 
 
 def main():
-    from math import sqrt
+    from math import hypot
 
     txa, tya, txb, tyb, t, v = list(map(int, input().split()))
     n = int(input())
 
     for i in range(n):
         x, y = map(int, input().split())
-        dist = sqrt((y - tya) ** 2 + (x - txa) ** 2) + sqrt((tyb - y) ** 2 + (txb - x) ** 2)
+
+        # See:
+        # https://beta.atcoder.jp/contests/abc010/submissions/1230259
+        dist = hypot(x - txa, y - tya) + hypot(txb - x, tyb - y)
 
         if dist <= v * t:
             print('YES')
