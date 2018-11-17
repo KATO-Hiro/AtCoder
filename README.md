@@ -14,7 +14,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 007|◯|◯|--|--|
 |AtCoder Beginner Contest 008|◯|◯|--|--|
 |AtCoder Beginner Contest 009|◯|◯|--|--|
-|AtCoder Beginner Contest 010|◯|◯|--|--|
+|AtCoder Beginner Contest 010|◯|◯|◯|--|
 |AtCoder Beginner Contest 011|◯|◯|--|--|
 |AtCoder Beginner Contest 012|◯|◯|--|--|
 |AtCoder Beginner Contest 013|◯|◯|--|--|
@@ -199,7 +199,8 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 026|◯|--|--|--|--|--|
 |AtCoder Grand Contest 027|◯|--|--|--|--|--|
 |AtCoder Grand Contest 028|◯|--|--|--|--|--|
-|CODE FESTIVAL 2015 Morning Easy|◯|--|--|--|None|None|
+|CODE FESTIVAL 2015 qual B|◯|--|--|--|None|None|
+|CODE FESTIVAL 2015 Morning Easy|◯|◯|--|--|None|None|
 |CODE FESTIVAL 2016 qual A|◯|△|--|--|--|None|
 |CODE FESTIVAL 2016 qual B|◯|◯|--|--|--|None|
 |CODE FESTIVAL 2016 qual C|◯|--|--|--|--|None|
