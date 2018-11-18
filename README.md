@@ -211,7 +211,7 @@ Represents a repository of accepted results.
 |CODE FESTIVAL 2017 final|◯|--|--|--|--|--|
 |CODE FESTIVAL 2018 qual A|◯|◯|--|--|--|None|
 |CODE FESTIVAL 2018 qual B|◯|◯|--|--|--|None|
-|CODE THANKS FESTIVAL 2015 open|◯|--|--|--|--|--|
+|CODE THANKS FESTIVAL 2015 open|◯|--|◯|--|--|--|
 |CODE THANKS FESTIVAL 2017 A|◯|◯|--|--|--|--|
 |COLOCON Colopl programming contest 2018 qual A|◯|◯|--|--|--|--|
 |NJPC 2017|◯|--|--|--|--|--|
