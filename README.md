@@ -18,7 +18,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 011|◯|◯|--|--|
 |AtCoder Beginner Contest 012|◯|◯|--|--|
 |AtCoder Beginner Contest 013|◯|◯|--|--|
-|AtCoder Beginner Contest 014|◯|--|--|--|
+|AtCoder Beginner Contest 014|◯|--|◯|--|
 |AtCoder Beginner Contest 015|◯|◯|--|--|
 |AtCoder Beginner Contest 016|◯|◯|--|--|
 |AtCoder Beginner Contest 017|◯|◯|--|--|
@@ -216,6 +216,7 @@ Represents a repository of accepted results.
 |CODE THANKS FESTIVAL 2017 A|◯|◯|--|--|--|--|
 |COLOCON Colopl programming contest 2018 qual A|◯|◯|--|--|--|--|
 |NJPC 2017|◯|--|--|--|--|--|
+|DWANGO #2 qual|◯|--|--|--|--|--|
 |DWANGO #3 qual|◯|--|--|--|--|--|
 |DWANGO #4 qual|◯|--|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Spring|◯|◯|--|--|--|--|
