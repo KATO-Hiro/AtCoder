@@ -240,6 +240,7 @@ Represents a repository of accepted results.
 |Maximum-Cup2018|◯|--|--|--|--|--|
 |MUJIN2016|◯|--|--|--|--|None|
 |Chokudai SpeedRun 001|◯|◯|◯|◯|◯|--|
+|ttpc2015|◯|--|--|--|--|--|
 |tkppc2|◯|--|--|--|--|--|
 |Discovery 2016 qual|◯|--|--|--|None|None|
 
