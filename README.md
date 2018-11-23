@@ -228,6 +228,7 @@ Represents a repository of accepted results.
 |yahoo procon2018 qual|◯|◯|--|--|--|None|
 |ddcc2016 qual|◯|◯|--|--|None|None|
 |ddcc2017 qual|◯|◯|◯|--|None|None|
+|ddcc2019 qual|◯|◯|--|--|None|None|
 |bitflyer2018 qual|◯|◯|--|--|--|None|
 |bitflyer2018 final open|◯|--|--|--|--|--|
 |tenka1 2016 qual A|◯|--|--|--|--|None|
