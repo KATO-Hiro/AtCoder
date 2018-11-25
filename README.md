@@ -214,6 +214,7 @@ Represents a repository of accepted results.
 |CODE FESTIVAL 2018 qual B|◯|◯|--|--|--|None|
 |CODE THANKS FESTIVAL 2015 open|◯|--|◯|--|--|--|
 |CODE THANKS FESTIVAL 2017 A|◯|◯|--|--|--|--|
+|CODE THANKS FESTIVAL 2018 open|◯|--|◯|◯|--|--|
 |COLOCON Colopl programming contest 2018 qual A|◯|◯|--|--|--|--|
 |NJPC 2017|◯|--|--|--|--|--|
 |DWANGO #2 qual|◯|--|--|--|--|--|
