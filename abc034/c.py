@@ -2,6 +2,11 @@
 
 
 def count_combinations(n, k, mod):
+    # See:
+    # https://beta.atcoder.jp/contests/abc034/submissions/3410655
+    if k > n - k:
+        return count_combinations(n, n - k, mod)
+
     ans = 1
 
     for i in range(1, k + 1):
