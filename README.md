@@ -247,6 +247,7 @@ Represents a repository of accepted results.
 |ttpc2015|◯|--|--|--|--|--|
 |tkppc2|◯|--|--|--|--|--|
 |Discovery 2016 qual|◯|--|--|--|None|None|
+|snuke21|◯|--|--|--|--|--|
 
 Captions:
 
