@@ -248,6 +248,7 @@ Represents a repository of accepted results.
 |tkppc2|◯|--|--|--|--|--|
 |Discovery 2016 qual|◯|--|--|--|None|None|
 |snuke21|◯|--|--|--|--|--|
+|Indeednow qualA|◯|--|--|--|--|--|
 
 Captions:
 
