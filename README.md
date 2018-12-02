@@ -249,6 +249,7 @@ Represents a repository of accepted results.
 |Discovery 2016 qual|◯|--|--|--|None|None|
 |snuke21|◯|--|--|--|--|--|
 |Indeednow qualA|◯|--|--|--|--|--|
+|Indeednow qualB|◯|--|--|--|--|--|
 
 Captions:
 
