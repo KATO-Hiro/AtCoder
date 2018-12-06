@@ -251,6 +251,7 @@ Represents a repository of accepted results.
 |snuke21|◯|--|--|--|--|--|
 |Indeednow qualA|◯|--|--|--|--|--|
 |Indeednow qualB|◯|--|--|--|--|--|
+|donuts 2015|◯|--|--|--|None|None|
 
 Captions:
 
