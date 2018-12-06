@@ -218,6 +218,7 @@ Represents a repository of accepted results.
 |CODE THANKS FESTIVAL 2018 open|◯|--|◯|◯|--|--|
 |COLOCON Colopl programming contest 2018 qual A|◯|◯|--|--|--|--|
 |NJPC 2017|◯|--|--|--|--|--|
+|DWANGO #1 qual|◯|--|--|--|--|--|
 |DWANGO #2 qual|◯|--|--|--|--|--|
 |DWANGO #3 qual|◯|--|--|--|--|--|
 |DWANGO #4 qual|◯|--|--|--|--|--|
