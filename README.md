@@ -254,7 +254,7 @@ Represents a repository of accepted results.
 |Indeednow qualA|◯|--|--|--|--|--|
 |Indeednow qualB|◯|--|--|--|--|--|
 |donuts 2015|◯|--|--|--|None|None|
-|NYC 2015|◯|--|--|--|--|--|
+|NYC 2015|◯|◯|--|--|--|--|
 
 Captions:
 
