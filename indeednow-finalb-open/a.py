@@ -2,18 +2,17 @@
 
 
 def main():
-    from itertools import accumulate
-
     a = int(input())
     b = int(input())
-    summed = [0] * (10 ** 6 + 1)
     mod = 10 ** 9 + 7
+    ans = 0
 
-    for i in range(b + 1):
-        summed[i] = ((i ** 2 * (i + 1)) // 2) % mod
+    # See:
+    # https://beta.atcoder.jp/contests/indeednow-finalb-open/submissions/2066213
+    for i in range(a, b + 1):
+        ans += ((i ** 2 * (i + 1)) // 2) % mod
 
-    ans = list(accumulate(summed))
-    print((ans[b] - ans[a - 1]) % mod)
+    print(ans % mod)
 
 
 if __name__ == '__main__':
