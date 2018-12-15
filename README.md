@@ -256,6 +256,7 @@ Represents a repository of accepted results.
 |Indeednow final open B|◯|--|--|--|--|--|
 |donuts 2015|◯|--|--|--|None|None|
 |NYC 2015|◯|◯|--|--|--|--|
+|bcu30|◯|--|--|--|--|--|
 
 Captions:
 
