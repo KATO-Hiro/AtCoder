@@ -249,6 +249,7 @@ Represents a repository of accepted results.
 |Chokudai SpeedRun 001|◯|◯|◯|◯|◯|--|
 |ttpc2015|◯|--|--|--|--|--|
 |tkppc2|◯|--|--|--|--|--|
+|tkppc3|◯|--|--|--|--|--|
 |Discovery 2016 qual|◯|--|--|--|None|None|
 |snuke21|◯|--|--|--|--|--|
 |Indeednow qualA|◯|--|--|--|--|--|
