@@ -258,6 +258,7 @@ Represents a repository of accepted results.
 |donuts 2015|◯|--|--|--|None|None|
 |NYC 2015|◯|◯|--|--|--|--|
 |bcu30|◯|--|--|--|--|--|
+|joi 2018|◯|--|--|--|--|--|
 |joi 2019|◯|◯|◯|--|--|--|
 
 Captions:
