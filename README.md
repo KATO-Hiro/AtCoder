@@ -260,6 +260,7 @@ Represents a repository of accepted results.
 |bcu30|◯|--|--|--|--|--|
 |joi 2018|◯|--|--|--|--|--|
 |joi 2019|◯|◯|◯|--|--|--|
+|caddi2018b|◯|◯|--|--|--|--|
 
 Captions:
 
