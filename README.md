@@ -262,6 +262,10 @@ Represents a repository of accepted results.
 |joi 2019|◯|◯|◯|--|--|--|
 |caddi2018b|◯|◯|--|--|--|--|
 
+|Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|jag 2017 day1|--|--|--|--|--|--|--|--|--|◯|--|--|
+
 Captions:
 
     ◯: By myself.
