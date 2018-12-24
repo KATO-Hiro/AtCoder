@@ -266,6 +266,7 @@ Represents a repository of accepted results.
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |jag 2017 day1|--|--|--|--|--|--|--|--|--|◯|--|--|
 |paken 2018 day2|◯|◯|◯|--|--|--|--|--|None|None|None|None|
+|xmascon18|◯|--|--|--|--|--|--|--|--|--|None|None|
 
 Captions:
 
