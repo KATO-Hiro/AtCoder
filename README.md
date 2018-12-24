@@ -265,6 +265,7 @@ Represents a repository of accepted results.
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |jag 2017 day1|--|--|--|--|--|--|--|--|--|◯|--|--|
+|paken 2018 day2|◯|◯|◯|--|--|--|--|--|None|None|None|None|
 
 Captions:
 
