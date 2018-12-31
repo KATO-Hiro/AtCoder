@@ -223,7 +223,7 @@ Represents a repository of accepted results.
 |DWANGO #1 qual|◯|--|--|--|--|--|
 |DWANGO #2 qual|◯|--|--|--|--|--|
 |DWANGO #3 qual|◯|--|--|--|--|--|
-|DWANGO #4 qual|◯|--|--|--|--|--|
+|DWANGO #4 qual|◯|◯|--|--|--|--|
 |DWANGO #5 qual|◯|--|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Spring|◯|◯|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Summer|◯|◯|--|--|--|--|
