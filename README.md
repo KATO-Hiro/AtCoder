@@ -202,6 +202,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 026|◯|--|--|--|--|--|
 |AtCoder Grand Contest 027|◯|--|--|--|--|--|
 |AtCoder Grand Contest 028|◯|--|--|--|--|--|
+|AtCoder Grand Contest 030|◯|--|--|--|--|--|
 |CODE FESTIVAL 2015 qual A|◯|--|--|--|None|None|
 |CODE FESTIVAL 2015 qual B|◯|--|--|--|None|None|
 |CODE FESTIVAL 2015 Morning Easy|◯|◯|--|--|None|None|
