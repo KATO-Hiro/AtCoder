@@ -6,14 +6,14 @@ def main():
     a = list(map(int, input().split()))
     cost = [0 for _ in range(n)]
 
-    for i in range(1, n):
+    # See:
+    # http://abc040.contest.atcoder.jp/data/abc/040/editorial.pdf
+    # https://atcoder.jp/contests/abc040/submissions/1140205
+    cost[1] = abs(a[1] - a[0])
+
+    for i in range(2, n):
         candidate1 = cost[i - 1] + abs(a[i - 1] - a[i])
-
-        if i >= 2:
-            candidate2 = cost[i - 2] + abs(a[i - 2] - a[i])
-        else:
-            candidate2 = float('inf')
-
+        candidate2 = cost[i - 2] + abs(a[i - 2] - a[i])
         cost[i] = min(candidate1, candidate2)
 
     print(cost[n - 1])
