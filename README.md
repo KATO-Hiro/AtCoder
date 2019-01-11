@@ -273,6 +273,7 @@ Represents a repository of accepted results.
 |paken 2018 day2|◯|◯|◯|--|--|--|--|--|None|None|None|None|
 |paken 2018 day3|◯|◯||--|--|--|--|--|None|None|None|None|
 |xmascon18|◯|--|--|--|--|--|--|--|--|--|None|None|
+|Educational DP Contest|◯|--|--|--|--|--|--|--|--|--|--|--|
 
 Captions:
 
