@@ -269,6 +269,7 @@ Represents a repository of accepted results.
 |joi 2019|◯|◯|◯|--|--|--|
 |caddi2018b|◯|◯|△|--|--|--|
 |keyence 2019|◯|◯|◯|--|--|--|
+|aising 2019|◯|--|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
