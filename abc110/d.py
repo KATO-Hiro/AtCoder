@@ -3,36 +3,50 @@
 mod = 10 ** 9 + 7
 
 
-def mod_pow(a: int, p: int):
-    '''a ** p % mod.'''
+'''Snippets for combination.
 
-    if p == 0:
+Available functions:
+- count_combination: Count the total number of combinations.
+'''
+
+
+def count_combination(n: int, r: int, mod: int = 10 ** 9 + 7) -> int:
+    '''Count the total number of combinations.
+        nCr % mod.
+
+    Args:
+        n   : Elements. Int of number (greater than 1).
+        r   : The number of r-th combinations. Int of number (greater than 0).
+        mod : Modulo. The default is 10 ** 9 + 7.
+
+    Returns:
+        The total number of combinations.
+
+    Landau notation: O(n)
+
+    See:
+    https://qiita.com/derodero24/items/91b6468e66923a87f39f
+    '''
+
+    if r > (n - r):
+        return count_combination(n, n - r)
+
+    if r == 0 or r == n:
         return 1
 
-    if p % 2 == 0:
-        half_p = p // 2
-        half = mod_pow(a, half_p)
-        return (half ** 2) % mod
-    else:
-        return (a * mod_pow(a, p - 1)) % mod
-
-
-def calc_combination(a: int, b: int):
-    '''aCb % mod.'''
-
-    if b > (a - b):
-        return calc_combination(a, a - b)
+    if r == 1:
+        return n
 
     multiple = 1
     division = 1
 
-    for i in range(b):
-        multiple *= a - i
+    for i in range(r):
+        multiple *= n - i
         division *= i + 1
         multiple %= mod
         division %= mod
 
-    return multiple * mod_pow(division, mod - 2) % mod
+    return multiple * pow(division, mod - 2, mod) % mod
 
 
 def solve(n: int, m: int):
@@ -49,11 +63,11 @@ def solve(n: int, m: int):
                 count += 1
                 remain //= j
 
-            ans *= calc_combination(n + count - 1, n - 1)
+            ans *= count_combination(n + count - 1, n - 1)
             ans %= mod
 
     if remain != 1:
-        ans *= calc_combination(n, 1)
+        ans *= count_combination(n, 1)
         ans %= mod
 
     return ans
