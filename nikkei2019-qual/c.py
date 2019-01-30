@@ -11,13 +11,13 @@ def main():
     # https://misteer.hatenablog.com/entry/NIKKEI2019qual?_ga=2.121425408.962332021.1548821392-1201012407.1527836447
     for i in range(n):
         ai, bi = map(int, input().split())
-        dishes.append(tuple([ai + bi, ai, bi]))
+        dishes.append((ai, bi))
 
-    for index, dish in enumerate(sorted(dishes, reverse=True)):
+    for index, dish in enumerate(sorted(dishes, key=lambda x: x[0] + x[1], reverse=True)):
         if index % 2 == 0:
-            ans += dish[1]
+            ans += dish[0]
         else:
-            ans -= dish[2]
+            ans -= dish[1]
 
     print(ans)
 
