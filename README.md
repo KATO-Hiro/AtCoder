@@ -238,6 +238,7 @@ Represents a repository of accepted results.
 |Tenka1 Programmer Beginner Contest 2018|◯|◯|--|--|--|--|
 |yahoo procon2017 qual|◯|◯|--|--|--|None|
 |yahoo procon2018 qual|◯|◯|--|--|--|None|
+|yahoo procon2019 qual|◯|◯|--|--|--|None|
 |ddcc2016 qual|◯|◯|--|--|None|None|
 |ddcc2017 qual|◯|◯|◯|--|None|None|
 |ddcc2019 qual|◯|◯|--|--|None|None|
