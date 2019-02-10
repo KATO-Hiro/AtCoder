@@ -234,6 +234,7 @@ Represents a repository of accepted results.
 |SoundHound Inc. Programming Contest 2018 Spring|◯|◯|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Summer|◯|◯|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Summer final|◯|--|--|--|--|None|
+|Tenka1 Programmer 2013 qual A|◯|--|--|--|--|--|
 |Tenka1 Programmer Beginner Contest|◯|◯|--|--|--|--|
 |Tenka1 Programmer Beginner Contest 2018|◯|◯|--|--|--|--|
 |yahoo procon2017 qual|◯|◯|--|--|--|None|
