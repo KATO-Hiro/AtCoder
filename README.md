@@ -286,6 +286,7 @@ Represents a repository of accepted results.
 |keyence 2019|◯|◯|◯|--|--|--|
 |aising 2019|◯|◯|△|--|--|--|
 |nikkei 2019 qual|◯|◯|△|--|--|--|
+|k2pc easy|◯|--|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
