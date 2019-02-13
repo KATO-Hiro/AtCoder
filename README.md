@@ -246,6 +246,7 @@ Represents a repository of accepted results.
 |ddcc2019 final|◯|--|--|--|--|None|
 |bitflyer2018 qual|◯|◯|--|--|--|None|
 |bitflyer2018 final open|◯|--|--|--|--|--|
+|tenka1 2012 qual B|◯|--|--|--|None|None|
 |tenka1 2015 qual A|◯|--|--|--|--|None|
 |tenka1 2015 qual B|◯|--|--|--|--|None|
 |tenka1 2016 qual A|◯|--|--|--|--|None|
