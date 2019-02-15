@@ -46,7 +46,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 039|◯|◯|--|--|
 |AtCoder Beginner Contest 040|◯|◯|△|--|
 |AtCoder Beginner Contest 041|◯|◯|◯|--|
-|AtCoder Beginner Contest 042|◯|◯|--|--|
+|AtCoder Beginner Contest 042|◯|◯|◯|--|
 |AtCoder Beginner Contest 043|◯|◯|△|--|
 |AtCoder Beginner Contest 044|◯|◯|--|--|
 |AtCoder Beginner Contest 045|◯|◯|◯|--|
