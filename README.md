@@ -96,7 +96,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 089|◯|◯|△|--|
 |AtCoder Beginner Contest 090|◯|◯|◯|△|
 |AtCoder Beginner Contest 091|◯|◯|△|--|
-|AtCoder Beginner Contest 092|◯|◯|△|--|
+|AtCoder Beginner Contest 092|◯|◯|△|△|
 |AtCoder Beginner Contest 093|◯|◯|△|--|
 |AtCoder Beginner Contest 094|◯|◯|◯|△|
 |AtCoder Beginner Contest 095|◯|◯|◯|--|
