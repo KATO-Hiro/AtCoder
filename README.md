@@ -196,6 +196,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 014|△|--|--|--|--|--|
 |AtCoder Grand Contest 015|◯|--|--|--|--|--|
 |AtCoder Grand Contest 017|△|--|--|--|--|--|
+|AtCoder Grand Contest 018|△|--|--|--|--|--|
 |AtCoder Grand Contest 019|△|--|--|--|--|--|
 |AtCoder Grand Contest 021|△|--|--|--|--|--|
 |AtCoder Grand Contest 022|△|--|--|--|--|--|
