@@ -123,7 +123,8 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 116|◯|◯|◯|--|
 |AtCoder Beginner Contest 117|◯|◯|◯|--|
 |AtCoder Beginner Contest 118|◯|◯|◯|--|
-|AtCoder Beginner Contest 119|--|--|--|--|
+|AtCoder Beginner Contest 119|◯|--|--|--|
+|AtCoder Beginner Contest 120|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
