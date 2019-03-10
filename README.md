@@ -310,6 +310,7 @@ Represents a repository of accepted results.
 |code festival 2018 final open|--|--|◯|--|--|--|--|--|--|--|None|None|
 |nikkei 2019 final|◯|△|--|--|--|--|--|--|None|None|None|None|
 |nikkei 2019 ex|--|◯|◯|--|◯|--|--|--|None|None|None|None|
+|wupc 2019|◯|--|--|--|--|--|--|--|--|--|None|None|
 
 Captions:
 
