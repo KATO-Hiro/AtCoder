@@ -4,13 +4,14 @@
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    ans = 0
+    ans = [0 for _ in range(n + 1)]
 
-    for index, ai in enumerate(a):
-        power = n - index - 1
-        ans += pow(2, power) * a[index]
+    # See:
+    # https://www.slideshare.net/chokudai/codefestival2015quala
+    for i in range(n):
+        ans[i + 1] = 2 * ans[i] + a[i]
 
-    print(ans)
+    print(ans[n])
 
 
 if __name__ == '__main__':
