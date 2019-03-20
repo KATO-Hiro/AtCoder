@@ -303,6 +303,7 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|yuha c88 2015|◯|--|--|--|--|--|--|--|--|--|None|None|
 |wupc2nd|◯|--|--|--|--|--|--|--|--|None|None|None|
 |jag 2017 day1|--|--|--|--|--|--|--|--|--|◯|--|--|
 |paken 2018 day2|◯|◯|◯|--|--|--|--|--|None|None|None|None|
