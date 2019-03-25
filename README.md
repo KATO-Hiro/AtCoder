@@ -305,6 +305,7 @@ Represents a repository of accepted results.
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |code festival 2015 relay|--|◯|◯|--|--|--|--|--|--|--|None|None|
+|code festival 2016 relay|◯|--|--|--|--|--|--|--|--|--|--|None|
 |yuha c88 2015|◯|--|--|--|--|--|--|--|--|--|None|None|
 |wupc2nd|◯|--|--|--|--|--|--|--|--|None|None|None|
 |jag 2017 day1|--|--|--|--|--|--|--|--|--|◯|--|--|
