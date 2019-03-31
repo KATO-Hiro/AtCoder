@@ -230,7 +230,7 @@ Represents a repository of accepted results.
 |CODE FESTIVAL 2017 final|◯|--|--|--|--|--|
 |CODE FESTIVAL 2018 qual A|◯|◯|--|--|--|None|
 |CODE FESTIVAL 2018 qual B|◯|◯|--|--|--|None|
-|CODE THANKS FESTIVAL 2014 A open|◯|--|--|--|--|--|
+|CODE THANKS FESTIVAL 2014 A open|◯|--|◯|--|--|--|
 |CODE THANKS FESTIVAL 2015 open|◯|--|◯|--|--|--|
 |CODE THANKS FESTIVAL 2017 A|◯|◯|--|--|--|--|
 |CODE THANKS FESTIVAL 2018 open|◯|--|◯|◯|--|--|
