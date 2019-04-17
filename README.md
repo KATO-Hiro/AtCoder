@@ -160,6 +160,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 026|◯|◯|--|--|
 |AtCoder Regular Contest 027|◯|--|--|--|
 |AtCoder Regular Contest 028|◯|--|--|--|
+|AtCoder Regular Contest 029|△|--|--|--|
 |Atcoder Regular Contest 031|◯|--|--|--|
 |Atcoder Regular Contest 032|◯|--|--|--|
 |Atcoder Regular Contest 033|◯|--|--|--|
