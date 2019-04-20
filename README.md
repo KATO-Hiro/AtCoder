@@ -326,6 +326,7 @@ Represents a repository of accepted results.
 |nikkei 2019 ex|◯|◯|◯|--|◯|--|--|--|None|None|None|None|
 |utpc 2011|◯|--|--|--|--|--|--|--|--|--|--|--|
 |wupc 2019|◯|--|--|--|--|--|--|--|--|--|None|None|
+|s8pc #1|◯|--|--|--|--|--|--|--|None|None|None|None|
 |s8pc #6|◯|--|--|--|--|--|--|--|--|None|None|None|
 
 Captions:
