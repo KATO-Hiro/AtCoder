@@ -269,6 +269,7 @@ Represents a repository of accepted results.
 |tenka1 2015 qual B|◯|--|--|--|--|None|
 |tenka1 2016 qual A|◯|--|--|--|--|None|
 |tenka1 2016 qual B|◯|--|--|--|--|None|
+|tenka1 beginner 2019|◯|--|--|--|None|None|
 |KUPC2016|◯|--|--|--|--|--|
 |KUPC2017|◯|--|--|--|--|--|
 |KUPC2018|◯|◯|◯|--|--|--|
