@@ -144,6 +144,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 008|◯|◯|--|--|
 |AtCoder Regular Contest 009|◯|--|--|--|
 |AtCoder Regular Contest 010|◯|--|--|--|
+|AtCoder Regular Contest 011|◯|--|--|--|
 |AtCoder Regular Contest 012|◯|◯|--|--|
 |AtCoder Regular Contest 013|--|◯|--|--|
 |AtCoder Regular Contest 014|◯|◯|--|--|
