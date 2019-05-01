@@ -333,6 +333,7 @@ Represents a repository of accepted results.
 |wupc 2019|◯|--|--|--|--|--|--|--|--|--|None|None|
 |s8pc #1|◯|--|--|--|--|--|--|--|None|None|None|None|
 |s8pc #6|◯|--|--|--|--|--|--|--|--|None|None|None|
+|iroha 2019 day1|--|--|--|◯|◯|--|--|--|--|--|--|--|
 
 Captions:
 
