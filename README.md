@@ -334,6 +334,7 @@ Represents a repository of accepted results.
 |s8pc #1|◯|--|--|--|--|--|--|--|None|None|None|None|
 |s8pc #6|◯|--|--|--|--|--|--|--|--|None|None|None|
 |iroha 2019 day1|--|--|--|◯|◯|--|--|--|--|--|--|--|
+|iroha 2019 day2|--|◯|◯|--|--|--|--|--|--|--|--|--|
 
 Captions:
 
