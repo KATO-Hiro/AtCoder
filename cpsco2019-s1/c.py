@@ -16,15 +16,10 @@ def main():
 
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
-    prices = list()
-
-    for i in combinations(a, k):
-        prices.append(sum(i))
-
     ans = float('inf')
 
-    for price in prices:
-        ans = min(ans, count_coins(price, 9, 0))
+    for i in combinations(a, k):
+        ans = min(ans, count_coins(sum(i), 9, 0))
 
     print(ans)
 
