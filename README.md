@@ -337,6 +337,7 @@ Represents a repository of accepted results.
 |iroha 2019 day2|--|◯|◯|--|--|--|--|--|--|--|--|--|
 |iroha 2019 day3|--|--|--|--|◯|◯|--|--|◯|◯|--|--|
 |iroha 2019 day4|--|◯|--|--|--|--|--|--|--|--|--|--|
+|cpsco2019 session 1|--|○|○|--|--|--|--|--|None|None|None|None|
 
 Captions:
 
