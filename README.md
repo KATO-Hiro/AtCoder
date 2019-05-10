@@ -338,6 +338,7 @@ Represents a repository of accepted results.
 |iroha 2019 day3|--|--|--|--|◯|◯|--|--|◯|◯|--|--|
 |iroha 2019 day4|--|◯|--|--|--|--|--|--|--|--|--|--|
 |cpsco2019 session 1|○|○|○|--|--|--|--|--|None|None|None|None|
+|cpsco2019 session 2|◯|--|--|--|--|--|--|--|None|None|None|None|
 |cpsco2019 session 3|--|--|○|△|--|--|--|--|None|None|None|None|
 |cpsco2019 session 4|--|--|○|--|--|--|--|--|None|None|None|None|
 
