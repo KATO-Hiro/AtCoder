@@ -313,7 +313,7 @@ Represents a repository of accepted results.
 |nikkei 2019 qual|◯|◯|△|--|--|--|
 |k2pc easy|◯|--|--|--|--|--|
 |exawizards 2019|◯|◯|--|--|--|--|
-|diverta 2019|◯|◯|△|--|--|--|
+|diverta 2019|◯|◯|△|△|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
