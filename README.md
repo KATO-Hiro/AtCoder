@@ -130,7 +130,6 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 123|◯|◯|◯|◯|
 |AtCoder Beginner Contest 124|◯|◯|◯|--|
 |AtCoder Beginner Contest 125|◯|◯|--|◯|
-|AtCoder Beginner Contest 126|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
@@ -192,6 +191,8 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|E|F|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|AtCoder Beginner Contest 126|◯|◯|◯|--|--|--|
+|AtCoder Beginner Contest 127|--|--|--|--|--|--|
 |AtCoder Grand Contest 001|◯|--|--|--|--|--|
 |AtCoder Grand Contest 002|◯|--|--|--|--|--|
 |AtCoder Grand Contest 003|△|◯|--|--|--|--|
