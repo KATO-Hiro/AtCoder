@@ -344,7 +344,7 @@ Represents a repository of accepted results.
 |cpsco2019 session 1|○|○|○|--|--|--|--|--|None|None|None|None|
 |cpsco2019 session 2|◯|--|--|--|--|--|--|--|None|None|None|None|
 |cpsco2019 session 3|◯|◯|○|△|--|--|--|--|None|None|None|None|
-|cpsco2019 session 4|--|--|○|--|--|--|--|--|None|None|None|None|
+|cpsco2019 session 4|--|◯|○|--|--|--|--|--|None|None|None|None|
 
 Captions:
 
