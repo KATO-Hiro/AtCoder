@@ -156,7 +156,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 021|◯|--|--|--|
 |AtCoder Regular Contest 022|◯|--|--|--|
 |AtCoder Regular Contest 023|◯|--|--|--|
-|AtCoder Regular Contest 024|◯|--|--|--|
+|AtCoder Regular Contest 024|◯|◯|--|--|
 |AtCoder Regular Contest 025|◯|--|--|--|
 |AtCoder Regular Contest 026|◯|◯|--|--|
 |AtCoder Regular Contest 027|◯|--|--|--|
