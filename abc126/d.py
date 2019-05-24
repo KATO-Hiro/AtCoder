@@ -8,6 +8,8 @@ def main():
     to = [[] for _ in range(n)]
     cost = [[] for _ in range(n)]
 
+    # See:
+    # https://www.youtube.com/watch?v=26AWkQNRb-A
     for i in range(n - 1):
         ui, vi, wi = map(int, input().split())
         ui -= 1
