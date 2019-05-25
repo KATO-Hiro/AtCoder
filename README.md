@@ -192,7 +192,7 @@ Represents a repository of accepted results.
 |Contest name\Problems|A|B|C|D|E|F|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |AtCoder Beginner Contest 126|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 127|◯|◯|◯|--|--|--|
+|AtCoder Beginner Contest 127|◯|◯|◯|△|--|--|
 |AtCoder Grand Contest 001|◯|--|--|--|--|--|
 |AtCoder Grand Contest 002|◯|--|--|--|--|--|
 |AtCoder Grand Contest 003|△|◯|--|--|--|--|
