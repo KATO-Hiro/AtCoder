@@ -318,6 +318,7 @@ Represents a repository of accepted results.
 |k2pc easy|◯|--|--|--|--|--|
 |exawizards 2019|◯|◯|--|--|--|--|
 |diverta 2019|◯|◯|△|△|--|--|
+|m solutions 2019|◯|◯|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
