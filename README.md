@@ -315,7 +315,7 @@ Represents a repository of accepted results.
 |joi 2017|◯|◯|--|--|--|--|
 |joi 2018 qual|◯|◯|--|--|--|--|
 |joi 2019|◯|◯|◯|--|--|--|
-|caddi2018b|◯|◯|△|--|--|--|
+|caddi2018b|◯|◯|△|△|--|--|
 |keyence 2019|◯|◯|◯|--|--|--|
 |aising 2019|◯|◯|△|--|--|--|
 |nikkei 2019 qual|◯|◯|△|--|--|--|
