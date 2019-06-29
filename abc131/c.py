@@ -36,10 +36,7 @@ def main():
     z = b // l - (a - 1) // l
     w = b - a + 1
 
-    if c % d == 0 or d % c == 0:
-        print(w - x)
-    else:
-        print(w - (x + y - z))
+    print(w - (x + y - z))
 
 
 if __name__ == '__main__':
