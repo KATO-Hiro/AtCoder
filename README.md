@@ -355,7 +355,7 @@ Represents a repository of accepted results.
 |cpsco2019 session 3|◯|◯|○|△|--|--|--|--|None|None|None|None|
 |cpsco2019 session 4|--|◯|○|--|--|--|--|--|None|None|None|None|
 |chokudai speedrun 002|◯|◯|◯|◯|◯|◯|◯|◯|--|--|--|--|
-|Typical DP|◯|--|--|--|--|--|--|--|--|--|--|--|
+|Typical DP|◯|◯|◯|--|--|--|--|--|--|--|--|--|
 
 Captions:
 
