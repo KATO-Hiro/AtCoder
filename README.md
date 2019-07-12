@@ -325,7 +325,7 @@ Represents a repository of accepted results.
 |diverta 2019|◯|◯|△|△|--|--|
 |m solutions 2019|◯|◯|--|--|--|--|
 |diverta 2019 2|◯|--|--|--|--|--|
-|Typical 001|◯|--|--|None|None|None|
+|Typical 001|◯|◯|--|None|None|None|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
