@@ -302,6 +302,7 @@ Represents a repository of accepted results.
 |donuts 2015|◯|--|--|--|None|None|
 |NYC 2015|◯|◯|--|--|--|--|
 |bcu30|◯|--|--|--|--|--|
+|bcu30 2019|◯|--|None|None|None|None|
 |joi 2006|◯|--|--|--|--|--|
 |joi 2007 qual|◯|◯|◯|--|--|--|
 |joi 2007|◯|--|--|--|--|--|
