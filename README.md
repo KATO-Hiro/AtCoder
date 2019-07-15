@@ -229,6 +229,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 030|◯|--|--|--|--|--|
 |AtCoder Grand Contest 033|△|--|--|--|--|--|
 |AtCoder Grand Contest 034|△|--|--|--|--|--|
+|AtCoder Grand Contest 035|△|--|--|--|--|--|
 |CODE FORMULA 2014 qual A|◯|--|--|--|None|None|
 |CODE FESTIVAL 2014 qual A|◯|◯|◯|--|None|None|
 |CODE FESTIVAL 2014 Easy|◯|◯|--|--|None|None|
