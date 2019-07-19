@@ -304,6 +304,7 @@ Represents a repository of accepted results.
 |NYC 2015|◯|◯|--|--|--|--|
 |bcu30|◯|--|--|--|--|--|
 |bcu30 2018|◯|--|None|None|None|None|
+|bcu30 2019 qual|◯|None|None|None|None|None|
 |bcu30 2019|◯|--|None|None|None|None|
 |joi 2006|◯|--|--|--|--|--|
 |joi 2007 qual|◯|◯|◯|--|--|--|
