@@ -8,11 +8,6 @@ def main():
     m = int(input())
     b = list(map(int, input().split()))
     count = 0
-
-    if n < m:
-        print('no')
-        exit()
-
     i = 0
     j = 0
 
