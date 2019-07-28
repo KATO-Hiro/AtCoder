@@ -23,7 +23,7 @@ def main():
             for q in range(10):
                 # XXX: next_dpの括弧内の理解がかなり怪しい
                 # digit - 1桁のときの結果を使って，
-                # それぞれのあまりについて組み合わせの数を更新
+                # それぞれのあまりjについて組み合わせの数を更新
                 for j in range(n):
                     next_dp[(q * digit + j) % n] += dp[j]
                     next_dp[(q * digit + j) % n] %= mod
