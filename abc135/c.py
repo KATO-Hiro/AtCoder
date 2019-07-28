@@ -8,23 +8,13 @@ def main():
     ans = 0
 
     for i in range(n):
-        if b[i] - a[i] >= 0:
-            ans += a[i]
-            b[i] -= a[i]
-            a[i] = 0
+        left = min(a[i], b[i])
+        ans += left
+        b[i] -= left
 
-            if b[i] - a[i + 1] >= 0:
-                ans += a[i + 1]
-                b[i] -= a[i + 1]
-                a[i + 1] = 0
-            else:
-                ans += b[i]
-                a[i + 1] -= b[i]
-                b[i] = 0
-        else:
-            ans += b[i]
-            a[i] -= b[i]
-            b[i] = 0
+        right = min(a[i + 1], b[i])
+        ans += right
+        a[i + 1] -= right
 
     print(ans)
 
