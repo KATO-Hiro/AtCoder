@@ -366,7 +366,7 @@ Represents a repository of accepted results.
 |chokudai speedrun 002|◯|◯|◯|◯|◯|◯|◯|◯|--|--|--|--|
 |Typical DP|◯|◯|◯|△|△|--|--|--|--|--|--|--|
 |kupc 2013|◯|--|--|--|--|--|--|--|--|--|--|--|
-|tkppc 4 day1|◯|◯|--|--|--|--|--|--|--|--|--|--|
+|tkppc 4 day1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
 
 Captions:
 
