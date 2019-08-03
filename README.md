@@ -199,7 +199,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 131|◯|◯|◯|◯|△|--|
 |AtCoder Beginner Contest 132|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 133|◯|◯|△|◯|--|--|
-|AtCoder Beginner Contest 134|◯|◯|◯|--|--|--|
+|AtCoder Beginner Contest 134|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 135|◯|◯|◯|△|--|--|
 |AtCoder Grand Contest 001|◯|--|--|--|--|--|
 |AtCoder Grand Contest 002|◯|--|--|--|--|--|
