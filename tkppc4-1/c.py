@@ -21,7 +21,6 @@ def main():
     for i in range(2, 10 + 1):
         if decimal_to_bin(n, i) == x:
             print(i)
-            exit()
 
 
 if __name__ == '__main__':
