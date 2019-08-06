@@ -6,13 +6,7 @@ def main():
     ans = 0
 
     for i in range(1, n + 1):
-        if 10 <= i <= 99:
-            continue
-        elif 1000 <= i <= 9999:
-            continue
-        elif i == 100000:
-            continue
-        else:
+        if len(list(str(i))) % 2 == 1:
             ans += 1
 
     print(ans)
