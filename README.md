@@ -274,6 +274,7 @@ Represents a repository of accepted results.
 |yahoo procon2018 qual|◯|◯|--|--|--|None|
 |yahoo procon2019 qual|◯|◯|◯|--|--|None|
 |ddcc2016 qual|◯|◯|--|--|None|None|
+|ddcc2016 final|◯|--|--|--|--|None|
 |ddcc2017 qual|◯|◯|◯|--|None|None|
 |ddcc2019 qual|◯|◯|--|--|None|None|
 |ddcc2019 final|◯|--|--|--|--|None|
