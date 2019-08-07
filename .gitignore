@@ -108,5 +108,6 @@ ENV/
 samplecase/
 compile/
 patcoder.py
+patcoder_virtualdir.py
 login.txt
 setting.ini
