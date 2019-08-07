@@ -1,0 +1,100 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+    // same ids are connected.
+    // See: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+	"Read Interger": {
+		"prefix": "read-int",
+		"body": [
+            "$0 = int(input())"
+		],
+		"description": "Read an integer."
+	},
+
+	"Read 1D-Integers as map obj": {
+		"prefix": "read-ints-1D-map",
+		"body": [
+			"$1, $0 = map(int, input().split())",
+		],
+		"description": "Read a one-dimensional array of integers."
+    },
+
+	"Read 1D-Integers": {
+		"prefix": "read-ints-1D",
+		"body": [
+			"$1, $0 = list(map(int, input().split()))",
+		],
+		"description": "Read a one-dimensional array of integers."
+    },
+
+	"Read 2D-Integers": {
+		"prefix": "read-ints-2D",
+		"body": [
+            "$1 = [list(map(int, input().split())) for _ in range($2)]"
+		],
+		"description": "Read a two-dimensional array of integers."
+    },
+
+    "Read input using loop": {
+        "prefix": "read-input-using-loop",
+        "body": [
+            "for $1 in range($2):",
+                "\t$3, $4 = map(int, input().split())"
+        ],
+    },
+
+    "Generate values as 1D-Array": {
+        "prefix": "generate-values-1D",
+        "body": [
+            "$1 = [$2 for _ in range($3)]"
+        ],
+        "description": "Generate a one-dimensional array of values."
+    },
+
+    "Double for loop": {
+        "prefix": "double-for-loop",
+        "body": [
+            "for $1 in range($2):",
+            "\tfor $3 in range($4):",
+            "\t\tpass"
+        ],
+    },
+
+    "Import Accumulate": {
+        "prefix": "import-accumulate",
+        "body": [
+            "from itertools import accumulate",
+            "",
+            "$1 = list(accumulate([0] + list(map(int, input().split()))))"
+        ],
+        "description": "Import accumulate and return a list for cumulative sum."
+    },
+
+    "Import Counter": {
+        "prefix": "import-counter",
+        "body": [
+            "from collections import Counter",
+            "",
+            "$1 = Counter($2)"
+        ],
+    },
+
+    "Mod": {
+        "prefix": "mod-10 ** 9 + 7",
+        "body": [
+            "mod = 10 ** 9 + 7"
+        ],
+    },
+
+    "ans": {
+        "prefix": "ans",
+        "body": [
+            "ans = $1",
+            "",
+            "print(ans)"
+        ],
+    }
+
+}
