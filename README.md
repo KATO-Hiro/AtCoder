@@ -276,6 +276,7 @@ Represents a repository of accepted results.
 |ddcc2016 qual|◯|◯|--|--|None|None|
 |ddcc2016 final|◯|--|--|--|--|None|
 |ddcc2017 qual|◯|◯|◯|--|None|None|
+|ddcc2017 final|△|--|--|--|--|None|
 |ddcc2019 qual|◯|◯|--|--|None|None|
 |ddcc2019 final|◯|--|--|--|--|None|
 |bitflyer2018 qual|◯|◯|--|--|--|None|
