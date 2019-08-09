@@ -328,6 +328,7 @@ Represents a repository of accepted results.
 |joi 2018 qual|◯|◯|--|--|--|--|
 |joi 2019|◯|◯|◯|--|--|--|
 |caddi2018b|◯|◯|△|△|--|--|
+|hack to the future 2018 qual|◯|None|None|None|None|None|
 |keyence 2019|◯|◯|◯|--|--|--|
 |aising 2019|◯|◯|△|--|--|--|
 |nikkei 2019 qual|◯|◯|△|--|--|--|
