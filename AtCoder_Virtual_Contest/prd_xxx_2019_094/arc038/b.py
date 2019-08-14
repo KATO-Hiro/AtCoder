@@ -4,46 +4,31 @@
 def main():
     h, w = map(int, input().split())
     s = [list(input()) for _ in range(h)]
-    dxy = [(1, 0), (0, 1), (1, 1)]
-    memo = [[None for _ in range(w)] for _ in range(h)]
 
-    def is_lost(i, j) -> bool:
-        # 盤外
-        if i < 0 or h <= i or j < 0 or w <= j:
-            return True
+    # See:
+    # https://atcoder.jp/contests/arc038/submissions/6892990
+    # 注：写経したため，自分の理解した範囲でコードの意図を言語化
+    # マス(H, W)から(1, 1)に到達できるかどうかを判定
+    dp = [[False for _ in range(w)] for _ in range(h)]
 
-        # 障害物
-        if s[i][j] == '#':
-            return True
+    # 実装は，0-index
+    for i in range(h - 1, -1, -1):
+        for j in range(w - 1, -1, -1):
+            # 到達できるかどうかを確認済み，もしくは障害物があるときは，更新しない
+            if dp[i][j] or s[i][j] == '#':
+                continue
 
-        return False
+            # 現在の位置から移動前の状態にできるかどうか
+            # 3方向（問題文とは逆に，左・上・左上）それぞれ確認
+            if i > 0:
+                dp[i - 1][j] = True
+            if j > 0:
+                dp[i][j - 1] = True
+            if i > 0 and j > 0:
+                dp[i - 1][j - 1] = True
 
-    def judge(i, j) -> str:
-        # 基本ケース（終了条件）
-        if is_lost(i, j):
-            return True
-
-        # 計算量削減のため，メモを利用（メモ化再帰）
-        if memo[i][j] is not None:
-            return memo[i][j]
-
-        # 初期化
-        result = False
-
-        # 再帰ケース
-        # 現在の位置(i, j)から下・右・右下の3方向に移動
-        for dx, dy in dxy:
-            nx = j + dx
-            ny = i + dy
-
-            if judge(ny, nx) is False:
-                result = True
-
-        # メモに記録して，次回以降はこの結果を使い回す
-        memo[i][j] = result
-        return memo[i][j]
-
-    if judge(0, 0):
+    # 初期位置に到達できたかどうか
+    if dp[0][0]:
         print('First')
     else:
         print('Second')
