@@ -342,7 +342,7 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|code festival 2015 final open|--|◯|--|--|--|--|--|--|--|--|None|None|
+|code festival 2015 final open|◯|◯|--|--|--|--|--|--|--|--|None|None|
 |code festival 2015 relay|--|◯|◯|--|--|--|--|--|--|--|None|None|
 |code festival 2016 relay|◯|◯|◯|△|--|--|--|--|--|--|--|None|
 |code festival 2018 relay open|◯|--|--|--|--|--|--|--|--|--|None|None|
