@@ -3,29 +3,19 @@
 
 def main():
     s = input()
-    n = len(s)
-    pre = ''
+    prev, cur = '', ''
     ans = 0
-    i = 0
 
-    # See:
-    # https://atcoder.jp/contests/agc037/submissions/6955216
-    while i < n:
-        cur = s[i]
+    for si in s:
+        cur += si  # KeyInsight: curに1文字加える
 
-        if pre == cur:
-            if i + 1 < n:
-                pre = cur + s[i + 1]
-                # 1文字増やすことに伴い，参照するインデックスも修正
-                i += 1
-            # 末尾の処理
-            else:
-                break
-        else:
-            pre = cur
+        # prevとcurが異なる
+        if cur != prev:
+            ans += 1
 
-        ans += 1
-        i += 1
+            # prevとcurを更新
+            prev = cur
+            cur = ''
 
     print(ans)
 
