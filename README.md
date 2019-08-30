@@ -345,6 +345,7 @@ Represents a repository of accepted results.
 |diverta 2019 2|◯|--|--|--|--|--|
 |Typical 001|◯|◯|--|None|None|None|
 |jsc 2019 qual|◯|△|--|--|--|--|
+|AtCoder Petrozavodsk Content 001|◯|--|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
