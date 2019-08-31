@@ -346,6 +346,7 @@ Represents a repository of accepted results.
 |Typical 001|◯|◯|--|None|None|None|
 |jsc 2019 qual|◯|△|--|--|--|--|
 |AtCoder Petrozavodsk Content 001|◯|--|--|--|--|--|
+|chokudai 004|◯|None|None|None|None|None|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
