@@ -250,7 +250,7 @@ Represents a repository of accepted results.
 |CODE FESTIVAL 2015 Morning Middle|◯|--|--|--|None|None|
 |CODE FESTIVAL 2016 qual A|◯|△|--|--|--|None|
 |CODE FESTIVAL 2016 qual B|◯|◯|--|--|--|None|
-|CODE FESTIVAL 2016 qual C|◯|--|◯|--|--|None|
+|CODE FESTIVAL 2016 qual C|◯|△|◯|--|--|None|
 |CODE FESTIVAL 2016 final|◯|◯|--|--|--|--|
 |CODE FESTIVAL 2017 qual A|◯|△|--|--|--|--|
 |CODE FESTIVAL 2017 qual B|◯|◯|--|--|--|--|
