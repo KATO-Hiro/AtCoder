@@ -349,7 +349,7 @@ Represents a repository of accepted results.
 |diverta 2019 2|◯|--|--|--|--|--|
 |Typical 001|◯|◯|--|None|None|None|
 |jsc 2019 qual|◯|△|--|--|--|--|
-|AtCoder Petrozavodsk Content 001|◯|--|--|--|--|--|
+|AtCoder Petrozavodsk Content 001|◯|△|--|--|--|--|
 |chokudai 003|◯|None|None|None|None|None|
 |chokudai 004|◯|None|None|None|None|None|
 
