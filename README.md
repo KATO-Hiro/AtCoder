@@ -241,6 +241,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 033|△|--|--|--|--|--|
 |AtCoder Grand Contest 034|△|--|--|--|--|--|
 |AtCoder Grand Contest 035|△|--|--|--|--|--|
+|AtCoder Grand Contest 036|△|--|--|--|--|--|
 |AtCoder Grand Contest 037|△|--|--|--|--|--|
 |AtCoder Grand Contest 038|△|--|--|--|--|--|
 |CODE FORMULA 2014 qual A|◯|--|--|--|None|None|
