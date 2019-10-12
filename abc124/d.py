@@ -2,6 +2,8 @@
 
 
 def main():
+    from itertools import accumulate
+
     n, k = map(int, input().split())
     s = list(input())
 
@@ -31,28 +33,17 @@ def main():
 
     add = 2 * k + 1
 
-    # 1. left，rightをfor文の前に
-    left = 0
-    right = 0  # [left, right)
+    # 累積和
+    summed = list(accumulate([0] + nums))
+
     tmp = 0
     ans = 0
 
     # 偶数番目に着目
     for i in range(0, len(nums), 2):
-        # 2. 次のleft, rightを決める
-        next_left = i
-        next_right = min(i + add, len(nums))
-
-        # 3.
-        # 左端を移動
-        while next_left > left:
-            tmp -= nums[left]
-            left += 1
-
-        # 右端を移動
-        while next_right > right:
-            tmp += nums[right]
-            right += 1
+        left = i
+        right = min(i + add, len(nums))
+        tmp = summed[right] - summed[left]
 
         ans = max(ans, tmp)
 
