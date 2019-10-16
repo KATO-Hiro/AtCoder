@@ -277,7 +277,7 @@ Represents a repository of accepted results.
 |DWANGO #4 qual|◯|◯|--|--|--|--|
 |DWANGO #5 qual|◯|--|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Spring|◯|◯|--|--|--|--|
-|SoundHound Inc. Programming Contest 2018 Summer|◯|◯|--|--|--|--|
+|SoundHound Inc. Programming Contest 2018 Summer|◯|◯|△|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Summer final|◯|--|--|--|--|None|
 |Tenka1 Programmer 2013 qual A|◯|--|--|--|--|--|
 |Tenka1 Programmer 2014 qual B|◯|--|--|--|--|--|
