@@ -349,7 +349,7 @@ Represents a repository of accepted results.
 |exawizards 2019|◯|◯|--|--|--|--|
 |diverta 2019|◯|◯|△|△|--|--|
 |m solutions 2019|◯|◯|--|--|--|--|
-|diverta 2019 2|◯|△|--|--|--|--|
+|diverta 2019 2|◯|△|△|--|--|--|
 |Typical 001|◯|◯|--|None|None|None|
 |jsc 2019 qual|◯|△|--|--|--|--|
 |AtCoder Petrozavodsk Content 001|◯|△|--|--|--|--|
