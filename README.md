@@ -348,7 +348,7 @@ Represents a repository of accepted results.
 |k2pc easy|◯|--|--|--|--|--|
 |exawizards 2019|◯|◯|--|--|--|--|
 |diverta 2019|◯|◯|△|△|--|--|
-|m solutions 2019|◯|◯|--|--|--|--|
+|m solutions 2019|◯|◯|--|◯|--|--|
 |diverta 2019 2|◯|△|△|--|--|--|
 |Typical 001|◯|◯|--|None|None|None|
 |jsc 2019 qual|◯|△|--|--|--|--|
