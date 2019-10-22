@@ -11,7 +11,7 @@ def main():
     # See:
     # https://atcoder.jp/contests/abc006/submissions/1112016
     # WAの原因：成立しない条件の境界値を0以下だと思っていた，2項目の条件に気がつけなかった
-    if summed < 0 or (m - 2 * n) < 0:
+    if summed < 0:
         print(-1, -1, -1)
         exit()
 
