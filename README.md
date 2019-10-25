@@ -129,7 +129,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 122|◯|◯|◯|--|
 |AtCoder Beginner Contest 123|◯|◯|◯|◯|
 |AtCoder Beginner Contest 124|◯|◯|◯|△|
-|AtCoder Beginner Contest 125|◯|◯|--|◯|
+|AtCoder Beginner Contest 125|◯|◯|△|◯|
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
