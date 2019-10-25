@@ -1,67 +1,33 @@
 # -*- coding: utf-8 -*-
-'''Snippets for factorization.
-Available functions:
-- run_prime_factorization: Run prime factorization.
-'''
-
-
-def run_prime_factorization(max_number: int) -> dict:
-    '''Run prime factorization.
-    Args:
-        max_number: Int of number (greater than 1).
-    Returns:
-        A dictionary's items ((base, exponent) pairs).
-    Landau notation: O(log n)
-    '''
-
-    from math import sqrt
-
-    ans = dict()
-    remain = max_number
-
-    for base in range(2, int(sqrt(max_number)) + 1):
-        if remain % base == 0:
-            exponent_count = 0
-
-            while remain % base == 0:
-                exponent_count += 1
-                remain //= base
-
-            ans[base] = exponent_count
-
-    if remain != 1:
-        ans[remain] = 1
-
-    return ans
 
 
 def main():
     from fractions import gcd
 
     n = int(input())
-    d = dict()
     a = list(map(int, input().split()))
+    left = [0 for _ in range(n + 1)]
+    right = [0 for _ in range(n + 1)]
 
-    for ai in a:
-        p = run_prime_factorization(ai)
+    # KeyInsight
+    # 一つを書き換える→消すと同じ意味
+    # 最大公約数の交換則
+    # 左右から最大公約数を前計算
+    # See:
+    # https://www.youtube.com/watch?v=8lm8o8L9Bmw
+    # http://drken1215.hatenablog.com/entry/2019/04/27/224100_1
+    for i in range(n):
+        left[i + 1] = gcd(left[i], a[i])
 
-        for key, pi in p.items():
-            if key not in d.keys():
-                d[key] = 1
-            else:
-                d[key] += 1
+    for i in range(n - 1, -1, -1):
+        right[i] = gcd(right[i + 1], a[i])
 
-    ans = 1
+    ans = 0
 
-    for key, val in sorted(d.items(), key=lambda x: x[1], reverse=True):
-        if val == 3:
-            ans *= key
-        elif val == 2:
-            ans *= key
-            break
-
-    for i in range(1, n):
-        ans = max(ans, gcd(a[i - 1], a[i]))
+    for i in range(n):
+        l = left[i]
+        r = right[i + 1]
+        ans = max(ans, gcd(l, r))
 
     print(ans)
 
