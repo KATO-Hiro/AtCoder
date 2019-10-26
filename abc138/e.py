@@ -24,7 +24,7 @@ def main():
         alpha[(ord(si) - ord('a'))].append(index + n)
 
     ans = 0
-    p = 0
+    p = 0  # after p
 
     for ti in t:
         c = ord(ti) - ord('a')
@@ -36,8 +36,10 @@ def main():
         # 二分探索でWAを量産
         # See:
         # https://atcoder.jp/contests/abc138/submissions/6999265
+        # p以上の最小の値
         p = alpha[c][bisect_left(alpha[c], p)] + 1
 
+        # インデックスが，sの長さ以上のとき
         if p >= n:
             p -= n
             ans += n
