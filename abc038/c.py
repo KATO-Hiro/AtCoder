@@ -3,21 +3,23 @@
 
 def main():
     n = int(input())
-    a = list(map(int, input().split()))
-    count = 1
+    a = list(map(int, input().split())) + [-1]
+    i = 0  # 現在見ている数列aの位置
     ans = 0
 
     # KeyInsight
-    # 単調増加する数列の個数mを数える
-    # m * (m + 1) // 2個がl, rの組み合わせの数
-    for i in range(1, n):
-        if a[i] > a[i - 1]:
-            count += 1
-        else:
-            ans += count * (count + 1) // 2
-            count = 1
+    # 尺取り法
+    # See:
+    # https://atcoder.jp/contests/abc038/submissions/744050
+    while i < n:
+        j = 1  # 単調増加する個数
 
-    ans += count * (count + 1) // 2
+        while a[i + 1] > a[i]:
+            i += 1
+            j += 1
+
+        ans += j * (j + 1) // 2
+        i += 1
 
     print(ans)
 
