@@ -358,6 +358,7 @@ Represents a repository of accepted results.
 |AtCoder Petrozavodsk Content 001|◯|△|--|--|--|--|
 |chokudai 003|◯|None|None|None|None|None|
 |chokudai 004|◯|None|None|None|None|None|
+|nikkei 2019 2 qual|--|△|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
