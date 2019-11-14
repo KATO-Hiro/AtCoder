@@ -137,7 +137,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 002|◯|△|◯|--|
 |AtCoder Regular Contest 003|◯|--|--|--|
 |AtCoder Regular Contest 004|◯|◯|--|--|
-|AtCoder Regular Contest 005|◯|--|--|--|
+|AtCoder Regular Contest 005|◯|◯|--|--|
 |AtCoder Regular Contest 006|◯|--|◯|--|
 |AtCoder Regular Contest 007|◯|◯|--|--|
 |AtCoder Regular Contest 008|◯|◯|--|--|
