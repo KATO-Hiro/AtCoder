@@ -2,33 +2,25 @@
 
 
 def main():
-    from string import ascii_lowercase
+    # See:
+    # https://atcoder.jp/contests/arc009/submissions/6100055
+    b = {int(x): index for index, x in enumerate(input().split())}
 
-    b = list(map(int, input().split()))
+    # 再帰関数で1桁ずつ対応する数字に変換
+    def f(x):
+        if x < 10:
+            return b[x]
+
+        p, q = divmod(x, 10)
+
+        return 10 * f(p) + b[q]
+
     n = int(input())
+    words = [int(input()) for _ in range(n)]
 
-    # 数字をアルファベットに変換
-    d = dict()
-    alpha = ascii_lowercase[:len(b)]
-
-    for index, bi in enumerate(b):
-        d[bi] = alpha[index]
-
-    ans = list()
-
-    for _ in range(n):
-        ai = input()
-        mod_ai = ''
-
-        for aii in list(ai):
-            mod_ai += d[int(aii)]
-
-        # 文字の長さ，変換後の文字列，変換前の数字
-        ans.append((len(ai), mod_ai, ai))
-
-    # 昇順に
-    for _, _, number in sorted(ans):
-        print(number)
+    # 自分で作成した関数でsortできるのは知らなかった
+    sorted_words = sorted(words, key=f)
+    print('\n'.join(map(str, sorted_words)))
 
 
 if __name__ == '__main__':
