@@ -173,7 +173,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 039|◯|△|--|--|
 |AtCoder Regular Contest 040|◯|△|--|--|
 |AtCoder Regular Contest 041|◯|◯|--|--|
-|AtCoder Regular Contest 042|◯|--|--|--|
+|AtCoder Regular Contest 042|◯|◯|--|--|
 |AtCoder Regular Contest 043|◯|--|--|--|
 |AtCoder Regular Contest 044|◯|--|--|--|
 |AtCoder Regular Contest 045|◯|--|--|--|
