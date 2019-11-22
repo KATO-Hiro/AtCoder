@@ -165,7 +165,7 @@ Represents a repository of accepted results.
 |Atcoder Regular Contest 031|◯|--|--|--|
 |Atcoder Regular Contest 032|◯|--|--|--|
 |Atcoder Regular Contest 033|◯|--|--|--|
-|Atcoder Regular Contest 034|◯|--|--|--|
+|Atcoder Regular Contest 034|◯|◯|--|--|
 |Atcoder Regular Contest 035|◯|◯|--|--|
 |Atcoder Regular Contest 036|◯|--|--|--|
 |AtCoder Regular Contest 037|◯|--|--|--|
