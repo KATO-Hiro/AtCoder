@@ -297,6 +297,7 @@ Represents a repository of accepted results.
 |ddcc2017 final|△|--|--|--|--|None|
 |ddcc2019 qual|◯|◯|--|--|None|None|
 |ddcc2019 final|◯|--|--|--|--|None|
+|ddcc2020 qual|◯|--|--|--|--|--|
 |bitflyer2018 qual|◯|◯|--|--|--|None|
 |bitflyer2018 final open|◯|--|--|--|--|--|
 |tenka1 2012 qual A|--|◯|--|--|None|None|
