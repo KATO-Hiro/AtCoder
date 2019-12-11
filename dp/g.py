@@ -11,6 +11,7 @@ def main():
     n, m = map(int, input().split())
     graph = [[] for _ in range(n)]
     # node vを始点としたときの，graphの有効パスの長さの最大値
+    # △：xi, yiの通るときのパスの長さの最大値としていた．もっともシンプルでよかったみたい
     dp = [-1 for _ in range(n)]
 
     for _ in range(m):
@@ -25,18 +26,23 @@ def main():
     # See:
     # https://qiita.com/drken/items/03c7db44ccd27820ea0d#g-%E5%95%8F%E9%A1%8C---longest-path
     def rec(v):
+        # 再帰関数(dfs)で計算しようとはしていた
+        # △：メモ化再帰で計算量を削減
         # 更新済み
         if dp[v] != -1:
             return dp[v]
 
         result = 0
 
+        # △：隣接するnodeを順番にチェック
         for next_v in graph[v]:
+            # △：次に進むから，パスの長さが伸びる
             result = max(result, rec(next_v) + 1)
 
         # メモを更新
         dp[v] = result
 
+        # △：返す
         return dp[v]
 
     ans = 0
