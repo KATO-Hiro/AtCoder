@@ -364,7 +364,7 @@ Represents a repository of accepted results.
 |chokudai 003|◯|None|None|None|None|None|
 |chokudai 004|◯|None|None|None|None|None|
 |nikkei 2019 2 qual|◯|△|--|--|--|--|
-|sumitrust 2019|--|◯|◯|△|--|--|
+|sumitrust 2019|◯|◯|◯|△|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
