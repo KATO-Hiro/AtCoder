@@ -348,6 +348,7 @@ Represents a repository of accepted results.
 |joi 2017|◯|◯|--|--|--|--|
 |joi 2018 qual|◯|◯|--|--|--|--|
 |joi 2019|◯|◯|◯|--|--|--|
+|joi 2020 yo 2|◯|--|--|--|--|--|
 |caddi2018b|◯|◯|△|△|--|--|
 |hack to the future 2018 qual|◯|None|None|None|None|None|
 |keyence 2019|◯|◯|◯|--|--|--|
