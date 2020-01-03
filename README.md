@@ -215,7 +215,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 146|◯|◯|◯|--|--|--|
 |AtCoder Beginner Contest 147|◯|◯|△|△|--|--|
 |AtCoder Beginner Contest 148|--|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 149|--|◯|◯|--|--|--|
+|AtCoder Beginner Contest 149|--|◯|◯|◯|--|--|
 |AtCoder Grand Contest 001|◯|--|--|--|--|--|
 |AtCoder Grand Contest 002|◯|△|△|--|--|--|
 |AtCoder Grand Contest 003|△|◯|◯|--|--|--|
