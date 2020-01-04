@@ -383,6 +383,7 @@ Represents a repository of accepted results.
 |paken 2018 day2|◯|◯|◯|--|--|--|--|--|None|None|None|None|
 |paken 2018 day3|◯|◯||--|--|--|--|--|None|None|None|None|
 |paken 2019 day3|◯|○|◯|△|--|--|--|--|None|None|None|None|
+|paken 2019 day4|--|○|--|--|--|--|--|--|None|None|None|None|
 |xmascon18|◯|--|--|--|--|--|--|--|--|--|None|None|
 |Educational DP Contest|◯|◯|△|△|△|△|△|△|△|--|△|--|
 |code festival 2018 final open|△|--|◯|--|--|--|--|--|--|--|None|None|
