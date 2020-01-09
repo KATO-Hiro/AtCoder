@@ -2,7 +2,8 @@
 
 
 def main():
-    pass
+    alpha = sorted(list(map(int, input().split())), reverse=True)
+    print(alpha[2])
 
 
 if __name__ == '__main__':
