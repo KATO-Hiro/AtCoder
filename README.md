@@ -286,6 +286,7 @@ Represents a repository of accepted results.
 |DWANGO #3 qual|◯|--|--|--|--|--|
 |DWANGO #4 qual|◯|◯|--|--|--|--|
 |DWANGO #5 qual|◯|--|--|--|--|--|
+|DWANGO #6 qual|◯|--|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Spring|◯|◯|--|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Summer|◯|◯|△|--|--|--|
 |SoundHound Inc. Programming Contest 2018 Summer final|◯|--|--|--|--|None|
