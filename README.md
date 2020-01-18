@@ -358,6 +358,7 @@ Represents a repository of accepted results.
 |caddi2018b|◯|◯|△|△|--|--|
 |hack to the future 2018 qual|◯|None|None|None|None|None|
 |keyence 2019|◯|◯|◯|--|--|--|
+|keyence 2020|◯|◯|◯|--|--|--|
 |aising 2019|◯|◯|△|--|--|--|
 |nikkei 2019 qual|◯|◯|△|--|--|--|
 |k2pc easy|◯|--|--|--|--|--|
