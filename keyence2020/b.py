@@ -7,7 +7,6 @@ def main():
 
     for i in range(n):
         xi, li = map(int, input().split())
-        # y.append((xi - li + 1, xi + li - 1))
         y.append((xi - li, xi + li))
 
     count = 1
