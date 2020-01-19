@@ -277,7 +277,7 @@ Represents a repository of accepted results.
 |CODE FESTIVAL 2018 qual B|◯|◯|--|--|--|None|
 |CODE THANKS FESTIVAL 2014 A open|◯|--|◯|--|--|--|
 |CODE THANKS FESTIVAL 2014 B open|◯|--|--|--|--|--|
-|CODE THANKS FESTIVAL 2015 open|◯|--|◯|--|--|--|
+|CODE THANKS FESTIVAL 2015 open|◯|◯|◯|--|--|--|
 |CODE THANKS FESTIVAL 2017 open|◯|◯|◯|--|--|--|
 |CODE THANKS FESTIVAL 2018 open|◯|--|◯|◯|--|--|
 |COLOCON Colopl programming contest 2018 qual A|◯|◯|--|--|--|--|
