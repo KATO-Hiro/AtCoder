@@ -133,7 +133,7 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
-|AtCoder Regular Contest 001|◯|--|--|--|
+|AtCoder Regular Contest 001|◯|◯|--|--|
 |AtCoder Regular Contest 002|◯|△|◯|--|
 |AtCoder Regular Contest 003|◯|--|--|--|
 |AtCoder Regular Contest 004|◯|◯|--|--|
