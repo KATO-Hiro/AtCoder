@@ -2,31 +2,26 @@
 
 
 def main():
+    from collections import deque
+
     a, b = map(int, input().split())
-    patten1 = [1, 2, 3, 2, 1]
-    patten2 = [2, 3, 3, 2, 1]
 
-    if a == b:
-        print(0)
-        exit()
+    # BFS
+    # See:
+    # https://atcoder.jp/contests/arc001/submissions/7649526
+    d = deque()
+    # Initialize
+    d.append((a, 0))
 
-    diff = abs(b - a)
-    p, q = divmod(diff, 10)
+    while True:
+        value, count = d.popleft()
 
-    if 1 <= q <= 5:
-        if p >= 1:
-            print(p + patten1[q - 1])
-        else:
-            print(patten1[q - 1])
-    else:
-        if q == 0:
-            print(p)
+        if value == b:
+            print(count)
             exit()
 
-        if p >= 1:
-            print(p + patten2[q - 6])
-        else:
-            print(patten2[q - 6])
+        for i in [-10, -5, -1, 1, 5, 10]:
+            d.append((value + i, count + 1))
 
 
 if __name__ == '__main__':
