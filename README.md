@@ -219,7 +219,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 150|◯|◯|◯|--|--|--|
 |AtCoder Beginner Contest 151|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 152|--|◯|◯|△|--|--|
-|AtCoder Beginner Contest 153|--|--|◯|--|--|--|
+|AtCoder Beginner Contest 153|--|--|◯|◯|--|--|
 |AtCoder Grand Contest 001|◯|--|--|--|--|--|
 |AtCoder Grand Contest 002|◯|△|△|--|--|--|
 |AtCoder Grand Contest 003|△|◯|◯|--|--|--|
