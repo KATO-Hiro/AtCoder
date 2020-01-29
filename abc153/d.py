@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 
+def rec(x):
+    if x == 1:
+        return 1
+
+    return 2 * rec(x // 2) + 1
+
+
 def main():
+    from sys import setrecursionlimit
+
+    setrecursionlimit(10 ** 7)
+
     n = int(input())
-    j = 0
-    count = 1
-
-    while n > 1:
-        n //= 2
-        j += 1
-        count += 2 ** j
-
-    print(count)
+    print(rec(n))
 
 
 if __name__ == '__main__':
