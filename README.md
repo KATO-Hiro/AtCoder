@@ -402,6 +402,7 @@ Represents a repository of accepted results.
 |wupc 2012|◯|△|--|--|--|--|None|None|None|None|None|None|
 |wupc 2019|◯|--|--|--|--|--|--|--|--|--|None|None|
 |s8pc #1|◯|--|--|--|--|--|--|--|None|None|None|None|
+|s8pc #4|--|△|--|--|--|--|--|--|None|None|None|None|
 |s8pc #5|◯|◯|--|--|--|--|--|--|--|None|None|None|
 |s8pc #6|◯|◯|--|--|--|--|--|--|--|None|None|None|
 |iroha 2019 day1|◯|◯|◯|◯|◯|--|--|--|--|--|--|--|
