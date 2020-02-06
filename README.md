@@ -328,7 +328,7 @@ Represents a repository of accepted results.
 |Maximum-Cup2018|◯|--|--|--|--|--|
 |MUJIN2016|◯|--|--|--|--|None|
 |ttpc2015|◯|--|--|--|--|--|
-|tkppc2|◯|--|--|--|--|--|
+|tkppc2|◯|◯|--|--|--|--|
 |tkppc3|◯|◯|△|--|--|--|
 |Discovery 2016 qual|◯|--|--|--|None|None|
 |snuke21|◯|--|--|--|--|--|
