@@ -381,6 +381,7 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|code festival 2014 relay|--|◯|--|--|--|--|--|--|--|--|None|None|
 |code festival 2014 final|--|◯|--|--|--|--|--|--|--|--|None|None|
 |code festival 2015 final open|◯|◯|--|--|--|--|--|--|--|--|None|None|
 |code festival 2015 relay|--|◯|◯|--|--|--|--|--|--|--|None|None|
