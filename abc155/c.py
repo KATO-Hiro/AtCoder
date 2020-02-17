@@ -6,11 +6,11 @@ def main():
 
     n = int(input())
     s = [input() for _ in range(n)]
-    c = sorted(Counter(s).items(), key=lambda x: x[1], reverse=True)
-    max_value = c[0][1]
+    c = Counter(s)
+    max_value = max(c.values())
     ans = list()
 
-    for key, value in c:
+    for key, value in c.items():
         if value == max_value:
             ans.append(key)
 
