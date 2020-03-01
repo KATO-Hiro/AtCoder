@@ -2,65 +2,40 @@
 
 
 def main():
-    from itertools import accumulate
+    from math import ceil
 
-    s = input()
-    children_count = list()
-    pos = 'R'
-    r_count = 0
-    l_count = 0
-
-    if s[0] == 'L':
-        children_count.append(0)
-        pos = 'L'
-
-    for si in s:
-        if pos == 'R':
-            if si == 'R':
-                r_count += 1
-            else:
-                children_count.append(r_count)
-                r_count = 0
-                pos = 'L'
-                l_count += 1
-        else:
-            if si == 'L':
-                l_count += 1
-            else:
-                children_count.append(l_count)
-                l_count = 0
-                pos = 'R'
-                r_count += 1
-
-    if r_count > 0:
-        children_count.append(r_count)
-
-    if l_count > 0:
-        children_count.append(l_count)
-
-    if s[-1] == 'R':
-        children_count.append(0)
-
+    s = list(input())
     ans = [0 for _ in range(len(s))]
 
-    summed = list(accumulate(children_count))
+    # KeyInsight
+    # 1. RLとなる部分に子どもたちが集まる
+    # 2. 試行回数が偶数、かつ、最初の位置から偶奇が入れ替わることはない
+    # See:
+    # https://www.youtube.com/watch?v=lyHk98daDJo
+    for i in range(2):
+        count = 0
 
-    for i in range(len(summed) // 2):
-        ri_count = children_count[2 * i]
-        li_count = children_count[2 * i + 1]
-
-        if (ri_count + li_count) % 2 == 0:
-            ans[summed[2 * i] - 1] = (ri_count + li_count) // 2
-            ans[summed[2 * i]] = (ri_count + li_count) // 2
-        else:
-            if ri_count > li_count:
-                ans[summed[2 * i] - 1] = ri_count
-                ans[summed[2 * i]] = li_count
+        # Rのみカウント
+        for index, si in enumerate(s):
+            if si == 'R':
+                count += 1
             else:
-                ans[summed[2 * i] - 1] = li_count
-                ans[summed[2 * i]] = ri_count
+                # R側の個数は切り上げ、L側の個数は切り捨て
+                ans[index] += count // 2
+                ans[index - 1] += ceil(count / 2)
+                count = 0
 
-    print(' '.join(map(str,ans)))
+        # 実装を楽にするため、入力と結果を反転させている&LRを入れ替え
+        s = s[::-1]
+        ans = ans[::-1]
+
+        for index, si in enumerate(s):
+            if si == 'L':
+                s[index] = 'R'
+            else:
+                s[index] = 'L'
+
+    print(' '.join(map(str, ans)))
 
 
 if __name__ == '__main__':
