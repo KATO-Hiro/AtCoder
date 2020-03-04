@@ -375,6 +375,7 @@ Represents a repository of accepted results.
 |m solutions 2019|◯|◯|--|◯|--|--|
 |diverta 2019 2|◯|△|△|--|--|--|
 |Typical 001|◯|◯|--|None|None|None|
+|Typical 002|--|◯|--|None|None|None|
 |jsc 2019 qual|◯|△|--|--|--|--|
 |AtCoder Petrozavodsk Content 001|◯|△|--|--|--|--|
 |chokudai 003|◯|None|None|None|None|None|
