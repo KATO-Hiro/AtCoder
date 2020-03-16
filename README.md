@@ -385,7 +385,7 @@ Represents a repository of accepted results.
 |nikkei 2019 2 qual|◯|△|--|--|--|--|
 |sumitrust 2019|◯|◯|◯|△|--|--|
 |hitachi 2020|◯|◯|--|--|--|--|
-|panasonic 2020|◯|--|--|--|--|--|
+|panasonic 2020|◯|◯|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
