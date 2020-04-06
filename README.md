@@ -393,6 +393,7 @@ Represents a repository of accepted results.
 |sumitrust 2019|◯|◯|◯|△|--|--|
 |hitachi 2020|◯|◯|--|--|--|--|
 |panasonic 2020|◯|◯|△|--|--|--|
+|judge system update test 202004|--|◯|--|--|None|None|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
