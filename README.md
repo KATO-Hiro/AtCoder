@@ -184,7 +184,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 049|◯|--|--|--|
 |AtCoder Regular Contest 050|◯|--|--|--|
 |AtCoder Regular Contest 051|◯|△|--|--|
-|AtCoder Regular Contest 052|◯|--|--|--|
+|AtCoder Regular Contest 052|◯|◯|--|--|
 |AtCoder Regular Contest 053|◯|◯|--|--|
 |AtCoder Regular Contest 055|◯|--|--|--|
 |AtCoder Regular Contest 056|◯|--|--|--|
