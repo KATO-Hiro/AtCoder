@@ -2,7 +2,8 @@
 
 
 def main():
-    pass
+    s = int(input())
+    print(50 / s)
 
 
 if __name__ == '__main__':
