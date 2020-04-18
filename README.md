@@ -272,7 +272,7 @@ Represents a repository of accepted results.
 |CODE FORMULA 2014 qual A|◯|◯|--|--|None|None|
 |CODE FORMULA 2014 qual B|--|◯|--|--|None|None|
 |CODE FESTIVAL 2014 qual A|◯|◯|◯|--|None|None|
-|CODE FESTIVAL 2014 qual B|--|◯|--|--|None|None|
+|CODE FESTIVAL 2014 qual B|◯|◯|--|--|None|None|
 |CODE FESTIVAL 2014 Easy|◯|◯|--|--|None|None|
 |CODE FESTIVAL 2015 qual A|◯|◯|◯|--|None|None|
 |CODE FESTIVAL 2015 qual B|◯|◯|◯|--|None|None|
