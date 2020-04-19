@@ -2,7 +2,8 @@
 
 
 def main():
-    pass
+    n = int(input())
+    print(7 - n)
 
 
 if __name__ == '__main__':
