@@ -372,7 +372,7 @@ Represents a repository of accepted results.
 |joi 2017|◯|◯|--|--|--|--|
 |joi 2018 qual|◯|◯|--|--|--|--|
 |joi 2019|◯|◯|◯|--|--|--|
-|joi 2020 yo 1|--|--|◯|--|--|--|
+|joi 2020 yo 1|--|◯|◯|--|--|--|
 |joi 2020 yo 1b|--|◯|◯|None|None|None|
 |joi 2020 yo 2|◯|--|--|--|--|--|
 |joi 2020 yo 3|--|◯|--|None|None|None|
