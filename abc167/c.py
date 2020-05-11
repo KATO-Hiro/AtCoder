@@ -2,7 +2,6 @@
 
 
 def main():
-    from itertools import product
     import sys
     input = sys.stdin.readline
 
@@ -21,25 +20,21 @@ def main():
 
     ans = float('inf')
 
-    for p in list(product(range(2), repeat=n)):
-        tmp = [0 for _ in range(m)]
+    # KeyInsight: bit演算を使った全探索
+    # 全パターン(選ぶ/選ばないを1/0で表現)を列挙
+    for i in range(1 << n):
         cost = 0
+        tmp = [0 for _ in range(m)]
 
-        for index, pi in enumerate(p):
-            if pi == 1:
-                for idx, aii in enumerate(a[index]):
-                    tmp[idx] += aii
+        for j in range(n):
+            # あるビットが立っているかどうか(1かどうか)を判定
+            if (i >> j & 1):
+                cost += c[j]
 
-                cost += c[index]
+                for index, aii in enumerate(a[j]):
+                    tmp[index] += aii
 
-        is_ok = True
-
-        for t in tmp:
-            if t < x:
-                is_ok = False
-                break
-
-        if is_ok:
+        if min(tmp) >= x:
             ans = min(ans, cost)
 
     if ans == float('inf'):
