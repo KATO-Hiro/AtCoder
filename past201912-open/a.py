@@ -2,7 +2,12 @@
 
 
 def main():
-    pass
+    s = input()
+
+    if s.isdigit():
+        print(int(s) * 2)
+    else:
+        print('error')
 
 
 if __name__ == '__main__':
