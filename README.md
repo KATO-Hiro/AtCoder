@@ -405,6 +405,7 @@ Represents a repository of accepted results.
 |hitachi 2020|◯|◯|--|--|--|--|
 |panasonic 2020|◯|◯|△|--|--|--|
 |judge system update test 202004|◯|◯|--|--|None|None|
+|rcl 2020 final|--|△|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
