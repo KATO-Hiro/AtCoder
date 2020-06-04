@@ -409,7 +409,7 @@ Represents a repository of accepted results.
 |rcl 2019 final open|△|△|--|--|--|--|
 |rcl 2020 qual|△|△|--|--|--|--|
 |rcl 2020 final|△|△|--|--|--|--|
-|nomura 2020|◯|--|--|--|--|--|
+|nomura 2020|◯|◯|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
