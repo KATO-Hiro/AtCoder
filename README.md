@@ -411,6 +411,7 @@ Represents a repository of accepted results.
 |rcl 2020 qual|△|△|--|--|--|--|
 |rcl 2020 final|△|△|--|--|--|--|
 |nomura 2020|◯|◯|--|--|--|--|
+|tokio marine 2020|◯|--|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
