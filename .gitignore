@@ -111,3 +111,6 @@ patcoder.py
 patcoder_virtualdir.py
 login.txt
 setting.ini
+
+# online-judge-tools
+*/test/
