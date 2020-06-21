@@ -409,7 +409,7 @@ Represents a repository of accepted results.
 |panasonic 2020|◯|◯|△|--|--|--|
 |judge system update test 202004|◯|◯|--|--|None|None|
 |rcl 2018 qual|△|△|--|--|--|--|
-|rcl 2019 qual|△|--|--|--|--|--|
+|rcl 2019 qual|△|△|--|--|--|--|
 |rcl 2019 final open|△|△|--|--|--|--|
 |rcl 2020 qual|△|△|--|--|--|--|
 |rcl 2020 final|△|△|--|--|--|--|
