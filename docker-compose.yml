@@ -1,0 +1,10 @@
+# See:
+# https://docs.docker.com/compose/gettingstarted/
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app:cached
