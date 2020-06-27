@@ -409,6 +409,7 @@ Represents a repository of accepted results.
 |hitachi 2020|◯|◯|--|--|--|--|
 |panasonic 2020|◯|◯|△|--|--|--|
 |judge system update test 202004|◯|◯|--|--|None|None|
+|rcl 2017 final open|△|--|--|--|--|--|
 |rcl 2018 qual|△|△|--|--|--|--|
 |rcl 2019 qual|△|△|--|--|--|--|
 |rcl 2019 final open|△|△|--|--|--|--|
