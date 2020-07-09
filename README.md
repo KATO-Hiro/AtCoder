@@ -421,7 +421,7 @@ Represents a repository of accepted results.
 |nomura 2020|◯|◯|--|--|--|--|
 |tokio marine 2020|◯|--|--|--|--|--|
 |intro heuristics|--|◯|--|None|None|None|
-|hokudai hitachi 2018|△|--|--|None|None|None|
+|hokudai hitachi 2018|△|△|--|None|None|None|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
