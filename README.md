@@ -394,6 +394,7 @@ Represents a repository of accepted results.
 |keyence 2019|◯|◯|◯|--|--|--|
 |keyence 2020|◯|◯|◯|--|--|--|
 |aising 2019|◯|◯|△|--|--|--|
+|aising 2020|--|◯|--|--|--|--|
 |nikkei 2019 qual|◯|◯|△|--|--|--|
 |k2pc easy|◯|--|--|--|--|--|
 |exawizards 2019|◯|◯|--|--|--|--|
