@@ -405,6 +405,7 @@ Represents a repository of accepted results.
 |Typical 002|--|◯|--|None|None|None|
 |jsc 2019 qual|◯|△|--|--|--|--|
 |AtCoder Petrozavodsk Content 001|◯|△|--|--|--|--|
+|chokudai 001|△|None|None|None|None|None|
 |chokudai 003|◯|None|None|None|None|None|
 |chokudai 004|◯|None|None|None|None|None|
 |nikkei 2019 2 qual|◯|△|--|--|--|--|
