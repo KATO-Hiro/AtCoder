@@ -426,6 +426,7 @@ Represents a repository of accepted results.
 |hokudai hitachi 2018|△|△|△|None|None|None|
 |future 2018 final open|△|None|None|None|None|None|
 |rco 2018 final open|△|△|--|--|--|--|
+|future meets you open|△|-|None|None|None|None|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
