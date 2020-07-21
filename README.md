@@ -425,6 +425,7 @@ Represents a repository of accepted results.
 |intro heuristics|--|◯|--|None|None|None|
 |hokudai hitachi 2018|△|△|△|None|None|None|
 |future 2018 final open|△|None|None|None|None|None|
+|future 2019 final open|△|--|None|None|None|None|
 |rco 2018 final open|△|△|--|--|--|--|
 |future meets you open|△|-|None|None|None|None|
 
