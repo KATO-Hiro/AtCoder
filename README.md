@@ -424,6 +424,7 @@ Represents a repository of accepted results.
 |tokio marine 2020|◯|--|--|--|--|--|
 |intro heuristics|--|◯|--|None|None|None|
 |hokudai hitachi 2018|△|△|△|None|None|None|
+|hokudai hitachi 2019 1|△|--|None|None|None|None|
 |future 2018 final open|△|None|None|None|None|None|
 |future 2019 final open|△|--|None|None|None|None|
 |rco 2018 final open|△|△|--|--|--|--|
