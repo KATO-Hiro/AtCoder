@@ -428,6 +428,7 @@ Represents a repository of accepted results.
 |hokudai hitachi 2019 1|△|△|None|None|None|None|
 |future 2018 final open|△|None|None|None|None|None|
 |future 2019 final open|△|--|None|None|None|None|
+|future 2020 final open|△|--|None|None|None|None|
 |rco 2018 final open|△|△|--|--|--|--|
 |future meets you open|△|-|None|None|None|None|
 
