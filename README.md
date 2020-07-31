@@ -429,6 +429,7 @@ Represents a repository of accepted results.
 |future 2018 final open|△|None|None|None|None|None|
 |future 2019 final open|△|--|None|None|None|None|
 |future 2020 final open|△|--|None|None|None|None|
+|future 2020 final 2 open|△|None|None|None|None|None|
 |rco 2018 final open|△|△|--|--|--|--|
 |future meets you open|△|-|None|None|None|None|
 
