@@ -359,6 +359,7 @@ Represents a repository of accepted results.
 |snuke21|◯|--|--|--|--|--|
 |Indeednow qualA|◯|◯|--|--|--|--|
 |Indeednow qualB|◯|◯|--|--|--|--|
+|Indeednow final open A|△|--|--|--|--|--|
 |Indeednow final open B|◯|--|--|--|--|--|
 |donuts 2014|◯|--|--|--|None|None|
 |donuts 2015|◯|--|--|--|None|None|
