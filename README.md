@@ -263,7 +263,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 021|△|--|--|--|--|--|
 |AtCoder Grand Contest 022|△|--|--|--|--|--|
 |AtCoder Grand Contest 023|△|--|--|--|--|--|
-|AtCoder Grand Contest 024|◯|△|--|--|--|--|
+|AtCoder Grand Contest 024|◯|△|△|--|--|--|
 |AtCoder Grand Contest 025|◯|--|--|--|--|--|
 |AtCoder Grand Contest 026|◯|--|--|--|--|--|
 |AtCoder Grand Contest 027|◯|--|--|--|--|--|
