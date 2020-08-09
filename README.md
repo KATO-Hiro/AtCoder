@@ -424,7 +424,7 @@ Represents a repository of accepted results.
 |rcl 2020 qual|△|△|--|--|--|--|
 |rcl 2020 final|△|△|--|--|--|--|
 |nomura 2020|◯|◯|--|--|--|--|
-|tokio marine 2020|◯|--|--|--|--|--|
+|tokio marine 2020|◯|◯|--|--|--|--|
 |intro heuristics|--|◯|--|None|None|None|
 |hokudai hitachi 2018|△|△|△|None|None|None|
 |hokudai hitachi 2019 1|△|△|None|None|None|None|
