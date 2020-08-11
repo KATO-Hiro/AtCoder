@@ -115,3 +115,5 @@ setting.ini
 # online-judge-tools
 */test/
 */*/test/
+*/*/*/test/
+*/*/*/*/test/
