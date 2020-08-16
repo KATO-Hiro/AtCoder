@@ -534,6 +534,7 @@ Captions:
 ## Links
 
 [How GitHub Markdown details to work](https://gist.github.com/Phroneris/e7e6c869640b95bd42434bdc995cd4f6)
+
 [Readme Driven Development; RDD](https://qiita.com/b4b4r07/items/c80d53db9a0fd59086ec)
 
 ## Author
