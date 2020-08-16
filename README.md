@@ -2,6 +2,8 @@
 
 Represents a repository of accepted results.
 
+[![hiro_hiro](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fhiro_hiro)](https://atcoder.jp/users/hiro_hiro)
+
 ## Achievement
 
 <details>
@@ -532,6 +534,8 @@ Captions:
     --: Not yet started.
 
 ## Links
+
+[AtCoder Badges](https://atcoder-badges.now.sh/)
 
 [How GitHub Markdown details to work](https://gist.github.com/Phroneris/e7e6c869640b95bd42434bdc995cd4f6)
 
