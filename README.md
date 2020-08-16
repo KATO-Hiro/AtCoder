@@ -1,7 +1,11 @@
 # AtCoder
+
 Represents a repository of accepted results.
 
-# Achievement
+## Achievement
+
+<details>
+<summary>AtCoder Beginner Contest</summary>
 
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
@@ -131,6 +135,64 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 124|◯|◯|◯|△|
 |AtCoder Beginner Contest 125|◯|◯|△|◯|
 
+|Contest name\Problems|A|B|C|D|E|F|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|AtCoder Beginner Contest 126|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 127|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 128|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 129|◯|◯|△|◯|--|--|
+|AtCoder Beginner Contest 130|◯|◯|△|◯|--|--|
+|AtCoder Beginner Contest 131|◯|◯|◯|◯|△|--|
+|AtCoder Beginner Contest 132|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 133|◯|◯|△|◯|--|--|
+|AtCoder Beginner Contest 134|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 135|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 136|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 137|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 138|◯|◯|◯|△|△|--|
+|AtCoder Beginner Contest 139|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 140|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 141|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 142|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 143|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 144|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 145|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 146|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 147|◯|◯|△|△|--|--|
+|AtCoder Beginner Contest 148|◯|◯|◯|◯|◯|--|
+|AtCoder Beginner Contest 149|--|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 150|◯|◯|◯|--|--|--|
+|AtCoder Beginner Contest 151|◯|◯|◯|△|△|--|
+|AtCoder Beginner Contest 152|◯|◯|◯|△|△|--|
+|AtCoder Beginner Contest 153|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 154|◯|◯|◯|◯|△|--|
+|AtCoder Beginner Contest 155|◯|◯|◯|--|--|--|
+|AtCoder Beginner Contest 156|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 157|◯|◯|△|--|--|--|
+|AtCoder Beginner Contest 158|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 159|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 160|◯|◯|◯|△|◯|--|
+|AtCoder Beginner Contest 161|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 162|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 163|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 164|◯|◯|◯|--|--|--|
+|AtCoder Beginner Contest 165|◯|◯|--|◯|--|--|
+|AtCoder Beginner Contest 166|◯|◯|◯|△|△|--|
+|AtCoder Beginner Contest 167|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 168|◯|◯|--|◯|--|--|
+|AtCoder Beginner Contest 169|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 170|◯|◯|◯|--|--|--|
+|AtCoder Beginner Contest 171|◯|◯|◯|◯|◯|--|
+|AtCoder Beginner Contest 172|◯|◯|△|△|--|--|
+|AtCoder Beginner Contest 173|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 174|◯|◯|△|◯|--|--|
+|AtCoder Beginner Contest 175|--|◯|--|--|--|--|
+
+</details>
+
+<details>
+<summary>AtCoder Regular Contest</summary>
+
 |Contest name\Problems|A|B|C|D|
 |:--:|:--:|:--:|:--:|:--:|
 |AtCoder Regular Contest 001|◯|◯|--|--|
@@ -190,58 +252,13 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 056|◯|--|--|--|
 |AtCoder Regular Contest 057|◯|--|--|--|
 
+</details>
+
+<details>
+<summary>AtCoder Grand Contest</summary>
+
 |Contest name\Problems|A|B|C|D|E|F|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|AtCoder Beginner Contest 126|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 127|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 128|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 129|◯|◯|△|◯|--|--|
-|AtCoder Beginner Contest 130|◯|◯|△|◯|--|--|
-|AtCoder Beginner Contest 131|◯|◯|◯|◯|△|--|
-|AtCoder Beginner Contest 132|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 133|◯|◯|△|◯|--|--|
-|AtCoder Beginner Contest 134|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 135|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 136|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 137|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 138|◯|◯|◯|△|△|--|
-|AtCoder Beginner Contest 139|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 140|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 141|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 142|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 143|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 144|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 145|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 146|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 147|◯|◯|△|△|--|--|
-|AtCoder Beginner Contest 148|◯|◯|◯|◯|◯|--|
-|AtCoder Beginner Contest 149|--|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 150|◯|◯|◯|--|--|--|
-|AtCoder Beginner Contest 151|◯|◯|◯|△|△|--|
-|AtCoder Beginner Contest 152|◯|◯|◯|△|△|--|
-|AtCoder Beginner Contest 153|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 154|◯|◯|◯|◯|△|--|
-|AtCoder Beginner Contest 155|◯|◯|◯|--|--|--|
-|AtCoder Beginner Contest 156|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 157|◯|◯|△|--|--|--|
-|AtCoder Beginner Contest 158|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 159|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 160|◯|◯|◯|△|◯|--|
-|AtCoder Beginner Contest 161|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 162|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 163|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 164|◯|◯|◯|--|--|--|
-|AtCoder Beginner Contest 165|◯|◯|--|◯|--|--|
-|AtCoder Beginner Contest 166|◯|◯|◯|△|△|--|
-|AtCoder Beginner Contest 167|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 168|◯|◯|--|◯|--|--|
-|AtCoder Beginner Contest 169|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 170|◯|◯|◯|--|--|--|
-|AtCoder Beginner Contest 171|◯|◯|◯|◯|◯|--|
-|AtCoder Beginner Contest 172|◯|◯|△|△|--|--|
-|AtCoder Beginner Contest 173|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 174|◯|◯|△|◯|--|--|
-|AtCoder Beginner Contest 175|--|◯|--|--|--|--|
 |AtCoder Grand Contest 001|◯|--|--|--|--|--|
 |AtCoder Grand Contest 002|◯|△|△|--|--|--|
 |AtCoder Grand Contest 003|△|◯|◯|--|--|--|
@@ -283,6 +300,14 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 040|△|--|--|--|--|--|
 |AtCoder Grand Contest 041|△|--|--|--|--|--|
 |AtCoder Grand Contest 046|◯|--|--|--|--|--|
+
+</details>
+
+<details>
+<summary>Others</summary>
+
+|Contest name\Problems|A|B|C|D|E|F|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |CODE FORMULA 2014 qual A|◯|◯|--|--|None|None|
 |CODE FORMULA 2014 qual B|◯|◯|--|--|None|None|
 |CODE FESTIVAL 2014 qual A|◯|◯|◯|--|None|None|
@@ -494,6 +519,8 @@ Represents a repository of accepted results.
 |past 2020 04|◯|◯|--|--|◯|◯|--|--|--|--|--|--|
 |past 2020 05 open|◯|◯|◯|◯|◯|◯|--|--|--|--|--|--|
 
+</details>
+
 Captions:
 
     ◯: By myself.
@@ -503,3 +530,16 @@ Captions:
     ✕: Unsolved.
 
     --: Not yet started.
+
+## Links
+
+[How GitHub Markdown details to work](https://gist.github.com/Phroneris/e7e6c869640b95bd42434bdc995cd4f6)
+[Readme Driven Development; RDD](https://qiita.com/b4b4r07/items/c80d53db9a0fd59086ec)
+
+## Author
+
+[@KATO-Hiro](https://twitter.com/k_hiro1818)
+
+## License
+
+[MIT](http://KATO-Hiro.mit-license.org)
