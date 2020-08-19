@@ -535,6 +535,8 @@ Captions:
 
 ## Links
 
+[My library](https://github.com/KATO-Hiro/Somen-Soupy)
+
 [AtCoder Badges](https://atcoder-badges.now.sh/)
 
 [How GitHub Markdown details to work](https://gist.github.com/Phroneris/e7e6c869640b95bd42434bdc995cd4f6)
