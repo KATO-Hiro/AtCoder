@@ -115,7 +115,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 102|◯|◯|△|--|
 |AtCoder Beginner Contest 103|◯|◯|◯|△|
 |AtCoder Beginner Contest 104|◯|◯|△|--|
-|AtCoder Beginner Contest 105|◯|◯|△|--|
+|AtCoder Beginner Contest 105|◯|◯|△|△|
 |AtCoder Beginner Contest 106|◯|◯|◯|△|
 |AtCoder Beginner Contest 107|◯|◯|◯|--|
 |AtCoder Beginner Contest 108|◯|◯|△|--|
