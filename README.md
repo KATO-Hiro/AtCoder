@@ -535,6 +535,8 @@ Captions:
 
 ## Links
 
+[My cheetsheet](https://github.com/KATO-Hiro/AtCoder/blob/master/my_cheetsheet.md)
+
 [My library](https://github.com/KATO-Hiro/Somen-Soupy)
 
 [AtCoder Badges](https://atcoder-badges.now.sh/)
