@@ -105,6 +105,20 @@
 
 + (b - a) mod k = 0のとき、a mod k = b mod kが成り立つ．
 
+### 三角関数
+
++ 1° = π / 180 (rad)
+
++ 余弦定理
+
+```md
+c ** 2 = (a ** 2) + (b ** 2) - 2 * a * b * cos(x)
+```
+
+#### See
+
+https://sci-pursuit.com/math/radian.html
+
 ## グリッド
 
 + 片方の軸にだけ注目するとどうなるか?
