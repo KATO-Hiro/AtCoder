@@ -7,17 +7,21 @@ def main():
     input = sys.stdin.readline
 
     oa, ab, bc = map(int, input().split())
-    len_max = (oa + ab + bc)
-    diff = oa - (ab + bc)
+    large_r = oa + ab + bc
+    longest = max(oa, ab, bc)
+    shortest = min(oa, ab, bc)
+    middle = large_r - (longest + shortest)
 
-    if diff > 0:
-        len_min = diff
+    # See:
+    # https://www.slideshare.net/chokudai/mujin2016
+    if shortest + middle >= longest:
+        # 三角形が作れるため、原点と点Cが一致する
+        small_r = 0
     else:
-        len_min = 0
+        # 線分OA, AB, BCを入れ替えても、点Cの座標は変わらない
+        small_r = longest - (shortest + middle)
 
-    len_min = 9
-
-    print(((len_max ** 2) - (len_min ** 2)) * pi)
+    print(((large_r ** 2) - (small_r ** 2)) * pi)
 
 
 if __name__ == '__main__':
