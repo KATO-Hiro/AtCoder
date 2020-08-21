@@ -380,7 +380,7 @@ Represents a repository of accepted results.
 |KUPC2018|◯|◯|◯|--|--|--|
 |QUPC2018|◯|--|--|--|--|--|
 |Maximum-Cup2018|◯|--|--|--|--|--|
-|MUJIN2016|◯|--|--|--|--|None|
+|MUJIN2016|◯|△|--|--|--|None|
 |ttpc2015|◯|--|--|--|--|--|
 |tkppc2|◯|◯|--|--|--|--|
 |tkppc3|◯|◯|△|--|--|--|
