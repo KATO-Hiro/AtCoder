@@ -363,6 +363,7 @@ Represents a repository of accepted results.
 |ddcc2017 qual|◯|◯|◯|--|None|None|
 |ddcc2017 final|△|--|--|--|--|None|
 |ddcc2019 qual|◯|◯|--|--|None|None|
+|ddcc2019 machine|△|--|None|None|None|None|
 |ddcc2019 final|◯|--|--|--|--|None|
 |ddcc2020 qual|◯|◯|--|--|--|--|
 |bitflyer2018 qual|◯|◯|--|--|--|None|
