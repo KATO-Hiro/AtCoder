@@ -387,6 +387,7 @@ Represents a repository of accepted results.
 |tkppc2|◯|◯|--|--|--|--|
 |tkppc3|◯|◯|△|--|--|--|
 |Discovery 2016 qual|◯|--|--|--|None|None|
+|Discovery 2016 final|◯|--|--|--|None|None|
 |snuke21|◯|--|--|--|--|--|
 |Indeednow qualA|◯|◯|--|--|--|--|
 |Indeednow qualB|◯|◯|--|--|--|--|
