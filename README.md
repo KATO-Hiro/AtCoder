@@ -476,7 +476,7 @@ Represents a repository of accepted results.
 |code festival 2014 relay|◯|◯|--|--|--|--|--|--|--|--|None|None|
 |code festival 2014 final|◯|◯|◯|◯|--|--|--|--|--|--|None|None|
 |code festival 2015 final open|◯|◯|--|--|--|--|--|--|--|--|None|None|
-|code festival 2015 relay|--|◯|◯|--|--|--|--|--|--|--|None|None|
+|code festival 2015 relay|--|◯|◯|--|--|△|--|--|--|--|None|None|
 |code festival 2016 relay|◯|◯|◯|△|--|--|--|--|--|--|--|None|
 |code festival 2018 relay open|◯|--|--|--|--|--|--|--|--|--|None|None|
 |code formula 2014 final|◯|◯|◯|--|--|--|--|--|None|None|None|None|
