@@ -526,6 +526,7 @@ Represents a repository of accepted results.
 |past 2020 04|◯|◯|--|--|◯|◯|--|--|--|--|--|--|
 |past 2020 05 open|◯|◯|◯|◯|◯|◯|--|--|--|--|--|--|
 |language test 1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
+|practice 2|◯|--|--|--|--|--|--|--|--|--|--|--|
 
 </details>
 
