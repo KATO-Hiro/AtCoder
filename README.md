@@ -470,6 +470,7 @@ Represents a repository of accepted results.
 |rco 2018 final open|△|△|--|--|--|--|
 |future meets you open|△|-|None|None|None|None|
 |digitalarts 2012|◯|--|--|None|None|None|
+|ijpc 2015|◯|--|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
