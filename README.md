@@ -257,6 +257,10 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 056|◯|--|--|--|
 |AtCoder Regular Contest 057|◯|--|--|--|
 
+|Contest name\Problems|A|B|C|D|E|F|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|AtCoder Regular Contest 104|◯|--|--|--|--|--|
+
 </details>
 
 <details>
