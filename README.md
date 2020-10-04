@@ -260,7 +260,7 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|E|F|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|AtCoder Regular Contest 104|◯|--|--|--|--|--|
+|AtCoder Regular Contest 104|◯|△|--|--|--|--|
 
 </details>
 
