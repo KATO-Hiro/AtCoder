@@ -479,6 +479,7 @@ Represents a repository of accepted results.
 |digitalarts 2012|◯|--|--|None|None|None|
 |ijpc 2015|◯|--|--|--|--|--|
 |abl|◯|◯|◯|--|--|--|
+|hhkb 2020|--|◯|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
