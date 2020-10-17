@@ -4,20 +4,25 @@
 def main():
     s = input()
 
-    one = ['A', 'D', 'O', 'P', 'Q', 'R']
-    two = ['B']
+    one = ["A", "D", "O", "P", "Q", "R"]
+    two = ["B"]
 
-    for index, si in enumerate(s):
-        if index == 2 and si not in one:
-            print('no')
-            exit()
+    utpc = "0010"
+    given = ""
 
-        if si in one and si in two:
-            print('no')
-            exit()
+    for si in s:
+        if si in two:
+            given += "2"
+        elif si in one:
+            given += "1"
+        else:
+            given += "0"
 
-    print('yes')
+    if given == utpc:
+        print("yes")
+    else:
+        print("no")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
