@@ -453,6 +453,7 @@ Represents a repository of accepted results.
 |chokudai 001|△|None|None|None|None|None|
 |chokudai 003|◯|None|None|None|None|None|
 |chokudai 004|◯|None|None|None|None|None|
+|chokudai 005|△|None|None|None|None|None|
 |nikkei 2019 2 qual|◯|△|--|--|--|--|
 |sumitrust 2019|◯|◯|◯|△|--|--|
 |hitachi 2020|◯|◯|--|--|--|--|
