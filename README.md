@@ -263,6 +263,7 @@ Represents a repository of accepted results.
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |AtCoder Regular Contest 104|◯|△|--|--|--|--|
 |AtCoder Regular Contest 105|◯|◯|--|--|--|--|
+|AtCoder Regular Contest 106|◯|◯|--|--|--|--|
 
 </details>
 
