@@ -511,6 +511,7 @@ Represents a repository of accepted results.
 |nikkei 2019 ex|◯|◯|◯|--|◯|--|--|--|None|None|None|None|
 |nikkei 2019 2 final|◯|◯|--|--|--|--|--|--|None|None|None|None|
 |utpc 2011|◯|--|--|--|--|--|--|--|--|--|--|--|
+|utpc 2012|◯|--|--|--|--|--|--|--|--|--|--|--|
 |utpc 2013|◯|--|--|--|--|--|--|--|--|--|--|--|
 |wupc 2012|◯|△|--|--|--|--|None|None|None|None|None|None|
 |wupc 2019|◯|--|--|--|--|--|--|--|--|--|None|None|
