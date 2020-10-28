@@ -547,6 +547,7 @@ Represents a repository of accepted results.
 |past 2020 05 open|◯|◯|◯|◯|◯|◯|--|--|--|--|--|--|
 |language test 1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
 |practice 2|◯|◯|◯|--|--|--|--|--|--|--|--|--|
+|fuka 5th|◯|--|--|--|--|--|--|None|None|None|None|None|
 
 </details>
 
