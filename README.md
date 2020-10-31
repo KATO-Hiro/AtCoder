@@ -486,6 +486,7 @@ Represents a repository of accepted results.
 |ijpc 2015|◯|--|--|--|--|--|
 |abl|◯|◯|◯|--|--|--|
 |hhkb 2020|◯|◯|◯|--|--|--|
+|intro heuristics 2020|△|◯|△|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
