@@ -490,6 +490,7 @@ Represents a repository of accepted results.
 |abl|◯|◯|◯|--|--|--|
 |hhkb 2020|◯|◯|◯|--|--|--|
 |intro heuristics 2020|△|◯|△|--|--|--|
+|future 2021 qual|◯|None|None|None|None|None|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
