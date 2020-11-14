@@ -10,53 +10,79 @@ def main():
     # -1: Block
     #  0: Not used
     #  1: On
-    lights1 = [[0 for _ in range(w)] for _ in range(h)]
-    lights2 = [[0 for _ in range(w)] for _ in range(h)]
+    grid = [[0 for _ in range(w)] for _ in range(h)]
+    results = [[0 for _ in range(w)] for _ in range(h)]
 
+    # See:
+    # https://atcoder.jp/contests/abc182/submissions/17966314
     for i in range(n):
         ai, bi = map(int, input().split())
         ai -= 1
         bi -= 1
-        lights1[ai][bi] = 1
-        lights2[ai][bi] = 1
+        grid[ai][bi] = 1
 
     for j in range(m):
         ci, di = map(int, input().split())
         ci -= 1
         di -= 1
-        lights1[ci][di] = -1
-        lights2[ci][di] = -1
+        grid[ci][di] = -1
 
     # Right
     for i in range(h):
-        for j in range(1, w):
-            if lights1[i][j - 1] == 1 and lights1[i][j] == 0:
-                lights1[i][j] = 1
+        # フラグの用意
+        on = 0
+
+        for j in range(w):
+            # 光源かブロックか判定して、フラグを変更
+            if grid[i][j] == 1:
+                on = 1
+            elif grid[i][j] == -1:
+                on = 0
+
+            # 論理和(OR)
+            results[i][j] |= on
 
     # Left
     for i in range(h):
-        for j in range(w - 2, -1, -1):
-            if lights1[i][j + 1] == 1 and lights1[i][j] == 0:
-                lights1[i][j] = 1
+        on = 0
+
+        for j in range(w - 1, -1, -1):
+            if grid[i][j] == 1:
+                on = 1
+            elif grid[i][j] == -1:
+                on = 0
+
+            results[i][j] |= on
 
     # Down
     for j in range(w):
-        for i in range(1, h):
-            if lights2[i - 1][j] == 1 and lights2[i][j] == 0:
-                lights2[i][j] = 1
+        on = 0
+
+        for i in range(h):
+            if grid[i][j] == 1:
+                on = 1
+            elif grid[i][j] == -1:
+                on = 0
+
+            results[i][j] |= on
 
     # Up
     for j in range(w):
-        for i in range(h - 2, -1, -1):
-            if lights2[i + 1][j] == 1 and lights2[i][j] == 0:
-                lights2[i][j] = 1
+        on = 0
+
+        for i in range(h - 1, -1, -1):
+            if grid[i][j] == 1:
+                on = 1
+            elif grid[i][j] == -1:
+                on = 0
+
+            results[i][j] |= on
 
     ans = 0
 
     for i in range(h):
         for j in range(w):
-            if lights1[i][j] == 1 or lights2[i][j] == 1:
-                ans += 1
+            ans += results[i][j]
 
     print(ans)
 
