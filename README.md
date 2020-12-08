@@ -442,7 +442,7 @@ Represents a repository of accepted results.
 |joi 2020 yo 2|◯|--|--|--|--|--|
 |joi 2020 yo 3|--|◯|◯|None|None|None|
 |joi 2021 yo 1a|◯|◯|◯|--|--|--|
-|joi 2021 yo 1b|--|◯|◯|--|--|--|
+|joi 2021 yo 1b|◯|◯|◯|None|None|None|
 |caddi2018b|◯|◯|△|△|--|--|
 |hack to the future 2018 qual|◯|None|None|None|None|None|
 |hack to the future 2020 qual|△|None|None|None|None|None|
