@@ -562,7 +562,7 @@ Represents a repository of accepted results.
 |past 2020 05 open|◯|◯|◯|◯|◯|◯|--|--|--|--|--|--|
 |past 2020 10 open|◯|◯|◯|--|◯|◯|--|--|--|--|--|--|
 |language test 1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
-|practice 2|◯|◯|◯|--|--|--|--|--|--|--|--|--|
+|practice 2|◯|◯|◯|--|--|--|--|--|--|△|--|--|
 |fuka 5th|◯|--|--|--|--|--|--|None|None|None|None|None|
 |gw 2015|◯|--|--|--|--|--|--|--|--|--|None|None|
 
