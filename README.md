@@ -469,7 +469,7 @@ Represents a repository of accepted results.
 |chokudai 004|◯|None|None|None|None|None|
 |chokudai 005|△|None|None|None|None|None|
 |nikkei 2019 2 qual|◯|△|--|--|--|--|
-|sumitrust 2019|◯|◯|◯|△|--|--|
+|sumitrust 2019|◯|◯|◯|△|△|--|
 |hitachi 2020|◯|◯|--|--|--|--|
 |panasonic 2020|◯|◯|△|△|--|--|
 |judge system update test 202004|◯|◯|--|--|None|None|
