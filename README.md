@@ -200,6 +200,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 184|◯|◯|△|△|--|--|
 |AtCoder Beginner Contest 185|◯|◯|◯|◯|--|△|
 |AtCoder Beginner Contest 186|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 187|--|--|◯|--|--|--|
 
 </details>
 
