@@ -7,23 +7,18 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    x = set()
-    y = set()
+    s = set()
 
     for i in range(n):
         si = input().rstrip()
+        s.add(si)
 
-        if si[0] == "!":
-            y.add(si[1:])
-        else:
-            x.add(si)
+    for si in s:
+        if "!" + si in s:
+            print(si)
+            exit()
 
-    result = x & y
-
-    if len(result) == 0:
-        print("satisfiable")
-    else:
-        print(list(result)[0])
+    print("satisfiable")
 
 
 if __name__ == "__main__":
