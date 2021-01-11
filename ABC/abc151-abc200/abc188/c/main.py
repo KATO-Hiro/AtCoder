@@ -19,17 +19,10 @@ def main():
         di = d.popleft()
         dj = d.popleft()
 
-        if di > dj:
-            d.append(di)
-        else:
-            d.append(dj)
+        d.append(max(di, dj))
 
-    semi = min(d)
-
-    for i in range(2 ** n):
-        if a[i] == semi:
-            print(i + 1)
-            exit()
+    index = a.index(min(d))  # 0-index
+    print(index + 1)
 
 
 if __name__ == "__main__":
