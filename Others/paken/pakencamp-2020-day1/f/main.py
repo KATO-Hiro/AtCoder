@@ -2,30 +2,18 @@
 
 
 def main():
-    from sys import setrecursionlimit
-
-    setrecursionlimit(10 ** 7)
-
     p = int(input())
-    f = [0 for _ in range(10 ** 4)]
-    f[1] = 1
-    f[2] = 1
+    f = [0, 1, 1]
 
-    def rec(i):
-        if i > 10 ** 4:
-            return -1
+    for i in range(1, 10 ** 5):
+        f.append(f[-1] + f[-2])
 
-        f[i + 2] = f[i + 1] + f[i]
+    for j in range(1, 10 ** 5):
+        if f[j] % p == 0:
+            print(j)
+            exit()
 
-        for ii in range(i, i + 3):
-            if f[ii] % p == 0:
-                return ii
-
-        i += 1
-
-        return rec(i)
-
-    print(rec(1))
+    print(-1)
 
 
 if __name__ == "__main__":
