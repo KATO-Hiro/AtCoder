@@ -453,6 +453,7 @@ Represents a repository of accepted results.
 |hack to the future 2020 qual|△|None|None|None|None|None|
 |keyence 2019|◯|◯|◯|--|--|--|
 |keyence 2020|◯|◯|◯|--|--|--|
+|keyence 2021|◯|--|--|--|--|--|
 |aising 2019|◯|◯|△|--|--|--|
 |aising 2020|◯|◯|△|△|--|--|
 |nikkei 2019 qual|◯|◯|△|--|--|--|
