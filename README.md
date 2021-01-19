@@ -438,7 +438,7 @@ Represents a repository of accepted results.
 |joi 2015|◯|◯|--|--|--|--|
 |joi 2016|◯|◯|◯|--|--|--|
 |joi 2017|◯|◯|--|--|--|--|
-|joi 2018 qual|◯|◯|--|--|--|--|
+|joi 2018 qual|◯|◯|◯|--|--|--|
 |joi 2019|◯|◯|◯|--|--|--|
 |joi 2020 yo 1|◯|◯|◯|--|--|--|
 |joi 2020 yo 1b|◯|◯|◯|None|None|None|
