@@ -240,7 +240,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 028|◯|--|--|--|
 |AtCoder Regular Contest 029|△|--|--|--|
 |Atcoder Regular Contest 030|◯|--|--|--|
-|Atcoder Regular Contest 031|◯|--|--|--|
+|Atcoder Regular Contest 031|◯|△|--|--|
 |Atcoder Regular Contest 032|◯|◯|--|--|
 |Atcoder Regular Contest 033|◯|--|--|--|
 |Atcoder Regular Contest 034|◯|◯|--|--|
