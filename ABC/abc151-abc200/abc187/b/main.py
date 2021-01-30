@@ -21,7 +21,7 @@ def main():
         for j in range(i + 1, n):
             xj, yj = xy[j]
 
-            if -abs(xj - xi) <= abs(yj - yi) <= abs(xj - xi):
+            if abs(yj - yi) <= abs(xj - xi):
                 ans += 1
 
     print(ans)
