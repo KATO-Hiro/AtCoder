@@ -12,20 +12,16 @@ def main():
     k = int(input())
     cd = [tuple(map(lambda x: int(x) - 1, input().split())) for _ in range(k)]
 
-    patterns = product([0, 1], repeat=k)
+    patterns = product(*cd)
     ans = 0
 
     for pattern in patterns:
-        dishes = [0 for _ in range(n)]
-
-        for index, p in enumerate(pattern):
-            pos = cd[index][p]
-            dishes[pos] += 1
+        pattern = set(pattern)
 
         count = 0
 
         for ai, bi in ab:
-            if dishes[ai] >= 1 and dishes[bi] >= 1:
+            if ai in pattern and bi in pattern:
                 count += 1
 
         ans = max(ans, count)
