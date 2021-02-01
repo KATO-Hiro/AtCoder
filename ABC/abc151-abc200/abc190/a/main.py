@@ -8,16 +8,10 @@ def main():
 
     a, b, c = map(int, input().split())
 
-    if c == 0:
-        if a - b > 0:
-            print("Takahashi")
-        else:
-            print("Aoki")
+    if a + c > b:
+        print("Takahashi")
     else:
-        if b - a > 0:
-            print("Aoki")
-        else:
-            print("Takahashi")
+        print("Aoki")
 
 
 if __name__ == "__main__":
