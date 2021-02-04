@@ -394,6 +394,7 @@ Represents a repository of accepted results.
 |tenka1 2012 qual A|◯|◯|--|--|None|None|
 |tenka1 2012 qual B|◯|--|--|--|None|None|
 |tenka1 2012 qual C|◯|--|--|--|None|None|
+|tenka1 2013 qual A|--|◯|--|--|--|None|
 |tenka1 2013 qual B|◯|--|--|--|--|None|
 |tenka1 2015 qual A|◯|--|--|--|--|None|
 |tenka1 2015 qual B|◯|△|--|--|--|None|
