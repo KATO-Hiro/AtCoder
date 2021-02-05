@@ -2,24 +2,22 @@
 
 
 def main():
-    from collections import deque
-
     n = int(input())
-    d = deque()
+    count = 0
 
     for i in range(n):
         si = input()
 
         if si == "A":
-            d.append(si)
+            count += 1
         else:
-            if len(d) > 0:
-                d.popleft()
+            if count > 0:
+                count -= 1
             else:
                 print("NO")
                 exit()
 
-    if len(d) > 0:
+    if count > 0:
         print("NO")
     else:
         print("YES")
