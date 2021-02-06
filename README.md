@@ -520,6 +520,7 @@ Represents a repository of accepted results.
 |code formula 2014 final|◯|◯|◯|--|--|--|--|--|None|None|None|None|
 |yuha c88 2015|◯|△|--|--|--|--|--|--|--|--|None|None|
 |wupc2nd|◯|--|--|--|--|--|--|--|--|None|None|None|
+|jag 2014 summer day4|△|--|--|--|--|--|--|--|--|--|--|--|
 |jag 2016 domestic|◯|--|--|--|--|--|--|--|--|--|--|--|
 |jag 2017 day1|--|--|--|--|--|--|--|--|--|◯|--|--|
 |paken 2018 day2|◯|◯|◯|--|--|--|--|--|None|None|None|None|
