@@ -9,7 +9,7 @@ def main():
     x, y, z = map(int, input().split())
     mod = 10 ** 9 + 7
 
-    for i in range(5 * 10 ** 5):
+    for i in range(17 * 107):
         m = i * mod + z
 
         if (m % 17 == x) and (m % 107 == y):
