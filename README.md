@@ -524,6 +524,7 @@ Represents a repository of accepted results.
 |jag 2014 summer day4|△|--|--|--|--|--|--|--|--|--|--|--|
 |jag 2016 domestic|◯|--|--|--|--|--|--|--|--|--|--|--|
 |jag 2017 day1|--|--|--|--|--|--|--|--|--|◯|--|--|
+|jag 2018 summer day2|◯|--|--|--|--|--|--|--|--|--|--|--|
 |paken 2018 day2|◯|◯|◯|--|--|--|--|--|None|None|None|None|
 |paken 2018 day3|◯|◯||--|--|--|--|--|None|None|None|None|
 |paken 2019 day3|◯|○|◯|△|--|--|--|--|None|None|None|None|
