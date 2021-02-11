@@ -9,7 +9,6 @@ def dijkstra(vertex_count: int, source: int, edges):
     costs[source] = 0
     pending = -1
     parents = [pending for _ in range(vertex_count)]
-    ans = float("inf")
 
     while hq:
         cost, vertex = heappop(hq)
@@ -20,15 +19,12 @@ def dijkstra(vertex_count: int, source: int, edges):
         for weight, edge in edges[vertex]:
             new_cost = cost + weight
 
-            if edge == source:
-                ans = min(ans, new_cost)
-
             if new_cost < costs[edge]:
                 costs[edge] = new_cost
                 parents[edge] = vertex
                 heappush(hq, (new_cost, edge))
 
-    return ans
+    return costs, parents
 
 
 def main():
@@ -38,6 +34,7 @@ def main():
 
     n, m = map(int, input().split())
     edges = [[] for _ in range(n)]
+    reversed_edges = [[] for _ in range(n)]
 
     for _ in range(m):
         ai, bi, ci = map(int, input().split())
@@ -45,14 +42,19 @@ def main():
         bi -= 1
 
         edges[ai].append((ci, bi))
+        reversed_edges[bi].append((ci, ai))
 
     for i in range(n):
-        dist = dijkstra(vertex_count=n, source=i, edges=edges)
+        dist, _ = dijkstra(vertex_count=n, source=i, edges=edges)
+        ans = float("inf")
 
-        if dist == float("inf"):
+        for cost, reversed_edge in reversed_edges[i]:
+            ans = min(ans, dist[reversed_edge] + cost)
+
+        if ans == float("inf"):
             print(-1)
         else:
-            print(dist)
+            print(ans)
 
 
 if __name__ == "__main__":
