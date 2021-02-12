@@ -1,27 +1,44 @@
 # -*- coding: utf-8 -*-
 
 
-def warshall_floyd(dist):
-    """
+def dijkstra(vertex_count: int, source: int, edges):
+    """Uses Dijkstra's algorithm to find the shortest path in a graph.
     Args:
-        Distance matrix between two points.
+        vertex_count: The number of vertices.
+        source      : Vertex number (0-indexed).
+        edges       : List of (cost, edge) (0-indexed).
     Returns:
-        Matrix of shortest distance.
-    Landau notation: O(n ** 3).
+        costs  : List of the shortest distance.
+        parents: List of parent vertices.
+    Landau notation: O(|Edges|log|Vertices|).
+    See:
+    https://atcoder.jp/contests/abc191/submissions/19964078
+    https://atcoder.jp/contests/abc191/submissions/19966232
     """
 
-    v_count = len(dist[0])
+    from heapq import heappop, heappush
 
-    for k in range(v_count):
-        for i in range(v_count):
-            for j in range(v_count):
-                if i == j:
-                    dist[i][j] = 0
-                    continue
+    hq = [(0, source)]  # weight, vertex number (0-indexed)
+    costs = [float("inf") for _ in range(vertex_count)]
+    costs[source] = 0
+    pending = -1
+    parents = [pending for _ in range(vertex_count)]
 
-                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
+    while hq:
+        cost, vertex = heappop(hq)
 
-    return dist
+        if cost > costs[vertex]:
+            continue
+
+        for weight, edge in edges[vertex]:
+            new_cost = cost + weight
+
+            if new_cost < costs[edge]:
+                costs[edge] = new_cost
+                parents[edge] = vertex
+                heappush(hq, (new_cost, edge))
+
+    return costs, parents
 
 
 def main():
@@ -31,22 +48,21 @@ def main():
 
     n, m = map(int, input().split())
     inf = float("inf")
-    graph = [[inf for _ in range(n)] for _ in range(n)]
+    graph = [[] for _ in range(n)]
 
     for _ in range(m):
         ai, bi, ti = map(int, input().split())
         ai -= 1
         bi -= 1
 
-        graph[ai][bi] = ti
-        graph[bi][ai] = ti
-
-    w = warshall_floyd(graph)
+        graph[ai].append((ti, bi))
+        graph[bi].append((ti, ai))
 
     ans = inf
 
-    for wi in w:
-        ans = min(ans, max(wi))
+    for i in range(n):
+        costs, _ = dijkstra(n, i, graph)
+        ans = min(ans, max(costs))
 
     print(ans)
 
