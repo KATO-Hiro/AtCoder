@@ -2,10 +2,9 @@
 
 
 def main():
-    from sys import setrecursionlimit
+    from collections import deque
     import sys
 
-    setrecursionlimit(10 ** 7)
     input = sys.stdin.readline
 
     n = int(input())
@@ -23,16 +22,18 @@ def main():
         graph[ai].append(bi)
         graph[bi].append(ai)
 
-    depth_list = [-1 for _ in range(n)]
+    depth = [-1 for _ in range(n)]
+    depth[0] = 0
+    d = deque()
+    d.append(0)
 
-    def calc_depth(vertex, depth):
-        depth_list[vertex] = depth
+    while d:
+        vertex = d.popleft()
 
         for g in graph[vertex]:
-            if depth_list[g] == -1:
-                calc_depth(g, depth + 1)
-
-    calc_depth(0, 0)
+            if depth[g] == -1:
+                depth[g] = depth[vertex] + 1
+                d.append(g)
 
     q = int(input())
     imos = [0 for _ in range(n)]
@@ -47,21 +48,22 @@ def main():
         if ti == 2:
             va, vb = vb, va
 
-        if depth_list[va] < depth_list[vb]:
+        if depth[va] < depth[vb]:
             imos[0] += xi
             imos[vb] -= xi
         else:
             imos[va] += xi
 
-    def apply_imos_method(vertex, current_value):
-        imos[vertex] += current_value
-        current_value = imos[vertex]
+    f = deque()
+    f.append(0)
+
+    while f:
+        vertex = f.popleft()
 
         for g in graph[vertex]:
-            if depth_list[vertex] < depth_list[g]:
-                apply_imos_method(g, current_value)
-
-    apply_imos_method(0, 0)
+            if depth[vertex] < depth[g]:
+                imos[g] += imos[vertex]
+                f.append(g)
 
     print(*imos)
 
