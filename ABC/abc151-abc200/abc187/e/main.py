@@ -1,8 +1,46 @@
 # -*- coding: utf-8 -*-
 
 
-def main():
+def calc_depth(vertex_count: int, graph):
     from collections import deque
+
+    PENDING = -1
+    depth = [PENDING for _ in range(vertex_count)]
+    parent = [PENDING for _ in range(vertex_count)]
+    depth[0], parent[0] = 0, 0
+    d = deque()
+    d.append(0)
+
+    while d:
+        vertex = d.popleft()
+
+        for g in graph[vertex]:
+            if depth[g] == PENDING:
+                depth[g] = depth[vertex] + 1
+                parent[g] = vertex
+                d.append(g)
+
+    return depth
+
+
+def run_imos(graph, depth, imos):
+    from collections import deque
+
+    d = deque()
+    d.append(0)
+
+    while d:
+        vertex = d.popleft()
+
+        for g in graph[vertex]:
+            if depth[vertex] < depth[g]:
+                imos[g] += imos[vertex]
+                d.append(g)
+
+    return imos
+
+
+def main():
     import sys
 
     input = sys.stdin.readline
@@ -22,18 +60,7 @@ def main():
         graph[ai].append(bi)
         graph[bi].append(ai)
 
-    depth = [-1 for _ in range(n)]
-    depth[0] = 0
-    d = deque()
-    d.append(0)
-
-    while d:
-        vertex = d.popleft()
-
-        for g in graph[vertex]:
-            if depth[g] == -1:
-                depth[g] = depth[vertex] + 1
-                d.append(g)
+    depth = calc_depth(vertex_count=n, graph=graph)
 
     q = int(input())
     imos = [0 for _ in range(n)]
@@ -54,18 +81,7 @@ def main():
         else:
             imos[va] += xi
 
-    f = deque()
-    f.append(0)
-
-    while f:
-        vertex = f.popleft()
-
-        for g in graph[vertex]:
-            if depth[vertex] < depth[g]:
-                imos[g] += imos[vertex]
-                f.append(g)
-
-    print(*imos)
+    print(*run_imos(graph=graph, depth=depth, imos=imos), sep="\n")
 
 
 if __name__ == "__main__":
