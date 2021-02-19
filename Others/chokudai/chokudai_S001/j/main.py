@@ -2,16 +2,16 @@
 
 
 class BIT:
-    def __init__(self, size: int):
+    def __init__(self, size: int) -> None:
         self.size = size
         self._bit = [0 for _ in range(self.size + 1)]
 
-    def add(self, index: int, value: int):
+    def add(self, index: int, value: int) -> None:
         while index <= self.size:
             self._bit[index] += value
             index += index & -index
 
-    def sum(self, index):
+    def sum(self, index) -> int:
         summed = 0
 
         while index > 0:
