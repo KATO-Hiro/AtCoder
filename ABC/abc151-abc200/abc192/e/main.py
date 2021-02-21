@@ -17,7 +17,7 @@ def dijkstra(vertex_count: int, source: int, edges):
             continue
 
         for weight, edge, dep_time in edges[vertex]:
-            new_cost = (cost + dep_time - 1) // dep_time * dep_time + weight
+            new_cost = cost + (dep_time - cost % dep_time) % dep_time + weight
 
             if new_cost < costs[edge]:
                 costs[edge] = new_cost
