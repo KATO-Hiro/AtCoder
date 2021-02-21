@@ -407,7 +407,7 @@ Represents a repository of accepted results.
 |KUPC2017|◯|--|--|--|--|--|
 |KUPC2018|◯|◯|◯|--|--|--|
 |QUPC2014|--|◯|◯|--|--|--|
-|QUPC2018|◯|--|--|--|--|--|
+|QUPC2018|◯|△|--|--|--|--|
 |Maximum-Cup2013|--|◯|--|--|--|--|
 |Maximum-Cup2018|◯|--|--|--|--|--|
 |MUJIN2016|◯|△|--|--|--|None|
