@@ -5,8 +5,9 @@ def main():
     n, k = map(int, input().split())
 
     for _ in range(k):
-        tmp = int("".join(sorted(str(n), reverse=True))) - int("".join(sorted(str(n))))
-        n = tmp
+        small = "".join(sorted(str(n)))
+        large = small[::-1]
+        n = int(large) - int(small)
 
     print(n)
 
