@@ -27,10 +27,8 @@ def main():
                 continue
             if (ny < 0) or (ny >= h):
                 continue
-            if a[ny][nx] >= a[y][x]:
-                continue
-
-            count += dfs(ny, nx)
+            if a[ny][nx] < a[y][x]:
+                count += dfs(ny, nx)
 
         memo[y][x] = count % mod
 
