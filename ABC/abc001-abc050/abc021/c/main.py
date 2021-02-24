@@ -21,8 +21,10 @@ def dijkstra(vertex_count: int, source: int, edges):
     hq = [(0, source)]  # weight, vertex number (0-indexed)
     costs = [float("inf") for _ in range(vertex_count)]
     costs[source] = 0
-    parents = [[] for _ in range(vertex_count)]
     visited = [False for _ in range(vertex_count)]
+    path_count = [0 for _ in range(vertex_count)]
+    path_count[source] = 1
+    mod = 10 ** 9 + 7
 
     while hq:
         cost, vertex = heappop(hq)
@@ -41,18 +43,15 @@ def dijkstra(vertex_count: int, source: int, edges):
             if new_cost <= costs[edge]:
                 costs[edge] = new_cost
 
-                if new_cost < costs[edge]:
-                    parents[edge] = [vertex]
-                else:
-                    parents[edge].append(vertex)
+                path_count[edge] += path_count[vertex]
+                path_count[edge] %= mod
 
                 heappush(hq, (new_cost, edge))
 
-    return costs, parents
+    return path_count
 
 
 def main():
-    from collections import deque
     import sys
 
     input = sys.stdin.readline
@@ -74,31 +73,9 @@ def main():
         edges[xi].append((1, yi))
         edges[yi].append((1, xi))
 
-    _, parents = dijkstra(vertex_count=n, source=a, edges=edges)
+    path_counts = dijkstra(vertex_count=n, source=a, edges=edges)
 
-    dp = [0 for _ in range(n)]
-    dp[b] = 1
-    visited = [False for _ in range(n)]
-
-    d = deque()
-    d.append(b)
-    mod = 10 ** 9 + 7
-
-    while d:
-        di = d.popleft()
-
-        if visited[di]:
-            continue
-
-        visited[di] = True
-
-        for p in parents[di]:
-            dp[p] += dp[di]
-            dp[p] %= mod
-
-            d.append(p)
-
-    print(dp[a])
+    print(path_counts[b])
 
 
 if __name__ == "__main__":
