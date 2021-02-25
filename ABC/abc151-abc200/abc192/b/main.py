@@ -6,11 +6,11 @@ def main():
 
     for index, si in enumerate(s, 1):
         if index % 2 == 1:
-            if si != si.lower():
+            if si.isupper():
                 print("No")
                 exit()
         else:
-            if si != si.upper():
+            if si.islower():
                 print("No")
                 exit()
 
