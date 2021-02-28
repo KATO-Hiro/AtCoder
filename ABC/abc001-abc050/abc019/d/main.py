@@ -11,8 +11,7 @@ def main():
     dist = 0
 
     for i in range(2, n + 1):
-        print("?", 1, i)
-        sys.stdout.flush()
+        print("?", 1, i, flush=True)
 
         di = int(input())
 
@@ -27,8 +26,7 @@ def main():
         if j == index:
             continue
 
-        print("?", index, j)
-        sys.stdout.flush()
+        print("?", index, j, flush=True)
 
         di = int(input())
 
