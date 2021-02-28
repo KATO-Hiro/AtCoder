@@ -1,44 +1,35 @@
 # -*- coding: utf-8 -*-
 
 
+def calc_score(s):
+    count = [0 for _ in range(10)]
+    score = 0
+
+    for si in s:
+        count[int(si)] += 1
+
+    for num, c in enumerate(count):
+        score += num * (10 ** c)
+
+    return score
+
+
 def main():
     k = int(input())
     s = input()
     t = input()
     numbers = [k for _ in range(10)]
-    t_numbers = [0 for _ in range(10)]
-    a_numbers = [0 for _ in range(10)]
 
     for si, ti in zip(s[:-1], t[:-1]):
         numbers[int(si)] -= 1
         numbers[int(ti)] -= 1
 
-        t_numbers[int(si)] += 1
-        a_numbers[int(ti)] += 1
-
     count = 0
 
     for i in range(1, 10):
         for j in range(1, 10):
-            if numbers[i] == 0:
-                continue
-
-            if numbers[i] == 1 and i == j:
-                continue
-
-            t_score = 0
-            a_score = 0
-
-            for num in range(1, 10):
-                if num == i:
-                    t_score += num * (10 ** (t_numbers[num] + 1))
-                else:
-                    t_score += num * (10 ** t_numbers[num])
-
-                if num == j:
-                    a_score += num * (10 ** (a_numbers[num] + 1))
-                else:
-                    a_score += num * (10 ** a_numbers[num])
+            t_score = calc_score(s[:-1] + str(i))
+            a_score = calc_score(t[:-1] + str(j))
 
             if t_score > a_score:
                 if i != j:
