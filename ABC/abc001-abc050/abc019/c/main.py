@@ -1,37 +1,27 @@
 # -*- coding: utf-8 -*-
 
 
+def mod2(number: int):
+    while True:
+        if number % 2 == 0:
+            number //= 2
+        else:
+            return number
+
+
 def main():
-    from bisect import bisect_left
     import sys
 
     input = sys.stdin.readline
 
     n = int(input())
-    a = sorted(list(map(int, input().split()))) + [float("inf")]
-    visited = [False for _ in range(n + 1)]
-    ans = 0
+    a = list(map(int, input().split()))
+    ans = set()
 
-    for index, ai in enumerate(a[:-1]):
-        if visited[index]:
-            continue
+    for ai in a:
+        ans.add(mod2(ai))
 
-        visited[index] = True
-        bi = ai
-
-        for i in range(40):
-            bi *= 2
-            pos = bisect_left(a, bi)
-
-            if a[pos] == bi:
-                visited[pos] = True
-
-            if pos == n:
-                break
-
-        ans += 1
-
-    print(ans)
+    print(len(ans))
 
 
 if __name__ == "__main__":
