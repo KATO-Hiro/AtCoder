@@ -14,7 +14,7 @@ def main():
     for index in range(n):
         ai, bi = map(int, input().split())
 
-        for i in range(min(index + 1, k), 0, -1):
+        for i in reversed(range(min(index + 1, k))):
             for j in range(ai, w + 1):
                 dp[i][j] = max(dp[i][j], dp[i - 1][j - ai] + bi)
                 ans = max(ans, dp[i][j])
