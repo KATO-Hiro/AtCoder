@@ -280,6 +280,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 107|◯|--|--|--|--|--|
 |AtCoder Regular Contest 108|◯|--|--|--|--|--|
 |AtCoder Regular Contest 110|◯|◯|--|--|--|--|
+|AtCoder Regular Contest 113|◯|--|--|--|--|--|
 
 </details>
 
