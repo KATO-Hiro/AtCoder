@@ -2,29 +2,28 @@
 
 
 def main():
+    from collections import Counter
+
     import sys
 
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
     a = list(map(int, input().split()))
-    pos = [[] for _ in range(n)]
+    c = Counter(a[:m])
+    ans = 0
 
-    for index, ai in enumerate(a):
-        pos[ai].append(index)
+    while c[ans]:
+        ans += 1
 
-    for i in range(n):
-        prev = -1
-        pos[i].append(n)
+    for i in range(m, n):
+        c[a[i]] += 1
+        c[a[i - m]] -= 1
 
-        for p in pos[i]:
-            if p - prev > m:
-                print(i)
-                exit()
+        if c[a[i - m]] == 0:
+            ans = min(ans, a[i - m])
 
-            prev = p
-
-    print(n)
+    print(ans)
 
 
 if __name__ == "__main__":
