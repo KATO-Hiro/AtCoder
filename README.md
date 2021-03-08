@@ -422,7 +422,7 @@ Represents a repository of accepted results.
 |Discovery 2016 final|◯|--|--|--|None|None|
 |snuke21|◯|--|--|--|--|--|
 |Indeednow qualA|◯|◯|--|--|--|--|
-|Indeednow qualB|◯|◯|--|--|--|--|
+|Indeednow qualB|◯|◯|◯|--|--|--|
 |Indeednow final open A|△|--|--|--|--|--|
 |Indeednow final open B|◯|--|--|--|--|--|
 |donuts 2014|◯|--|--|--|None|None|
