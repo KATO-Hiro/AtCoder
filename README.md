@@ -421,7 +421,7 @@ Represents a repository of accepted results.
 |Discovery 2016 qual|◯|--|--|--|None|None|
 |Discovery 2016 final|◯|--|--|--|None|None|
 |snuke21|◯|--|--|--|--|--|
-|Indeednow qualA|◯|◯|--|--|--|--|
+|Indeednow qualA|◯|◯|△|--|--|--|
 |Indeednow qualB|◯|◯|◯|--|--|--|
 |Indeednow final open A|△|--|--|--|--|--|
 |Indeednow final open B|◯|--|--|--|--|--|
