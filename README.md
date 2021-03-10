@@ -155,7 +155,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 139|◯|◯|◯|◯|--|--|
 |AtCoder Beginner Contest 140|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 141|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 142|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 142|◯|◯|◯|◯|△|--|
 |AtCoder Beginner Contest 143|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 144|◯|◯|◯|◯|--|--|
 |AtCoder Beginner Contest 145|◯|◯|◯|◯|--|--|
