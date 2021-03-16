@@ -284,6 +284,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 110|◯|◯|--|--|--|--|
 |AtCoder Regular Contest 112|◯|--|--|--|--|--|
 |AtCoder Regular Contest 113|◯|--|--|--|--|--|
+|AtCoder Regular Contest 114|△|--|--|--|--|--|
 
 </details>
 
