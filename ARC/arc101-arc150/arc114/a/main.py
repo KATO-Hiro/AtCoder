@@ -36,7 +36,6 @@ class Prime:
 
 
 def main():
-    from itertools import product
     from math import gcd
     import sys
 
@@ -46,22 +45,17 @@ def main():
     x = list(map(int, input().split()))
     p = Prime(max(x))
     primes = p.generate()
+    prime_count = len(primes)
     ans = float("inf")
 
-    for pi in product([0, 1], repeat=len(primes)):
+    for bit in range(1, 1 << prime_count):
         y = 1
 
-        for pii, prime in zip(pi, primes):
-            if prime * pii != 0:
-                y *= prime
+        for i in range(prime_count):
+            if bit & (1 << i):
+                y *= primes[i]
 
-        count = 0
-
-        for xi in x:
-            if gcd(y, xi) > 1:
-                count += 1
-
-        if count == n:
+        if all(gcd(y, xi) > 1 for xi in x):
             ans = min(ans, y)
 
     print(ans)
