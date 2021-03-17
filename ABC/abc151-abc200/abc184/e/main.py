@@ -11,7 +11,8 @@ def main():
     a = [list(input().rstrip()) for _ in range(h)]
     sy, sx = 0, 0
     gy, gx = 0, 0
-    dist = [[float("inf") for _ in range(w)] for __ in range(h)]
+    inf = 10 ** 18
+    dist = [[inf for _ in range(w)] for __ in range(h)]
     d = deque()
     dxy = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     teleport = dict()
@@ -43,7 +44,7 @@ def main():
                 continue
             if a[ny][nx] == "#":
                 continue
-            if dist[ny][nx] != float("inf"):
+            if dist[ny][nx] != inf:
                 continue
 
             dist[ny][nx] = dist[y][x] + 1
@@ -54,7 +55,7 @@ def main():
                 continue
 
             for ny, nx in teleport[a[y][x]]:
-                if dist[ny][nx] != float("inf"):
+                if dist[ny][nx] != inf:
                     continue
 
                 dist[ny][nx] = dist[y][x] + 1
@@ -62,7 +63,7 @@ def main():
 
             teleport[a[y][x]] = []
 
-    if dist[gy][gx] == float("inf"):
+    if dist[gy][gx] == inf:
         print(-1)
     else:
         print(dist[gy][gx])
