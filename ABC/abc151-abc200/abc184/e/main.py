@@ -16,6 +16,8 @@ def main():
     d = deque()
     dxy = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     teleport = dict()
+    teleport = [[] for _ in range(26)]
+    is_used = [False for _ in range(26)]
 
     for i in range(h):
         for j in range(w):
@@ -26,13 +28,15 @@ def main():
             elif a[i][j] == "G":
                 gy, gx = i, j
             elif a[i][j].islower():
-                if a[i][j] not in teleport.keys():
-                    teleport[a[i][j]] = [(i, j)]
-                else:
-                    teleport[a[i][j]].append((i, j))
+                diff = ord(a[i][j]) - ord("a")
+                teleport[diff].append((i, j))
 
     while d:
         y, x = d.popleft()
+
+        if y == gy and x == gx:
+            print(dist[y][x])
+            exit()
 
         for dx, dy in dxy:
             nx = x + dx
@@ -51,22 +55,21 @@ def main():
             d.append((ny, nx))
 
         if a[y][x].islower():
-            if len(teleport[a[y][x]]) == 0:
+            diff = ord(a[y][x]) - ord("a")
+
+            if is_used[diff]:
                 continue
 
-            for ny, nx in teleport[a[y][x]]:
+            for ny, nx in teleport[diff]:
                 if dist[ny][nx] != inf:
                     continue
 
                 dist[ny][nx] = dist[y][x] + 1
                 d.append((ny, nx))
 
-            teleport[a[y][x]] = []
+            is_used[diff] = True
 
-    if dist[gy][gx] == inf:
-        print(-1)
-    else:
-        print(dist[gy][gx])
+    print(-1)
 
 
 if __name__ == "__main__":
