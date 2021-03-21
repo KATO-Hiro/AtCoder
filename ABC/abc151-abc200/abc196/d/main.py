@@ -1,51 +1,43 @@
 # -*- coding: utf-8 -*-
-from functools import lru_cache
 
 
-@lru_cache(maxsize=None)
 def main():
+    from itertools import combinations
     import sys
 
     input = sys.stdin.readline
-    sys.setrecursionlimit(10 ** 7)
 
     h, w, a, b = map(int, input().split())
-    used = [[False for _ in range(w)] for _ in range(h)]
+    tiles = list()
 
-    def dfs(i, j, a, b):
-        if a < 0 or b < 0:
-            return 0
-        if j == w:
-            j = 0
-            i += 1
-        if i == h:
-            return 1
-        if used[i][j]:
-            return dfs(i, j + 1, a, b)
+    for i in range(h):
+        for j in range(w - 1):
+            tiles.append(((i, j), (i, j + 1)))
 
-        count = 0
-        used[i][j] = True
+    for i in range(h - 1):
+        for j in range(w):
+            tiles.append(((i, j), (i + 1, j)))
 
-        # 1マス
-        count += dfs(i, j + 1, a, b - 1)
+    ans = 0
 
-        # 2マス: 横方向
-        if (j + 1) < w and not used[i][j + 1]:
-            used[i][j + 1] = True
-            count += dfs(i, j + 1, a - 1, b)
-            used[i][j + 1] = False
+    for c in combinations(tiles, a):
+        board = [[0 for _ in range(w)] for _ in range(h)]
 
-        # 2マス: 縦方向
-        if (i + 1) < h and not used[i + 1][j]:
-            used[i + 1][j] = True
-            count += dfs(i, j + 1, a - 1, b)
-            used[i + 1][j] = False
+        for first, second in c:
+            board[first[0]][first[1]] += 1
+            board[second[0]][second[1]] += 1
 
-        used[i][j] = False
+        max_value = 0
 
-        return count
+        for i in range(h):
+            for j in range(w):
+                max_value = max(max_value, board[i][j])
 
-    ans = dfs(0, 0, a, b)
+        if max_value > 1:
+            continue
+
+        ans += 1
+
     print(ans)
 
 
