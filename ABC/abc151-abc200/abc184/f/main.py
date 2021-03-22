@@ -26,10 +26,6 @@ def main():
     n, t = map(int, input().split())
     a = list(map(int, input().split()))
 
-    if n == 1:
-        print(a[0])
-        exit()
-
     mid = n // 2
     first = a[:mid]
     second = a[mid:]
@@ -43,10 +39,6 @@ def main():
 
     for first_pattern in first_patterns:
         remain = t - first_pattern
-
-        if remain > second_patterns[-1]:
-            remain = second_patterns[-1]
-
         left = left_index
         right = right_index
 
