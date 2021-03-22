@@ -39,10 +39,6 @@ def main():
 
     for first_pattern in first_patterns:
         remain = t - first_pattern
-
-        if remain > second_patterns[-1]:
-            remain = second_patterns[-1]
-
         left = left_index
         right = right_index
 
