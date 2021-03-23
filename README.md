@@ -537,6 +537,7 @@ Represents a repository of accepted results.
 |paken 2018 day3|◯|◯||--|--|--|--|--|None|None|None|None|
 |paken 2019 day3|◯|○|◯|△|--|--|--|--|None|None|None|None|
 |paken 2019 day4|○|○|--|--|--|--|--|--|None|None|None|None|
+|paken 2020 day1|--|--|--|--|△|--|--|--|None|None|None|None|
 |paken 2020 day2|△|--|--|--|--|--|--|--|None|None|None|None|
 |paken 2021 day1|◯|◯|◯|--|--|◯|--|--|--|--|--|--|
 |paken 2021 day2|◯|--|--|--|--|--|--|--|--|--|--|--|
