@@ -127,7 +127,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 114|◯|◯|◯|◯|
 |AtCoder Beginner Contest 115|◯|◯|◯|△|
 |AtCoder Beginner Contest 116|◯|◯|◯|--|
-|AtCoder Beginner Contest 117|◯|◯|◯|--|
+|AtCoder Beginner Contest 117|◯|◯|◯|△|
 |AtCoder Beginner Contest 118|◯|◯|◯|--|
 |AtCoder Beginner Contest 119|◯|◯|△|△|
 |AtCoder Beginner Contest 120|◯|◯|◯|--|
