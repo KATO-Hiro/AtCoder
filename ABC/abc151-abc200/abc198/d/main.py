@@ -21,8 +21,8 @@ def main():
     for p in permutations(range(10), r=n):
         d = dict()
 
-        for si, pi in zip(s, p):
-            d[si] = str(pi)
+        for index, si in enumerate(s):
+            d[si] = str(p[index])
 
         n1, n2, n3 = "", "", ""
 
