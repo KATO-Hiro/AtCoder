@@ -593,7 +593,7 @@ Represents a repository of accepted results.
 |practice 2|◯|◯|◯|--|--|--|--|--|--|△|--|--|
 |fuka 5th|◯|--|--|--|--|--|--|None|None|None|None|None|
 |gw 2015|◯|--|--|--|--|--|--|--|--|--|None|None|
-|jsc 2021|◯|◯|--|--|--|--|--|--|None|None|None|None|
+|jsc 2021|◯|◯|◯|--|--|--|--|--|None|None|None|None|
 
 </details>
 
