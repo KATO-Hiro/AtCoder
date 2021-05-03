@@ -37,12 +37,11 @@ def main():
         ok = False
 
         # k <= j <= iの範囲で全探索
-        for i, value_i in enumerate(patterns):
-            for j, value_j in enumerate(patterns):
-                for k, value_k in enumerate(patterns):
-                    if k <= j <= i:
-                        if value_i | value_j | value_k == ((1 << m) - 1):
-                            ok = True
+        for x in patterns:
+            for y in patterns:
+                for z in patterns:
+                    if x | y | z == ((1 << m) - 1):
+                        ok = True
 
         if ok:
             ac = wj
