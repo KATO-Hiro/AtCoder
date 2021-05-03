@@ -524,6 +524,7 @@ Represents a repository of accepted results.
 |intro heuristics 2020|△|◯|△|--|--|--|
 |future 2021 qual|◯|None|None|None|None|None|
 |future 2021 final open|△|None|None|None|None|None|
+|zone 2021|--|--|△|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
