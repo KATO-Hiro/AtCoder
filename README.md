@@ -629,4 +629,4 @@ Captions:
 
 ## License
 
-[MIT](http://KATO-Hiro.mit-license.org)
+[CC0](https://creativecommons.org/share-your-work/public-domain/cc0)
