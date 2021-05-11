@@ -20,8 +20,8 @@ def main():
         else:
             one[index] += 1
 
-    zero = list(accumulate([0] + zero))
-    one = list(accumulate([0] + one))
+    zero = list(accumulate(zero, initial=0))
+    one = list(accumulate(one, initial=0))
 
     for r in range(n + 1):
         cost = zero[r]
