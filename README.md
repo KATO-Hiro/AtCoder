@@ -214,7 +214,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 198|◯|◯|△|△|△|--|
 |AtCoder Beginner Contest 199|◯|◯|◯|--|--|--|
 |AtCoder Beginner Contest 200|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 201|--|--|◯|--|--|--|
+|AtCoder Beginner Contest 201|--|◯|◯|--|--|--|
 
 </details>
 
