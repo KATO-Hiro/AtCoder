@@ -527,6 +527,7 @@ Represents a repository of accepted results.
 |future 2021 qual|◯|None|None|None|None|None|
 |future 2021 final open|△|None|None|None|None|None|
 |zone 2021|◯|◯|△|◯|--|--|
+|monamieHB 2021|△|--|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
