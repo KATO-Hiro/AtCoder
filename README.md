@@ -298,6 +298,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 117|◯|△|--|--|--|--|
 |AtCoder Regular Contest 118|◯|--|--|--|--|--|
 |AtCoder Regular Contest 119|◯|--|--|--|--|--|
+|AtCoder Regular Contest 120|△|--|--|--|--|--|
 
 </details>
 
