@@ -16,21 +16,27 @@ class Heapq:
 
     See:
     https://qiita.com/physharp/items/f9229ab879cac9a944d7
+    https://prd-xxx.hateblo.jp/entry/2019/06/24/235844
     """
 
-    def __init__(self):
+    def __init__(self, descending_order=False):
         self.q = []
         self.p = []
+        self.descending_order = descending_order
+        self.sign = -1 if descending_order else 1
 
     def build(self, a):
+        if self.descending_order:
+            a = [-ai for ai in a]
+
         self.q = a
         heapify(self.q)
 
     def push(self, x):
-        heappush(self.q, x)
+        heappush(self.q, x * self.sign)
 
     def erase(self, x):
-        heappush(self.p, x)
+        heappush(self.p, x * self.sign)
         self.clean()
 
     def clean(self):
@@ -41,13 +47,13 @@ class Heapq:
     def pop(self, exc=None):
         self.clean()
         if self.q:
-            return heappop(self.q)
+            return heappop(self.q * self.sign)
         return exc
 
     def top(self, exc=None):
         self.clean()
         if self.q:
-            return self.q[0]
+            return self.q[0] * self.sign
         return exc
 
 
@@ -58,7 +64,7 @@ def main():
 
     n, q = map(int, input().split())
     g_count = 2 * 10 ** 5
-    groups = [Heapq() for _ in range(g_count)]
+    groups = [Heapq(descending_order=True) for _ in range(g_count)]
     ab = list()
 
     for _ in range(n):
@@ -66,14 +72,14 @@ def main():
         bi -= 1
         ab += [[ai, bi]]
 
-        groups[bi].push(-ai)
+        groups[bi].push(ai)
 
     equality = Heapq()
 
     # Get max value in each group.
     for group in groups:
         if group.q:
-            equality.push(-group.top())
+            equality.push(group.top())
 
     ans = list()
 
@@ -85,24 +91,23 @@ def main():
         rating, group_id = ab[ci]
 
         # Remove rating in group_id and max value in group_id of equality.
-        equality.erase(-groups[group_id].top())
-        groups[group_id].erase(-rating)
+        equality.erase(groups[group_id].top())
+        groups[group_id].erase(rating)
 
         # Get max value in group ci and add equality.
         if groups[group_id].q:
-            equality.push(-groups[group_id].top())
+            equality.push(groups[group_id].top())
 
         # Update di from ci.
         ab[ci][1] = di
 
         # Remove max value in group_id of equality.
         if groups[di].q:
-            di_max = -groups[di].top()
-            equality.erase(di_max)
+            equality.erase(groups[di].top())
 
         # Get max value in group di and add equality.
-        groups[di].push(-ab[ci][0])
-        equality.push(-groups[di].top())
+        groups[di].push(ab[ci][0])
+        equality.push(groups[di].top())
 
         ans += [equality.top()]
 
