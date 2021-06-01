@@ -2,39 +2,25 @@
 
 
 def main():
-    from collections import defaultdict
     import sys
 
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
-    d = defaultdict()
+    ab = list()
 
     for i in range(n):
         ai, bi = map(int, input().split())
+        ab.append((ai, bi))
 
-        if ai in d.keys():
-            d[ai] += bi
-        else:
-            d[ai] = bi
-
-    sorted_d = sorted(d.items(), key=lambda x: x[0])
-    pos = 0
+    sorted_ab = sorted(ab)
     money = k
 
-    for key, value in sorted_d:
-        diff = key - pos
-
-        if diff <= money:
-            money -= diff
-            pos = key
+    for pos, value in sorted_ab:
+        if money >= pos:
             money += value
-        else:
-            pos += money
-            print(pos)
-            exit()
 
-    print(pos + money)
+    print(money)
 
 
 if __name__ == "__main__":
