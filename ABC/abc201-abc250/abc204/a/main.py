@@ -6,20 +6,12 @@ def main():
 
     input = sys.stdin.readline
 
-    xy = list(map(int, input().split()))
+    x, y = map(int, input().split())
 
-    if len(set(xy)) == 1:
-        print(xy[0])
+    if x == y:
+        print(x)
     else:
-        checked = [False for _ in range(3)]
-
-        for hand in xy:
-            checked[hand] = True
-
-        for index, c in enumerate(checked):
-            if not c:
-                print(index)
-                exit()
+        print(3 - x - y)
 
 
 if __name__ == "__main__":
