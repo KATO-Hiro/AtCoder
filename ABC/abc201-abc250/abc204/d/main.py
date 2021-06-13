@@ -8,20 +8,22 @@ def main():
 
     n = int(input())
     t = list(map(int, input().split()))
-    m = 10 ** 5 + 1
-    dp = [False for _ in range(m)]
-    dp[0] = True
+    dp = set([0])
 
     for ti in t:
-        for i in reversed(range(m - ti)):
-            dp[i + ti] |= dp[i]
+        dp2 = set()
+
+        for d in dp:
+            dp2.add(d)
+            dp2.add(d + ti)
+
+        dp = dp2
 
     total = sum(t)
     ans = float("inf")
 
-    for t in range(m):
-        if dp[t]:
-            ans = min(ans, max(t, total - t))
+    for t in dp:
+        ans = min(ans, max(t, total - t))
 
     print(ans)
 
