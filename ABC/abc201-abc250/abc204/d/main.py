@@ -14,10 +14,9 @@ def main():
         dp2 = set()
 
         for d in dp:
-            dp2.add(d)
             dp2.add(d + ti)
 
-        dp = dp2
+        dp |= dp2
 
     total = sum(t)
     ans = float("inf")
