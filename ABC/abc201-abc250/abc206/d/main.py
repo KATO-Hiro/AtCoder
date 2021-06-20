@@ -83,19 +83,10 @@ def main():
     a = list(map(int, input().split()))
     m = 2 * 10 ** 5 + 10
     uf = UnionFind(m)
-
-    for i in range(n):
-        uf.merge_if_needs(a[i], a[n - i - 1])
-
     ans = 0
 
-    for j in range(m):
-        root = uf.find_root(j)
-
-        if j != root:
-            continue
-
-        ans += uf.get_group_size(root) - 1
+    for i in range(n):
+        ans += uf.merge_if_needs(a[i], a[n - i - 1])
 
     print(ans)
 
