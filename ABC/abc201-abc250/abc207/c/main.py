@@ -11,14 +11,16 @@ def main():
 
     for i in range(n):
         ti, li, ri = map(int, input().split())
+        li *= 2
+        ri *= 2
 
         if ti == 2:
-            ri -= 0.5
+            ri -= 1
         elif ti == 3:
-            li += 0.5
+            li += 1
         elif ti == 4:
-            li += 0.5
-            ri -= 0.5
+            li += 1
+            ri -= 1
 
         lr.append((li, ri))
 
@@ -30,12 +32,8 @@ def main():
         for j in range(i + 1, n):
             lj, rj = lr[j]
 
-            if ri < lj:
-                continue
-            if rj < li:
-                continue
-
-            ans += 1
+            if max(li, lj) <= min(ri, rj):
+                ans += 1
 
     print(ans)
 
