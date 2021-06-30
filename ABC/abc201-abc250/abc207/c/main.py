@@ -30,14 +30,12 @@ def main():
         for j in range(i + 1, n):
             lj, rj = lr[j]
 
-            if li <= rj <= ri:
-                ans += 1
-            elif lj <= ri <= rj:
-                ans += 1
-            elif lj <= li and ri <= rj:
-                ans += 1
-            elif li <= lj and rj <= ri:
-                ans += 1
+            if ri < lj:
+                continue
+            if rj < li:
+                continue
+
+            ans += 1
 
     print(ans)
 
