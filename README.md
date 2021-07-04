@@ -404,7 +404,7 @@ Represents a repository of accepted results.
 |Tenka1 Programmer 2014 qual A|◯|--|--|--|--|--|
 |Tenka1 Programmer 2014 qual B|◯|--|--|--|--|--|
 |Tenka1 Programmer Beginner Contest|◯|◯|△|--|--|--|
-|Tenka1 Programmer Beginner Contest 2018|◯|◯|△|--|--|--|
+|Tenka1 Programmer Beginner Contest 2018|◯|◯|△|△|--|--|
 |Tenka1 Programmer Beginner Contest 2019|◯|◯|△|--|--|--|
 |yahoo procon2017 qual|◯|◯|--|--|--|None|
 |yahoo procon2018 qual|◯|◯|--|--|--|None|
