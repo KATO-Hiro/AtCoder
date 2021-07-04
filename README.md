@@ -221,6 +221,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 205|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 206|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 207|◯|◯|◯|--|--|--|
+|AtCoder Beginner Contest 208|--|--|◯|--|--|--|
 
 </details>
 
