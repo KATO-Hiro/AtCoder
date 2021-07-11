@@ -6,7 +6,7 @@ class TreeDistance:
         self._graph = graph
         self._visited = [False for _ in range(vertex_count)]
 
-    def calc(self, start_vertex):
+    def calc(self, start_vertex=0):
         self._bfs(start_vertex)
 
         return self.dist
