@@ -1,5 +1,34 @@
 # -*- coding: utf-8 -*-
 
+class TreeDistance:
+    def __init__(self, vertex_count, graph) -> None:
+        self.dist = [0 for _ in range(vertex_count)]
+        self._graph = graph
+        self._visited = [False for _ in range(vertex_count)]
+
+    def calc(self, start_vertex):
+        self._bfs(start_vertex)
+
+        return self.dist
+
+    def _bfs(self, vertex):
+        from collections import deque
+
+        d = deque()
+        d.append(vertex)
+        self._visited[vertex] = True
+
+        while d:
+            di = d.popleft()
+
+            for to in self._graph[di]:
+                if self._visited[to]:
+                    continue
+
+                self._visited[to] = True
+                self.dist[to] = self.dist[di] + 1
+                d.append(to)
+
 
 def main():
     from collections import deque
@@ -17,23 +46,9 @@ def main():
     
         graph[ai].append(bi)
         graph[bi].append(ai)
-    
-    used = [False for _ in range(n)]
-    dist = [10 ** 7 for _ in range(n)]
-    dist[0] = 0
-    d = deque()
-    d.append(0)
 
-    while d:
-        di = d.popleft()
-        used[di] = True
-
-        for to in graph[di]:
-            if used[to]:
-                continue
-
-            dist[to] = min(dist[to], dist[di] + 1)
-            d.append(to)
+    td = TreeDistance(n, graph)
+    dist = td.calc(0)
     
     for i in range(q):
         ci, di = map(int, input().split())
