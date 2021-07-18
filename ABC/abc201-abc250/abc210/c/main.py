@@ -2,38 +2,28 @@
 
 
 def main():
+    from collections import Counter
     import sys
 
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
     c = list(map(int, input().split()))
-    d = dict()
+    d = Counter(c[:k])
+    ans = len(d)
 
-    for i in range(k):
-        if c[i] not in d.keys():
-            d[c[i]] = 1
-        else:
-            d[c[i]] += 1
-    
-    size = len(d.keys())
-    ans = size
+    for j in range(n):
+        if j + k == n:
+            break
 
-    for j in range(n - k):
         d[c[j]] -= 1
 
         if d[c[j]] == 0:
-            size -= 1
+            del d[c[j]]
 
-        if c[j + k] not in d.keys():
-            d[c[j + k]] = 1
-            size += 1
-        else:
-            if d[c[j + k]] == 0:
-                size += 1
-            d[c[j + k]] += 1
+        d[c[j + k]] += 1
         
-        ans = max(ans, size)
+        ans = max(ans, len(d))
 
     print(ans)
 
