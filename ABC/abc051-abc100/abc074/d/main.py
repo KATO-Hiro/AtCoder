@@ -1,6 +1,25 @@
 # -*- coding: utf-8 -*-
 
 
+def warshall_floyd(dist):
+    '''
+        Args:
+            Distance matrix between two points.
+        Returns:
+            Matrix of shortest distance.
+        Landau notation: O(n ** 3).
+    '''
+
+    v_count = len(dist[0])
+
+    for k in range(v_count):
+        for i in range(v_count):
+            for j in range(v_count):
+                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
+
+    return dist
+
+
 def main():
     import sys
 
@@ -8,29 +27,29 @@ def main():
 
     n = int(input())
     a = [list(map(int, input().split())) for _ in range(n)]
-    edges = list()
-    inf = 10 ** 18
+    b = [ai[:] for ai in a]
+    dist = warshall_floyd(b)
     ans = 0
 
     for i in range(n):
         for j in range(i + 1, n):
-            edges.append((a[i][j], (i, j)))
-            ans += a[i][j]
-    
-    for dist, (i, j) in sorted(edges, reverse=True):
-        if a[i][j] == inf:
-            continue
-    
-        for k in range(n):
-            if (k != i and k != j) and(a[i][k] != inf and a[k][j] != inf):
-                if a[i][k] + a[k][j] == a[i][j]:
-                    ans -= dist
-                    a[i][j] = inf
-                    a[j][i] = inf
-                    break
-                elif a[i][k] + a[k][j] < a[i][j]:
-                    print(-1)
-                    exit()
+            if a[i][j] != dist[i][j]:
+                print(-1)
+                exit()
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            is_need = True
+
+            for k in range(n):
+                if k == i or k == j:
+                    continue
+
+                if dist[i][j] ==  dist[i][k] + dist[k][j]:
+                    is_need = False
+            
+            if is_need:
+                ans += dist[i][j]
 
     print(ans)
 
