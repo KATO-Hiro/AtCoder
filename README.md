@@ -84,7 +84,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 071|◯|◯|◯|△|
 |AtCoder Beginner Contest 072|◯|◯|◯|△|
 |AtCoder Beginner Contest 073|◯|◯|◯|◯|
-|AtCoder Beginner Contest 074|◯|◯|△|--|
+|AtCoder Beginner Contest 074|◯|◯|△|△|
 |AtCoder Beginner Contest 075|◯|◯|△|△|
 |AtCoder Beginner Contest 076|◯|◯|◯|--|
 |AtCoder Beginner Contest 077|◯|◯|△|--|
