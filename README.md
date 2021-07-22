@@ -61,7 +61,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 048|◯|△|◯|--|
 |AtCoder Beginner Contest 049|◯|◯|△|△|
 |AtCoder Beginner Contest 050|◯|◯|△|--|
-|AtCoder Beginner Contest 051|◯|◯|◯|--|
+|AtCoder Beginner Contest 051|◯|◯|◯|△|
 |AtCoder Beginner Contest 052|◯|◯|△|◯|
 |AtCoder Beginner Contest 053|◯|◯|◯|◯|
 |AtCoder Beginner Contest 054|◯|△|△|--|
