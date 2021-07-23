@@ -158,7 +158,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 142|◯|◯|◯|◯|△|--|
 |AtCoder Beginner Contest 143|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 144|◯|◯|◯|◯|△|--|
-|AtCoder Beginner Contest 145|◯|◯|◯|◯|--|--|
+|AtCoder Beginner Contest 145|◯|◯|◯|◯|△|--|
 |AtCoder Beginner Contest 146|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 147|◯|◯|△|△|--|--|
 |AtCoder Beginner Contest 148|◯|◯|◯|◯|◯|△|
