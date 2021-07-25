@@ -16,11 +16,16 @@ def main():
             p.add(k // i)
     
     ans = 0
+    sorted_p = sorted(p)
+    n = len(p)
     
-    for a in p:
-        for b in p:
+    for i in range(n):
+        for j in range(i, n):
+            a = sorted_p[i]
+            b = sorted_p[j]
             c, q = divmod(k, a * b)
-            if q == 0 and (a <= b <= c):
+
+            if q == 0 and (c >= b):
                 ans += 1
 
     print(ans)
