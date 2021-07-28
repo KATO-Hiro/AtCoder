@@ -1,16 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-def f(x):
-    count = 0
-
-    while x % 2 == 0:
-        x //= 2
-        count += 1
-
-    return count
-
-
 def lcm(a: int, b: int) -> int:
     '''Compute least common multiple of a and b.
     Args:
@@ -29,6 +19,29 @@ def lcm(a: int, b: int) -> int:
     return a * b // gcd(a, b)
 
 
+# See:
+# https://blog.hamayanhamayan.com/entry/2020/01/11/145024
+def naive(n, m, b):
+    ans = 0
+    
+    for i in range(m):
+        ok = True
+
+        for j in range(n):
+            # 各数字が(ak / 2)で割り切れない
+            if i % b[j] != 0:
+                ok = False
+            # 2p + 1が偶数になる
+            if (i // b[j]) % 2 == 0:
+                ok = False
+            
+            if ok:
+                print(i)
+                ans += 1
+    
+    return ans
+
+
 def main():
     from math import ceil
     import sys
@@ -45,23 +58,23 @@ def main():
         else:
             print(0)
             exit()
-
-    t = f(b[0])
-
-    for index, bi in enumerate(b[1:]):
-        if f(bi) != t:
-            print(0)
-            exit()
-
-        b[index] >>= t 
-
+    
     l = b[0]
 
     for bi in b[1:]:
         l = lcm(l, bi)
     
+    # 2p + 1が偶数になるかどうかをチェック
+    for bi in b:
+        if (l // bi) % 2 == 0:
+            print(0)
+            exit()
+
     count = m // l
     print(ceil(count / 2))
+
+
+    # print(naive(n, m, b))
 
 
 if __name__ == "__main__":
