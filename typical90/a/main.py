@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 
 
-def f(a, k, l, candidate):
+def f(a, k, candidate):
     count = 0
     prev = 0
 
     for ai in a:
-        if ai - prev >= candidate and l - ai >=candidate:
+        if ai - prev >= candidate:
             count += 1
             prev = ai
     
-    if count >= k:
+    if count > k:
         return True
     else:
         return False
@@ -24,12 +24,12 @@ def main():
     n, l = map(int, input().split())
     k = int(input())
     a = list(map(int, input().split())) + [l]
-    left = -1
+    left = 0
     right = l + 1
 
     while (right - left) > 1:
         candidate = (left + right) // 2
-        ok = f(a, k, l, candidate)
+        ok = f(a, k, candidate)
 
         if ok:
             left = candidate
