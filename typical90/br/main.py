@@ -2,7 +2,7 @@
 
 
 def main():
-    from statistics import mean, median
+    from statistics import median
     import sys
 
     input = sys.stdin.readline
