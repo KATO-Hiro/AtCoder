@@ -225,6 +225,10 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 209|--|--|--|◯|--|--|
 |AtCoder Beginner Contest 210|--|◯|◯|△|--|--|
 
+|Contest name\Problems|A|B|C|D|E|F|G|H|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|AtCoder Beginner Contest 212|--|--|--|--|--|--|--|--|
+
 </details>
 
 <details>
