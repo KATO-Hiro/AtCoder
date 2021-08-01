@@ -8,18 +8,13 @@ def main():
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
-    a = sorted(list(map(int, input().split())))
+    a = sorted(list(map(int, input().split())) + [-10 ** 10, 10 ** 10]) # 番兵を置く
     b = sorted(list(map(int, input().split())))
     ans = float("inf")
 
     for bi in b:
-        index = bisect_left(a, bi)
-
-        if index == n:
-            index -= 1
-
-        for j in range(max(0, index - 3), min(index + 3, n)):
-            ans = min(ans, abs(a[j] - bi))
+        j = bisect_left(a, bi)
+        ans = min(ans, abs(a[j] - bi), abs(a[j - 1] - bi))
 
     print(ans)
 
