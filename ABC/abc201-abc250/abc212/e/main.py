@@ -7,37 +7,34 @@ def main():
     input = sys.stdin.readline
 
     n, m, k = map(int, input().split())
-    graph = [[] for _ in range(n)]
+    graph = []
 
     for _ in range(m):
         ai, bi = map(int, input().split())
         ai -= 1
         bi -= 1
     
-        graph[ai].append(bi)
-        graph[bi].append(ai)
+        graph.append((ai, bi))
 
     mod = 998244353
-    dp = [0 for _ in range(n)]
+    dp = [0] * n
     dp[0] = 1
 
-    for ki in range(k):
-        next_dp = [0 for _ in range(n)]
-        dp, next_dp = next_dp, dp # swap
+    for _ in range(k):
+        total = sum(dp) % mod
+        ndp = [total] * n
 
-        total = sum(next_dp)
-        total %= mod
+        for u, v in graph:
+            ndp[u] -= dp[v]
+            ndp[v] -= dp[u]
 
         for i in range(n):
-            dp[i] = total
+            ndp[i] -= dp[i] 
+            ndp[i] %= mod
+        
+        dp = ndp
 
-            for to in graph[i]:
-                dp[i] -= next_dp[to]
-            
-            dp[i] -= next_dp[i] # self
-            dp[i] %= mod
-
-    print(dp[0])
+    print(dp[0] % mod)
 
 
 if __name__ == "__main__":
