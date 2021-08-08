@@ -18,25 +18,17 @@ def main():
         graph[ai].append(bi)
         graph[bi].append(ai)
     
-    visited = [False] * n
     ans = list()
     
     def dfs(cur, prev=-1):
-        visited[cur] = True
         ans.append(cur + 1)
 
         for to in sorted(graph[cur]):
-            if visited[to]:
+            if to == prev:
                 continue
 
             dfs(to, cur)
-
-
-        if cur == 0:
-            return
-        else:
-            ans.append(prev + 1)
-
+            ans.append(cur + 1)
     
     dfs(0)
     print(' '.join(map(str, ans)))
