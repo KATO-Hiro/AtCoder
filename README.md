@@ -316,6 +316,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 119|◯|--|--|--|--|--|
 |AtCoder Regular Contest 120|△|--|--|--|--|--|
 |AtCoder Regular Contest 121|△|--|--|--|--|--|
+|AtCoder Regular Contest 122|--|◯|--|--|--|--|
 |AtCoder Regular Contest 123|△|--|--|--|--|--|
 
 </details>
