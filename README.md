@@ -383,7 +383,7 @@ Represents a repository of accepted results.
 |CODE FESTIVAL 2015 qual A|◯|◯|◯|--|None|None|
 |CODE FESTIVAL 2015 qual B|◯|◯|◯|--|None|None|
 |CODE FESTIVAL 2015 Morning Easy|◯|◯|--|--|None|None|
-|CODE FESTIVAL 2015 Morning Middle|◯|--|--|--|None|None|
+|CODE FESTIVAL 2015 Morning Middle|◯|△|--|--|None|None|
 |CODE FESTIVAL 2016 qual A|◯|△|△|--|--|None|
 |CODE FESTIVAL 2016 qual B|◯|◯|△|--|--|None|
 |CODE FESTIVAL 2016 qual C|◯|△|◯|--|--|None|
