@@ -2,14 +2,15 @@
 
 
 def main():
-    xy = input().split(".")
+    x, y = list(map(int, input().split(".")))
+    x = str(x)
 
-    if 0 <= int(xy[1]) <= 2:
-        print(xy[0] + "-")
-    elif 3 <= int(xy[1]) <= 6:
-        print(xy[0])
+    if y <= 2:
+        print(x + "-")
+    elif y <= 6:
+        print(x)
     else:
-        print(xy[0] + "+")
+        print(x + "+")
 
 
 if __name__ == "__main__":
