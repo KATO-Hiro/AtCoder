@@ -8,13 +8,12 @@ def main():
 
     n = int(input())
     p = list(map(int, input().split()))
-    q = list()
+    q = [0] * n
 
     for index, pi in enumerate(p, 1):
-        q.append((pi, index))
+        q[pi - 1] = index
 
-    r = [index for qi, index in sorted(q)]
-    print(*r)
+    print(*q)
 
 
 if __name__ == "__main__":
