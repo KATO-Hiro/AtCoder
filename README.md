@@ -321,6 +321,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 122|--|◯|--|--|--|--|
 |AtCoder Regular Contest 123|△|◯|--|--|--|--|
 |AtCoder Regular Contest 124|△|--|--|--|--|--|
+|AtCoder Regular Contest 125|△|--|--|--|--|--|
 
 </details>
 
