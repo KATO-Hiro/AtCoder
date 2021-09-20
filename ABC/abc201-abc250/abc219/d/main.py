@@ -8,25 +8,20 @@ def main():
 
     n = int(input())
     x, y = map(int, input().split())
-    ab = [list(map(int, input().split())) for _ in range(n)]
-    inf = 10 ** 9
-    size_max = 305
-    dp = [[[inf for _ in range(size_max + 1)] for __ in range(size_max + 1)] for ___ in range(size_max + 1)]
-    dp[0][0][0] = 0
+    inf = n + 1
+    dp = [[inf for _ in range(y + 1)] for __ in range(x + 1)]
+    dp[0][0] = 0
 
-    for i in range(n):
-        ai, bi = ab[i]
+    for _ in range(n):
+        ai, bi = map(int, input().split())
 
-        for j in range(x + 1):
-            for k in range(y + 1):
-                dp[i + 1][j][k] = min(dp[i + 1][j][k], dp[i][j][k])
-
+        for j in range(x, -1, -1):
+            for k in range(y, -1, -1):
                 xi = min(j + ai, x)
                 yi = min(k + bi, y)
+                dp[xi][yi] = min(dp[xi][yi], dp[j][k] + 1)
 
-                dp[i + 1][xi][yi] = min(dp[i + 1][xi][yi], dp[i][j][k] + 1)
-
-    ans = dp[n][x][y]
+    ans = dp[x][y]
 
     if ans == inf:
         print(-1)
