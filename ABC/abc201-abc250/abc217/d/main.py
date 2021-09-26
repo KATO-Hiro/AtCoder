@@ -168,8 +168,8 @@ def main():
 
     l, q = map(int, input().split())
     bt = BalancingTree(31) # 0 ～ 2 ** 31 - 1 までの要素を入れられるピボット木
-    value_min = -1
-    value_max = 2 ** 31 - 1
+    bt.append(0)
+    bt.append(l)
 
     for _ in range(q):
         ci, qi = map(int, input().split())
@@ -177,8 +177,8 @@ def main():
         if ci == 1:
             bt.append(qi)
         else:
-            left = 0 if bt.find_l(qi) == value_min else bt.find_l(qi)
-            right = l if bt.find_r(qi) == value_max else bt.find_r(qi)
+            left = bt.find_l(qi)
+            right = bt.find_r(qi)
 
             print(right - left)
 
