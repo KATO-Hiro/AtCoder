@@ -8,19 +8,9 @@ def main():
 
     k = int(input())
     a, b = input().split()
-    a = list(reversed(a))
-    b = list(reversed(b))
-
-    x = 0
-    y = 0
-
-    for index, ai in enumerate(a):
-        x += int(ai) * (k ** index)
-
-    for index, ai in enumerate(b):
-        y += int(ai) * (k ** index)
-
-    print(x * y)
+    a = int(a, k)
+    b = int(b, k)
+    print(a * b)
 
 
 if __name__ == "__main__":
