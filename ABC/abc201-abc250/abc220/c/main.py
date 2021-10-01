@@ -10,15 +10,6 @@ def main():
     a = list(map(int, input().split()))
     x = int(input())
     ans = float('inf')
-    summed = 0
-
-    for index, ai in enumerate(a, 1):
-        summed += ai
-
-        if summed > x:
-            ans = min(ans, index)
-            print(ans)
-            exit()
 
     summed_a = sum(a)
     p, q = divmod(x, summed_a)
