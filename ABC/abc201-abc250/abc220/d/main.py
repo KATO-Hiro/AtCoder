@@ -10,20 +10,12 @@ def main():
     a = list(map(int, input().split()))
     dp = [0] * 10
     mod = 998244353
+    dp[a[0]] = 1
 
-    x, y = a[0], a[1]
-    z = (x + y) % 10
-    dp[z] += 1
-    z = (x * y) % 10
-    dp[z] += 1
-
-    for i in range(2, n):
+    for i in range(1, n):
         ndp = [0] * 10
 
         for index, d in enumerate(dp):
-            if d == 0:
-                continue
-
             z = (index + a[i]) % 10
             ndp[z] += d
             ndp[z] %= mod
