@@ -2,8 +2,8 @@
 
 
 def main():
-    s = input()
-    t = input()
+    s = list(input())
+    t = list(input())
     n = len(s)
 
     if s == t:
@@ -11,12 +11,14 @@ def main():
         exit()
     
     for i in range(n - 1):
-        ns = s[:i] + s[i + 1] + s[i] + s[i + 2:]
+        s[i], s[i + 1] = s[i + 1], s[i]
 
-        if ns == t:
+        if s == t:
             print("Yes")
             exit()
-    
+
+        s[i], s[i + 1] = s[i + 1], s[i]
+
     print("No")
 
 
