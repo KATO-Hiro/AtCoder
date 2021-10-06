@@ -6,7 +6,7 @@ def main():
 
     n = list(input())
     m = len(n)
-    patterns = permutations(n)
+    patterns = permutations(n, m)
     ans = 0
 
     for pattern in patterns:
