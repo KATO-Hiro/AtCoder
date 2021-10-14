@@ -4,26 +4,19 @@
 def main():
     n = int(input())
     s = input()
-    zero_count = s.count('0')
-
-    if zero_count == 1:
-        print(-1)
-        exit()
 
     ans = [i for i in range(1, n + 1)]
-    indices = list()
-    numbers = list()
+    tmp = ans[:]
+    indices = [index for index, si in enumerate(s) if si == '0']
 
-    for index, si in enumerate(s):
-        if si == '0':
-            indices.append(index)
-            numbers.append(index + 1)
+    if len(indices) == 1:
+        print(-1)
+        exit()
     
-    if len(numbers) >= 2:
-        for index, number in zip(indices, numbers[1:] + [numbers[0]]):
-            ans[index] = number
+    for i in range(len(indices)):
+        ans[indices[i]] = tmp[indices[i - 1]]
 
-    print(' '.join(map(str, ans)))
+    print(*ans)
 
 
 if __name__ == "__main__":
