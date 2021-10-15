@@ -21,13 +21,8 @@ def main():
     if len(d.keys()) < k:
         print(-1)
     else:
-        ans = 0
         sorted_d = sorted(d.values())
-
-        for i in range(k):
-            ans += sorted_d[i]
-        
-        print(ans)
+        print(sum(sorted_d[:k]))
 
 
 if __name__ == "__main__":
