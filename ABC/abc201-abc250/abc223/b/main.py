@@ -4,21 +4,15 @@
 def main():
     s = input()
     n = len(s)
+    s2 = s + s
     candidates = set()
-    candidates.add(s)
 
     for i in range(n):
-        t = s[i:] + s[:i]
+        t = s2[i:i + n]
         candidates.add(t)
     
-    for i in range(n, -1, -1):
-        t = s[i:] + s[:i]
-        candidates.add(t)
-
-    ans = sorted(candidates)
-
-    print(ans[0])
-    print(ans[-1])
+    print(min(candidates))
+    print(max(candidates))
     
 
 if __name__ == "__main__":
