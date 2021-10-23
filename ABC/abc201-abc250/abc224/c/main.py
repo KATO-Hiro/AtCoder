@@ -2,25 +2,25 @@
 
 
 def main():
-    from itertools import combinations
     import sys
 
     input = sys.stdin.readline
 
     n = int(input())
-    xy = list()
-
-    for i in range(n):
-        xi, yi = map(int, input().split())
-        xy.append((xi, yi))
-    
+    xy = [tuple(map(int, input().split())) for _ in range(n)]
     ans = 0
     
-    for (x1, y1), (x2, y2), (x3, y3) in combinations(xy, 3):
-        s = abs((x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3)) / 2
-    
-        if s > 0:
-            ans += 1
+    for i in range(n):
+        x1, y1 = xy[i]
+
+        for j in range(i + 1, n):
+            x2, y2 = xy[j]
+
+            for k in range(j + 1, n):
+                x3, y3 = xy[k]
+
+                if ((x1 - x3) * (y2 - y3)) != ((x2 - x3) * (y1 - y3)):
+                    ans += 1
     
     print(ans)
 
