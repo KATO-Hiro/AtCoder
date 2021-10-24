@@ -4,9 +4,9 @@
 def main():
     s = input()
 
-    if s[-2:] == "er":
+    if s[-1] == "r":
         print("er")
-    elif len(s) >= 3 and s[-3:] == "ist":
+    else:
         print("ist")
 
 
