@@ -9,17 +9,13 @@ def main():
     n = int(input())
     s = sorted(list(map(int, input().split())))
     t = int(input())
-    prev = -1
-    ans = 0
+    ans = set()
 
     for si in s:
         p, q = divmod(si, t)
-        
-        if p != prev:
-            prev = p
-            ans += 1
+        ans.add(p)
     
-    print(ans)
+    print(len(ans))
 
 
 if __name__ == "__main__":
