@@ -7,18 +7,13 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    d = dict()
+    s = set()
 
     for i in range(n):
-        line = list(map(int, input().split()))
-        a = tuple(line[1:])
-
-        if a not in d:
-            d[a] = 1
-        else:
-            d[a] += 1
+        line = tuple(map(int, input().split()))
+        s.add(line)
     
-    print(len(d.keys()))
+    print(len(s))
 
 
 if __name__ == "__main__":
