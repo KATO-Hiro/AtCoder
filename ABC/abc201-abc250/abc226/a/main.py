@@ -6,9 +6,12 @@ def main():
 
     input = sys.stdin.readline
 
-    x = float(input())
-    print(round(x + 0.0005))
+    a, b  = map(int, input().split("."))
 
+    if b >= 500:
+        print(a + 1)
+    else:
+        print(a)
 
 
 if __name__ == "__main__":
