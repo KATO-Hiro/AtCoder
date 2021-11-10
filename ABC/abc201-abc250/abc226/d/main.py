@@ -12,10 +12,7 @@ def main():
     ans = set()
 
     for i in range(n):
-        for j in range(n):
-            if i == j:
-                continue
-
+        for j in range(i + 1, n):
             xi = x[i]
             xj = x[j]
 
@@ -24,6 +21,7 @@ def main():
 
             g = gcd(dx, dy)
             ans.add((dx // g, dy // g))
+            ans.add((-dx // g, -dy // g))
     
     print(len(ans))
 
