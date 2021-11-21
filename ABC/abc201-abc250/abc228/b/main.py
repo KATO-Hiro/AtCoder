@@ -9,14 +9,12 @@ def main():
     n, x = map(int, input().split())
     a = list(map(int, input().split()))
     taught = [False] * n
-    ans = set([x])
 
     while not taught[x - 1]:
-        ans.add(a[x - 1])
         taught[x - 1] = True
         x = a[x - 1]
 
-    print(len(ans))
+    print(sum(taught))
 
 
 if __name__ == "__main__":
