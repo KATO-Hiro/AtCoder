@@ -223,7 +223,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 207|◯|◯|◯|--|--|--|
 |AtCoder Beginner Contest 208|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 209|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 210|--|◯|◯|△|--|--|
+|AtCoder Beginner Contest 210|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 211|◯|◯|◯|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|
