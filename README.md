@@ -228,7 +228,7 @@ Represents a repository of accepted results.
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|AtCoder Beginner Contest 212|◯|--|◯|△|△|--|--|--|
+|AtCoder Beginner Contest 212|◯|◯|◯|△|△|--|--|--|
 |AtCoder Beginner Contest 213|◯|◯|◯|◯|△|--|--|--|
 |AtCoder Beginner Contest 214|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 215|◯|◯|◯|◯|--|--|--|--|
