@@ -10,11 +10,8 @@ def main():
     
     if s > t:
         t += 24
-
-        if s <= x < 24:
-            pass
-        else:
-            x += 24
+    if x < s:
+        x += 24
     
     if s <= x < t:
         print('Yes')
