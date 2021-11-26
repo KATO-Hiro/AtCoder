@@ -12,22 +12,15 @@ def main():
 
     for i in range(n):
         pi = sum(list(map(int, input().split())))
-        scores.append((pi, i))
+        scores.append(pi)
     
-    scores = sorted(scores, reverse=True)
-    ans = list()
+    border = sorted(scores, reverse=True)[k]
 
-    for i, (score, index) in enumerate(scores):
-        if i <= k:
-            ans.append((index, "Yes"))
+    for score in scores:
+        if score + 300 >= border:
+            print('Yes')
         else:
-            if score + 300 >= scores[k][0]:
-                ans.append((index, "Yes"))
-            else:
-                ans.append((index, "No"))
-
-    for index, a in sorted(ans):
-        print(a)
+            print('No')
 
 
 if __name__ == "__main__":
