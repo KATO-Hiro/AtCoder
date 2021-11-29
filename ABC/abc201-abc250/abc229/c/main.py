@@ -17,12 +17,9 @@ def main():
     ans = 0
 
     for ai, bi in ab:
-        if w - bi >= 0:
-            w -= bi
-            ans += ai * bi
-        else:
-            ans += ai * w
-            break
+        x = min(bi, w)
+        ans += ai * x
+        w -= x
 
     print(ans)
 
