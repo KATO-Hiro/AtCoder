@@ -238,14 +238,15 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 219|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 220|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 221|◯|◯|◯|△|--|--|--|--|
-|AtCoder Beginner Contest 222|◯|◯|◯|--|--|--|
-|AtCoder Beginner Contest 223|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 224|◯|◯|◯|--|--|--|
-|AtCoder Beginner Contest 225|◯|◯|△|△|--|--|
-|AtCoder Beginner Contest 226|△|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 227|◯|◯|◯|--|--|--|
-|AtCoder Beginner Contest 228|◯|◯|◯|◯|--|--|
-|AtCoder Beginner Contest 229|--|◯|◯|△|△|--|
+|AtCoder Beginner Contest 222|◯|◯|◯|--|--|--|--|--|
+|AtCoder Beginner Contest 223|◯|◯|◯|△|--|--|--|--|
+|AtCoder Beginner Contest 224|◯|◯|◯|--|--|--|--|--|
+|AtCoder Beginner Contest 225|◯|◯|△|△|--|--|--|--|
+|AtCoder Beginner Contest 226|△|◯|◯|◯|--|--|--|--|
+|AtCoder Beginner Contest 227|◯|◯|◯|--|--|--|--|--|
+|AtCoder Beginner Contest 228|◯|◯|◯|◯|--|--|--|--|
+|AtCoder Beginner Contest 229|--|◯|◯|△|△|--|--|--|
+|AtCoder Beginner Contest 230|--|--|--|--|◯|--|--|--|
 
 </details>
 
