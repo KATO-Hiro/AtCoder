@@ -3,11 +3,9 @@
 
 def main():
     s = input()
-    t1 = 'oxx' * 4
-    t2 = 'xxo' * 4
-    t3 = 'xox' * 4
+    t = 'oxx' * 4
 
-    if s in t1 or s in t2 or s in t3:
+    if s in t:
         print('Yes')
     else:
         print('No')
