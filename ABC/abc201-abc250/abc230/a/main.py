@@ -7,15 +7,8 @@ def main():
     if n >= 42:
         n += 1
 
-    ans = "AGC0"
-
-    if n < 10:
-        ans += "0"
-        ans += str(n)
-    else:
-        ans += str(n)
-
-    print(ans)
+    ans = "AGC"
+    print(ans + str(n).zfill(3))
 
 
 if __name__ == "__main__":
