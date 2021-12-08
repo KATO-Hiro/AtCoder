@@ -2,45 +2,26 @@
 
 
 def main():
-    from heapq import heappush, heappop, heapify
     import sys
 
     input = sys.stdin.readline
 
     n, d = map(int, input().split())
-    l = list()
-    r = list()
-    used = [False] * n
+    walls = list()
     count = 0
 
     for i in range(n):
         li, ri = map(int, input().split())
-        l.append((li, i))
-        r.append((ri, i))
+        walls.append((ri, li))
     
-    heapify(l)
-    heapify(r)
-
-    while r:
-        ri, i = heappop(r)
-
-        if used[i]:
+    broken_point = -1
+    
+    for ri, li in sorted(walls):
+        if li <= broken_point:
             continue
 
         count += 1
-        used[i] = True
-
-        while l:
-            li, j = heappop(l)
-
-            if used[j]:
-                continue
-
-            if li <= ri + d - 1:
-                used[j] = True
-            else:
-                heappush(l, (li, j))
-                break
+        broken_point = ri + d - 1
 
     print(count)
 
