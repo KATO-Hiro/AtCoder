@@ -2,6 +2,7 @@
 
 
 def main():
+    from math import ceil
     import sys
 
     input = sys.stdin.readline
@@ -9,14 +10,9 @@ def main():
     s = int(input())
     a = int(input())
     b = int(input())
-    ans = 250
-    height = a
+    count = ceil(max(0, s - a) / b)
     
-    while height < s:
-        height += b
-        ans += 100
-    
-    print(ans)
+    print(250 + count * 100)
 
 
 if __name__ == "__main__":
