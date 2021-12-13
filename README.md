@@ -511,7 +511,7 @@ Represents a repository of accepted results.
 |joi 2021 yo 1c|◯|◯|◯|None|None|None|
 |joi 2022 yo 1a|◯|◯|◯|◯|None|None|
 |joi 2022 yo 1b|◯|◯|◯|◯|None|None|
-|joi 2022 yo 1c|--|◯|◯|◯|None|None|
+|joi 2022 yo 1c|◯|◯|◯|◯|None|None|
 |joig 2021 open|◯|◯|◯|--|--|--|
 |caddi2018b|◯|◯|△|△|--|--|
 |hack to the future 2018 qual|◯|None|None|None|None|None|
