@@ -8,7 +8,7 @@ def main():
 
     n, s = map(int, input().split())
     a, b = [0] * n, [0] * n
-    dp = [[False] * (n + 10) for _ in range(s + 10)]
+    dp = [[False] * (s + 10) for _ in range(n + 10)]
     dp[0][0] = True
 
     for i in range(n):
@@ -19,24 +19,24 @@ def main():
             diff1 = j - a[i - 1]
             diff2 = j - b[i - 1]
 
-            if diff1 >= 0 and dp[diff1][i - 1]:
-                dp[j][i] = True
+            if diff1 >= 0 and dp[i - 1][diff1]:
+                dp[i][j] = True
 
-            if diff2 >= 0 and dp[diff2][i - 1]:
-                dp[j][i] = True
+            if diff2 >= 0 and dp[i - 1][diff2]:
+                dp[i][j] = True
     
-    if dp[s][n]:
+    if dp[n][s]:
         ans = ""
         pos = s
         
-        for i in reversed(range(1, n + 1)):
+        for i in range(n, 0, -1):
             ai = a[i - 1]
             bi = b[i - 1]
 
-            if pos >= ai and dp[pos - ai][i - 1]:
+            if pos >= ai and dp[i - 1][pos - ai]:
                 ans += "A"
                 pos -= ai
-            elif pos >= bi and dp[pos - bi][i - 1]: 
+            elif pos >= bi and dp[i - 1][pos - bi]: 
                 ans += "B"
                 pos -= bi
 
