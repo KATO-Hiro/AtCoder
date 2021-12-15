@@ -8,9 +8,9 @@ def main():
 
     s1 = input().rstrip()
     s2 = input().rstrip()
-    count = s1.count("#") + s2.count("#")
+    s = s1 + s2
 
-    if count == 2 and s1[0] == s2[1] and s1[1] == s2[0]:
+    if s == "#..#" or s == ".##.":
         print("No")
     else:
         print("Yes")
