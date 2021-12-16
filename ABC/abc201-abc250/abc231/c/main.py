@@ -2,7 +2,7 @@
 
 
 def main():
-    from bisect import bisect_right
+    from bisect import bisect_left
     import sys
 
     input = sys.stdin.readline
@@ -12,9 +12,8 @@ def main():
 
     for i in range(q):
         xi = int(input())
-        xi -= 1
 
-        index = bisect_right(a, xi)
+        index = bisect_left(a, xi)
         print(n - index)
 
 
