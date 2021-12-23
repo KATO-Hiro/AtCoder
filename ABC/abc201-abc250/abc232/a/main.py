@@ -6,8 +6,8 @@ def main():
 
     input = sys.stdin.readline
 
-    s = input().rstrip()
-    print(int(s[0]) * int(s[2]))
+    a, b = map(int, input().split('x'))
+    print(a * b)
 
 
 if __name__ == "__main__":
