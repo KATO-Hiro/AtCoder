@@ -12,11 +12,13 @@ def main():
 
     for i in range(n):
         for j in range(i + 1, n):
-            total = (lr[i][1] - lr[i][0] + 1) * (lr[j][1] - lr[j][0] + 1)
+            l, r = lr[i]
+            nl, nr = lr[j]
+            total = (r - l + 1) * (nr - nl + 1)
             met = 0
 
-            for k in range(lr[i][0], lr[i][1] + 1):
-                met += max(0, min(k, lr[j][1] + 1) - lr[j][0])
+            for k in range(l, r + 1):
+                met += max(0, min(k, nr + 1) - nl)
 
             ans += met / total
 
