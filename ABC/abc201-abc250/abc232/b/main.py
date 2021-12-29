@@ -2,18 +2,16 @@
 
 
 def main():
-    from string import ascii_lowercase
     import sys
 
     input = sys.stdin.readline
-    alpha = ascii_lowercase
 
     s = input().rstrip()
     t = input().rstrip()
     c = set()
 
     for si, ti in zip(s, t):
-        c.add((alpha.index(si) - alpha.index(ti)) % 26)
+        c.add((ord(si) - ord(ti)) % 26)
 
     if len(c) == 1:
         print("Yes")
