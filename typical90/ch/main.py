@@ -8,42 +8,27 @@ def main():
 
     n, q = map(int, input().split())
     mod = 10 ** 9 + 7
-    x, y, z, w = [0] * 100, [0] * 100, [0] * 100, [0] * 100
-    nx, ny, nz, nw = [0] * 100, [0] * 100, [0] * 100, [0] * 100
+    xyzw = [list(map(int, input().split())) for _ in range(q)]
     ans = 1
 
-    for i in range(q):
-        xi, yi, zi, wi = map(int, input().split())
-        x[i], y[i], z[i], w[i] = xi - 1, yi - 1, zi - 1, wi
-    
-    def brute_force_search():
-        count = 0
+    # See:
+    # https://atcoder.jp/contests/typical90/submissions/24036175
+    def is_ok(i, j):
+        for x, y, z, w in xyzw:
+            w1 = ((j >> x - 1) | (j >> y - 1) | (j >> z - 1)) & 1
 
-        for i in range(1 << n):
-            bit = [0] * (n + 3)
+            if w1 != ((w >> i) & 1):
+                return False
 
-            for j in range(n):
-                bit[j] = (i // (1 << j)) % 2
-            
-            flag = True
-
-            for k in range(q):
-                if bit[nx[k]] | bit[ny[k]] | bit[nz[k]] != nw[k]:
-                    flag = False
-                    break
-
-            if flag:
-                count += 1
-        
-        return count
+        return True
 
 
     for i in range(60):
-        for j in range(q):
-            nx[j], ny[j], nz[j] = x[j], y[j], z[j]
-            nw[j] = (w[j] // (1 << i)) % 2
-        
-        count = brute_force_search()
+        count = 0
+
+        for j in range(1 << n):
+            if is_ok(i, j):
+                count += 1
         ans *= count
         ans %= mod
 
