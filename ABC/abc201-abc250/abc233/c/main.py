@@ -1,37 +1,27 @@
 # -*- coding: utf-8 -*-
 
 
+from itertools import product
 import sys
-sys.setrecursionlimit(10 ** 7)
 
 input = sys.stdin.readline
 
 n, x = map(int, input().split())
 a = [[] for _ in range(n)]
-size = [0 for _ in range(n)]
 
 for i in range(n):
-    l, *ai = map(int, input().split())
-    size[i], a[i] = l, ai
+    _, *ai = map(int, input().split())
+    a[i] = ai
 
-def dfs(arr, j):
-    if len(arr) == n:
-        p = 1
+ans = 0
 
-        for ai in arr:
-            p *= ai
+for p in product(*a):
+    mul = 1
 
-        if p == x:
-            return 1
-        return 0
+    for pi in p:
+        mul *= pi
     
-    count = 0
-    
-    for i in range(size[j]):
-        arr.append(a[j][i])
-        count += dfs(arr, j + 1)
-        arr.pop()
+    if mul == x:
+        ans += 1
 
-    return count
-    
-print(dfs([], 0))
+print(ans)
