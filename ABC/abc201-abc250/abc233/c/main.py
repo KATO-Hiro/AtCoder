@@ -11,15 +11,10 @@ a = [[] for _ in range(n)]
 size = [0 for _ in range(n)]
 
 for i in range(n):
-    b = list(map(int, input().split()))
-    l, ai = b[0], b[1:]
+    l, *ai = map(int, input().split())
     size[i], a[i] = l, ai
 
-ans = 0
-
 def dfs(arr, j):
-    global ans
-
     if len(arr) == n:
         p = 1
 
@@ -27,13 +22,16 @@ def dfs(arr, j):
             p *= ai
 
         if p == x:
-            ans += 1
-        return
+            return 1
+        return 0
+    
+    count = 0
     
     for i in range(size[j]):
         arr.append(a[j][i])
-        dfs(arr, j + 1)
+        count += dfs(arr, j + 1)
         arr.pop()
+
+    return count
     
-dfs([], 0)
-print(ans)
+print(dfs([], 0))
