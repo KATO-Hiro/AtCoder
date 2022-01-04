@@ -519,6 +519,7 @@ Represents a repository of accepted results.
 |caddi2018b|◯|◯|△|△|--|--|
 |hack to the future 2018 qual|◯|None|None|None|None|None|
 |hack to the future 2020 qual|△|None|None|None|None|None|
+|hack to the future 2022 qual|△|None|None|None|None|None|
 |keyence 2019|◯|◯|◯|--|--|--|
 |keyence 2020|◯|◯|◯|--|--|--|
 |keyence 2021|◯|--|--|--|--|--|
