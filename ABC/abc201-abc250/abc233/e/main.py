@@ -7,43 +7,25 @@ def main():
     input = sys.stdin.readline
     x = list(input().rstrip())
     n = len(x)
-    summed = 0
-    ans = [0] * (n + 1)
+    digit_sum = sum([int(xi) for xi in x])
+    xi = 0
+    ans = ''
 
-    for i, xi in enumerate(x, 1):
-        summed += int(xi)
+    for i in range(n - 1, -1, -1):
+        xi += digit_sum
+        digit_sum -= int(x[i])
 
-        yi = summed
-        pos = i
+        p, q = divmod(xi, 10)
+        ans += str(q)
+        xi = p
 
-        while yi > 0:
-            p, q = divmod(yi, 10)
-            ans[pos] += q
-
-            yi = p
-            pos -= 1
-    
     # 繰り上がりの処理
-    for i in range(n, 0, -1):
-        value = ans[i]
-        pos = i
+    while xi > 0:
+        pi, qi = divmod(xi, 10)
+        ans += str(qi)
+        xi = pi
 
-        if value < 10:
-            continue
-
-        while value > 0:
-            pass
-            ans[pos] -= value
-            p, q = divmod(value, 10)
-
-            ans[pos] += q
-            ans[pos - 1] += p
-            value = p
-        
-    if ans[0] == 0:
-        ans = ans[1:]
-
-    print(''.join(map(str, ans)))
+    print(ans[::-1])
 
 
 if __name__ == "__main__":
