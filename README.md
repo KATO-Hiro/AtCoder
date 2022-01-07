@@ -553,6 +553,7 @@ Represents a repository of accepted results.
 |rcl 2019 final open|△|△|--|--|--|--|
 |rcl 2020 qual|△|△|--|--|--|--|
 |rcl 2020 final|△|△|--|--|--|--|
+|rcl 2021 long|△|--|--|--|--|--|
 |nomura 2020|◯|◯|--|--|--|--|
 |tokio marine 2020|◯|◯|--|--|--|--|
 |intro heuristics|--|◯|--|None|None|None|
