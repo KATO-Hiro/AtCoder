@@ -19,7 +19,6 @@ def main():
 
                 if cur >= x:
                     ans = min(ans, cur)
-                    break
 
                 i += d
     
