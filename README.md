@@ -519,6 +519,7 @@ Represents a repository of accepted results.
 |joi 2022 yo 1b|◯|◯|◯|◯|None|None|
 |joi 2022 yo 1c|◯|◯|◯|◯|None|None|
 |joig 2021 open|◯|◯|◯|--|--|--|
+|joig 2022 open|◯|--|--|--|--|--|
 |caddi2018b|◯|◯|△|△|--|--|
 |hack to the future 2018 qual|◯|None|None|None|None|None|
 |hack to the future 2020 qual|△|None|None|None|None|None|
