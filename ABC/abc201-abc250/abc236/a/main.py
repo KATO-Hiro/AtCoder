@@ -6,15 +6,10 @@ def main():
 
     input = sys.stdin.readline
 
-    s = input().rstrip()
+    s = list(input().rstrip())
     a, b = map(int, input().split())
-    first = s[a - 1]
-    second = s[b - 1]
-    t = list(s)
-    t[a - 1] = second
-    t[b - 1] = first
-
-    print(''.join(t))
+    s[a - 1], s[b - 1] = s[b - 1], s[a - 1]
+    print(''.join(s))
 
 
 if __name__ == "__main__":
