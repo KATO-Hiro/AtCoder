@@ -610,6 +610,7 @@ Represents a repository of accepted results.
 |paken 2021 day1|◯|◯|◯|--|--|◯|--|--|--|--|--|--|
 |paken 2021 day2|◯|--|--|--|--|--|--|--|--|--|--|--|
 |xmascon18|◯|--|--|--|--|--|--|--|--|--|None|None|
+|xmascon21|--|△|--|--|--|--|--|--|--|--|None|None|
 |Educational DP Contest|◯|◯|△|△|△|△|△|△|△|--|△|--|
 |code festival 2018 final open|△|--|◯|--|--|--|--|--|--|--|None|None|
 |nikkei 2019 final|◯|△|--|--|--|--|--|--|None|None|None|None|
