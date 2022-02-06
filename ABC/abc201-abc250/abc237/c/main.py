@@ -7,27 +7,15 @@ def main():
     input = sys.stdin.readline
     
     s = input().rstrip()
-    n = len(s)
-    left_count, right_count = 0, 0
 
-    for si in s:
-        if si == "a":
-            left_count += 1
-        else:
-            break
+    # See:
+    # https://atcoder.jp/contests/abc237/submissions/28904376
+    t = s.rstrip("a")
+    suffix = len(s) - len(t)
+    u = t.lstrip("a")
+    prefix = len(t) - len(u)
 
-    for si in reversed(s):
-        if si == "a":
-            right_count += 1
-        else:
-            break
-    
-    diff = right_count - left_count
-
-    if diff > 0:
-        s = "a" * diff + s
-    
-    if s == s[::-1]:
+    if u == u[::-1] and prefix <= suffix:
         print("Yes")
     else:
         print("No")
