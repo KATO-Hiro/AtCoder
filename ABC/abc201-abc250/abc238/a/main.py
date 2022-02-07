@@ -9,7 +9,7 @@ def main():
     
     n = int(input())
 
-    if n * log10(2) > 2 * log10(n):
+    if n < 2 or n > 4:
         print("Yes")
     else:
         print("No")
