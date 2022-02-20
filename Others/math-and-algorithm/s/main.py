@@ -2,19 +2,18 @@
 
 
 def main():
+    from collections import Counter
     import sys
 
     input = sys.stdin.readline
 
     n = int(input())
     a = list(map(int, input().split()))
-    r = a.count(1)
-    y = a.count(2)
-    b = a.count(3)
+    c = Counter(a)
+    ans = 0
 
-    ans = r * (r - 1) // 2
-    ans += y * (y - 1) // 2
-    ans += b * (b - 1) // 2
+    for key, value in c.items():
+        ans += value * (value - 1) // 2
 
     print(ans)
 
