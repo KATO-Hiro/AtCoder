@@ -69,13 +69,11 @@ def main():
     primes = p.generate()
 
     for x in range(a, b + 1):
-        is_prime = False
 
         for y in range(c, d + 1):
             if (x + y) in primes:
-                is_prime = True
-        
-        if not is_prime:
+                break
+        else:
             print("Takahashi")
             exit()
     
