@@ -2,40 +2,31 @@
 
 
 def main():
-    from collections import deque
     import sys
 
     input = sys.stdin.readline
 
     n = int(input())
     a = list(map(int, input().split()))
-    d = deque()
-    d.append((a[0], 1))
-    ball_count = 1
-    print(ball_count)
+    q = list()
+    ans = 0
 
-    for i in range(1, n):
-        ai = a[i]
+    # See:
+    # https://atcoder.jp/contests/abc240/submissions/29510382
+    for ai in a:
+        ans += 1
 
-        if ball_count >= 1:
-            value, count = d.pop()
-            ball_count -= count
-
-            if ai == value:
-                if count + 1 == value:
-                    pass
-                else:
-                    d.append((value, count + 1))
-                    ball_count += count + 1
-            else:
-                d.append((value, count))
-                d.append((ai, 1))
-                ball_count += count + 1
+        if not q:
+            q.append([ai, 1])
+        elif ai != q[-1][0]:
+            q.append([ai, 1])
+        elif ai != q[-1][1] + 1:
+            q[-1][1] += 1
         else:
-            d.append((ai, 1))
-            ball_count += 1
-
-        print(ball_count)
+            q.pop()
+            ans -= ai
+        
+        print(ans)
 
 
 if __name__ == "__main__":
