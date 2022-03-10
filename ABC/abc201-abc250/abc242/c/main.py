@@ -22,13 +22,7 @@ def main():
         
         dp = ndp
     
-    ans = 0
-
-    for d in dp:
-        ans += d
-        ans %= mod
-    
-    print(ans)
+    print(sum(dp) % mod)
 
 
 if __name__ == "__main__":
