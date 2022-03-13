@@ -8,7 +8,7 @@ def main():
 
     n, x = map(int, input().split())
     s = input().rstrip()
-    x = list(bin(x)[2:])
+    x = list(bin(x))
 
     for si in s:
         if si == "U":
