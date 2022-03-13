@@ -2,44 +2,30 @@
 
 
 def main():
-    from bisect import bisect
+    from collections import defaultdict
     import sys
 
     input = sys.stdin.readline
 
     n = int(input())
-    d = dict()
+    xy = list()
+    d = defaultdict(list)
 
     for i in range(n):
         xi, yi = map(int, input().split())
-        xi -= 1
+        xy.append((xi, yi))
 
-        if yi not in d.keys():
-            d[yi] = [(i, xi)]
-        else:
-            d[yi].append([i, xi])
-    
     s = input().rstrip()
 
-    for key, values in d.items():
-        left = list()
-        right = list()
+    for i in range(n):
+        xi, yi = xy[i]
+        d[yi].append((xi, s[i]))
+    
+    for values in d.values():
+        values = sorted(values)
 
-        for i, pos in values:
-            if s[i] == 'L':
-                left.append(pos)
-            else:
-                right.append(pos)
-        
-        if len(left) == 0 or len(right) == 0:
-            continue
-        
-        left = sorted(left)
-
-        for r in right:
-            index = bisect(left, r)
-
-            if index != len(left):
+        for (_, dir1), (_, dir2) in zip(values, values[1:]):
+            if dir1 == "R" and dir2 == "L":
                 print("Yes")
                 exit()
 
