@@ -142,7 +142,6 @@ def main():
     q = int(input())
     s = SortedMultiset()
     ans = list()
-    size = 0
 
     for _ in range(q):
         qi = list(map(int, input().split()))
@@ -150,7 +149,6 @@ def main():
 
         if qi[0] == 1:
             s.add(x)
-            size += 1
         elif qi[0] == 2:
             k = qi[2]
             count = s.index_right(x)
@@ -162,7 +160,7 @@ def main():
         else:
             k = qi[2]
             count = s.index(x)
-            remain = size - count
+            remain = len(s) - count
 
             if remain >= k:
                 ans.append(s[count + k - 1])
