@@ -2,39 +2,35 @@
 
 
 def main():
+    from collections import defaultdict
     import sys
 
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
     a = list(map(int, input().split()))
-    last_time, last_count = [-1] * n, [-1] * n
-    cur_time, cur_count = 0, 0 
+    x = 0
+    memo_i, memo_x = defaultdict(int), defaultdict(int)
 
-    while True:
-        if cur_time == k:
-            print(cur_count)
-            exit()
-        
-        mod_n = cur_count % n
-        
-        if last_time[mod_n] != -1:
-            break
-        
-        last_time[mod_n] = cur_time
-        last_count[mod_n] = cur_count
-        cur_time += 1
-        cur_count += a[mod_n]
-    
-    cycle = (k - cur_time) // (cur_time - last_time[cur_count % n])
-    next_time = cur_time + cycle * (cur_time - last_time[cur_count % n])
-    next_count = cur_count + cycle * (cur_count - last_count[cur_count % n])
+    # See:
+    # https://www.youtube.com/watch?v=sN2AqHqLzdg
+    for i in range(k):
+        mod_n = x % n
 
-    while next_time < k:
-        next_count += a[next_count % n]
-        next_time += 1
-    
-    print(next_count)
+        # ループを検出
+        if mod_n in memo_i.keys():
+            period = i - memo_i[mod_n]
+
+            # ちょうどのとき
+            if (k - i) % period == 0:
+                x += (k - i) // period * (x - memo_x[mod_n])
+                break
+
+        memo_i[mod_n] = i
+        memo_x[mod_n] = x
+        x += a[mod_n]
+
+    print(x)
 
 
 if __name__ == "__main__":
