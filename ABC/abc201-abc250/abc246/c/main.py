@@ -14,16 +14,11 @@ def main():
     for ai in a:
         p, q = divmod(ai, x)
 
-        if k > 0:
-            if k >= p:
-                k -= p
-            else:
-                ans += (p - k) * x
-                k = 0
-        else:
-            ans += p * x
+        used = min(p, k)
+        ai -= used * x
+        k -= used
 
-        r.append(q)
+        r.append(ai)
     
     for ri in sorted(r, reverse=True):
         if k > 0:
