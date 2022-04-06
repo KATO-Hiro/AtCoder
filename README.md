@@ -150,7 +150,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 134|◯|◯|◯|△|△|--|
 |AtCoder Beginner Contest 135|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 136|◯|◯|◯|△|--|--|
-|AtCoder Beginner Contest 137|◯|◯|◯|△|--|--|
+|AtCoder Beginner Contest 137|◯|◯|◯|△|△|--|
 |AtCoder Beginner Contest 138|◯|◯|◯|△|△|--|
 |AtCoder Beginner Contest 139|◯|◯|◯|◯|--|--|
 |AtCoder Beginner Contest 140|◯|◯|◯|△|--|--|
