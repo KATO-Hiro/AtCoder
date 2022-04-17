@@ -6,9 +6,13 @@ def main():
 
     input = sys.stdin.readline
 
-    s = set(input().rstrip())
-    numbers = set([str(i) for i in range(10)])
-    print(*list(s ^ numbers))
+    s = list(input().rstrip())
+    numbers = [i for i in range(10)]
+
+    for number in numbers:
+        if str(number) not in s:
+            print(number)
+            exit()
 
 
 if __name__ == "__main__":
