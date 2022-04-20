@@ -620,7 +620,7 @@ Represents a repository of accepted results.
 |paken 2020 day2|△|--|--|--|--|--|--|--|None|None|None|None|
 |paken 2021 day1|◯|◯|◯|--|--|◯|--|--|--|--|--|--|
 |paken 2021 day2|◯|--|--|--|--|--|--|--|--|--|--|--|
-|paken camp 2021 day2|--|◯|--|◯|--|--|--|--|--|--|--|--|
+|paken camp 2021 day2|◯|◯|--|◯|--|--|--|--|--|--|--|--|
 |xmascon18|◯|--|--|--|--|--|--|--|--|--|None|None|
 |xmascon21|--|△|--|--|--|--|--|--|--|--|None|None|
 |Educational DP Contest|◯|◯|△|△|△|△|△|△|△|--|△|--|
