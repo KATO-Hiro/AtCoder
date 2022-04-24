@@ -23,17 +23,16 @@ def main():
             while c > 0:
                 xi, ci = d.popleft()
 
-                if c <= ci:
-                    summed += xi * c
-                    print(summed)
+                # See:
+                # https://atcoder.jp/contests/abc247/submissions/30850883
+                use = min(c, ci)
+                summed += xi * use
+                c -= use
 
-                    if c != ci:
-                        d.appendleft((xi, ci - c))
+                if use < ci:
+                    d.appendleft((xi, ci - use))
 
-                    c = 0
-                else:
-                    summed += xi * ci
-                    c -= ci
+            print(summed)
 
 
 if __name__ == "__main__":
