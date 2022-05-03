@@ -74,7 +74,6 @@ class UnionFind:
 
 
 def main():
-    from collections import defaultdict
     import sys
 
     input = sys.stdin.readline
@@ -90,26 +89,13 @@ def main():
     
         uf.merge_if_needs(ai, bi)
     
-    candidate1 = 0
+    ans = 0
 
     for i, pi in enumerate(p):
-        if i == pi:
-            candidate1 += 1
+        if uf.is_same_group(i, pi):
+            ans += 1
     
-    q = defaultdict(list)
-    r = defaultdict(list)
-
-    for i in range(n):
-        index = uf.find_root(i)
-        q[index].append(i)
-        r[index].append(p[i])
-    
-    candidate2 = 0
-    
-    for qi, ri in zip(q.values(), r.values()):
-        candidate2 += len(set(qi) & set(ri))
-
-    print(max(candidate1, candidate2))
+    print(ans)
 
 
 if __name__ == "__main__":
