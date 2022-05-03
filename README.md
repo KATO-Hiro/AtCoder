@@ -588,7 +588,7 @@ Represents a repository of accepted results.
 |digitalarts 2012|◯|--|--|None|None|None|
 |ijpc 2015|◯|--|--|--|--|--|
 |abl|◯|◯|◯|--|--|--|
-|hhkb 2020|◯|◯|◯|--|--|--|
+|hhkb 2020|◯|◯|◯|--|△|--|
 |intro heuristics 2020|△|◯|△|--|--|--|
 |future 2021 qual|◯|None|None|None|None|None|
 |future 2021 final open|△|None|None|None|None|None|
