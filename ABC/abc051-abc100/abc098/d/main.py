@@ -2,34 +2,31 @@
 
 
 def main():
+    from collections import deque
     import sys
 
     input = sys.stdin.readline
 
     n = int(input())
     a = list(map(int, input().split()))
-    right = 0
+    d = deque()
     cur_sum, cur_xor = 0, 0
-    size = 0
     ans = 0
 
-    # 尺取り法
-    for left in range(n):
-        while right < n and (cur_sum + a[right] == cur_xor ^ a[right]):
-            cur_sum += a[right]
-            cur_xor ^= a[right]
-            right += 1
-            size += 1
+    # 尺取り法(deque Ver)
+    for ai in a:
+        d.append(ai)
+        cur_sum += ai
+        cur_xor ^= ai
 
-        ans += size
-
-        # 後処理
-        size -= 1
-        cur_sum -= a[left]
-        cur_xor ^= a[left]
+        while d and not (cur_sum == cur_xor):
+            di = d.popleft()
+            cur_sum -= di
+            cur_xor ^= di
+        
+        ans += len(d)
 
     print(ans)
-
 
 
 if __name__ == "__main__":
