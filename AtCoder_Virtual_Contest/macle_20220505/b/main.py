@@ -2,20 +2,26 @@
 
 
 def main():
-    from bisect import bisect_left, bisect_right
+    from collections import Counter
     import sys
 
     input = sys.stdin.readline
 
     n = int(input())
-    a = sorted(list(map(int, input().split())))
+    a = list(map(int, input().split()))
+    c = Counter(a)
+    b = set(sorted(a))
     ans = 0
 
-    for ai in a:
-        index1 = bisect_left(a, ai - 1)
-        index2 = bisect_right(a, ai + 1)
-        size = index2 - index1
-        ans = max(ans, size)
+    for bi in b:
+        count = c[bi]
+
+        if (bi - 1) in c.keys():
+            count += c[bi - 1]
+        if (bi + 1) in c.keys():
+            count += c[bi + 1]
+
+        ans = max(ans, count)
     
     print(ans)
 
