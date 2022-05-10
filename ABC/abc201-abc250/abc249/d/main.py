@@ -18,7 +18,7 @@ def make_divisors(n):
 
 
 def main():
-    from collections import Counter, defaultdict
+    from collections import Counter
     import sys
 
     input = sys.stdin.readline
@@ -26,18 +26,13 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     c = Counter(a)
-    size = 2 * 10 ** 5 + 10
-    d = defaultdict(list)
-
-    for i in range(1, size + 1):
-        divisors = make_divisors(i)
-        d[i] = divisors
-    
     ans = 0
 
     for ai in a:
-        for dai in d[ai]:
-            ans += c[dai] * c[ai // dai]
+        d = make_divisors(ai)
+
+        for di in d:
+            ans += c[di] * c[ai // di]
 
     print(ans)
 
