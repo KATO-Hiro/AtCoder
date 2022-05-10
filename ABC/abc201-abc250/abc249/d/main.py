@@ -1,22 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-def make_divisors(n):
-    lower_divisors , upper_divisors = [], []
-    i = 1
-
-    while i * i <= n:
-        if n % i == 0:
-            lower_divisors.append(i)
-
-            if i != n // i:
-                upper_divisors.append(n//i)
-
-        i += 1
-
-    return lower_divisors + upper_divisors[::-1]
-
-
 def main():
     from collections import Counter
     import sys
@@ -25,14 +9,18 @@ def main():
 
     n = int(input())
     a = list(map(int, input().split()))
+    upper = 2 * 10 ** 5 + 1
     c = Counter(a)
     ans = 0
 
-    for ai in a:
-        d = make_divisors(ai)
+    # See:
+    # https://atcoder.jp/contests/abc249/submissions/31175801
+    for i in range(1, upper):
+        k = 0
 
-        for di in d:
-            ans += c[di] * c[ai // di]
+        for j in range(i, upper, i):
+            k += 1
+            ans += c[i] * c[j] * c[k]
 
     print(ans)
 
