@@ -87,24 +87,19 @@ def main():
         bi -= 1
     
         graph[ai].append(bi)
-        graph[bi].append(ai)
     
     uf = UnionFind(n)
-    ans = [0]
+    ans = []
     count = 0
 
-    for i in range(n - 1, 0, -1):
+    for i in range(n - 1, -1, -1):
+        ans.append(count)
         count += 1
 
         for to in graph[i]:
-            if to <= i:
-                continue
-
             if not uf.is_same_group(i, to):
                 uf.merge_if_needs(i, to)
                 count -= 1
-        
-        ans.append(count)
 
     print('\n'.join(map(str, ans[::-1])))
 
