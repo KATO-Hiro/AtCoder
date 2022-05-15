@@ -266,6 +266,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 247|◯|--|◯|◯|△|--|--|--|
 |AtCoder Beginner Contest 248|◯|◯|◯|◯|△|--|--|--|
 |AtCoder Beginner Contest 249|--|◯|--|◯|--|--|--|--|
+|AtCoder Beginner Contest 251|--|--|--|--|△|--|--|--|
 
 </details>
 
