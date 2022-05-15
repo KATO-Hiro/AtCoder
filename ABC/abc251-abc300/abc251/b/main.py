@@ -2,31 +2,30 @@
 
 
 def main():
-    from itertools import combinations
     import sys
 
     input = sys.stdin.readline
 
     n, w = map(int, input().split())
     a = list(map(int, input().split()))
-
-    c2 = list(combinations(a, 2))
-    c3 = list(combinations(a, 3))
-
     ans = set()
 
-    for ai in a:
-        if ai <= w:
-            ans.add(ai)
-    
-    for a1, a2 in c2:
-        if (a1 + a2) <= w:
-            ans.add(a1 + a2)
+    for i in range(n):
+        if a[i] <= w:
+            ans.add(a[i])
 
-    for a1, a2, a3 in c3:
-        if (a1 + a2 + a3) <= w:
-            ans.add(a1 + a2 + a3)
-    
+        for j in range(i + 1, n):
+            summed2 = a[i] + a[j]
+
+            if summed2 <= w:
+                ans.add(summed2)
+
+            for k in range(j + 1, n):
+                summed3 = a[i] + a[j] + a[k]
+
+                if summed3 <= w:
+                    ans.add(summed3)
+
     print(len(ans))
 
 
