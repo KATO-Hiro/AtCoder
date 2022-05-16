@@ -2,7 +2,7 @@
 
 
 def main():
-    from collections import Counter
+    from collections import defaultdict
     from itertools import product
     import sys
 
@@ -14,17 +14,15 @@ def main():
     ans = 0
 
     for pattern in patterns:
-        t = list()
+        d = defaultdict(int)
         count = 0
 
         for i, p in enumerate(pattern):
             if p == 1:
                 for si in s[i]:
-                    t.append(si)
+                    d[si] += 1
         
-        c = Counter(t)
-
-        for value in c.values():
+        for value in d.values():
             if value == k:
                 count += 1
 
