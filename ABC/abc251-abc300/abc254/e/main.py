@@ -2,7 +2,6 @@
 
 
 def main():
-    from collections import defaultdict
     from collections import deque
     import sys
 
@@ -22,36 +21,30 @@ def main():
     q = int(input())
     ans = list()
 
+    # See:
+    # https://atcoder.jp/contests/abc254/submissions/32215156
     for i in range(q):
         xi, ki = map(int, input().split())
         xi -= 1
 
         # BFS
         d = deque()
-        d.append(xi)
-        used = defaultdict(bool)
-        dist = defaultdict(int)
-        dist[xi] = 0
-        summed = xi + 1
-        used[xi] = True
+        d.append((xi, 0))  # vertex, dist
+        s = set([xi])  # 集合で頂点を管理
 
         while d:
-            di = d.popleft()
+            vertex, dist = d.popleft()
 
-            for to in graph[di]:
-                if used[to]:
-                    continue
+            if dist == ki:
+                continue
 
-                if dist[di] < ki:
-                    dist[to] = dist[di] + 1
-
-                    if not used[to]:
-                        summed += to + 1
-
-                    used[to] = True
-                    d.append(to)
+            for to in graph[vertex]:
+                if to not in s:
+                    s.add(to)
+                    d.append((to, dist + 1))
         
-        ans.append(summed)
+        size = len(s)
+        ans.append(sum(s) + size)
     
     print(*ans, sep="\n")
         
