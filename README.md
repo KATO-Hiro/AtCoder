@@ -655,7 +655,7 @@ Represents a repository of accepted results.
 |cpsco2019 session 3|◯|◯|○|△|--|--|--|--|None|None|None|None|
 |cpsco2019 session 4|--|◯|○|--|--|--|--|--|None|None|None|None|
 |Chokudai SpeedRun 001|◯|◯|◯|◯|◯|◯|◯|◯|◯|◯|--|--|
-|chokudai speedrun 002|◯|◯|◯|◯|◯|◯|◯|◯|--|--|--|--|
+|chokudai speedrun 002|◯|◯|◯|◯|◯|◯|◯|◯|--|◯|--|--|
 |Typical DP|◯|◯|◯|△|△|△|--|△|--|--|--|--|
 |kupc 2012|◯|--|--|--|--|--|--|--|--|--|--|--|
 |kupc 2013|◯|--|--|--|--|--|--|--|--|--|--|--|
