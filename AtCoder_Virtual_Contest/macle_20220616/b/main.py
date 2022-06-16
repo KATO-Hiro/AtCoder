@@ -18,22 +18,19 @@ def main():
         graph[ai].append(bi)
         graph[bi].append(ai)
     
-    used = [False] * n
     ans = list()
 
     def dfs(cur, parent=-1):
-        used[cur] = True
+        ans.append(cur + 1)
 
         for to in sorted(graph[cur]):
-            if used[to]:
+            if to == parent:
                 continue
 
-            ans.append(cur + 1)
             dfs(to, cur)
-            ans.append(to + 1)
+            ans.append(cur + 1)
     
     dfs(0)
-    ans.append(1)
     print(*ans)
 
 if __name__ == "__main__":
