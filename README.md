@@ -685,6 +685,7 @@ Represents a repository of accepted results.
 |fuka 5th|◯|--|--|--|--|--|--|None|None|None|None|None|
 |gw 2015|◯|--|--|--|--|--|--|--|--|--|None|None|
 |jsc 2021|◯|◯|◯|◯|--|--|--|--|None|None|None|None|
+|nadafes 2022 day2|--|△|--|--|--|--|--|--|--|--|-|-|
 
 </details>
 
