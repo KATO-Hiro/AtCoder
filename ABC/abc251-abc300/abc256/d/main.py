@@ -18,20 +18,19 @@ def main():
     
     imos = list(accumulate(imos))
     start = False
-    ans = list()
+    left = list()
+    right = list()
 
     for i, value in enumerate(imos):
         if not start and value >= 1:
             start = True
-            ans.append(i)
+            left.append(i)
         elif start and value == 0:
             start = False
-            ans.append(i)
+            right.append(i)
 
-    size = len(ans) // 2
-    
-    for i in range(size):
-        print(ans[2 * i], ans[2 * i + 1])
+    for li, ri in zip(left, right):
+        print(li, ri)
 
 
 if __name__ == "__main__":
