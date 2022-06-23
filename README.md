@@ -682,7 +682,7 @@ Represents a repository of accepted results.
 |past 2021 09 open|◯|◯|◯|◯|◯|◯|--|△|--|--|--|--|
 |past 2021 12 open|◯|◯|◯|◯|◯|--|△|--|--|--|--|--|
 |language test 1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
-|practice 2|◯|◯|◯|--|--|--|--|--|--|△|--|--|
+|practice 2|◯|◯|◯|--|--|--|◯|--|--|△|--|--|
 |fuka 5th|◯|--|--|--|--|--|--|None|None|None|None|None|
 |gw 2015|◯|--|--|--|--|--|--|--|--|--|None|None|
 |jsc 2021|◯|◯|◯|◯|--|--|--|--|None|None|None|None|
