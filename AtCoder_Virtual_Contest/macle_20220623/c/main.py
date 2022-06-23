@@ -12,13 +12,12 @@ def main():
 
     for i in range(n):
         ai, bi = map(int, input().split())
-        ab.append((ai, i, inf))
-        ab.append((bi, i, 1))
+        ab.append((ai, inf))
+        ab.append((bi, 1))
     
     ans = 0
-    used_bi = [False] * n
 
-    for ci, index, count in sorted(ab, reverse=True):
+    for ci, count in sorted(ab, reverse=True):
         if count == inf:
             p, q = divmod(h, ci)
             ans += p
@@ -31,7 +30,6 @@ def main():
         else:
             h -= ci
             ans += 1
-            used_bi[index] = True
 
         if h <= 0:
             print(ans)
