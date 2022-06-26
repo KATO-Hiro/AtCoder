@@ -27,11 +27,10 @@ def main():
         else:
             count -= 1
 
-        if (i < n - 1):
-            if y[i][0] != y[i + 1][0]:
-                ans = max(ans, count)
-        else:
-            ans = max(ans, count)
+        if (i < n - 1) and y[i][0] == y[i + 1][0]:
+            continue
+
+        ans = max(ans, count)
 
     print(ans)
 
