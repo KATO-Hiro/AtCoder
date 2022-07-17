@@ -1,29 +1,23 @@
 # -*- coding: utf-8 -*-
 
 
-def get_day(day):
-    return str(day).replace("-", "/").replace(" 00:00:00", "")
-
-
 def main():
-    from datetime import datetime, timedelta
+    from datetime import date, timedelta
     import sys
 
     input = sys.stdin.readline
 
     s = input().rstrip().split("/")
-    start_day = datetime(int(s[0]), int(s[1]), int(s[2]))
-    one_day = timedelta(days=1)
-    next_day = start_day
+    cur_day = date(*map(int, s))
 
     while True:
-        candidate = get_day(next_day)
+        formatted = cur_day.isoformat().replace("-", "/")
 
-        if len(set(list(candidate))) <= 3:
-            print(candidate)
+        if len(set(formatted)) <= 3:
+            print(formatted)
             exit()
 
-        next_day += one_day
+        cur_day += timedelta(days=1)
 
 
 if __name__ == "__main__":
