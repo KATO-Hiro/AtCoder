@@ -2,37 +2,34 @@
 
 
 def main():
+    from collections import defaultdict
     import sys
 
     input = sys.stdin.readline
-    
-    n, m = map(int, input().split())
-    graph = [[False] * n for _ in range(n)]
-    
-    for _ in range(m):
-        ai, bi = map(int, input().split())
-        ai -= 1
-        bi -= 1
-    
-        graph[ai][bi] = True
-        graph[bi][ai] = True
-    
+
+    n = int(input())
+    a = list(map(int, input().split()))
+    d = defaultdict(int)
+    same_count = 0
     ans = 0
 
-    for a in range(n):
-        for b in range(a + 1, n):
-            for c in range(b + 1, n):
-                if not graph[a][b] and not graph[b][a]:
-                    continue
-                if not graph[b][c] and not graph[c][b]:
-                    continue
-                if not graph[c][a] and not graph[a][c]:
-                    continue
+    for i, ai in enumerate(a, 1):
+        if i == ai:
+            same_count += 1
+        else:
+            if (ai, i) in d.keys():
+                d[(ai, i)] += 1
+            else:
+                d[(i, ai)] = 1
 
-                ans += 1
+    ans = same_count * (same_count - 1) // 2
+
+    for value in d.values():
+        if value >= 2:
+            ans += 1
 
     print(ans)
-
+    
 
 if __name__ == "__main__":
     main()
