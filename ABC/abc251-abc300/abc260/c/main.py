@@ -7,20 +7,18 @@ def main():
     input = sys.stdin.readline
 
     n, x, y = map(int, input().split())
+    red = [0] * (n + 1)
+    red[n] = 1
+    blue = [0] * (n + 1)
 
-    def dfs(level, is_red):
-        if level == 1:
-            if is_red:
-                return 0
-            else:
-                return 1
-        
-        if is_red:
-            return dfs(level - 1, True) + dfs(level, False) * x
-        else:
-            return dfs(level - 1, True) + dfs(level - 1, False) * y
+    for i in range(n, 1, -1):
+        red[i - 1] += red[i]
+        blue[i] += red[i] * x
+
+        red[i - 1] += blue[i]
+        blue[i - 1] += blue[i] * y
     
-    print(dfs(n, True))
+    print(blue[1])
 
 
 if __name__ == "__main__":
