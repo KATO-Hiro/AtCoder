@@ -2,34 +2,23 @@
 
 
 def main():
-    from collections import deque
     import sys
 
     input = sys.stdin.readline
 
     n, x, y = map(int, input().split())
-    red, blue = "r", "b"
-    d = deque()
-    d.append((red, n, 1))
-    ans = 0
+    red = [0] * (n + 1)
+    red[n] = 1
+    blue = [0] * (n + 1)
 
-    while d:
-        color, level, count = d.popleft()
-        next_level = level - 1
+    for i in range(n, 1, -1):
+        red[i - 1] += red[i]
+        blue[i] += red[i] * x
 
-        if color == red:
-            if next_level >= 2:
-                d.append((red, next_level, count))
-            if level >= 2:
-                d.append((blue, level, count * x))
-        else:
-            if next_level >= 2:
-                d.append((red, next_level, count))
-                d.append((blue, next_level, count * y))
-            elif next_level == 1:
-                ans += count * y
-
-    print(ans)
+        red[i - 1] += blue[i]
+        blue[i - 1] += blue[i] * y
+    
+    print(blue[1])
 
 
 if __name__ == "__main__":
