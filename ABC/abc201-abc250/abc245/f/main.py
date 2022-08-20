@@ -144,36 +144,26 @@ def main():
         bi -= 1
     
         scc.add_edge(ai, bi)
-        to[ai].append(bi)
+        to[bi].append(ai)
 
-    groups = scc.scc()  # トポロジカル順
-    size = len(groups)
-    index = [0] * n  # 各頂点がどのグループに属しているか?
+    groups = scc.scc()
+    dp = [0] * (n + 1)
 
-    for i in range(size):
-        for v in groups[i]:
-            index[v] = i
+    # 頂点が2つ以上ある = サイクルがある
+    for group in groups:
+        if len(group) <= 1:
+            continue
 
-    dp = [False] * size
-    ans = 0
+        for v in group:
+            dp[v] = 1
 
     # 強連結成分分解した結果がトポロジカル順になっており、後ろから見る
-    for i in range(size - 1, -1, -1):
-        # サイクルがあるか判定
-        if len(groups[i]) >= 2:
-            dp[i] = True
+    for group in groups[::-1]:
+        for x in group:
+            for y in to[x]:
+                dp[y] |= dp[x]
 
-        # サイクルに到達できるか判定
-        for v in groups[i]:
-            for u in to[v]:
-                if dp[index[u]]:
-                    dp[i] = True
-
-    for i, di in enumerate(dp):
-        if di:
-            ans += len(groups[i])
-
-    print(ans)
+    print(sum(dp))
 
 
 if __name__ == "__main__":
