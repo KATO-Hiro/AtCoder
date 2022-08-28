@@ -20,20 +20,20 @@ def main():
     dp[0] = 0
     t_max = max(t)
 
-    for k in range(t_max + 1):
-        ti, xi, ai = t[k], x[k], a[k]
-
+    for i in range(t_max):
+        ni = i + 1  # ポイント
         ndp = [-inf] * count
 
-        for i in range(count):
-            if dp[i] == -inf:
-                continue
+        for j in range(count):
+            for nj in range(j - 1, j + 2):
+                # 遷移できない範囲を弾く
+                if nj < 0 or nj >= count:
+                    continue
 
-            for j in range(max(0, i - 1), min(i + 1, min(k, 4)) + 1):
-                if j == xi:
-                    ndp[j] = max(ndp[j], dp[i] + ai)
-                else:
-                    ndp[j] = max(ndp[j], dp[i])
+                ndp[nj] = max(ndp[nj], dp[j])
+
+        # ボーナスとして扱う
+        ndp[x[ni]] += a[ni]
 
         dp = ndp
 
