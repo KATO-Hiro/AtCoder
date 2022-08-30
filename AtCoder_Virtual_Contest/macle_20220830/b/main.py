@@ -8,75 +8,31 @@ def main():
 
     n = int(input())
     s = [input().rstrip() for _ in range(n)]
+    dxy = [(1, 0), (0, 1), (1, 1), (-1, 1)]
 
-    # 横
+    # 6文字の判定部分を関数化
+    def calc(x, y, dx, dy):
+        count = 0
+
+        # 範囲外の場合
+        for i in range(6):
+            if x < 0 or x >= n or y < 0 or y >= n:
+                return False
+        
+            if s[y][x] == "#":
+                count += 1
+
+            x += dx
+            y += dy
+        
+        return count >= 4
+
     for i in range(n):
         for j in range(n):
-            count = 0
-
-            for k in range(6):
-                if j + k >= n:
-                    count = -1
-                    continue
-
-                if s[i][j + k] == "#":
-                    count += 1
-            
-            if count >= 4:
-                print("Yes")
-                exit()
-
-    # 縦
-    for j in range(n):
-        for i in range(n):
-            count = 0
-
-            for k in range(6):
-                if i + k >= n:
-                    count = -1
-                    continue
-
-                if s[i + k][j] == "#":
-                    count += 1
-            
-            if count >= 4:
-                print("Yes")
-                exit()
-
-    # 左上から右下
-    for i in range(n):
-        for j in range(n):
-            count = 0
-
-            for k in range(6):
-                if i + k >= n or j + k >= n:
-                    count = -1
-                    continue
-
-                if s[i + k][j + k] == "#":
-                    count += 1
-        
-            if count >= 4:
-                print("Yes")
-                exit()
-
-    # 右上から左下
-    for i in range(n):
-        for j in range(n - 1, -1, -1):
-            count = 0
-
-            for k in range(6):
-                if i + k >= n or j - k < 0:
-                    count = -1
-                    continue
-
-                if s[i + k][j - k] == "#":
-                    count += 1
-        
-            if count >= 4:
-                print("Yes")
-                exit()
-
+            for dx, dy in dxy:
+                if calc(i, j, dx, dy):
+                    print("Yes")
+                    exit()
 
     print("No")
 
