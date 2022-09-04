@@ -20,19 +20,18 @@ def main():
         if si == "1":
             p[j] += 1
     
-    for size in range(3, 7 + 1):
-        for i in range(7 - size + 1):
+    # 10...01の形式になっているか3重ループで判定
+    for i in range(7):
+        for j in range(i + 2, 7):
             ok = True
-            q = p[i:i + size]
 
-            for j in range(size):
-                if j == 0 or j == size - 1:
-                    if q[j] == 0:
+            if p[i] >= 1 and p[j] >= 1:
+                for k in range(i + 1, j):
+                    if p[k] > 0:
                         ok = False
-                else:
-                    if q[j] > 0:
-                        ok = False
-        
+            else:
+                ok = False
+
             if ok:
                 print("Yes")
                 exit()
