@@ -13,17 +13,9 @@ def main():
     dp = [-inf] * value_max
     dp[0] = 0
 
-    for j in range(n):
-        ndp = [-inf] * value_max
-
-        for i in range(m + 1):
-            if dp[i] == -1:
-                continue
-
-            ndp[i] = max(ndp[i], dp[i])
-            ndp[i + 1] = max(ndp[i + 1], dp[i] + (i + 1) * a[j])
-
-        dp = ndp
+    for ai in a:
+        for i in range(m, 0, -1):
+            dp[i] = max(dp[i], dp[i - 1] + i * ai)
 
     print(dp[m])
 
