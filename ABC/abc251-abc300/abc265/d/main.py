@@ -8,30 +8,20 @@ def main():
 
     n, p, q, r = map(int, input().split())
     a = list(map(int, input().split()))
-    y, z, w = 0, 0, 0
-    sum_1, sum_2, sum_3 = 0, 0, 0
+    s = set([0])
+    total = 0
 
-    for x in range(n):
-        while y < n and sum_1 < p:
-            sum_1 += a[y]
-            sum_2 -= a[y]
-            y += 1
+    # See:
+    # https://atcoder.jp/contests/abc265/submissions/34204256
+    for ai in a:
+        total += ai
 
-        while z < n and sum_2 < q:
-            sum_2 += a[z]
-            sum_3 -= a[z]
-            z += 1
-
-        while w < n and sum_3 < r:
-            sum_3 += a[w]
-            w += 1
-
-        if sum_1 == p and sum_2 == q and sum_3 == r:
+        if (total - r) in s and (total - r - q) in s and (total - r - q - p) in s:
             print("Yes")
             exit()
+
+        s.add(total)
         
-        sum_1 -= a[x]
-    
     print("No")
 
 
