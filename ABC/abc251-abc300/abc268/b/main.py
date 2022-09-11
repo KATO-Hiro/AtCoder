@@ -10,16 +10,10 @@ def main():
     t = input().rstrip()
     n, m = len(s), len(t)
 
-    if n > m:
+    if n <= m and t.startswith(s):
+        print("Yes")
+    else:
         print("No")
-        exit()
-
-    for si, ti in zip(s, t):
-        if si != ti:
-            print("No")
-            exit()
-
-    print("Yes")
 
 
 if __name__ == "__main__":
