@@ -374,6 +374,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 124|△|--|--|--|--|--|
 |AtCoder Regular Contest 125|△|--|--|--|--|--|
 |AtCoder Regular Contest 130|◯|--|--|--|--|--|
+|AtCoder Regular Contest 133|△|--|--|--|--|--|
 |AtCoder Regular Contest 136|△|--|--|--|--|--|
 |AtCoder Regular Contest 144|△|--|--|--|--|--|
 |AtCoder Regular Contest 146|△|--|--|--|--|--|
