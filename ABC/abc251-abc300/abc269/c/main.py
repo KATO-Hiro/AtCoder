@@ -2,31 +2,17 @@
 
 
 def main():
-    from itertools import product
     import sys
 
     input = sys.stdin.readline
 
-    s = bin(int(input()))[2:]
-    m = len(s)
-    flag_id = list()
+    n = int(input())
+    m = n
+    ans = [0]
 
-    for i, si in enumerate(s):
-        if si == '1':
-            flag_id.append(i)
-    
-    size = len(flag_id)
-    bools = product([True, False], repeat=size)
-    ans = list()
-
-    for bool in bools:
-        value = ["0"] * m 
-
-        for b, i in zip(bool, flag_id):
-            if b:
-                value[i] = "1"
-        
-        ans.append(int(''.join(map(str, value)), 2))
+    while m > 0:
+        ans.append(m)
+        m = (m - 1) & n # 天才的な解法
     
     print(*sorted(ans), sep="\n")
 
