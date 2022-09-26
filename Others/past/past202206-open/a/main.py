@@ -7,8 +7,8 @@ def main():
     input = sys.stdin.readline
 
     x, a, b, c = map(int, input().split())
-    d = x / a + c
-    e = x / b
+    d = b * (x + c * a)
+    e = a * x
 
     if d < e:
         print("Hare")
