@@ -14,14 +14,11 @@ def main():
         ri, ci = map(int, input().split())
         ri -= 1
         ci -= 1
+        s[ri][ci] = 0
 
-        if s[ri][ci] == 0:
-            continue
-
-        for j in range(ri, 0, -1):
-            s[j][ci] = s[j - 1][ci]
-        
-        s[0][ci] = 0
+        while ri > 0 and s[ri][ci] == 0:
+            s[ri][ci], s[ri - 1][ci] = s[ri - 1][ci], s[ri][ci]
+            ri -= 1
     
     for si in s:
         print(*si)
