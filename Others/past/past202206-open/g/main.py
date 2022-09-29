@@ -88,12 +88,7 @@ def main():
     
         uf.merge_if_needs(ai, bi)
     
-    ans = set()
-
-    for i in range(n):
-        ans.add(uf.find_root(i))
-
-    if len(ans) == 1:
+    if uf.get_group_size(0) == n:
         print("Yes")
     else:
         print("No")
