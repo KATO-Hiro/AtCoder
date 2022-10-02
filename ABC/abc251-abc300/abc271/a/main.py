@@ -7,11 +7,7 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    ans = hex(n)[2:].upper()
-
-    if len(ans) == 1:
-        ans = "0" + ans
-
+    ans = hex(n)[2:].zfill(2).upper()
     print(ans)
 
 
