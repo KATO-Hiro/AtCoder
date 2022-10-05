@@ -2,8 +2,8 @@
 
 
 def main():
+    from collections import deque
     import sys
-    sys.setrecursionlimit(10 ** 8)
 
     input = sys.stdin.readline
 
@@ -20,23 +20,29 @@ def main():
         graph[ai].append(bi)
         graph[bi].append(ai)
     
-    ans = list()
-    
-    def dfs(cur, parent=-1):
-        if cur == y:
-            ans.append(cur + 1)
-            print(*ans)
-            exit()
+    d = deque()
+    d.append(y)
+    not_used = -1
+    pos = [not_used] * n
+
+    while d:
+        cur = d.popleft()
 
         for to in graph[cur]:
-            if to == parent:
-                continue
+            if pos[to] == not_used:
+                pos[to] = cur
+                d.append(to)
 
-            ans.append(cur + 1)
-            dfs(to, cur)
-            ans.pop()
+    now = x
+    ans = list()
+
+    while now != y:
+        ans.append(now + 1)
+        now = pos[now]
     
-    dfs(x)
+    ans.append(y + 1)
+    
+    print(*ans)
 
 
 if __name__ == "__main__":
