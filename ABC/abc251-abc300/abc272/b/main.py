@@ -2,29 +2,28 @@
 
 
 def main():
-    from itertools import combinations
-    from collections import defaultdict
     import sys
 
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
-    d = defaultdict(int)
+    ok = [[False] * n for _ in range(n)]
 
-    for i in range(m):
-        tmp = list(map(int, input().split()))
-        x = tmp[1:]
+    for _ in range(m):
+        k, *x = map(int, input().split())
 
-        for x1, x2 in combinations(x, 2):
-            d[(x1, x2)] += 1
-            d[(x2, x1)] += 1
-    
-    expected = n * (n - 1)
+        for i in range(k):
+            for j in range(i + 1, k):
+                ok[x[i] - 1][x[j] - 1] = True
+                ok[x[j] - 1][x[i] - 1] = True
 
-    if len(d.keys()) == expected:
-        print("Yes")
-    else:
-        print("No")
+    for i in range(n):
+        for j in range(i + 1, n):
+            if not ok[i][j]:
+                print("No")
+                exit()
+
+    print("Yes")
 
 
 if __name__ == "__main__":
