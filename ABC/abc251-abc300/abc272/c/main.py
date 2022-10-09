@@ -17,18 +17,16 @@ def main():
         else:
             odd.append(ai)
     
-    if len(odd) == 1 and len(even) == 1:
-        print(-1)
-    elif len(odd) == 0:
-        even = sorted(even, reverse=True)
-        print(sum(even[:2]))
-    elif len(even) == 0:
+    ans = -1
+
+    if len(odd) >= 2:
         odd = sorted(odd, reverse=True)
-        print(sum(odd[:2]))
-    else:
+        ans = max(ans, (sum(odd[:2])))
+    if len(even) >= 2:
         even = sorted(even, reverse=True)
-        odd = sorted(odd, reverse=True)
-        print(max(sum(even[:2]), sum(odd[:2])))
+        ans = max(ans, sum(even[:2]))
+
+    print(ans)
 
 
 if __name__ == "__main__":
