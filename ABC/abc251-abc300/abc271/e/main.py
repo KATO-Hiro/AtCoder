@@ -12,7 +12,6 @@ def main():
     inf = 10 ** 18
     dist = [inf] * n
     dist[0] = 0
-    start = False
 
     for ei in e:
         ei -= 1
@@ -20,17 +19,6 @@ def main():
         ai, bi, ci = abc[ei]
         ai -= 1
         bi -= 1
-
-        if ai == 0:
-            start = True
-        
-        # 都市1からスタートしていない
-        if not start:
-            continue 
-
-        # 都市aiに到達できていない
-        if dist[ai] == inf:
-            continue
 
         dist[bi] = min(dist[bi], dist[ai] + ci)
 
