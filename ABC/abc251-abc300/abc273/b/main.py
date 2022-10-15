@@ -7,7 +7,6 @@ def main():
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
-    c = 10
 
     for i in range(1, k + 1):
         q = n % (10 ** i)
