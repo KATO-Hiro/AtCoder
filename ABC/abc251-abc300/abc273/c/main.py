@@ -2,20 +2,18 @@
 
 
 def main():
-    from bisect import bisect
+    from collections import Counter
     import sys
 
     input = sys.stdin.readline
 
     n = int(input())
     a = list(map(int, input().split()))
-    b = sorted(set(a))
-    m = len(b)
+    c = Counter(sorted(a, reverse=True))
     ans = [0] * n
 
-    for ai in a:
-        index = bisect(b, ai)
-        ans[m - index] += 1
+    for i, value in enumerate(c.values()):
+        ans[i] = value
     
     print(*ans, sep="\n")
 
