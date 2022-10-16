@@ -1,6 +1,23 @@
 # -*- coding: utf-8 -*-
 
 
+def round_int(n: int, base: int, digit: int):
+    """
+    See:
+    https://atcoder.jp/contests/abc273/submissions/35663188
+    """
+
+    assert base > 0
+
+    for _ in range(digit):
+        n, q = divmod(n, base)
+
+        if q >= 5:
+            n += 1
+    
+    return n * (base ** digit)
+
+
 def main():
     import sys
 
@@ -8,15 +25,7 @@ def main():
 
     n, k = map(int, input().split())
 
-    for i in range(1, k + 1):
-        q = n % (10 ** i)
-
-        if q >= 5 * (10 ** (i - 1)):
-            n += (10 ** i)
-
-        n -= q
-    
-    print(n)
+    print(round_int(n, 10, k))
 
 
 if __name__ == "__main__":
