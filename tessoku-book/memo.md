@@ -29,3 +29,17 @@
 - 部分和問題、DP
 
 - dp[i][j]: i番目を選んだときに、合計をjにできるか?
+
+```py
+dp = [False] * (s + 1)
+dp[0] = True
+
+for ai in a:
+    # 逆順に回すのがポイント
+    # 配列を使い回す
+    for i in range(s, 0, -1):
+        if i - ai < 0:
+            break
+
+        dp[i] |= dp[i - ai]
+```

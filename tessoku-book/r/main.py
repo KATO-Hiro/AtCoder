@@ -8,21 +8,22 @@ def main():
 
     n, s = map(int, input().split())
     a = list(map(int, input().split()))
-    dp = [0] * (s + 1)
-    dp[0] = 1
+    dp = [False] * (s + 1)
+    dp[0] = True
 
-    for j in range(n):
-        ndp = [0] * (s + 1)
+    # See:
+    # https://atcoder.jp/contests/tessoku-book/submissions/34883889
 
-        for i in range(s + 1):
-            ndp[i] += dp[i]
+    for ai in a:
+        # 逆から回す
+        for i in range(s, 0, -1):
+            if i - ai < 0:
+                break
 
-            if i + a[j] <= s:
-                ndp[i + a[j]] += dp[i]
-
-        dp = ndp
+            # 遷移がシンプルに書ける
+            dp[i] |= dp[i - ai]
     
-    if dp[s] >= 1:
+    if dp[s]:
         print("Yes")
     else:
         print("No")
