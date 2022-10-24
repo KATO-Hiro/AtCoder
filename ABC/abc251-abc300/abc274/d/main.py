@@ -7,52 +7,29 @@ def main():
     input = sys.stdin.readline
 
     n, x, y = map(int, input().split())
-    grid_max = 10 ** 4
-    x += grid_max
-    y += grid_max
-
     a = list(map(int, input().split()))
-    ax = list()
-    ay = list()
+    dp_x = set([a[0]])
+    dp_y = set([0])
 
-    for i, ai in enumerate(a):
-        if i % 2 == 0:
-            ax.append(ai)
-        else:
-            ay.append(ai)
-    
-    axis_max = 2 * grid_max + 1
-    dp_x = [False] * axis_max
-    dp_x[ax[0] + grid_max] = True
-    dp_y = [False] * axis_max
-    dp_y[ay[0] + grid_max] = True
-    dp_y[-ay[0] + grid_max] = True
+    for i in range(2, n, 2):
+        ndp_x = set()
 
-    for axi in ax[1:]:
-        ndp_x = [False] * axis_max
-
-        for i in range(axis_max):
-            if dp_x[i]:
-                if i + axi < axis_max:
-                    ndp_x[i + axi] = True 
-                if 0 <= i - axi:
-                    ndp_x[i - axi] = True 
-
+        for dp_xi in dp_x:
+            ndp_x.add(dp_xi + a[i])
+            ndp_x.add(dp_xi - a[i])
+        
         dp_x = ndp_x
 
-    for ayi in ay[1:]:
-        ndp_y = [False] * axis_max
+    for j in range(1, n, 2):
+        ndp_y = set()
 
-        for i in range(axis_max):
-            if dp_y[i]:
-                if i + ayi < axis_max:
-                    ndp_y[i + ayi] = True 
-                if 0 <= i - ayi:
-                    ndp_y[i - ayi] = True 
-
+        for dp_yi in dp_y:
+            ndp_y.add(dp_yi + a[j])
+            ndp_y.add(dp_yi - a[j])
+        
         dp_y = ndp_y
     
-    if dp_x[x] and dp_y[y]:
+    if (x in dp_x) and (y in dp_y):
         print("Yes")
     else:
         print("No")
