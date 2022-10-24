@@ -7,12 +7,10 @@ def main():
     input = sys.stdin.readline
     
     a, b = map(int, input().split())
-    c = list(str(b / a) + "0000")
-
-    if int(c[5]) >= 5:
-        c[4] = str(int(c[4]) + 1)
-    
-    print(''.join(c)[:5])
+    c = b / a
+    d = 4
+    d -= 1
+    print(f'{c:.{d}f}')
 
 
 if __name__ == "__main__":
