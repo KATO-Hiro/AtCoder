@@ -44,6 +44,19 @@ for ai in a:
         dp[i] |= dp[i - ai]
 ```
 
+## 019
+
+- ナップサックDP
+
+```py
+for _ in range(n)
+    # 上から押さえるイメージ
+    for i in range(w, wi - 1, -1):
+        dp[i] = max(dp[i], dp[i - wi] + vi)
+```
+
+https://atcoder.jp/contests/tessoku-book/submissions/34897562
+
 ## 031
 
 - 整数、割り切れる数、組み合わせ、和集合
