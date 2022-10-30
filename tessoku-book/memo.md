@@ -101,3 +101,10 @@ https://atcoder.jp/contests/tessoku-book/submissions/34897562
 - mod 100が同じものを連想配列などでまとめる
 - mod 100 = 0, 50のときはnC2
 - それ以外は、d[i] * d[i - 100]
+
+## A062
+
+- グラフ、判定問題、連結、DFS、UF
+
+- 連結性の判定 = UFで解いた
+- DFS: visitedで未訪問の頂点がないか判定
