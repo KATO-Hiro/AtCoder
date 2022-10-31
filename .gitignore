@@ -118,3 +118,5 @@ setting.ini
 */*/*/test/
 */*/*/*/test/
 */*/*/*/cases/
+
+*/*/*/*/.DS_Store
