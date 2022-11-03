@@ -1,30 +1,27 @@
 # -*- coding: utf-8 -*-
 
-ans = 0
+
+from functools import lru_cache
 
 
-from math import floor
-from collections import defaultdict
-import sys
-
-input = sys.stdin.readline
-
-n = int(input())
-memo = defaultdict(int)
-
+@lru_cache(maxsize=10 ** 6)
 def dfs(i):
-    global ans
-
     if i == 0:
-        memo[i] = 1
         return 1
-    
-    if i in memo.keys():
-        return memo[i]
 
-    memo[i] = dfs(floor(i / 2)) + dfs(floor(i / 3))
-    
-    return memo[i]
+    return dfs((i // 2)) + dfs(i // 3)
 
-dfs(n)
-print(memo[n])
+
+def main():
+    import sys
+    sys.setrecursionlimit(10 ** 7)
+
+    input = sys.stdin.readline
+
+    n = int(input())
+    print(dfs(n))
+
+
+if __name__ == "__main__":
+    main()
+
