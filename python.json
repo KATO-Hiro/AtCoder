@@ -4,6 +4,13 @@
     // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
     // same ids are connected.
     // See: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+    "Read String": {
+        "prefix": "read-string",
+        "body": [
+            "$0 = input().rstrip()"
+        ],
+        "description": "Read a string."
+    },
     "Read Interger": {
         "prefix": "read-int",
         "body": [
@@ -40,7 +47,7 @@
         ]
     },
     "Read graph": {
-        "prefix": "read_graph",
+        "prefix": "read-graph",
         "body": [
             "graph = [[] for _ in range($1)]",
             "",
@@ -55,7 +62,7 @@
         "description": "Read a non-directed graph (0-indexed)."
     },
     "Generate values as 1D-Array": {
-        "prefix": "generate-values-1D",
+        "prefix": "add-1D",
         "body": [
             "$1 = [$2 for _ in range($3)]"
         ],
@@ -94,12 +101,30 @@
             "heappush(${1:elements}, -${2:number})",
             "",
             "$0 = -heappop($1)"
-        ],
+        ]
     },
     "Mod": {
         "prefix": "mod-10 ** 9 + 7",
         "body": [
             "mod = 10 ** 9 + 7"
+        ]
+    },
+    "Mod998244353": {
+        "prefix": "mod-998244353",
+        "body": [
+            "mod = 998244353"
+        ]
+    },
+    "Inverse (mod p) ex: inv = 1 / p": {
+        "prefix": "mod-pow",
+        "body": [
+            "inv = pow($0, mod - 2, mod)  # 1 / p"
+        ]
+    },
+    "inf": {
+        "prefix": "inf",
+        "body": [
+            "inf = float('inf')"
         ]
     },
     "ans": {
@@ -114,6 +139,39 @@
         "prefix": "p",
         "body": [
             "print($1)"
+        ]
+    },
+    "Print flush": {
+        "prefix": "flush",
+        "body": [
+            "print($1, flush=True)"
+        ]
+    },
+    "Print Yes and No": {
+        "prefix": "pyn",
+        "body": [
+            "if $1:",
+            "\tprint('Yes')",
+            "else:",
+            "\tprint('No')"
+        ]
+    },
+    "Print YES and NO": {
+        "prefix": "pYN",
+        "body": [
+            "if $1:",
+            "\tprint('YES')",
+            "else:",
+            "\tprint('NO')"
+        ]
+    },
+    "Print Takahashi and Aoki": {
+        "prefix": "Print Takahashi and Aoki",
+        "body": [
+            "if $1:",
+            "\tprint('Takahashi')",
+            "else:",
+            "\tprint('Aoki')"
         ]
     }
 }
