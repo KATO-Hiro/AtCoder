@@ -8,15 +8,8 @@ def main():
 
     n = int(input())
     h = list(map(int, input().split()))
-    hj = 0
-    ans = 0
-
-    for i, hi in enumerate(h, 1):
-        if hi > hj:
-            ans = i
-            hj = hi
-    
-    print(ans)
+    ans = sorted({(hi, i) for i, hi in enumerate(h, 1)})
+    print(ans[-1][1])
     
 
 if __name__ == "__main__":
