@@ -292,6 +292,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 273|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 274|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 275|◯|◯|◯|◯|△|--|--|--|
+|AtCoder Beginner Contest 276|◯|--|--|--|--|--|--|--|
 
 </details>
 
