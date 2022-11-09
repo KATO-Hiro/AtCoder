@@ -80,18 +80,15 @@ def main():
         xi, yi = map(int, input().split())
         t[xi].append(yi)
     
-    count = 0
     ans = 0
     
     for i in range(1, d + 1):
         if len(t[i]) > 0:
             for ti in t[i]:
                 hq.push(ti)
-                count += 1
         
-        if count > 0:
+        if hq.q:
             ans += hq.pop()
-            count -= 1
     
     print(ans)
 
