@@ -2,18 +2,20 @@
 
 
 def main():
-    from itertools import product
     import sys
 
     input = sys.stdin.readline
 
-    numbers = list()
     n = int(input())
 
-    for pattern in product(["4", "7"], repeat=10):
-        numbers.append(int("".join(pattern)))
-    
-    print(sorted(numbers)[n - 1])
+    # https://atcoder.jp/contests/tessoku-book/submissions/34955585
+    # nが小さいので、 # 2進数に変換 + 0→4、1→7に置き換え
+    n -= 1
+
+    # ゼロ埋めも
+    b = bin(n)[2:].zfill(10)
+    b = b.replace("0", "4").replace("1", "7")
+    print(b)
 
 
 if __name__ == "__main__":
