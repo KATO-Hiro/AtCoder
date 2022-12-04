@@ -19,16 +19,10 @@ def main():
     for col in zip(*t):
         e[col] += 1
     
-    for key, value in d.items():
-        if key not in e.keys():
-            print("No")
-            exit()
-        
-        if e[key] != value:
-            print("No")
-            exit()
-
-    print("Yes")
+    if d == e:
+        print("Yes")
+    else:
+        print("No")
 
 
 if __name__ == "__main__":
