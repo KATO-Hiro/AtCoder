@@ -19,11 +19,8 @@ def main():
         if i == 0:
             continue
 
-        print(i, end="")
-        print(": ", end="")
-        print("{", end="")
-        print(*sorted(g), sep=", ", end="")
-        print("}")
+        si = ", ".join(map(str, g))
+        print(f"{i}: {{{si}}}")
 
 
 if __name__ == "__main__":
