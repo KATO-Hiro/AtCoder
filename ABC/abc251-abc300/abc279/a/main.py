@@ -7,14 +7,7 @@ def main():
     input = sys.stdin.readline
 
     s = input().rstrip()
-    ans = 0
-
-    for si in s:
-        if si == "v":
-            ans += 1
-        else:
-            ans += 2
-    
+    ans = s.count("v") + s.count("w") * 2
     print(ans)
     
 
