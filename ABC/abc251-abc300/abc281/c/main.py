@@ -2,8 +2,6 @@
 
 
 def main():
-    from itertools import accumulate
-    from bisect import bisect
     import sys
 
     input = sys.stdin.readline
@@ -13,12 +11,13 @@ def main():
 
     summed_a = sum(a)
     t %= summed_a
-    b = list(accumulate([0] + a + [10 ** 10]))
 
-    index = bisect(b, t)
-    ti = t - b[index - 1]
-
-    print(index, ti)
+    for index, ai in enumerate(a, 1):
+        if t < ai:
+            print(index, t)
+            exit()
+        else:
+            t -= ai
     
 
 if __name__ == "__main__":
