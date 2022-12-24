@@ -8,16 +8,13 @@ def main():
     input = sys.stdin.readline
 
     s = input().rstrip()
-    pattern = "[A-Z]{1}[0-9]{6}[A-Z]{1}"
+    pattern = "[A-Z][1-9][0-9]{5}[A-Z]"
 
     r = re.compile(pattern)
     result = r.match(s)
 
     if result:
-        if len(list(str(int(s[1:7])))) == 6:
-            print("Yes")
-        else:
-            print("No")
+        print("Yes")
     else:
         print("No")
     
