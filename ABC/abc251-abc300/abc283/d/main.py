@@ -7,30 +7,20 @@ def main():
     input = sys.stdin.readline
 
     s = input().rstrip()
-    left_count = 0
-    right_count = 0
-    left_index = list()
-    d = dict()
+    box = set()
+    stack = [[]]
 
     for i, si in enumerate(s):
         if si == "(":
-            left_count += 1
-            left_index.append(i)
+            stack.append([])
+            pass
         elif si == ")":
-            right_count += 1
-
-            left = 0
-            right = i
-
-            if left_count > right_count:
-                left = left_index[-(right_count + 1)] + 1
-            
-            for key, value in list(d.items()):
-                if left < value < right:
-                    del d[key]
+            for ci in stack.pop():
+                box.discard(ci)
         else:
-            if si not in d.keys():
-                d[si] = i
+            if si not in box:
+                box.add(si)
+                stack[-1].append(si)
             else:
                 print("No")
                 exit()
