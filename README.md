@@ -574,7 +574,7 @@ Represents a repository of accepted results.
 |joi 2022 yo 1b|◯|◯|◯|◯|None|None|
 |joi 2022 yo 2|◯|--|--|--|--|None|
 |joi 2022 yo 1c|◯|◯|◯|◯|None|None|
-|joi 2023 yo 1a|--|◯|◯|◯|None|None|
+|joi 2023 yo 1a|◯|◯|◯|◯|None|None|
 |joi 2023 yo 1b|◯|◯|◯|◯|None|None|
 |joi 2023 yo 1c|--|--|--|◯|None|None|
 |joig 2021 open|◯|◯|◯|--|--|--|
