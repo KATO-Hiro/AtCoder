@@ -2,7 +2,6 @@
 
 
 def main():
-    from collections import Counter
     import sys
 
     input = sys.stdin.readline
@@ -11,7 +10,7 @@ def main():
     a = list(map(int, input().split()))
     m = int(input())
     b = list(map(int, input().split()))
-    c = Counter(b)
+    c = set(b)
     x = int(input())
     x_max = 2 * 10 ** 5 + 10
 
@@ -25,7 +24,7 @@ def main():
         for aj in a:
             ni = i + aj
 
-            if c[ni] != 1:
+            if ni not in c:
                 dp[ni] = True
     
     if dp[x]:
