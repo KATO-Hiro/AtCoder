@@ -9,7 +9,7 @@ def main():
     s = input().rstrip()
 
     for i, si in enumerate(s, 1):
-        if si.upper() == si:
+        if si.isupper():
             print(i)
             exit()
     
