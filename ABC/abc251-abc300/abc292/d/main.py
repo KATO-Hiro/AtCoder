@@ -71,14 +71,12 @@ class UnionFind:
         
         self.group_count -= 1
 
-        if self.get_group_size(x) >= self.get_group_size(y):
-            self.parent_numbers[x] += self.parent_numbers[y]
-            self.parent_numbers[y] = x
-            self.edge_count[x] += self.edge_count[y]
-        else:
-            self.parent_numbers[y] += self.parent_numbers[x]
-            self.parent_numbers[x] = y
-            self.edge_count[y] += self.edge_count[x]
+        if self.parent_numbers[x] > self.parent_numbers[y]:
+            x, y = y, x
+
+        self.parent_numbers[x] += self.parent_numbers[y]
+        self.parent_numbers[y] = x
+        self.edge_count[x] += self.edge_count[y]
         return True
 
     def get_roots(self):
