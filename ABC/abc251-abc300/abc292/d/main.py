@@ -9,6 +9,7 @@ class UnionFind:
     https://www.youtube.com/watch?v=zV3Ul2pA2Fw
     https://en.wikipedia.org/wiki/Disjoint-set_data_structure
     https://atcoder.jp/contests/abc120/submissions/4444942
+    https://atcoder.jp/contests/abc292/submissions/39410075
     '''
 
     def __init__(self, number_count: int):
@@ -17,6 +18,8 @@ class UnionFind:
             number_count: The size of elements (greater than 2).
         '''
         self.parent_numbers = [-1 for _ in range(number_count)]
+        self.edge_count = [0 for _ in range(number_count)]
+        self.group_count = number_count
 
     def find_root(self, number: int) -> int:
         '''Follows the chain of parent pointers from number up the tree until
@@ -61,47 +64,48 @@ class UnionFind:
         x = self.find_root(number_x)
         y = self.find_root(number_y)
 
+        self.edge_count[x] += 1
+
         if x == y:
             return False
+        
+        self.group_count -= 1
 
-        if self.get_group_size(x) >= self.get_group_size(y):
-            self.parent_numbers[x] += self.parent_numbers[y]
-            self.parent_numbers[y] = x
-        else:
-            self.parent_numbers[y] += self.parent_numbers[x]
-            self.parent_numbers[x] = y
+        if self.parent_numbers[x] > self.parent_numbers[y]:
+            x, y = y, x
+
+        self.parent_numbers[x] += self.parent_numbers[y]
+        self.parent_numbers[y] = x
+        self.edge_count[x] += self.edge_count[y]
         return True
+
+    def get_roots(self):
+        return [i for i, x in enumerate(self.parent_numbers) if x < 0]
+
+    def get_edge_count(self, number: int) -> int:
+        return self.edge_count[number]
+
+    def get_group_count(self) -> int:
+        return self.group_count
 
 
 def main():
-    from collections import defaultdict
     import sys
 
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
-    graph = list()
-    uf = UnionFind(n + 10)
-    
+    uf = UnionFind(n)
+
     for _ in range(m):
         ai, bi = map(int, input().split())
         ai -= 1
         bi -= 1
     
         uf.merge_if_needs(ai, bi)
-        graph.append((ai, bi))
     
-    edges = defaultdict(int)
-    
-    for ui, _ in graph:
-        root = uf.find_root(ui)
-        edges[root] += 1
-
-    for i in range(n):
-        if uf.find_root(i) != i:
-            continue
-
-        if uf.get_group_size(i) != edges[i]:
+    for i in uf.get_roots():
+        if uf.get_group_size(i) != uf.get_edge_count(i):
             print("No")
             exit()
     
