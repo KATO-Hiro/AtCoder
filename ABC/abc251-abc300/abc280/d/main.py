@@ -31,15 +31,15 @@ def run_prime_factorization(max_number: int) -> dict:
     return ans
 
 
-def ok(n, ps):
-    for pi, value in ps:
+def ok(n, prime_factorization):
+    for prime, prime_count in prime_factorization:
         m, count = n, 0
 
         while m > 0:
-            count += m // pi
-            m //= pi
+            count += m // prime
+            m //= prime
         
-        if count < value:
+        if count < prime_count:
             return False
     
     return True
