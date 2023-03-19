@@ -31,18 +31,22 @@ def run_prime_factorization(max_number: int) -> dict:
     return ans
 
 
-def f(n, p):
-    if n == 0:
-        return 0
+def ok(n, ps):
+    for pi, value in ps:
+        m, count = n, 0
+
+        while m > 0:
+            count += m // pi
+            m //= pi
+        
+        if count < value:
+            return False
     
-    n //= p
-    
-    return n + f(n, p)
+    return True
 
 
 def main():
     import sys
-    sys.setrecursionlimit(10 ** 7)
 
     input = sys.stdin.readline
 
@@ -52,14 +56,8 @@ def main():
 
     while ac - wa > 1:
         wj = (ac + wa) // 2
-        ok = True
 
-        for pi, count in ps:
-            if f(wj, pi) < count:
-                ok = False
-                break
-
-        if ok:
+        if ok(wj, ps):
             ac = wj
         else:
             wa = wj
