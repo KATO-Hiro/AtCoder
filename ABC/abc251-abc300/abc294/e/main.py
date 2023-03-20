@@ -2,36 +2,38 @@
 
 
 def main():
-    from itertools import accumulate
-    from bisect import bisect_left
     import sys
 
     input = sys.stdin.readline
 
     l, n1, n2 = map(int, input().split())
-    v1, l1, v2, l2 = [0] * n1, [0] * n1, [0] * n2, [0] * n2
+    l1, l2 = 0, 0
+    query = list()
 
-    for i in range(n1):
-        v1i, l1i = map(int, input().split())
-        v1[i], l1[i] = v1i, l1i
+    for _ in range(n1):
+        vi, li = map(int, input().split())
+        query.append((l1, vi, 1))
+        l1 += li
 
-    for i in range(n2):
-        v2i, l2i = map(int, input().split())
-        v2[i], l2[i] = v2i, l2i
+    for _ in range(n2):
+        vi, li = map(int, input().split())
+        query.append((l2, vi, 2))
+        l2 += li
     
-    l1_acc = list(accumulate(l1))
-    l2_acc = list(accumulate(l2))
-    pos = sorted(set([*l1_acc, *l2_acc]))
-    prev, ans = 0, 0
+    query.append((l, -1, -1))
+    query = sorted(query, key=lambda x: x[0])
+    x, y, prev, ans = -1, -1, 0, 0
 
-    for p in pos:
-        i1 = bisect_left(l1_acc, p)
-        i2 = bisect_left(l2_acc, p)
-
-        if v1[i1] == v2[i2]:
-            ans += p - prev
+    for li, vi, row in query:
+        if x == y:
+            ans += li - prev
         
-        prev = p
+        prev = li
+
+        if row == 1:
+            x = vi
+        else:
+            y = vi
 
     print(ans)
 
