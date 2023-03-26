@@ -13,7 +13,7 @@ def main():
     c[b] += 1
 
     for si in s:
-        b = b ^ (1 << int(si))
+        b ^= 1 << int(si)
         c[b] += 1
     
     ans = 0
