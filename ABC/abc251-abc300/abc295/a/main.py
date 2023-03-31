@@ -8,15 +8,14 @@ def main():
 
 
     n = int(input())
-    w = list(input().rstrip().split())
-    s = ["and", "not", "that", "the", "you"]
+    w = set(input().rstrip().split())
+    s = set(["and", "not", "that", "the", "you"])
+    common = w & s
 
-    for wi in w:
-        if wi in s:
-            print("Yes")
-            exit()
-    
-    print("No")
+    if len(common) > 0:
+        print("Yes")
+    else:
+        print("No")
     
 
 if __name__ == "__main__":
