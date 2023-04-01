@@ -7,13 +7,14 @@ def main():
     input = sys.stdin.readline
 
     x, y = map(int, input().split())
+    ans = 0
 
-    if x == 0 and y == 0:
-        print(0)
-    elif x == 0 or y == 0:
-        print(1)
-    else:
-        print(2)
+    if x != 0:
+        ans += 1
+    if y != 0:
+        ans += 1
+
+    print(ans)
     
 
 if __name__ == "__main__":
