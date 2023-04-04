@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
-ans = 0
-
 
 def main():
+    from collections import deque
     import sys
-    sys.setrecursionlimit(10 ** 8)
 
     input = sys.stdin.readline
 
@@ -21,26 +19,30 @@ def main():
         graph[bi].append(ai)
     
     visited = [False] * n
-    upper = 10 ** 6
+    upper, ans = 10 ** 6, 0
+    d = deque()
+    d.append((0, -1)) # node, parent
 
-    def dfs(vertex):
-        global ans
-
-        if ans == upper:
-            return
+    while d:
+        cur, parent = d.pop()
         
-        visited[vertex] = True
-        ans += 1
+        if cur >= 0:
+            visited[cur] = True
+            d.append((~cur, parent))
 
-        for to in graph[vertex]:
-            if visited[to]:
-                continue
-        
-            dfs(to)
+            for to in graph[cur]:
+                if to == parent or visited[to]:
+                    continue
+
+                d.append((to, cur))
+        else:
+            cur = ~cur
+            visited[cur] = False
+            ans += 1
+
+            if ans >= upper:
+                break
     
-        visited[vertex] = False
-
-    dfs(0)
     print(ans)
 
 
