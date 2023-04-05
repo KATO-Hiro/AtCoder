@@ -16,10 +16,8 @@ def main():
         
             d = int(b[i][j])
 
-            for x in range(-d, d + 1):
-                for y in range(-d, d + 1):
-                    ni, nj = i + x, j + y
-
+            for ni in range(r):
+                for nj in range(c):
                     if abs(i - ni) + abs(j - nj) > d:
                         continue
 
