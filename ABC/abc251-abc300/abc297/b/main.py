@@ -6,17 +6,13 @@ def main():
 
     input = sys.stdin.readline
 
-    s = list(input().rstrip())
-    t = list()
-    u = ""
+    s = input().rstrip()
+    result1 = (s.rfind("B") - s.find("B")) % 2 == 1
+    result2 = s.find("R") < s.find("K") < s.rfind("R")
 
-    for i, si in enumerate(s, 1):
-        if si == "B":
-            t.append(i)
-        elif si == "R" or si == "K":
-            u += si
-    
-    if (t[0] % 2 != t[1] % 2) and u == "RKR":
+    # See:
+    # https://atcoder.jp/contests/abc297/editorial/6178
+    if result1 and result2:
         print("Yes")
     else:
         print("No")
