@@ -11,6 +11,13 @@
         ],
         "description": "Read a string."
     },
+    "Read 2D-Strings": {
+        "prefix": "read-str-2D-list",
+        "body": [
+            "$0 = [list(input().rstrip()) for _ in range($1)]"
+        ],
+        "description": "Read grid of strings."
+    },
     "Read Interger": {
         "prefix": "read-int",
         "body": [
@@ -125,6 +132,12 @@
         "prefix": "inf",
         "body": [
             "inf = float('inf')"
+        ],
+    },
+    "set-rec": {
+        "prefix": "set-rec",
+        "body": [
+            "sys.setrecursionlimit(10 ** 8)"
         ]
     },
     "ans": {
