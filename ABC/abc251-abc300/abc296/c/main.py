@@ -2,17 +2,16 @@
 
 
 def main():
-    from collections import Counter
     import sys
 
     input = sys.stdin.readline
 
     n, x = map(int, input().split())
-    a = [0] + list(map(int, input().split()))
-    c = Counter(a)
+    a = list(map(int, input().split()))
+    s = set(a)
     
     for ai in a:
-        if (ai - x) in c.keys():
+        if (ai + x) in s:
             print("Yes")
             exit()
     
