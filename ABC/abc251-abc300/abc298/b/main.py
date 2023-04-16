@@ -1,6 +1,15 @@
 # -*- coding: utf-8 -*-
 
 
+from typing import List
+
+
+# See:
+# https://kazun-kyopro.hatenablog.com/entry/ABC/298/B
+def rotate_90_degrees_to_right(array: List[List]):
+    return [list(ai)[::-1] for ai in zip(*array)]
+
+
 def main():
     import sys
 
@@ -28,13 +37,7 @@ def main():
             print(ans)
             exit()
         
-        d = [[0 for _ in range(n)] for _ in range(n)]
-        
-        for i in range(n):
-            for j in range(n):
-                d[i][j] = c[n - 1 - j][i]
-        
-        c = d
+        c = rotate_90_degrees_to_right(c)
 
     print("No")
     
