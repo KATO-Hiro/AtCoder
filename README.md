@@ -298,7 +298,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 279|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 280|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 281|◯|◯|◯|△|--|--|--|--|
-|AtCoder Beginner Contest 282|◯|◯|◯|--|--|--|--|--|
+|AtCoder Beginner Contest 282|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 283|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 284|◯|◯|◯|△|△|--|--|--|
 |AtCoder Beginner Contest 285|◯|◯|◯|◯|--|--|--|--|
