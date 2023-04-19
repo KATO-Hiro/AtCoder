@@ -1,33 +1,31 @@
 # -*- coding: utf-8 -*-
 
 
+def f(a, b, p):
+    if a > b:
+        a, b = b, a
+
+    return a < p < b
+
+
 def main():
     import sys
 
     input = sys.stdin.readline
 
-    xyz = list(map(int, input().split())) 
-    plus_count = 0
+    x, y, z = map(int, input().split())
+    ans = -1
 
-    for i in xyz:
-        if i > 0:
-            plus_count += 1
-        
-    x, y, z = xyz[0], xyz[1], xyz[2]
-    ans = abs(x)
-    
-    if plus_count == 3:
-        if min(xyz) == y:
-            ans = -1
-    elif plus_count == 2:
-        if z < y < x:
-            ans = abs(x) + abs(2 * z)
-    elif plus_count == 1:
-        if x < y < z:
-            ans = abs(x) + abs(2 * z)
+    # 場合分け + 同じ条件をまとめる
+    # 0とXの間にYはない: |X|
+    # 0とXの間にYがある:
+    #    0とZの間にYがある: -1 
+    #    0とZの間にYはない: |z - x| + |z| 
+    if f(0, x, y):
+        if not f(0, z, y):
+            ans = abs(z - x) + abs(z)
     else:
-        if max(xyz) == y:
-            ans = -1
+        ans = abs(x)
 
     print(ans)
 
