@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 
+from typing import List
+
 
 class BIT:
     """Binary Indexed Tree (Fenwick Tree)
@@ -42,32 +44,21 @@ class BIT:
         return summed
 
 
-def count(x):
-    size = len(x)
+# See:
+# https://ikatakos.com/pot/programming_algorithm/dynamic_programming/inversion
+def calc_inversion_number(array: List[int]) -> int:
+    compressed_dict = {element: index for index, element in enumerate(sorted(set(array)), 1)}
+    compressed_list = [compressed_dict[ai] for ai in array]
+
+    size = len(compressed_list)
     bit = BIT(size)
-    ans = 0
-    
-    for i, xi in enumerate(x):
-        ans += i - bit.sum(xi)
-        bit.add(xi, 1)
+    inversion_number = 0
 
-    return ans
+    for index, value in enumerate(compressed_list):
+        inversion_number += index - bit.sum(value)
+        bit.add(value, 1)
 
-
-def compress_coordinate(elements: list) -> dict:
-    ''' Means that reduce the numerical value while maintaining the magnitude
-        relationship.
-    Args:
-        elements: list of integer numbers (greater than -1).
-    Returns:
-        A dictionary's items ((original number, compressed number) pairs).
-    Landau notation: O(n log n)
-    '''
-
-    # See:
-    # https://atcoder.jp/contests/abc036/submissions/5707999?lang=ja
-    compressed_list = sorted(set(elements))
-    return {element: index for index, element in enumerate(compressed_list)}
+    return inversion_number
 
 
 def main():
@@ -82,7 +73,7 @@ def main():
 
     # 転倒数
     # 色を識別しない場合 - 同じ色の場合
-    ans = count(x)
+    ans = calc_inversion_number(x)
 
     # 同じ色の場合
     # 数字をまとめる + 座標圧縮
@@ -95,10 +86,7 @@ def main():
             d[ci].append(xi)
 
     for values in d.values():
-        compressed_values = compress_coordinate(values)
-        e = [compressed_values[value] + 1 for value in values]
-
-        ans -= count(e)
+        ans -= calc_inversion_number(values)
 
     print(ans)
 
