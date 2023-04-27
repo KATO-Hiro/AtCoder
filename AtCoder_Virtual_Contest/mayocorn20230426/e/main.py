@@ -1,106 +1,42 @@
 # -*- coding: utf-8 -*-
 
 
-import random
-import string
-import traceback
+import typing
 
 
 # See:
-# https://atcoder.jp/contests/abc284/submissions/37841742
-class RollingHashWithRange():
-    def __init__(self, parent, left, right) -> None:
-        self.parent = parent
-        self.left = left
-        self.right = right
+# https://github.com/not522/ac-library-python/blob/master/atcoder/string.py
+def z_algorithm(s: typing.Union[str, typing.List[int]]) -> typing.List[int]:
+    '''
+    Reference:
+    D. Gusfield,
+    Algorithms on Strings, Trees, and Sequences: Computer Science and
+    Computational Biology
+    '''
 
-    def __getitem__(self, key):
-        if key > self.right - self.left:
-            traceback.print_exc()
-            raise Exception("index out of range")
+    if isinstance(s, str):
+        s = [ord(c) for c in s]
 
-        return self.get(self.left, self.left + key)
+    n = len(s)
 
-    # Overall hash value
-    def get(self, left, right):
-        mod = RollingHash.mod
-        return (self.parent.hash[right] - self.parent.hash[left] * self.parent.power[right - left]) % mod
+    if n == 0:
+        return []
 
-    def __len__(self):
-        return self.right - self.left
+    z = [0] * n
+    j = 0
 
-    def __eq__(self, other):
-        return self.get(self.left, self.right) == other.get(other.left, other.right)
+    for i in range(1, n):
+        z[i] = 0 if j + z[j] <= i else min(j + z[j] - i, z[i - j])
 
-    # Longest Common Prefix
-    def __lt__(self, other):
-        length = min(len(self), len(other))
+        while i + z[i] < n and s[z[i]] == s[i + z[i]]:
+            z[i] += 1
 
-        if self[length] == other[length]:
-            return len(self) < len(other)
+        if j + z[j] < i + z[i]:
+            j = i
 
-        left, right = 0, length
+    z[0] = n
 
-        while True:
-            mid = (left + right) // 2
-
-            if left == right:
-                return self.parent.s[self.left + right - 1] < other.parent.s[other.left + right - 1]
-
-            if self[mid] != other[mid]:
-                right = mid
-            else:
-                left = mid + 1
-                right = right
-
-
-class RollingHash():
-    base = 30
-    mod = 10 ** 9 + 9
-
-    @classmethod
-    def config(cls, base, mod) -> None:
-        RollingHash.base = base
-        RollingHash.mod = mod
-
-    def __init__(self, s) -> None:
-        mod = RollingHash.mod
-        base = RollingHash.base
-        self.power = power = [1] * (len(s) + 1)
-        self.s = s
-
-        size = len(s)
-        self.hash = hash = [0] * (size + 1)
-
-        value = 0
-
-        for i in range(size):
-            hash[i + 1] = value = (value * base + ord(s[i])) % mod
-
-        value = 1
-
-        for i in range(size):
-            power[i + 1] = value = value * base % mod
-
-    def get(self, left, right) -> RollingHashWithRange:
-        return RollingHashWithRange(self, left, right)
-
-
-def get_random_name(n):
-    rand_list = [random.choice(string.ascii_letters + string.digits) for i in range(n)]
-    return ''.join(rand_list)
-
-
-def test():
-    RollingHash.config(100, 10 ** 9 + 7)
-
-    for i in range(100):
-        n = 5
-        x, y = get_random_name(n), get_random_name(n)
-        y = x
-
-        if (x < y) != (RollingHash(x).get(0, n) < RollingHash(y).get(0, n)):
-            print("No", x < y, RollingHash(x).get(0, n) < RollingHash(y).get(0, n), x, y)
+    return z
 
 
 def main():
@@ -110,17 +46,29 @@ def main():
 
     n = int(input())
     t = input().rstrip()
-    reversed_t = t[::-1]
+    former = t[:n]
+    latter = t[n:][::-1]
+    x = former + latter
+    y = latter + former
 
-    rh1 = RollingHash(t)
-    rh2 = RollingHash(reversed_t)
+    # Z algorithmで接頭辞を比較
+    z_x = z_algorithm(x)
+    z_y = z_algorithm(y)
 
-    for i in range(n + 1):
-        if rh1.get(0, i) == rh2.get(n - i, n) and rh1.get(n + i, 2 * n) == rh2.get(n, 2 * n - i):
-            print(t[:i] + t[n + i:])
-            print(i)
-            exit()
-    
+    for i in range(n):
+        # 範囲外参照を防ぐ
+        if i > 0 and (z_x[2 * n - i] != i):
+            continue
+
+        j = n - i
+
+        if z_y[2 * n - j] != j:
+            continue
+
+        print(t[:i] + t[i + n:])
+        print(i)
+        exit()
+
     print(-1)
 
 
