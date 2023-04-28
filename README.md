@@ -315,7 +315,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 296|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 297|◯|◯|◯|◯|△|--|--|--|
 |AtCoder Beginner Contest 298|◯|◯|◯|◯|△|--|--|--|
-|AtCoder Beginner Contest 299|◯|◯|◯|--|△|--|--|--|
+|AtCoder Beginner Contest 299|◯|◯|◯|△|△|--|--|--|
 
 </details>
 
