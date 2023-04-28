@@ -1,50 +1,32 @@
 # -*- coding: utf-8 -*-
 
 
-def dijkstra(vertex_count: int, source: int, edges):
-    """Uses Dijkstra's algorithm to find the shortest path in a graph.
-    Args:
-        vertex_count: The number of vertices.
-        source      : Vertex number (0-indexed).
-        edges       : List of (cost, edge) (0-indexed).
-    Returns:
-        costs  : List of the shortest distance.
-        parents: List of parent vertices.
-    Landau notation: O(|Edges|log|Vertices|).
-    See:
-    https://atcoder.jp/contests/abc191/submissions/19964078
-    https://atcoder.jp/contests/abc191/submissions/19966232
-    """
+def bfs(vertex_count: int, source: int, graph):
+    from collections import deque
 
-    from heapq import heappop, heappush
+    d = deque()
+    d.append(source)
+    visited = [False] * vertex_count
+    inf = 10 ** 18
+    dist = [inf] * vertex_count
+    dist[source] = 0
 
-    hq = [(0, source)]  # weight, vertex number (0-indexed)
-    costs = [float("inf") for _ in range(vertex_count)]
-    costs[source] = 0
-    visited = [False for _ in range(vertex_count)]
-    pending = -1
-    parents = [pending for _ in range(vertex_count)]
+    while d:
+        cur = d.popleft()
 
-    while hq:
-        cost, vertex = heappop(hq)
-
-        if cost > costs[vertex]:
+        if visited[cur]:
             continue
 
-        if visited[vertex]:
-            continue
+        visited[cur] = True
 
-        visited[vertex] = True
+        for to in graph[cur]:
+            if visited[to]:
+                continue
 
-        for weight, edge in edges[vertex]:
-            new_cost = cost + weight
+            dist[to] = min(dist[to], dist[cur] + 1)
+            d.append(to)
 
-            if new_cost < costs[edge]:
-                costs[edge] = new_cost
-                parents[edge] = vertex
-                heappush(hq, (new_cost, edge))
-
-    return costs, parents
+    return dist
 
 
 def main():
@@ -61,31 +43,28 @@ def main():
         bi -= 1
     
         # cost, vertex
-        graph[ai].append((1, bi))
-        graph[bi].append((1, ai))
+        graph[ai].append(bi)
+        graph[bi].append(ai)
     
-    # 前処理: 各頂点からの最短距離をBFSで求める
-    dist = list()
-
-    for i in range(n):
-        d, _ = dijkstra(vertex_count=n, source=i, edges=graph)
-        dist.append(d)
-
     # 頂点piからの距離がdi未満の頂点を白で塗る 
     # 上記以外を黒で塗る(全て白ならNo)
     k = int(input())
+    dist = list()
     pd = list()
+
+    none, white, black = -1, 0, 1
+    colors = [none] * n
 
     for _ in range(k):
         pi, di = map(int, input().split())
         pi -= 1
+
+        # 前処理: 各頂点からの最短距離をBFSで求める
+        d = bfs(vertex_count=n, source=pi, graph=graph)
+        dist.append(d)
         pd.append((pi, di))
     
-    none, white, black = -1, 0, 1
-    colors = [none] * n
-    
-    for pi, di in pd:
-        for j, dij in enumerate(dist[pi]):
+        for j, dij in enumerate(d):
             if dij < di:
                 colors[j] = white
     
@@ -100,16 +79,16 @@ def main():
         print("No")
         exit()
     
+    inf = 10 ** 18
+    
     # 頂点piと「黒で塗られた頂点のうち、頂点piとの距離の最小値」の距離がdiであるか判定
-    for pi, di in pd:
-        d_min = float("inf")
+    for i, (pi, di) in enumerate(pd):
+        d_min = inf
 
-        for j, dij in enumerate(dist[pi]):
-            if colors[j] == white:
-                continue
+        for j, (color, dij) in enumerate(zip(colors, dist[i])):
+            if color == black:
+                d_min = min(d_min, dij)
 
-            d_min = min(d_min, dij)
-        
         if d_min != di:
             print("No")
             exit()
