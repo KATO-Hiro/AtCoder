@@ -10,31 +10,15 @@ def main():
     a = [list(input().rstrip()) for _ in range(h)]
     b = [list(input().rstrip()) for _ in range(h)]
 
-    for i in range(h):
-        c = list()
-
-        for ii in range(h):
-            ni = (i + ii) % h
-            c.append(a[ni])
-
-        for j in range(w):
-            d = list()
-
-            for jj in range(w):
-                nj = (j + jj) % w
-
-                for k in range(h):
-                    ck = c[k]
-                    d.append(ck[nj:] + ck[:nj])
-            
+    for s in range(h):
+        for t in range(w):
             flag = True
 
-            for y in range(h):
-                for x in range(w):
-                    if d[y][x] != b[y][x]:
+            for i in range(h):
+                for j in range(w):
+                    if a[(i + s) % h][(j + t) % w] != b[i][j]:
                         flag = False
-                        break
-
+                
             if flag:
                 print("Yes")
                 exit()
