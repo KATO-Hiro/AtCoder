@@ -70,21 +70,6 @@ def main():
     ps = [0] + p.generate() + [inf]
     m = len(ps)
 
-    def f(ps, a2, b):
-        ok = 0
-        ng = m + 1
-
-        while ng - ok > 1:
-            judge = (ok + ng) // 2
-            c = ps[judge]
-
-            if a2 * b * (c ** 2) <= n:
-                ok = judge
-            else:
-                ng = judge
-        
-        return ok
-
     ans = 0
 
     for i in range(1, m + 1):
@@ -94,20 +79,20 @@ def main():
         if a2 > n:
             break
 
-        for j in range(i + 1, m - 1):
+        for j in range(i + 1, m + 1):
             b = ps[j]
-            c_min = ps[j + 1]
 
             if a2 * b > n:
                 break
-            if a2 * b * (c_min ** 2) > n:
-                break
 
-            k = f(ps, a2, b)
+            for k in range(j + 1, m + 1):
+                c = ps[k]
 
-            if k != m + 1:
-                ans += max(k - j, 0)
-    
+                if a2 * b * (c ** 2) > n:
+                    break
+
+                ans += 1
+
     print(ans)
     
 
