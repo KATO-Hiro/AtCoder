@@ -1,51 +1,32 @@
 # -*- coding: utf-8 -*-
 
 
-def dijkstra(vertex_count: int, source: int, edges):
-    """Uses Dijkstra's algorithm to find the shortest path in a graph.
-    Args:
-        vertex_count: The number of vertices.
-        source      : Vertex number (0-indexed).
-        edges       : List of (cost, edge) (0-indexed).
-    Returns:
-        costs  : List of the shortest distance.
-        parents: List of parent vertices.
-    Landau notation: O(|Edges|log|Vertices|).
-    See:
-    https://atcoder.jp/contests/abc191/submissions/19964078
-    https://atcoder.jp/contests/abc191/submissions/19966232
-    """
+from collections import deque
 
-    from heapq import heappop, heappush
 
-    hq = [(0, source)]  # weight, vertex number (0-indexed)
-    costs = [float("inf") for _ in range(vertex_count)]
+def bfs(vertex_count, source, graph):
+    inf = float("inf")
+    costs = [inf for _ in range(vertex_count)]
     costs[source] = 0
     visited = [False for _ in range(vertex_count)]
-    pending = -1
-    parents = [pending for _ in range(vertex_count)]
+    q = deque([source])
 
-    while hq:
-        cost, vertex = heappop(hq)
+    while q:
+        cur = q.popleft()
 
-        if cost > costs[vertex]:
+        if visited[cur]:
             continue
 
-        if visited[vertex]:
-            continue
+        visited[cur] = True
 
-        visited[vertex] = True
+        for to in graph[cur]:
+            if visited[to]:
+                continue
 
-        for weight, edge in edges[vertex]:
-            new_cost = cost + weight
-
-            if new_cost < costs[edge]:
-                costs[edge] = new_cost
-                parents[edge] = vertex
-                heappush(hq, (new_cost, edge))
-
-    return costs, parents
-
+            costs[to] = min(costs[to], costs[cur] + 1)
+            q.append(to)
+    
+    return costs
 
 
 def main():
@@ -60,15 +41,13 @@ def main():
         ai, bi = map(int, input().split())
         ai -= 1
         bi -= 1
-        # ci: cost
-        # bi: edge (0-indexed)
-        edges[ai].append((1, bi))
+        edges[ai].append(bi)
     
     inf = float('inf')
     ans = 0
 
     for i in range(n):
-        dist, _ = dijkstra(vertex_count=n, source=i, edges=edges)
+        dist = bfs(n, i, edges)
 
         for di in dist:
             if di == 0 or di == 1 or di == inf:
