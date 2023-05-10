@@ -10,40 +10,28 @@ def main():
 
     n, m = map(int, input().split())
     a = list(map(int, input().split()))
-    d = defaultdict(list)
+    s = [set() for _ in range(m)]
 
+    # See:
+    # https://atcoder.jp/contests/abc272/submissions/35477545
     # aiが0以上n未満となるまでの回数lower, upperを計算
-    for i in range(1, n + 1):
-        ai = a[i - 1]
-        ai += i  # 1回目の加算を行っておく
+    for i, ai in enumerate(a, 1):
+        lower = max(0, ceil(-ai / i))
+        ai += i * lower
 
-        if ai >= 0:
-            lower = 0
-        else:
-            lower = ceil(-ai / i)
+        for j in range(lower, m + 1):
+            if ai < m:
+                s[j - 1].add(ai)
+            else:
+                break
 
-        if ai >= n:
-            upper = 0
-        else:
-            upper = ceil((n - ai) / i)
-            upper = min(upper, m)  # 配列外参照を防ぐ
+            ai += i
 
-        for j in range(lower, upper):
-            d[j].append(ai + i * j)
-
+    # mexを計算
     for i in range(m):
-        # mexを計算
-        di = d[i]
-        size = len(di)
-        exist = [False] * (size + 1)
-
-        for dij in di:
-            if dij <= size:  # mexの定義に従い、範囲外参照を防ぐ
-                exist[dij] = True
-
         ans = 0
 
-        while exist[ans]:
+        while ans in s[i]:
             ans += 1
 
         print(ans)
