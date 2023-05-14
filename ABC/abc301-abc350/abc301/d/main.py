@@ -6,32 +6,27 @@ def main():
 
     input = sys.stdin.readline
 
-    s = input().rstrip()
+    s = input().rstrip()[::-1]
     m = len(s)
     n = int(input())
     ans = 0
 
+    # See:
+    # https://atcoder.jp/contests/abc301/submissions/41312127
     # 先頭の桁からGreedyに見る
-    for d in range(m):
-        if s[d] == "1":
-            ans += 1 << (m - d - 1)
-        elif s[d] == "?":
-            # "?"を1で仮置き
-            ans += 1 << (m - d - 1)
-            tmp = ans
-
-            # d + 1桁以降の?を0で埋めたときにN以下か?
-            # = 1の桁だけ見る
-            for i in range(d + 1, m):
-                if s[i] == "1":
-                    tmp += 1 << (m - i - 1)
-
-            # 条件を満たさないときは"0"を置く
-            if tmp > n:
-                ans -= 1 << (m - d - 1)
+    # ?を0で埋める = '1'の部分を加算
+    for i in range(m):
+        if s[i] == "1":
+            ans |= 1 << i
 
     if ans > n:
-        ans = -1
+        print(-1)
+        exit()
+
+    # ?を1で埋めたときにn以下か?
+    for i in reversed(range(m)):
+        if s[i] == "?" and (ans | 1 << i) <= n:
+            ans |= 1 << i
 
     print(ans)
 
