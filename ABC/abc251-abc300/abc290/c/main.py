@@ -7,14 +7,14 @@ def main():
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
-    a = sorted(set(map(int, input().split())))
-    m = min(len(a), k)
-    b = set(a[:m])
+    a = set(map(int, input().split()))
 
-    for i in range(n + 1):
-        if i not in b:
+    for i in range(k):
+        if i not in a:
             print(i)
             exit()
+
+    print(k)
 
 
 if __name__ == "__main__":
