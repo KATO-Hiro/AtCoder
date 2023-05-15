@@ -3,20 +3,18 @@
 
 def main():
     import sys
-    from itertools import accumulate
 
     input = sys.stdin.readline
 
     d = int(input())
-    # 降順 + 累積和
-    n = sorted(map(int, list(input().rstrip())), reverse=True)
-    a = [0] + list(accumulate(n))
+    # 昇順 + 累積和
+    a = sorted(map(int, input().rstrip()))
     ans = 0
+    acc = 0
 
-    for i in range(d):
-        m = d - i - 1
-        ai = n[i]
-        ans += ai * m - (a[d] - a[i + 1])
+    for i, ai in enumerate(a):
+        ans += ai * i - acc
+        acc += ai
 
     print(ans)
 
