@@ -8,36 +8,45 @@ def main():
 
     h, w = map(int, input().split())
     s = [input().rstrip() for _ in range(h)]
-    dyx = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+    dxy = [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (1, -1), (-1, 1), (1, 1)]
 
-    t = "snuke"
+    from typing import List
 
-    for dy, dx in dyx:
-        for i in range(h):
-            for j in range(w):
-                u = list()
-                candidate = list()
+    def is_in_grid(nx: int, ny: int, w: int = w, h: int = h) -> bool:
+        if not (0 <= nx < w):
+            return False
+        if not (0 <= ny < h):
+            return False
 
-                for k in range(5):
-                    nx = j + dx * k
-                    ny = i + dy * k
+        return True
 
-                    if not (0 <= nx < w):
-                        continue
-                    if not (0 <= ny < h):
-                        continue
+    def is_exist_word_in_grid(grid: List[str], word: str):
+        word_size = len(list(word))
 
-                    u.append(s[ny][nx])
-                    candidate.append((ny + 1, nx + 1))
+        for dx, dy in dxy:
+            for y in range(h):
+                for x in range(w):
+                    candidate = ""
+                    pos = list()  # y, x
 
-                if len(u) != 5:
-                    continue
+                    for k in range(word_size):
+                        nx, ny = x + dx * k, y + dy * k
 
-                if "".join(u) == t:
-                    for ri, ci in candidate:
-                        print(ri, ci)
+                        if not is_in_grid(nx, ny):
+                            continue
 
-                    exit()
+                        candidate += grid[ny][nx]
+                        pos.append((ny + 1, nx + 1))
+
+                    if candidate == word:
+                        return True, pos
+
+        return False, []
+
+    _, pos = is_exist_word_in_grid(s, "snuke")
+
+    for ri, ci in pos:
+        print(ri, ci)
 
 
 if __name__ == "__main__":
