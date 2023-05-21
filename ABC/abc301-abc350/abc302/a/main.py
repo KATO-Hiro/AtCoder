@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 
 
+def ceil(a: int, b: int) -> int:
+    assert b != 0
+
+    return (a + b - 1) // b
+
+
 def main():
     import sys
 
     input = sys.stdin.readline
 
     a, b = map(int, input().split())
-    p, q = divmod(a, b)
-
-    if q > 0:
-        p += 1
-
-    print(p)
+    print(ceil(a, b))
 
 
 if __name__ == "__main__":
