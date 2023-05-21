@@ -7,7 +7,6 @@ def main():
     input = sys.stdin.readline
 
     n, q = map(int, input().split())
-    size = [0] * n
     graph = [set() for _ in range(n)]
     count = n
 
@@ -20,13 +19,11 @@ def main():
             vi -= 1
 
             graph[ui].add(vi)
-            size[ui] += 1
             graph[vi].add(ui)
-            size[vi] += 1
 
-            if size[ui] == 1:
+            if len(graph[ui]) == 1:
                 count -= 1
-            if size[vi] == 1:
+            if len(graph[vi]) == 1:
                 count -= 1
         else:
             vi = qi[1]
@@ -34,15 +31,12 @@ def main():
 
             for to in graph[vi]:
                 graph[to].remove(vi)
-                size[to] -= 1
 
-                if size[to] == 0:
+                if len(graph[to]) == 0:
                     count += 1
 
-            graph[vi] = set()
-
-            if size[vi] != 0:
-                size[vi] = 0
+            if len(graph[vi]) != 0:
+                graph[vi] = set()
                 count += 1
 
         print(count)
