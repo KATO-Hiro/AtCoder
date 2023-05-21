@@ -8,7 +8,9 @@ def main():
 
     h, w = map(int, input().split())
     s = [input().rstrip() for _ in range(h)]
+    # dx, dy
     dxy = [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (1, -1), (-1, 1), (1, 1)]
+    # dxy = dxy[:4]
 
     from typing import List
 
