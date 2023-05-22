@@ -83,6 +83,14 @@
             "\t\tpass"
         ]
     },
+    "Import Defaultdict": {
+        "prefix": "import-defaultdict",
+        "body": [
+            "from collections import defaultdict",
+            "",
+            "$1 = defaultdict(int)" 
+        ],
+    },
     "Import Accumulate": {
         "prefix": "import-accumulate",
         "body": [
@@ -108,6 +116,34 @@
             "heappush(${1:elements}, -${2:number})",
             "",
             "$0 = -heappop($1)"
+        ]
+    },
+    "dx, dy for grid": {
+        "prefix": "dxy",
+        "body": [
+            "dxy = [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (1, -1), (-1, 1), (1, 1)]",
+            "# dxy = dxy[:4]",
+        ]
+    },
+    "Is in grid": {
+        "prefix": "is-in-grid",
+        "body": [
+            "def is_in_grid(nx: int, ny: int, w: int = w, h: int = h) -> bool:",
+            "\tif not (0 <= nx < w):",
+            "\t\treturn False",
+            "\tif not (0 <= ny < h):",
+            "\t\treturn False",
+            "",
+            "\treturn True",
+        ]
+    },
+    "Ceil": {
+        "prefix": "ceil",
+        "body": [
+            "def ceil(a: int, b: int) -> int:",
+            "\tassert b != 0",
+            "",
+            "\treturn (a + b - 1) // b",
         ]
     },
     "Mod": {
