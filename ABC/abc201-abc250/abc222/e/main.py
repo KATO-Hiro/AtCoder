@@ -3,8 +3,7 @@
 
 def main():
     import sys
-
-    sys.setrecursionlimit(10**8)
+    from collections import deque
 
     input = sys.stdin.readline
 
@@ -24,25 +23,41 @@ def main():
     # 前計算: 与えられた経路でそれぞれ辺を何回通るか
     count = [0] * (n - 1)
 
-    def dfs(cur, parent=-1):
-        if cur == goal:
-            return True
+    # See:
+    # https://atcoder.jp/contests/abc222/submissions/26452884
+    def bfs(start):
+        inf = -1
+        dist = [inf] * n
+        dist[start] = 0
+        q = deque([start])
 
-        for to, edge_id in graph[cur]:
-            if to == parent:
-                continue
+        while q:
+            qi = q.popleft()
 
-            if dfs(to, cur):
-                count[edge_id] += 1
+            for to, _ in graph[qi]:
+                if dist[to] != inf:
+                    continue
 
-                return True
+                dist[to] = dist[qi] + 1
+                q.append(to)
 
-        return False
+        return dist
 
     for start, goal in zip(a, a[1:]):
         start -= 1
         goal -= 1
-        dfs(start)
+
+        dist = bfs(start)
+        cur = goal
+
+        # 終点から始点までの経路をたどり、通過する辺を数える
+        while cur != start:
+            for to, edge_id in graph[cur]:
+                if dist[to] < dist[cur]:
+                    cur = to
+                    count[edge_id] += 1
+
+                    break
 
     # 合計S回のうち、赤い辺を何回通るか?
     # R - B = K、R + B = Sから、変数Bを削除
