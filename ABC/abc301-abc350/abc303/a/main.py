@@ -7,24 +7,14 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    s = input().rstrip()
-    t = input().rstrip()
+    # 標準化
+    s = input().rstrip().replace("1", "l").replace("0", "o")
+    t = input().rstrip().replace("1", "l").replace("0", "o")
 
-    for (
-        si,
-        ti,
-    ) in zip(s, t):
-        if si == ti:
-            pass
-        elif (si == "1" and ti == "l") or (ti == "1" and si == "l"):
-            pass
-        elif (si == "0" and ti == "o") or (ti == "0" and si == "o"):
-            pass
-        else:
-            print("No")
-            exit()
-
-    print("Yes")
+    if s == t:
+        print("Yes")
+    else:
+        print("No")
 
 
 if __name__ == "__main__":
