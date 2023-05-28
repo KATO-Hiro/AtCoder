@@ -8,24 +8,20 @@ def main():
 
     x, y, z = map(int, input().split())
     s = input().rstrip()
-    inf = 10**18
-    dp = [inf] * 2
-    dp[0] = 0
+
+    # See:
+    # https://atcoder.jp/contests/abc303/submissions/41736372
+    # tupleで初期化 & 上書き
+    dp = (0, z)
 
     for si in s:
-        ndp = [inf] * 2
-        a = si == "A"
+        # CapsLockを押したときのコストを加算
+        dp = min(dp[0], dp[1] + z), min(dp[1], dp[0] + z)
 
-        for c in range(2):
-            for nc in range(2):
-                cost = x if a == nc else y
-
-                if nc != c:
-                    cost += z
-
-                ndp[nc] = min(ndp[nc], dp[c] + cost)
-
-        dp = ndp
+        if si == "a":
+            dp = dp[0] + x, dp[1] + y
+        else:
+            dp = dp[0] + y, dp[1] + x
 
     print(min(dp))
 
