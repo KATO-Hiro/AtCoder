@@ -14,17 +14,16 @@ def main():
 
     for si in s:
         ndp = [inf] * 2
+        a = si == "A"
 
-        if si == "a":
-            ndp[0] = min(ndp[0], dp[0] + x)
-            ndp[1] = min(ndp[1], dp[0] + z + y)
-            ndp[0] = min(ndp[0], dp[1] + z + x)
-            ndp[1] = min(ndp[1], dp[1] + y)
-        else:
-            ndp[0] = min(ndp[0], dp[0] + y)
-            ndp[1] = min(ndp[1], dp[0] + z + x)
-            ndp[0] = min(ndp[0], dp[1] + z + y)
-            ndp[1] = min(ndp[1], dp[1] + x)
+        for c in range(2):
+            for nc in range(2):
+                cost = x if a == nc else y
+
+                if nc != c:
+                    cost += z
+
+                ndp[nc] = min(ndp[nc], dp[c] + cost)
 
         dp = ndp
 
