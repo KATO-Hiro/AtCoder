@@ -35,6 +35,7 @@ class TopologicalSorting:
         """
         que = deque([i for i in range(self.vertex_count) if self.indegrees[i] == 0])
         results = list()
+        cost = [1] * self.vertex_count
 
         if len(que) == 0:
             return False, []
@@ -49,12 +50,14 @@ class TopologicalSorting:
 
             for to in self.graph[vertex]:
                 self.indegrees[to] -= 1
+                # トポロジカルソートをしながらコストを更新
+                cost[to] = max(cost[to], cost[vertex] + 1)
 
                 if self.indegrees[to] == 0:
                     que.append(to)
 
         if len(results) == self.vertex_count:
-            return True, results
+            return True, cost
         else:
             return False, []
 
@@ -96,19 +99,11 @@ def main():
         # 各選手に対して、指定された日程の順番に辺を張る
         for ui, vi in zip(a[i], a[i][1:]):
             ts.add_edge(vi, ui)
-            # ts.add_edge(ui, vi)
 
-    is_DAG, orders = ts.sort()
+    is_DAG, dist = ts.sort()
 
     if is_DAG:
-        # 最長経路問題 = dp
-        dp = [1] * vertex_count
-
-        for i in range(vertex_count):
-            for to in ts.graph[orders[i]]:
-                dp[to] = max(dp[to], dp[orders[i]] + 1)
-
-        print(max(dp))
+        print(max(dist))
     else:
         print(-1)
 
