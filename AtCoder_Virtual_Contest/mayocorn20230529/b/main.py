@@ -7,22 +7,28 @@ def main():
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
-    b = [list(map(lambda x: int(x) - 1, input().split())) for _ in range(n)]
-    base = b[0][0]
-
-    p, q = divmod(base, 7)
-
-    if (q + m - 1) >= 7:
-        print("No")
-        exit()
+    b = [list(map(int, input().split())) for _ in range(n)]
+    flag = True
 
     for i in range(n):
         for j in range(m):
-            if b[i][j] != base + (i * 7 + j):
-                print("No")
-                exit()
+            # 右側は+1
+            if j + 1 < m and b[i][j] + 1 != b[i][j + 1]:
+                flag = False
+                break
+            # 下側は+7
+            if i + 1 < n and b[i][j] + 7 != b[i + 1][j]:
+                flag = False
+                break
+            # 7の倍数は右端
+            if b[i][j] % 7 == 0 and j != m - 1:
+                flag = False
+                break
 
-    print("Yes")
+    if flag:
+        print("Yes")
+    else:
+        print("No")
 
 
 if __name__ == "__main__":
