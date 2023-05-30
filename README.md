@@ -152,7 +152,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 136|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 137|◯|◯|◯|△|△|--|
 |AtCoder Beginner Contest 138|◯|◯|◯|△|△|--|
-|AtCoder Beginner Contest 139|◯|◯|◯|◯|△|--|
+|AtCoder Beginner Contest 139|◯|◯|◯|◯|-|--|
 |AtCoder Beginner Contest 140|◯|◯|◯|△|--|--|
 |AtCoder Beginner Contest 141|◯|◯|◯|◯|△|--|
 |AtCoder Beginner Contest 142|◯|◯|◯|◯|△|--|
@@ -746,7 +746,7 @@ Represents a repository of accepted results.
 |past 2022 03 open|◯|--|--|◯|◯|◯|◯|--|--|--|--|--|
 |past 2022 06 open|◯|◯|◯|◯|◯|◯|◯|--|--|◯|--|--|
 |past 2022 09 open|◯|◯|◯|◯|--|--|--|--|--|--|--|--|
-|past 2022 12 open|--|--|◯|--|◯|--|--|◯|--|--|--|--|
+|past 2022 12 open|--|--|◯|◯|◯|--|--|◯|--|--|--|--|
 |language test 1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
 |practice 2|◯|◯|◯|--|--|--|◯|--|--|△|--|--|
 |fuka 5th|◯|--|--|--|--|--|--|None|None|None|None|None|
