@@ -8,24 +8,16 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    s = input().rstrip()
-    t = ["axa", "ixi", "uxu", "exe", "oxo"]
-    ans = s
-    count = 0
+    s = list(input().rstrip())
 
-    for patterns in permutations(t):
-        u = s
+    # 指定された文字の構造: [aiueo]のどれか + x + [aiueo]のどれか
+    for i in range(1, n - 1):
+        if s[i] == "x" and s[i - 1] == s[i + 1] and s[i - 1] in "aiueo":
+            s[i - 1] = "."
+            s[i] = "."
+            s[i + 1] = "."
 
-        for pattern in patterns:
-            u = u.replace(pattern, "...")
-
-        candidate = u.count(".")
-
-        if candidate > count:
-            ans = u
-            count = candidate
-
-    print(ans)
+    print("".join(s))
 
 
 if __name__ == "__main__":
