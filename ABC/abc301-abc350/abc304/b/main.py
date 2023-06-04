@@ -6,16 +6,15 @@ def main():
 
     input = sys.stdin.readline
 
-    n = int(input())
+    # 文字列で受け取って、先頭から4文字目以降を0に
+    n = list(input().rstrip())
+    d = len(n)
 
-    for i in range(5, -1, -1):
-        if 10 ** (i + 3) <= n < 10 ** (i + 4):
-            n //= 10 ** (i + 1)
-            n *= 10 ** (i + 1)
-            print(n)
-            exit()
+    if d > 3:
+        for i in range(3, d):
+            n[i] = "0"
 
-    print(n)
+    print("".join(n))
 
 
 if __name__ == "__main__":
