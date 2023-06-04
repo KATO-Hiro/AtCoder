@@ -10,34 +10,25 @@ def main():
     n, d = map(int, input().split())
     d = d**2
     xy = [tuple(map(int, input().split())) for _ in range(n)]
-    inf = 10**12
-    dist = [[inf for _ in range(n)] for _ in range(n)]
-
-    for i in range(n):
-        xi, yi = xy[i]
-
-        for j in range(n):
-            xj, yj = xy[j]
-            di = (xj - xi) ** 2 + (yj - yi) ** 2
-            dist[i][j] = di
-            dist[j][i] = di
-
     ans = [False] * n
     q = deque([0])
 
     while q:
         cur = q.popleft()
+        x_cur, y_cur = xy[cur]
 
         if ans[cur]:
             continue
 
         ans[cur] = True
 
-        for i, to in enumerate(dist[cur]):
+        for i in range(n):
             if ans[i]:
                 continue
 
-            if to <= d:
+            xi, yi = xy[i]
+
+            if ((xi - x_cur) ** 2 + (yi - y_cur) ** 2) <= d:
                 q.append(i)
 
     for ans_i in ans:
