@@ -12,14 +12,17 @@ def main():
     # 2変数のうち片方を固定、もう片方を高速化
     # Aiが単調増加
     # 尺取り法
-    i, j = 0, 0
+    left = 0
     ans = 0
 
-    for i, ai in enumerate(a):
-        while j < n and a[j] - ai <= k:
-            j += 1
+    # 右端を全探索
+    # See:
+    # https://atcoder.jp/contests/tessoku-book/submissions/34897506
+    for right, ai in enumerate(a):
+        while left < n and ai - a[left] > k:
+            left += 1
 
-        ans += j - i - 1
+        ans += right - left
 
     print(ans)
 
