@@ -16,20 +16,18 @@ def main():
     # A, BのペアとC, Dのペアを作る
     # K - (A + B) = C + Dとなるか?
     ab = defaultdict(int)
-    cd = defaultdict(int)
 
     for ai in a:
         for bj in b:
             ab[ai + bj] += 1
 
+    # See:
+    # https://atcoder.jp/contests/tessoku-book/submissions/34897520
     for ci in c:
         for dj in d:
-            cd[ci + dj] += 1
-
-    for ab_i in ab:
-        if (k - ab_i) in cd.keys():
-            print("Yes")
-            exit()
+            if (k - (ci + dj)) in ab.keys():
+                print("Yes")
+                exit()
 
     print("No")
 
