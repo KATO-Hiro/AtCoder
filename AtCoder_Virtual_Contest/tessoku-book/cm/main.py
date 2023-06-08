@@ -3,15 +3,15 @@
 
 def main():
     import sys
-    from itertools import accumulate, product
+    from itertools import product
 
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
     a = sorted(list(map(int, input().split())))
     mid = n // 2
-    b, c = a[:mid], set(list(accumulate((a[mid:]))))
-    print(c)
+    b, c = a[:mid], a[mid:]
+    s = set()
 
     for pattern in product([0, 1], repeat=mid):
         summed = 0
@@ -20,12 +20,18 @@ def main():
             if pi == 1:
                 summed += bi
 
-        if (k - summed) in c:
+        s.add(summed)
+
+    for pattern in product([0, 1], repeat=n - mid):
+        summed = 0
+
+        for pi, bi in zip(pattern, c):
+            if pi == 1:
+                summed += bi
+
+        if (k - summed) in s:
             print("Yes")
             exit()
-        print(pattern)
-        print(summed)
-    print(b, c)
 
     print("No")
 
