@@ -7,26 +7,14 @@ def main():
     input = sys.stdin.readline
 
     n, w = map(int, input().split())
-    inf = -1
-    dp = [inf] * (w + 1)
-    dp[0] = 0
+    dp = [0] * (w + 1)
 
-    for i in range(n):
+    for _ in range(n):
         wi, vi = map(int, input().split())
-        ndp = [0] * (w + 1)
 
-        for j in range(w + 1):
-            if dp[j] == inf:
-                continue
-
-            ndp[j] = max(ndp[j], dp[j])
-
-            if j + wi > w:
-                continue
-
-            ndp[j + wi] = max(ndp[j + wi], dp[j] + vi)
-
-        dp = ndp
+        # 遷移を逆にすると、シンプルに書ける
+        for j in range(w, wi - 1, -1):
+            dp[j] = max(dp[j], dp[j - wi] + vi)
 
     print(max(dp))
 
