@@ -26,9 +26,6 @@ def main():
         ans = list()
 
         for i in range(n, 0, -1):
-            if not dp[j][i]:
-                continue
-
             tmp = j - a[i - 1]
 
             if tmp >= 0 and dp[tmp][i - 1]:
