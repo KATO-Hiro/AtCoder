@@ -7,33 +7,33 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    a = list(map(int, input().split()))
-    inf = 10**9
-    b = list(map(int, input().split()))
-    dp = [inf] * n
-    dp[0] = 0
+    a = [0] + list(map(int, input().split()))
+    b = [0, 0] + list(map(int, input().split()))
+    dp = [0] * n
+    dp[1] = a[1]
     memo = [-1] * n
+    memo[1] = 0
 
-    for i in range(1, n):
-        dp[i] = min(dp[i], dp[i - 1] + a[i - 1])
-        memo[i] = i - 1
+    for i in range(2, n):
+        tmp1 = dp[i - 1] + a[i]
+        tmp2 = dp[i - 2] + b[i]
 
-        if i >= 2:
-            tmp = dp[i - 2] + b[i - 2]
-
-            if dp[i] > tmp:
-                dp[i] = tmp
-                memo[i] = i - 2
+        if tmp1 <= tmp2:
+            memo[i] = i - 1
+            dp[i] = tmp1
+        else:
+            memo[i] = i - 2
+            dp[i] = tmp2
 
     pos = n - 1
     ans = list()
 
-    while memo[pos] != -1:
+    while pos != -1:
         ans.append(pos + 1)
         pos = memo[pos]
 
-    print(len(ans) + 1)
-    print(1, *ans[::-1])
+    print(len(ans))
+    print(*ans[::-1])
 
 
 if __name__ == "__main__":
