@@ -10,17 +10,18 @@ def main():
     a = list(map(int, input().split()))
 
     # 尺取り法
-    right = 0
+    left = 0
     summed = 0
     ans = 0
 
-    for left in range(n):
-        while right < n and summed + a[right] <= k:
-            summed += a[right]
-            right += 1
+    for right in range(n):
+        summed += a[right]
 
-        ans += right - left
-        summed -= a[left]
+        while left < n and summed > k:
+            summed -= a[left]
+            left += 1
+
+        ans += right - left + 1
 
     print(ans)
 
