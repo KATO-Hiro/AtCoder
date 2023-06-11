@@ -7,21 +7,15 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    numbers = [i for i in range(0, 100, 5)]
 
-    for i, j in zip(numbers, numbers[1:]):
-        if i <= n <= j:
-            d1 = n - i
-            d2 = j - n
+    m = n % 5
 
-            if d1 < d2:
-                print(i)
-                exit()
-            else:
-                print(j)
-                exit()
+    if m <= 2:
+        ans = n // 5 * 5
+    else:
+        ans = (n // 5 + 1) * 5
 
-    print(100)
+    print(ans)
 
 
 if __name__ == "__main__":
