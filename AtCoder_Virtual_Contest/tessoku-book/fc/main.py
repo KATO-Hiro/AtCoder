@@ -3,13 +3,12 @@
 
 def main():
     import sys
-    from itertools import product
 
     input = sys.stdin.readline
 
-    n = int(input())
-    patterns = sorted(list(product(["4", "7"], repeat=10)))
-    print("".join(patterns[n - 1]))
+    n = bin(int(input()) - 1)[2:].zfill(10)
+    n = n.replace("0", "4").replace("1", "7")
+    print(n)
 
 
 if __name__ == "__main__":
