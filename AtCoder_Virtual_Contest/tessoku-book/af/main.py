@@ -7,24 +7,20 @@ def main():
     input = sys.stdin.readline
 
     n, a, b = map(int, input().split())
-    dp = [[False for _ in range(2)] for _ in range(n + 1)]
-    dp[n][0] = True
+    dp = [False] * (n + 1)
 
-    for i in range(n, -1, -1):
-        if dp[i][0]:
-            if i - a >= 0:
-                dp[i - a][1] = True
-            if i - b >= 0:
-                dp[i - b][1] = True
+    for i in range(n + 1):
+        if i >= a and not dp[i - a]:
+            dp[i] = True
+        elif i >= b and not dp[i - b]:
+            dp[i] = True
+        else:
+            dp[i] = False
 
-        if dp[i][1]:
-            if i - a >= 0:
-                dp[i - a][0] = True
-            if i - b >= 0:
-                dp[i - b][0] = True
-
-    print(dp)
-    print(dp[0])
+    if dp[n]:
+        print("First")
+    else:
+        print("Second")
 
 
 if __name__ == "__main__":
