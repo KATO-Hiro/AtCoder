@@ -11,14 +11,7 @@ def main():
     dp = [False] * (n + 1)
 
     for i in range(n + 1):
-        ok = False
-
-        for ai in a:
-            if i >= ai and not dp[i - ai]:
-                ok = True
-
-        if ok:
-            dp[i] = True
+        dp[i] = any(not dp[i - ai] for ai in a if i >= ai)
 
     if dp[n]:
         print("First")
