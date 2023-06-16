@@ -7,25 +7,33 @@ def main():
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
-    ab = [list(map(int, input().split())) for _ in range(n)]
 
     # 体力・気力の下限値を全探索
-    upper = 100
+    upper = 102
+    dp = [[0 for _ in range(upper)] for _ in range(upper)]
+
+    # 2次元累積和
+    for _ in range(n):
+        ai, bi = map(int, input().split())
+        dp[ai][bi] += 1
+
+    for i in range(1, upper):
+        for j in range(1, upper):
+            dp[i][j] += dp[i - 1][j]
+            dp[i][j] += dp[i][j - 1]
+            dp[i][j] -= dp[i - 1][j - 1]
+
     ans = 0
+    k += 1
 
-    def f(a_min, b_min):
-        a_max, b_max = a_min + k, b_min + k
-        count = 0
+    for i in range(k, upper):
+        for j in range(k, upper):
+            x = dp[i][j]
+            x -= dp[i - k][j]
+            x -= dp[i][j - k]
+            x += dp[i - k][j - k]
 
-        for ai, bi in ab:
-            if a_min <= ai <= a_max and b_min <= bi <= b_max:
-                count += 1
-
-        return count
-
-    for a_min in range(upper + 1):
-        for b_min in range(upper + 1):
-            ans = max(ans, f(a_min, b_min))
+            ans = max(ans, x)
 
     print(ans)
 
