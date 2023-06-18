@@ -1,172 +1,105 @@
 # -*- coding: utf-8 -*-
 
-
-import math
-from bisect import bisect_left, bisect_right, insort
-from typing import Generic, Iterable, Iterator, List, TypeVar, Union
-
-T = TypeVar("T")
+from collections import defaultdict
+from heapq import heappop, heappush
 
 
-class SortedMultiset(Generic[T]):
-    """Sorted multi set (set) in C++.
+class SumOfTopKth:
+    """Sum of the k-th number from the smallest (largest) to the k-th.
 
     See:
-    https://qiita.com/tatyam/items/492c70ac4c955c055602
-    https://github.com/tatyam-prime/SortedSet/blob/main/SortedMultiset.py
+    https://atcoder.jp/contests/abc306/submissions/42339375
     """
 
-    BUCKET_RATIO = 50
-    REBUILD_RATIO = 170
+    __slots__ = (
+        "_summed",
+        "_k",
+        "_in",
+        "_out",
+        "_d_in",
+        "_d_out",
+        "_freq",
+        "_ascending_order",
+    )
 
-    def _build(self, a=None) -> None:
-        "Evenly divide `a` into buckets."
-        if a is None:
-            a = list(self)
+    def __init__(self, k: int, ascending_order=True) -> None:
+        self._k = k
+        self._summed = 0
+        self._in = []
+        self._out = []
+        self._d_in = []
+        self._d_out = []
+        self._ascending_order = ascending_order
+        self._freq = defaultdict(int)
 
-        size = self.size = len(a)
-        bucket_size = int(math.ceil(math.sqrt(size / self.BUCKET_RATIO)))
-        self.a = [
-            a[size * i // bucket_size : size * (i + 1) // bucket_size]
-            for i in range(bucket_size)
-        ]
+    def query(self) -> int:
+        return self._summed if self._ascending_order else -self._summed
 
-    def __init__(self, a: Iterable[T] = []) -> None:
-        "Make a new SortedMultiset from iterable. / O(N) if sorted / O(N log N)"
-        a = list(a)
+    def add(self, x: int) -> None:
+        if not self._ascending_order:
+            x = -x
 
-        if not all(a[i] <= a[i + 1] for i in range(len(a) - 1)):  # type: ignore
-            a = sorted(a)  # type: ignore
+        self._freq[x] += 1
+        heappush(self._in, -x)
+        self._summed += x
+        self._modify()
 
-        self._build(a)
-
-    def __iter__(self) -> Iterator[T]:
-        for i in self.a:
-            for j in i:
-                yield j  # type: ignore
-
-    def __reversed__(self) -> Iterator[T]:
-        for i in reversed(self.a):
-            for j in reversed(i):
-                yield j
-
-    def __len__(self) -> int:
-        return self.size
-
-    def __repr__(self) -> str:
-        return "SortedMultiset" + str(self.a)
-
-    def __str__(self) -> str:
-        s = str(list(self))
-        return "{" + s[1 : len(s) - 1] + "}"
-
-    def _find_bucket(self, x: T) -> List[T]:
-        "Find the bucket which should contain x. self must not be empty."
-        for a in self.a:
-            if x <= a[-1]:  # type: ignore
-                return a
-        return a  # type: ignore
-
-    def __contains__(self, x: T) -> bool:
-        if self.size == 0:
-            return False
-
-        a = self._find_bucket(x)
-        i = bisect_left(a, x)  # type: ignore
-        return i != len(a) and a[i] == x
-
-    def count(self, x: T) -> int:
-        "Count the number of x."
-        return self.index_right(x) - self.index(x)
-
-    def add(self, x: T) -> None:
-        "Add an element. / O(√N)"
-        if self.size == 0:
-            self.a = [[x]]
-            self.size = 1
+    def discard(self, x: int) -> None:
+        if not self._ascending_order:
+            x = -x
+        if self._freq[x] == 0:
             return
 
-        a = self._find_bucket(x)
-        insort(a, x)  # type: ignore
-        self.size += 1
+        self._freq[x] -= 1
 
-        if len(a) > len(self.a) * self.REBUILD_RATIO:
-            self._build()
+        if self._in and -self._in[0] == x:
+            self._summed -= x
+            heappop(self._in)
+        elif self._in and -self._in[0] > x:
+            self._summed -= x
+            heappush(self._d_in, -x)
+        else:
+            heappush(self._d_out, x)
 
-    def discard(self, x: T) -> bool:
-        "Remove an element and return True if removed. / O(√N)"
-        if self.size == 0:
-            return False
+        self._modify()
 
-        a = self._find_bucket(x)
-        i = bisect_left(a, x)  # type: ignore
+    def set_k(self, k: int) -> None:
+        self._k = k
+        self._modify()
 
-        if i == len(a) or a[i] != x:
-            return False
+    def get_k(self) -> int:
+        return self._k
 
-        a.pop(i)
-        self.size -= 1
+    def _modify(self) -> None:
+        while self._out and (len(self._in) - len(self._d_in) < self._k):
+            p = heappop(self._out)
 
-        if len(a) == 0:
-            self._build()
+            if self._d_out and p == self._d_out[0]:
+                heappop(self._d_out)
+            else:
+                self._summed += p
+                heappush(self._in, -p)
 
-        return True
+        while len(self._in) - len(self._d_in) > self._k:
+            p = -heappop(self._in)
 
-    def lt(self, x: T) -> Union[T, None]:
-        "Find the largest element < x, or None if it doesn't exist."
-        for a in reversed(self.a):
-            if a[0] < x:  # type: ignore
-                return a[bisect_left(a, x) - 1]  # type: ignore
-        return None
+            if self._d_in and p == -self._d_in[0]:
+                heappop(self._d_in)
+            else:
+                self._summed -= p
+                heappush(self._out, p)
 
-    def le(self, x: T) -> Union[T, None]:
-        "Find the largest element <= x, or None if it doesn't exist."
-        for a in reversed(self.a):
-            if a[0] <= x:  # type: ignore
-                return a[bisect_right(a, x) - 1]  # type: ignore
-        return None
+        while self._d_in and self._in[0] == self._d_in[0]:
+            heappop(self._in)
+            heappop(self._d_in)
 
-    def gt(self, x: T) -> Union[T, None]:
-        "Find the smallest element > x, or None if it doesn't exist."
-        for a in self.a:
-            if a[-1] > x:  # type: ignore
-                return a[bisect_right(a, x)]  # type: ignore
-        return None
+    def __len__(self) -> int:
+        return len(self._in) + len(self._out) - len(self._d_in) - len(self._d_out)
 
-    def ge(self, x: T) -> Union[T, None]:
-        "Find the smallest element >= x, or None if it doesn't exist."
-        for a in self.a:
-            if a[-1] >= x:  # type: ignore
-                return a[bisect_left(a, x)]  # type: ignore
-        return None
-
-    def __getitem__(self, x: int) -> T:
-        "Return the x-th element, or IndexError if it doesn't exist."
-        if x < 0:
-            x += self.size
-        if x < 0:
-            raise IndexError
-
-        for a in self.a:
-            if x < len(a):
-                return a[x]  # type: ignore
-
-            x -= len(a)
-        raise IndexError
-
-    def index(self, x: T) -> int:
-        "Count the number of elements < x."
-        ans = 0
-
-        for a in self.a:
-            if a[-1] >= x:  # type: ignore
-                return ans + bisect_left(a, x)  # type: ignore
-            ans += len(a)
-        return ans
-
-    def index_right(self, x: T) -> int:
-        "Count the number of elements <= x."
-        ans = 0
+    def __contains__(self, x: int) -> bool:
+        if not self._ascending_order:
+            x = -x
+        return self._freq[x] > 0
 
 
 def main():
@@ -176,35 +109,16 @@ def main():
 
     n, k, q = map(int, input().split())
     a = [0] * n
-    s = SortedMultiset([0] * n)
-    summed = 0
+    s = SumOfTopKth(k, ascending_order=False)
 
     for _ in range(q):
         xi, yi = map(int, input().split())
         xi -= 1
 
-        pos = s.index(a[xi]) + 1
-
-        if pos >= n - k:
-            summed -= a[xi]
-
-            if n != k:
-                summed += s[n - k - 1]
-
         s.discard(a[xi])
-
-        a[xi] = yi
         s.add(yi)
-
-        pos = s.index(yi) + 1
-
-        if pos >= n - k:
-            summed += yi
-
-            if n != k:
-                summed -= s[n - k - 1]
-
-        print(summed)
+        print(s.query())
+        a[xi] = yi
 
 
 if __name__ == "__main__":
