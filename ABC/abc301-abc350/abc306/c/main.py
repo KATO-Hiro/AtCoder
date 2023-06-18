@@ -9,22 +9,14 @@ def main():
 
     n = int(input())
     a = list(map(int, input().split()))
-    d = defaultdict(list)
-
-    for i, ai in enumerate(a, 1):
-        d[ai].append(i)
-
-    c = list()
-
-    for key, value in d.items():
-        vi = sorted(value)[1]
-
-        c.append((vi, key))
-
+    d = defaultdict(int)
     ans = list()
 
-    for _, i in sorted(c):
-        ans.append(i)
+    for i, ai in enumerate(a, 1):
+        d[ai] += 1
+
+        if d[ai] == 2:
+            ans.append(ai)
 
     print(*ans)
 
