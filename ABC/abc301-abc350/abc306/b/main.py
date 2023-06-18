@@ -6,13 +6,8 @@ def main():
 
     input = sys.stdin.readline
 
-    a = list(map(int, input().split()))
-    ans = 0
-
-    for i, ai in enumerate(a):
-        ans += ai * (2**i)
-
-    print(ans)
+    a = "".join(input().rstrip().replace(" ", "")[::-1])
+    print(int(a, 2))
 
 
 if __name__ == "__main__":
