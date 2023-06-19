@@ -26,15 +26,15 @@ def main():
     for _ in range(q):
         xi, yi = map(int, input().split())
         xi -= 1
-
-        yi = bin(yi)[2:]
-        size = len(yi)
+        j = 0
         pos = xi
 
-        for j in range(size):
-            if yi[j] == "1":
-                k = size - j - 1
-                pos = dp[k][pos]
+        while yi > 0:
+            if yi & 1:
+                pos = dp[j][pos]
+
+            j += 1
+            yi >>= 1
 
         print(pos + 1)
 
