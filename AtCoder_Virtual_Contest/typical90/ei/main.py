@@ -42,11 +42,11 @@ def main():
     dfs(0)
 
     pos = n - 1
-    ans = [pos + 1]
+    ans = list()
 
-    while prev[pos] != -1:
-        pos = prev[pos]
+    while pos != -1:
         ans.append(pos + 1)
+        pos = prev[pos]
 
     print(*ans[::-1])
 
