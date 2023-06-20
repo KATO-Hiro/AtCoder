@@ -99,50 +99,24 @@ def main():
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
-    ab = list()
+    abc = list()
 
     for _ in range(m):
-        ai, bi = map(int, input().split())
+        ai, bi, ci = map(int, input().split())
         ai -= 1
         bi -= 1
-        ab.append((ai, bi))
 
-    q = int(input())
-    # クエリを逆順に読む + 辺を削除する代わりに、つなぐ
-    qs = list()
-    connected = set([i for i in range(m)])
-
-    for _ in range(q):
-        qi = list(map(lambda x: int(x) - 1, input().split()))
-        qs.append(qi)
-
-        if qi[0] == 0:
-            x = qi[1]
-            connected.remove(x)
+        abc.append((ci, ai, bi))
 
     uf = UnionFind(n)
-    ans = list()
+    ans = 0
 
-    # 運休にならない路線はつないでおく
-    for ci in connected:
-        ai, bi = ab[ci]
-        uf.merge_if_needs(ai, bi)
-
-    for qi in qs[::-1]:
-        if qi[0] == 0:
-            x = qi[1]
-            ai, bi = ab[x]
-
+    for ci, ai, bi in sorted(abc):
+        if not uf.is_same_group(ai, bi):
             uf.merge_if_needs(ai, bi)
-        else:
-            ui, vi = qi[1:]
+            ans += ci
 
-            if uf.is_same_group(ui, vi):
-                ans.append("Yes")
-            else:
-                ans.append("No")
-
-    print(*ans[::-1], sep="\n")
+    print(ans)
 
 
 if __name__ == "__main__":
