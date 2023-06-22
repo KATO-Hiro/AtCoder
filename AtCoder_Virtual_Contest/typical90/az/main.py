@@ -8,19 +8,15 @@ def main():
 
     n = int(input())
     a = [list(map(int, input().split())) for _ in range(n)]
-    dp = a[0]
     mod = 10**9 + 7
+    ans = 1
 
-    for i in range(1, n):
-        ndp = [1] * 6
+    # 素因数分解ができる
+    for i in range(n):
+        ans *= sum(a[i])
+        ans %= mod
 
-        for j in range(6):
-            ndp[j] *= dp[j] * sum(a[i])
-            ndp[j] %= mod
-
-        dp = ndp
-
-    print(sum(dp) % mod)
+    print(ans)
 
 
 if __name__ == "__main__":
