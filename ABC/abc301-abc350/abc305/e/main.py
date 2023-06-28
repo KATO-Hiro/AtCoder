@@ -51,11 +51,7 @@ def main():
     ph = [tuple(map(int, input().split())) for _ in range(k)]
     dist = dijkstra(vertex_count=n, edges=graph, ph=ph)
 
-    ans = list()
-
-    for i, di in enumerate(dist, 1):
-        if di >= 0:
-            ans.append(i)
+    ans = [i for i, di in enumerate(dist, 1) if di >= 0]
 
     print(len(ans))
     print(*ans)
