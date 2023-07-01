@@ -21,24 +21,33 @@ def main():
     a = list(map(int, input().split()))
     s = input().rstrip()
 
-    # SiとAiの組み合わせは9種類
-    # 言い換え: 列Xから(連続とは限らない)部分列Yとなる場合の得点の合計
-    # dp
-    dp_m = [0] * 3
-    dp_e = [[0 for _ in range(3)] for _ in range(3)]
+    # jを固定 + i < j、j < kとなる個数を累積和で計算
+    acc_m = [[0 for _ in range(n)] for _ in range(3)]
+    acc_x = [[0 for _ in range(n)] for _ in range(3)]
+
+    for i, (si, ai) in enumerate(zip(s, a)):
+        if i > 0:
+            for y in range(3):
+                acc_m[y][i] = acc_m[y][i - 1]
+                acc_x[y][i] = acc_x[y][i - 1]
+
+        if si == "M":
+            acc_m[ai][i] += 1
+        elif si == "X":
+            acc_x[ai][i] += 1
+
     ans = 0
 
-    for ai, si in zip(a, s):
-        if si == "M":
-            dp_m[ai] += 1
-        elif si == "E":
-            for i in range(3):
-                dp_e[ai][i] += dp_m[i]
-        else:
-            for x in range(3):
-                for y in range(3):
-                    ans += dp_e[x][y] * mex(x, y, ai)
-                    pass
+    for j, (si, ai) in enumerate(zip(s, a)):
+        if j == 0 or j == n - 1:
+            continue
+
+        if si != "E":
+            continue
+
+        for x in range(3):
+            for y in range(3):
+                ans += acc_m[x][j - 1] * (acc_x[y][n - 1] - acc_x[y][j]) * mex(x, y, ai)
 
     print(ans)
 
