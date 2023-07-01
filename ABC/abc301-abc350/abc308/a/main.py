@@ -13,14 +13,10 @@ def main():
         print("No")
         exit()
 
-    for si in s:
-        if 100 <= si <= 675 and si % 25 == 0:
-            continue
-        else:
-            print("No")
-            exit()
-
-    print("Yes")
+    if s == sorted(s) and all(100 <= si <= 675 and si % 25 == 0 for si in s):
+        print("Yes")
+    else:
+        print("No")
 
 
 if __name__ == "__main__":
