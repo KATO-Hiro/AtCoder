@@ -1,18 +1,22 @@
 # -*- coding: utf-8 -*-
 
 
-# See:
-# https://atcoder.jp/contests/abc308/tasks/abc308_c/editorial
-class Fraction:
-    def __init__(self, a, b):
-        self.a, self.b = a, b
+def compare(a, b):
+    ai, aj, i = a
+    bi, bj, j = b
+    diff = ai * bj - bi * aj
 
-    def __lt__(self, other):
-        return self.a * other.b < self.b * other.a
+    if diff > 0:
+        return 1
+    elif diff < 0:
+        return -1
+    else:
+        return 0
 
 
 def main():
     import sys
+    from functools import cmp_to_key
 
     input = sys.stdin.readline
 
@@ -21,15 +25,15 @@ def main():
 
     for i in range(1, n + 1):
         ai, bi = map(int, input().split())
-        ab.append((ai, bi))
+        ab.append((ai, bi, i))
 
     ans = sorted(
-        range(1, n + 1),
-        key=lambda i: Fraction(ab[i - 1][0], ab[i - 1][0] + ab[i - 1][1]),
+        ab,
+        key=cmp_to_key(compare),
         reverse=True,
     )
 
-    print(*ans)
+    print(*[i for _, _, i in ans])
 
 
 if __name__ == "__main__":
