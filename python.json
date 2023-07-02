@@ -4,6 +4,22 @@
     // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
     // same ids are connected.
     // See: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+    "Set main()": {
+        "prefix": "set-main",
+        "body": [
+            "# -*- coding: utf-8 -*-",
+            "",
+            "",
+            "def main():",
+            "\timport sys",
+            "",
+            "\tinput = sys.stdin.readline",
+            "",
+            "",
+            "if __name__ == '__main__':",
+            "\tmain()",
+        ],
+    },
     "Read String": {
         "prefix": "read-string",
         "body": [
@@ -36,6 +52,13 @@
         "prefix": "read-ints-1D",
         "body": [
             "$0 = list(map(int, input().split()))"
+        ],
+        "description": "Read a one-dimensional array of integers."
+    },
+    "Read 1D-Integers as tuple": {
+        "prefix": "read-ints-1D-tuple",
+        "body": [
+            "$1 = [tuple(map(int, input().split())) for _ in range($2)]"
         ],
         "description": "Read a one-dimensional array of integers."
     },
@@ -88,7 +111,15 @@
         "body": [
             "from collections import defaultdict",
             "",
-            "$1 = defaultdict(int)" 
+            "$1 = defaultdict(int)"
+        ],
+    },
+    "Import Deque": {
+        "prefix": "import-deque",
+        "body": [
+            "from collections import deque",
+            "",
+            "d = deque()"
         ],
     },
     "Import Accumulate": {
@@ -128,13 +159,10 @@
     "Is in grid": {
         "prefix": "is-in-grid",
         "body": [
-            "def is_in_grid(nx: int, ny: int, w: int = w, h: int = h) -> bool:",
-            "\tif not (0 <= nx < w):",
-            "\t\treturn False",
-            "\tif not (0 <= ny < h):",
-            "\t\treturn False",
-            "",
-            "\treturn True",
+            "if not (0 <= nx < w):",
+            "\tcontinue",
+            "if not (0 <= ny < h):",
+            "\tcontinue",
         ]
     },
     "Ceil": {
