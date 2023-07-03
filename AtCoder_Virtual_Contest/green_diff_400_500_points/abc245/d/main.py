@@ -16,8 +16,10 @@ def main():
         r = c[i] // a[0]
         ans.append(r)
 
-        for j in range(i, i + n + 1):
-            c[j] -= r * a[j - i]
+        # 添え字で混乱しがち
+        # ベースの位置 + aiの要素数
+        for j in range(n + 1):
+            c[i + j] -= r * a[j]
 
     print(*ans[::-1])
 
