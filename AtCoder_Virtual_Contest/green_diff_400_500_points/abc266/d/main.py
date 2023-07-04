@@ -7,32 +7,24 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    t_max = 10**5 + 10
-    x, a = [0] * t_max, [0] * t_max
+    inf = 10**18
+    dp = [-inf] * 5
+    dp[0] = 0
+    prev_t = 0
 
     for _ in range(n):
         ti, xi, ai = map(int, input().split())
-        x[ti], a[ti] = xi, ai
-        t_max = ti
+        ndp = [-inf] * 5
 
-    dp = [0] * 5
-
-    for i in range(1, t_max + 1):
-        ndp = [0] * 5
-        xi, ai = x[i], a[i]
-
-        for j in range(5):
-            for k in range(-1, 2):
-                npos = j + k
-
-                if i < 4 and npos > i:
+        for cur in range(5):
+            for to in range(5):
+                # 時間差から移動できる範囲を絞る
+                if abs(to - cur) > ti - prev_t:
                     continue
 
-                if not (0 <= npos <= 4):
-                    continue
+                ndp[to] = max(ndp[to], dp[cur] + ai * (to == xi))
 
-                ndp[npos] = max(ndp[npos], dp[j] + ai * (npos == xi))
-
+        prev_t = ti
         dp = ndp
 
     print(max(dp))
