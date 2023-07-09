@@ -2,28 +2,11 @@
 
 
 def dijkstra(vertex_count: int, source: int, edges):
-    """Uses Dijkstra's algorithm to find the shortest path in a graph.
-
-    Args:
-        vertex_count: The number of vertices.
-        source      : Vertex number (0-indexed).
-        edges       : List of (cost, edge) (0-indexed).
-
-    Returns:
-        costs  : List of the shortest distance.
-        parents: List of parent vertices.
-
-    Landau notation: O(|Edges|log|Vertices|).
-
-    See:
-    https://atcoder.jp/contests/abc191/submissions/19964078
-    https://atcoder.jp/contests/abc191/submissions/19966232
-    """
-
     from heapq import heappop, heappush
 
     hq = [(0, source)]  # weight, vertex number (0-indexed)
-    costs = [float("inf") for _ in range(vertex_count)]
+    inf = 10**18
+    costs = [inf for _ in range(vertex_count)]
     costs[source] = 0
     visited = [False for _ in range(vertex_count)]
     pending = -1
@@ -58,7 +41,7 @@ def main():
 
     n1, n2, m = map(int, input().split())
     edges1 = [[] for _ in range(n1)]
-    edges2 = [[] for _ in range(n1 + n2)]
+    edges2 = [[] for _ in range(n2)]
 
     for _ in range(m):
         ai, bi = map(int, input().split())
@@ -66,25 +49,21 @@ def main():
         bi -= 1
 
         # ci: cost
-        # bi: edge (0-indexed)
         ci = 1
 
         if ai < n1:
             edges1[ai].append((ci, bi))
             edges1[bi].append((ci, ai))
         else:
+            ai -= n1
+            bi -= n1
             edges2[ai].append((ci, bi))
             edges2[bi].append((ci, ai))
 
     dist1, _ = dijkstra(vertex_count=n1, source=0, edges=edges1)
-    dist2, _ = dijkstra(vertex_count=n1 + n2, source=n1 + n2 - 1, edges=edges2)
+    dist2, _ = dijkstra(vertex_count=n2, source=n2 - 1, edges=edges2)
 
-    inf = float("inf")
-    dd1 = [d1 for d1 in dist1 if d1 != inf]
-    dd2 = [d2 for d2 in dist2 if d2 != inf]
-
-    # print(dist1, dist2)
-    print(max(dd1) + max(dd2) + 1)
+    print(max(dist1) + max(dist2) + 1)
 
 
 if __name__ == "__main__":
