@@ -3,36 +3,30 @@
 
 def main():
     import sys
-    from itertools import accumulate
+    from collections import defaultdict
 
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
-    ab = [tuple(map(int, input().split())) for _ in range(n)]
-    s_ab = sorted(ab)
-    b = list()
+    d = defaultdict(int)
 
-    for _, bi in s_ab:
-        b.append(bi)
+    # imos法
+    for _ in range(n):
+        ai, bi = map(int, input().split())
+        d[1] += bi
+        d[1 + ai] -= bi
 
-    b = [0] + list(accumulate(b))
-    b_max = max(b)
+    days = sorted(d.keys())
 
-    c = [b_max - bi for bi in b]
-    prev = 0
+    for k1, k2 in zip(days, days[1:]):
+        d[k2] += d[k1]
 
-    for (ai, _), ci in zip(s_ab, c):
-        # print(ai, ci, ci <= k)
-        if ci <= k:
-            print(prev + 1)
+    for day in days:
+        count = d[day]
+
+        if count <= k:
+            print(day)
             exit()
-
-        prev = ai
-
-    print(prev + 1)
-    # print(s_ab)
-    # print(b)
-    # print(c)
 
 
 if __name__ == "__main__":
