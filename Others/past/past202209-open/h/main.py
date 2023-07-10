@@ -9,29 +9,18 @@ def main():
     n, x = map(int, input().split())
     inf = 10**18
     dp = [(-inf, -inf)] * (x + 1)
-    dp[0] = (0, 10**9)  # 金貨、銀貨の枚数
+    dp[x] = (0, 10**9)  # 金貨、銀貨の枚数
 
-    for i in range(n):
+    for _ in range(n):
         ai, bi, ci = map(int, input().split())
-        ndp = [(-inf, -inf)] * (x + 1)
 
-        for j in range(x + 1):
-            if dp[j] == (-inf, -inf):
-                continue
-
-            ndp[j] = max(ndp[j], dp[j])
-
-            if j + bi > x:
-                continue
-
-            ndp[j + bi] = max(ndp[j + bi], (dp[j][0] + ci, dp[j][1] - ai))
-
-        dp = ndp
+        for j in range(bi, x + 1):
+            dp[j - bi] = max(dp[j - bi], (dp[j][0] + ci, dp[j][1] - ai))
 
     ans = (-inf, -inf, -inf)
 
     for ri, (pi, qi) in enumerate(dp):
-        ans = max(ans, (pi, qi, x - ri))
+        ans = max(ans, (pi, qi, ri))
 
     print(*ans)
 
