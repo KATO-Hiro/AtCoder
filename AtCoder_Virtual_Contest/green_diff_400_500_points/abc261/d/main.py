@@ -26,12 +26,7 @@ def main():
             if j + 1 > n:
                 continue
 
-            value = dp[j] + xi
-
-            if (j + 1) in d.keys():
-                value += d[j + 1]
-
-            ndp[j + 1] = max(ndp[j + 1], value)
+            ndp[j + 1] = max(ndp[j + 1], dp[j] + xi + d[j + 1])
 
         dp = ndp
 
