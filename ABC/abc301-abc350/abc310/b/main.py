@@ -7,37 +7,24 @@ def main():
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
-    a = [tuple(map(int, input().split())) for _ in range(n)]
+    pcf = [tuple(map(int, input().split())) for _ in range(n)]
 
-    for i in range(n):
-        pi, ci, *fi = a[i]
-        fi = set(fi)
-
-        for j in range(n):
+    for i, (pi, ci, *fi) in enumerate(pcf):
+        for j, (pj, cj, *fj) in enumerate(pcf):
             if i == j:
                 continue
 
             ok = True
-            pj, cj, *fj = a[j]
-            fj = set(fj)
+            fi, fj = set(fi), set(fj)
 
-            cond1 = pi >= pj
-            count1 = 0
+            if not (pi >= pj):
+                ok = False
+            if not fj.issuperset(fi):
+                ok = False
+            if not ((pi > pj) or (len(fj) > len(fi))):
+                ok = False
 
-            for fik in fi:
-                if fik in fj:
-                    count1 += 1
-
-            cond2 = count1 == ci
-            count2 = 0
-
-            for fjk in fj:
-                if fjk not in fi:
-                    count2 += 1
-
-            cond3 = (pi > pj) or (count2 > 0)
-
-            if cond1 == cond2 == cond3 == True:
+            if ok:
                 print("Yes")
                 exit()
 
