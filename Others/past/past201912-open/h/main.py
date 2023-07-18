@@ -254,6 +254,7 @@ class LazySegTree:
 
 def main():
     import sys
+    from operator import add
 
     input = sys.stdin.readline
 
@@ -277,15 +278,10 @@ def main():
     # See:
     # https://betrue12.hateblo.jp/entry/2020/09/23/005940
     # https://github.com/not522/ac-library-python/blob/master/example/lazysegtree_practice_l.py
-    def mapping(f, x):
-        return f + x
-
-    def composition(f, g):
-        return f + g
-
+    # https://atcoder.jp/contests/past201912-open/submissions/40741475
     id = False
-    st_odd = LazySegTree(min, inf, mapping, composition, id, odd)
-    st_even = LazySegTree(min, inf, mapping, composition, id, even)
+    st_odd = LazySegTree(min, inf, add, add, id, odd)
+    st_even = LazySegTree(min, inf, add, add, id, even)
     ans = 0
 
     for _ in range(q):
