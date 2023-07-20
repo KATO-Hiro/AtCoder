@@ -1,5 +1,71 @@
 # -*- coding: utf-8 -*-
 
+from typing import List
+
+
+class UnionFind2D:
+    """Extends UnionFind to two dimensions.
+
+    See:
+    https://atcoder.jp/contests/past202010-open/submissions/21472171
+    """
+
+    def __init__(self, height: int, width: int) -> None:
+        self.height: int = height
+        self.width: int = width
+        self.size: int = height * width
+        self.uf: UnionFind = UnionFind(self.size)
+
+    def find_root(self, x: int, y: int) -> int:
+        assert 0 <= x < self.width
+        assert 0 <= y < self.height
+
+        return self.uf.find_root(self._to_number(x, y))
+
+    def get_group_size(self, x: int, y: int) -> int:
+        assert 0 <= x < self.width
+        assert 0 <= y < self.height
+
+        return self.uf.get_group_size(self._to_number(x, y))
+
+    def is_same_group(self, x1: int, y1: int, x2: int, y2: int) -> bool:
+        assert 0 <= x1 < self.width
+        assert 0 <= y1 < self.height
+        assert 0 <= x2 < self.width
+        assert 0 <= y2 < self.height
+
+        return self.uf.is_same_group(self._to_number(x1, y1), self._to_number(x2, y2))
+
+    def merge_if_needs(self, x1: int, y1: int, x2: int, y2: int) -> bool:
+        assert 0 <= x1 < self.width
+        assert 0 <= y1 < self.height
+        assert 0 <= x2 < self.width
+        assert 0 <= y2 < self.height
+
+        return self.uf.merge_if_needs(self._to_number(x1, y1), self._to_number(x2, y2))
+
+    def get_roots(self) -> List[int]:
+        return self.uf.get_roots()
+
+    def get_edge_count(self, x: int, y: int) -> int:
+        assert 0 <= x < self.width
+        assert 0 <= y < self.height
+
+        return self.uf.get_edge_count(self._to_number(x, y))
+
+    def get_group_count(self) -> int:
+        return self.uf.get_group_count()
+
+    def _to_number(self, x: int, y: int) -> int:
+        """
+        Args:
+            x, y: Coordinates in grid (0-index).
+
+        Returns:
+            The trees id (0-index).
+        """
+        return x + self.width * y
+
 
 class UnionFind:
     """Represents a data structure that tracks a set of elements partitioned
@@ -102,7 +168,7 @@ def main():
     h, w = map(int, input().split())
     s = [list(input().rstrip()) for _ in range(h)]
     wall_count = 0
-    uf = UnionFind(h * w)
+    uf = UnionFind2D(height=h, width=w)
 
     # .をグラフ理論の連結成分とみなす
     for i in range(h):
@@ -111,15 +177,11 @@ def main():
                 wall_count += 1
                 continue
 
-            base = w * i + j
-
             if (i + 1 < h) and s[i + 1][j] == ".":
-                k = w * (i + 1) + j
-                uf.merge_if_needs(base, k)
+                uf.merge_if_needs(j, i, j, i + 1)
 
             if (j + 1 < w) and s[i][j + 1] == ".":
-                k = w * i + (j + 1)
-                uf.merge_if_needs(base, k)
+                uf.merge_if_needs(j, i, j + 1, i)
 
     dxy = [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (1, -1), (-1, 1), (1, 1)]
     dxy = dxy[:4]
@@ -133,7 +195,6 @@ def main():
 
             # ベースとなる結果からコピー
             uf2 = deepcopy(uf)
-            base = w * i + j
 
             for dx, dy in dxy:
                 ni = dy + i
@@ -146,16 +207,11 @@ def main():
                 if s[ni][nj] == "#":
                     continue
 
-                k = w * ni + nj
-                uf2.merge_if_needs(base, k)
-
-            # print(i, j, uf2.get_group_count(), uf2.get_roots())
+                uf2.merge_if_needs(j, i, nj, ni)
 
             if uf2.get_group_count() == wall_count:
                 ans += 1
 
-    # print(uf.get_group_count())
-    # print(wall_count)
     print(ans)
 
 
