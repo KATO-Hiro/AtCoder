@@ -2,43 +2,53 @@
 
 
 def find_cycle(n, edge):
-    seen = [0] * n
-    finished = [0] * n
-    stc = []
+    seen = [False] * n
+    finished = [False] * n
+    history = []
+
     for i in range(n):
         if seen[i]:
             continue
-        todo = [(1, i, -1), (0, i, -1)]
+
+        que = [(1, i, -1), (0, i, -1)]
         seen[i] = True
-        while todo:
-            t, v, edge_id = todo.pop()
+
+        while que:
+            t, vertex, edge_id = que.pop()
+
             if t == 0:
-                if finished[v]:
+                if finished[vertex]:
                     continue
-                seen[v] = 1
-                stc.append((v, edge_id))
-                for u, id in edge[v]:
-                    if finished[v]:
+
+                seen[vertex] = True
+                history.append((vertex, edge_id))
+
+                for u, id in edge[vertex]:
+                    if finished[vertex]:
                         continue
 
-                    if seen[u] and finished[u] == 0:
-                        cyc = [id]
-                        while stc:
-                            v, id = stc.pop()
-                            if v == u:
+                    if seen[u] and not finished[u]:
+                        cycle = [id]
+
+                        while history:
+                            vertex, id = history.pop()
+
+                            if vertex == u:
                                 break
-                            cyc.append(id)
-                        return cyc[::-1]
 
-                    elif seen[u] == 0:
-                        todo.append((1, u, id))
-                        todo.append((0, u, id))
+                            cycle.append(id)
 
+                        return cycle[::-1]
+
+                    elif not seen[u]:
+                        que.append((1, u, id))
+                        que.append((0, u, id))
             else:
-                if finished[v]:
+                if finished[vertex]:
                     continue
-                stc.pop()
-                finished[v] = 1
+
+                history.pop()
+                finished[vertex] = True
 
     return []
 
