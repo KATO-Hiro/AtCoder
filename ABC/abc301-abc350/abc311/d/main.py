@@ -12,14 +12,18 @@ def main():
     d = deque()
     d.append((1, 1))
     visited = [[False] * m for _ in range(n)]
-    visited[1][1] = True
     # 停止したかどうかを管理
     stopped = [[False] * m for _ in range(n)]
-    stopped[1][1] = True
     dxy = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
     while d:
         y, x = d.popleft()
+
+        if stopped[y][x]:
+            continue
+
+        stopped[y][x] = True
+        visited[y][x] = True
 
         for dx, dy in dxy:
             nx, ny = x, y
@@ -36,7 +40,6 @@ def main():
                 visited[ny][nx] = True
 
             if not stopped[ny][nx]:
-                stopped[ny][nx] = True
                 d.append((ny, nx))
 
     ans = sum([sum(row) for row in visited])
