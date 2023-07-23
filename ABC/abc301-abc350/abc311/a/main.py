@@ -8,20 +8,12 @@ def main():
 
     n = int(input())
     s = list(input().rstrip())
-    a, b, c = 0, 0, 0
+    ans = 0
 
-    for i, si in enumerate(s):
-        if si == "A":
-            a += 1
-        elif si == "B":
-            b += 1
-        else:
-            c += 1
-        # print(a, b, c)
+    for alpha in "ABC":
+        ans = max(ans, s.index(alpha))
 
-        if a >= 1 and b >= 1 and c >= 1:
-            print(i + 1)
-            exit()
+    print(ans + 1)
 
 
 if __name__ == "__main__":
