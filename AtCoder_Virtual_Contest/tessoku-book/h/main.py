@@ -1,5 +1,39 @@
 # -*- coding: utf-8 -*-
 
+from typing import Any, List
+
+
+# See:
+# https://atcoder.jp/contests/abc311/submissions/43843595
+class CumulativeSum2d:
+    def __init__(self, array: List[List[Any]]) -> None:
+        self.height: int = len(array)
+        self.width: int = len(array[0])
+        self.summed_array: List[List[Any]] = [
+            [0] * (self.width + 1) for _ in range(self.height + 1)
+        ]
+
+        for i in range(self.height):
+            for j in range(self.width):
+                self.summed_array[i + 1][j + 1] = (
+                    self.summed_array[i + 1][j]
+                    + self.summed_array[i][j + 1]
+                    - self.summed_array[i][j]
+                    + array[i][j]
+                )
+
+    def query(self, x1: int, y1: int, x2: int, y2: int) -> Any:
+        assert 0 <= x1 <= x2 <= self.width
+        assert 0 <= y1 <= y2 <= self.height
+
+        # x1, y1, x2, y2: 0-indexed
+        return (
+            self.summed_array[y2][x2]
+            - self.summed_array[y1][x2]
+            - self.summed_array[y2][x1]
+            + self.summed_array[y1][x1]
+        )
+
 
 def main():
     import sys
@@ -9,38 +43,11 @@ def main():
     h, w = map(int, input().split())
     x = [list(map(int, input().split())) for _ in range(h)]
     q = int(input())
-
-    for i in range(h):
-        for j in range(w):
-            if j + 1 >= w:
-                continue
-
-            x[i][j + 1] += x[i][j]
-
-    for j in range(w):
-        for i in range(h):
-            if i + 1 >= h:
-                continue
-
-            x[i + 1][j] += x[i][j]
+    c = CumulativeSum2d(x)
 
     for _ in range(q):
         ai, bi, ci, di = map(int, input().split())
-        ai -= 1
-        bi -= 1
-        ci -= 1
-        di -= 1
-
-        summed = x[ci][di]
-
-        if bi - 1 >= 0:
-            summed -= x[ci][bi - 1]
-        if ai - 1 >= 0:
-            summed -= x[ai - 1][di]
-        if bi - 1 >= 0 and ai - 1 >= 0:
-            summed += x[ai - 1][bi - 1]
-
-        print(summed)
+        print(c.query(bi - 1, ai - 1, di, ci))
 
 
 if __name__ == "__main__":
