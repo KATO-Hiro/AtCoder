@@ -14,8 +14,8 @@ class CumulativeSum2d:
             [0] * (self.width + 1) for _ in range(self.height + 1)
         ]
 
-        for i in range(self.width):
-            for j in range(self.height):
+        for i in range(self.height):
+            for j in range(self.width):
                 self.summed_array[i + 1][j + 1] = (
                     self.summed_array[i + 1][j]
                     + self.summed_array[i][j + 1]
