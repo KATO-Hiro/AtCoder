@@ -1,16 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from typing import Any, List, NamedTuple, Tuple
-
-PENDING = -1
-
-
-# See:
-# https://docs.python.org/3/library/typing.html?highlight=namedtuple#typing.NamedTuple
-class Edge(NamedTuple):
-    frm: int = PENDING
-    to: int = PENDING
-    value: Any = PENDING
+from typing import Any, List, Tuple
 
 
 # See:
@@ -33,43 +23,42 @@ class CycleDetection:
                 continue
 
             self.history.clear()
-            pos = self._dfs(vertex, Edge(), is_prohibit_reverse)
+            pos = self._dfs(vertex, self.pending, is_prohibit_reverse)
 
             if pos != self.pending:
-                return self.reconstruct(pos)
+                return self._reconstruct(pos)
 
         return []
 
-    def reconstruct(self, pos: int) -> List[int]:
+    def _reconstruct(self, pos: int) -> List[int]:
         cycle: List[Any] = []
 
         while self.history:
-            edge: Edge = self.history.pop()
-            cycle.append(edge)
+            cur = self.history.pop()
+            cycle.append(cur)
 
-            if edge.frm == pos:
+            if cur == pos:
                 break
 
         return cycle[::-1]
 
-    def _dfs(self, cur: int, edge: Edge, is_prohibit_reverse: bool = True) -> int:
+    def _dfs(self, cur: int, parent: int, is_prohibit_reverse: bool = True) -> int:
+        # print(cur, parent)
         self.seen[cur] = True
-        self.history.append(edge)
+        self.history.append(parent)
 
         for to, id in self.graph[cur]:
-            if is_prohibit_reverse and (to == edge.frm):
+            if is_prohibit_reverse and (to == parent):
                 continue
             if self.finished[to]:
                 continue
 
             # Detected cycle.
-            next_edge = Edge(cur, to, id)
-
             if self.seen[to] and not self.finished[to]:
-                self.history.append(next_edge)
+                self.history.append(cur)
                 return to
 
-            pos = self._dfs(to, next_edge, is_prohibit_reverse)
+            pos = self._dfs(to, cur, is_prohibit_reverse)
 
             if pos != self.pending:
                 return pos
@@ -97,11 +86,12 @@ def main():
     cd = CycleDetection(vertex_count=n, graph=graph)
     results = cd.detect(is_prohibit_reverse=False)
 
+    # print(results)
     print(len(results))
 
     ans = list()
 
-    for frm, to, value in results:
+    for value in results:
         ans.append(value + 1)
 
     print(*ans)
