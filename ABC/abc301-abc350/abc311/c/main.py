@@ -43,7 +43,6 @@ class CycleDetection:
         return cycle[::-1]
 
     def _dfs(self, cur: int, parent: int, is_prohibit_reverse: bool = True) -> int:
-        # print(cur, parent)
         self.seen[cur] = True
         self.history.append(parent)
 
@@ -86,15 +85,8 @@ def main():
     cd = CycleDetection(vertex_count=n, graph=graph)
     results = cd.detect(is_prohibit_reverse=False)
 
-    # print(results)
     print(len(results))
-
-    ans = list()
-
-    for value in results:
-        ans.append(value + 1)
-
-    print(*ans)
+    print(*map(lambda x: x + 1, results))
 
 
 if __name__ == "__main__":
