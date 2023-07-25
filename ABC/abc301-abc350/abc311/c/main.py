@@ -1,60 +1,76 @@
 # -*- coding: utf-8 -*-
 
+from typing import Any, List, Tuple
 
-def find_cycle(n, edge):
-    seen = [False] * n
-    finished = [False] * n
-    history = []
 
-    for i in range(n):
-        if seen[i]:
-            continue
+# See:
+# https://drken1215.hatenablog.com/entry/2023/05/20/200517
+class CycleDetection:
+    pending: int = -1
 
-        que = [(1, i, -1), (0, i, -1)]
-        seen[i] = True
+    def __init__(self, vertex_count: int, graph: List[List[Tuple[int, int]]]) -> None:
+        self.vertex_count: int = vertex_count
+        self.graph: List[List[Tuple[int, int]]] = graph
+        self.seen: List[bool] = [False] * self.vertex_count
+        self.finished: List[bool] = [False] * self.vertex_count
+        self.history: List[Any] = []
 
-        while que:
-            t, vertex, edge_id = que.pop()
+    def detect(self, is_prohibit_reverse: bool = True) -> List[Any]:
+        pos = self.pending
 
-            if t == 0:
-                if finished[vertex]:
-                    continue
+        for vertex in range(self.vertex_count):
+            if self.seen[vertex]:
+                continue
 
-                seen[vertex] = True
-                history.append((vertex, edge_id))
+            self.history.clear()
+            pos = self._dfs(vertex, self.pending, is_prohibit_reverse)
 
-                for u, id in edge[vertex]:
-                    if finished[vertex]:
-                        continue
+            if pos != self.pending:
+                return self._reconstruct(pos)
 
-                    if seen[u] and not finished[u]:
-                        cycle = [id]
+        return []
 
-                        while history:
-                            vertex, id = history.pop()
+    def _reconstruct(self, pos: int) -> List[int]:
+        cycle: List[Any] = []
 
-                            if vertex == u:
-                                break
+        while self.history:
+            cur = self.history.pop()
+            cycle.append(cur)
 
-                            cycle.append(id)
+            if cur == pos:
+                break
 
-                        return cycle[::-1]
+        return cycle[::-1]
 
-                    elif not seen[u]:
-                        que.append((1, u, id))
-                        que.append((0, u, id))
-            else:
-                if finished[vertex]:
-                    continue
+    def _dfs(self, cur: int, parent: int, is_prohibit_reverse: bool = True) -> int:
+        self.seen[cur] = True
+        self.history.append(parent)
 
-                history.pop()
-                finished[vertex] = True
+        for to, id in self.graph[cur]:
+            if is_prohibit_reverse and (to == parent):
+                continue
+            if self.finished[to]:
+                continue
 
-    return []
+            # Detected cycle.
+            if self.seen[to] and not self.finished[to]:
+                self.history.append(cur)
+                return to
+
+            pos = self._dfs(to, cur, is_prohibit_reverse)
+
+            if pos != self.pending:
+                return pos
+
+        self.finished[cur] = True
+        self.history.pop()
+        return self.pending
 
 
 def main():
     import sys
+
+    sys.setrecursionlimit(10**8)
 
     input = sys.stdin.readline
 
@@ -66,17 +82,11 @@ def main():
         ai -= 1
         graph[i].append((ai, i))
 
-    results = find_cycle(n, graph)
+    cd = CycleDetection(vertex_count=n, graph=graph)
+    results = cd.detect(is_prohibit_reverse=False)
 
     print(len(results))
-
-    ans = list()
-
-    for result in results:
-        ans.append(result + 1)
-
-    # print(results)
-    print(*ans)
+    print(*map(lambda x: x + 1, results))
 
 
 if __name__ == "__main__":
