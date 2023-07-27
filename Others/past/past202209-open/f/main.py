@@ -10,7 +10,9 @@ def main():
     a = list(map(int, input().split()))
     c = list()
 
-    # xiとyjの積集合を取り、共通する要素が0個となるaiの最大値
+    # xiとyjの共通する要素がない場合のaiの最大値
+    # See:
+    # https://note.nkmk.me/python-set/#intersection
     for i in range(n):
         _ = int(input())
         xi = set(map(int, input().split()))
@@ -26,7 +28,7 @@ def main():
         ans = -1
 
         for _, i, xi in c:
-            if len(yj & xi) == 0:
+            if yj.isdisjoint(xi):
                 ans = i
                 break
 
