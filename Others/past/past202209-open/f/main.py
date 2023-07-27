@@ -3,50 +3,32 @@
 
 def main():
     import sys
-    from collections import defaultdict
 
     input = sys.stdin.readline
 
     n = int(input())
     a = list(map(int, input().split()))
-    d = defaultdict(list)
+    c = list()
 
+    # xiとyjの積集合を取り、共通する要素が0個となるaiの最大値
     for i in range(n):
-        ci = int(input())
+        _ = int(input())
+        xi = set(map(int, input().split()))
+        c.append((a[i], i + 1, xi))
 
-        if ci >= 1:
-            xi = list(map(int, input().split()))
+    c = sorted(c, reverse=True)
 
-            for xij in xi:
-                d[xij].append(i + 1)
-
-    # print(d)
     q = int(input())
 
-    for j in range(q):
-        dj = int(input())
-        candidates = set([i for i in range(1, n + 1)])
-
-        if dj == 0:
-            _ = input().rstrip()
-        else:
-            yj = list(map(int, input().split()))
-
-            # TLEになるのでは?
-            for yjk in yj:
-                for djk in d[yjk]:
-                    if djk in candidates:
-                        candidates.remove(djk)
-
-        value = 0
+    for _ in range(q):
+        _ = int(input())
+        yj = set(map(int, input().split()))
         ans = -1
 
-        for i, ai in enumerate(a, 1):
-            if i in candidates:
-                if ai > value:
-                    value = ai
-                    ans = i
-        # print(candidates)
+        for _, i, xi in c:
+            if len(yj & xi) == 0:
+                ans = i
+                break
 
         print(ans)
 
