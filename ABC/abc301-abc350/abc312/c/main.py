@@ -1,26 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-def f(wj, a):
-    count = 0
-
-    for ai in a:
-        if wj >= ai:
-            count += 1
-
-    return count
-
-
-def g(wj, b):
-    count = 0
-
-    for bi in b:
-        if wj <= bi:
-            count += 1
-
-    return count
-
-
 def main():
     import sys
 
@@ -33,15 +13,35 @@ def main():
     ng = 0
     ok = 10**9 + 1
 
-    while ok - ng > 1:
-        wj = (ok + ng) // 2
+    def binary_search(ok, ng):
+        while abs(ok - ng) > 1:
+            wj = (ok + ng) // 2
 
-        if f(wj, a) >= g(wj, b):
-            ok = wj
+            if is_met_conditions(wj):
+                ok = wj
+            else:
+                ng = wj
+
+        return ok
+
+    def is_met_conditions(wj):
+        count1, count2 = 0, 0
+
+        for ai in a:
+            if wj >= ai:
+                count1 += 1
+
+        for bi in b:
+            if wj <= bi:
+                count2 += 1
+
+        if count1 >= count2:
+            return True
         else:
-            ng = wj
+            return False
 
-    print(ok)
+    result = binary_search(ok=10**9 + 1, ng=0)
+    print(result)
 
 
 if __name__ == "__main__":
