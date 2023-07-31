@@ -3,48 +3,38 @@
 
 def main():
     import sys
-    from collections import defaultdict
 
     input = sys.stdin.readline
 
     n = int(input())
-    m = n
     a = list(map(int, input().split()))
-    c = a.copy()
-    results = defaultdict(list)
-    round = 1
+    ans = [-1] * (1 << n)
+    b = [(ai, i) for i, ai in enumerate(a)]
 
-    while n > 0:
-        if n == 1:
-            results[round].append(a[0])
-            results[round].append(a[1])
+    for round in range(1, n + 1):
+        size = len(b)
+        tmp = list()
+
+        if round == n:
+            first, x = b[0]
+            second, y = b[1]
+
+            ans[x] = round
+            ans[y] = round
         else:
-            b = list()
-
-            for i in range(2 ** (n - 1)):
-                first, second = a[2 * i], a[2 * i + 1]
+            for i in range(size // 2):
+                first, x = b[2 * i]
+                second, y = b[2 * i + 1]
 
                 if first > second:
-                    results[round].append(second)
-                    b.append(first)
+                    tmp.append(b[2 * i])
+                    ans[y] = round
                 else:
-                    results[round].append(first)
-                    b.append(second)
+                    tmp.append(b[2 * i + 1])
+                    ans[x] = round
 
-            a = b
+            b, tmp = tmp, b
 
-        round += 1
-        n -= 1
-
-    ans = [-1] * (2**m)
-
-    for key, values in results.items():
-        for value in values:
-            # print(c.index(value))
-            ans[c.index(value)] = key
-
-    # print(results)
-    # print(c)
     print(*ans, sep="\n")
 
 
