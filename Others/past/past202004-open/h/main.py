@@ -20,11 +20,14 @@ def main():
     dist = [[[inf] * size for _ in range(w)] for _ in range(h)]
     dxy = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     sy, sx = -1, -1
+    gy, gx = -1, -1
 
     for i in range(h):
         for j in range(w):
             if a[i][j] == "S":
                 sy, sx = i, j
+            if a[i][j] == "G":
+                gy, gx = i, j
 
     d.append((sy, sx, 0))
     dist[sy][sx][0] = 0  # Initialize
@@ -58,13 +61,6 @@ def main():
 
             d.append((ny, nx, state + 1))
             dist[ny][nx][state + 1] = dist[y][x][state] + 1
-
-    gy, gx = -1, -1
-
-    for i in range(h):
-        for j in range(w):
-            if a[i][j] == "G":
-                gy, gx = i, j
 
     ans = dist[gy][gx][9]
 
