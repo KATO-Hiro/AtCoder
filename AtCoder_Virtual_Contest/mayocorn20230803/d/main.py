@@ -3,7 +3,6 @@
 
 def main():
     import sys
-    from collections import defaultdict
 
     sys.setrecursionlimit(10**8)
 
@@ -21,32 +20,23 @@ def main():
         graph[ai].append(bi)
         graph[bi].append(ai)
 
-    visited = [False] * n
-    d = defaultdict(set)
-    d[c[0]].add(0)
-    ans = [1]
+    colors = [0] * (10**5 + 1)
+    ans = []
 
     def dfs(cur, parent=-1):
-        visited[cur] = True
+        if colors[c[cur]] == 0:
+            ans.append(cur + 1)
+
+        colors[c[cur]] += 1
 
         for to in graph[cur]:
-            if visited[to]:
-                continue
-
             if to == parent:
                 continue
 
-            # print("from: ", cur, to)
-
-            if len(d[c[to]]) == 0:
-                ans.append(to + 1)
-
-            d[c[to]].add(to)
-            # print(c[to], d[c[to]])
             dfs(to, cur)
-            # print("to: ", cur, to)
-            d[c[to]].remove(to)
-            # print(c[to], d[c[to]])
+
+        # 元に戻す
+        colors[c[cur]] -= 1
 
     dfs(0)
     print(*sorted(ans), sep="\n")
