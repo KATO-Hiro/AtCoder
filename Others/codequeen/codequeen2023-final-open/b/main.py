@@ -7,21 +7,19 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    grid = [["." for _ in range(n)] for _ in range(n)]
     original = set([i for i in range(n)])
     rows, cols = set(), set()
+    pos = set()
 
     for _ in range(n - 1):
         ri, ci = map(int, input().split())
         ri -= 1
         ci -= 1
-        grid[ri][ci] = "#"
 
         rows.add(ri)
         cols.add(ci)
+        pos.add((ri, ci))
 
-    # print(grid)
-    # print(original - rows, original - cols)
     row = original - rows
     col = original - cols
 
@@ -36,13 +34,12 @@ def main():
 
     for dx, dy in dxy:
         nx, ny = x, y
-        # print(nx, ny)
 
         while 0 <= nx + dx < n and 0 <= ny + dy < n:
             nx += dx
             ny += dy
 
-            if grid[ny][nx] == "#":
+            if (ny, nx) in pos:
                 ok = False
                 break
 
