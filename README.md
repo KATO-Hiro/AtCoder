@@ -609,7 +609,7 @@ Represents a repository of accepted results.
 |joi 2023 yo 1c|◯|◯|◯|◯|None|None|
 |joi 2023 yo 2|◯|--|--|--|--|None|
 |joig 2021 open|◯|◯|◯|--|--|--|
-|joig 2022 open|◯|◯|--|--|--|--|
+|joig 2022 open|◯|◯|◯|--|--|--|
 |joig 2023 open|◯|◯|--|--|--|--|
 |caddi2018b|◯|◯|△|△|--|--|
 |hack to the future 2018 qual|◯|None|None|None|None|None|
