@@ -11,15 +11,12 @@ def main():
 
     for i in range(1, n + 1):
         xi, yi = map(int, input().split())
+        ans[i] = ans[i - 1]
 
         if yi == 0:
-            ans[i] = ans[i - 1] + 1
-        elif yi == xi + 1:
-            ans[i] = ans[i - 1]
+            ans[i] += 1
         elif ans[i - 1] - ans[i - 1 - xi] >= yi:
-            ans[i] = ans[i - 1] + 1
-        else:
-            ans[i] = ans[i - 1]
+            ans[i] += 1
 
     print(ans[n])
 
