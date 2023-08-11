@@ -1,5 +1,29 @@
+# ac-library-python  # ERROR: Could not find a version that satisfies the requirement ac-library-python (from versions: none)
 autopep8
+bitarray==2.6.2
+black
+cppyy==2.4.1
 flake8
-lxml
-pytest
+gmpy2==2.1.5
+lightgbm==3.3.1
+more-itertools==9.0.0
+mpmath==1.2.1
+mypy
+networkx==3.0
+numba==0.57.0
+numpy==1.24.1
 online-judge-tools
+ortools==9.5.2237
+pandas==1.5.2
+pip
+polars==0.15.15
+PuLP==2.7.0
+pytest
+scikit-learn==1.2.0
+scipy==1.10.1
+setuptools==66.0.0
+shapely==2.0.0
+sortedcontainers==2.4.0
+sympy==1.11.1
+# torch==1.13.1  ERROR: Could not find a version that satisfies the requirement torch==1.13.1 (from versions: 2.0.0, 2.0.1)
+z3-solver==4.12.1.0
