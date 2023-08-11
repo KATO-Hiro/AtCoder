@@ -1,59 +1,75 @@
 # -*- coding: utf-8 -*-
 
+from typing import List
 
-def dijkstra(vertex_count: int, source: int, edges):
-    """Uses Dijkstra's algorithm to find the shortest path in a graph.
 
-    Args:
-        vertex_count: The number of vertices.
-        source      : Vertex number (0-indexed).
-        edges       : List of (cost, edge) (0-indexed).
+# See:
+# https://ikatakos.com/pot/programming_algorithm/graph_theory/lowest_common_ancestor
+# https://atcoder.jp/contests/codequeen2023-final-open/submissions/44445587
+class Tree:
+    def __init__(self, graph: List[List[int]], root=0) -> None:
+        n = len(graph)
+        k = n.bit_length()
+        PENDING = -1
 
-    Returns:
-        costs  : List of the shortest distance.
-        parents: List of parent vertices.
+        # parent[k][u] := 2 ** k ahead of u.
+        parent: List[List[int]] = [[PENDING] * n for _ in range(k)]
+        depth: List[int] = [PENDING] * n
+        depth[root] = 0
+        stack: List[int] = [root]
 
-    Landau notation: O(|Edges|log|Vertices|).
+        while stack:
+            u = stack.pop()
 
-    See:
-    https://atcoder.jp/contests/abc191/submissions/19964078
-    https://atcoder.jp/contests/abc191/submissions/19966232
-    """
+            for v in graph[u]:
+                if depth[v] != PENDING:
+                    continue
 
-    from heapq import heappop, heappush
+                depth[v] = depth[u] + 1
+                parent[0][v] = u
+                stack.append(v)
 
-    hq = [(0, source)]  # weight, vertex number (0-indexed)
-    costs = [float("inf") for _ in range(vertex_count)]
-    costs[source] = 0
-    visited = [False for _ in range(vertex_count)]
-    pending = -1
-    parents = [pending for _ in range(vertex_count)]
+        for ki in range(k - 1):
+            for u in range(n):
+                if parent[ki][u] < 0:
+                    parent[ki + 1][u] = -1
+                else:
+                    parent[ki + 1][u] = parent[ki][parent[ki][u]]
 
-    while hq:
-        cost, vertex = heappop(hq)
+        self.n: int = n
+        self.k: int = k
+        self.parent: List[List[int]] = parent
+        self.depth: List[int] = depth
 
-        if cost > costs[vertex]:
-            continue
+    def lca(self, u: int, v: int) -> int:
+        depth, parent = self.depth, self.parent
 
-        if visited[vertex]:
-            continue
+        if depth[u] < depth[v]:
+            u, v = v, u
 
-        visited[vertex] = True
+        for ki in range(self.k):
+            if (depth[u] - depth[v]) >> ki & 1:
+                u = parent[ki][u]
 
-        for weight, edge in edges[vertex]:
-            new_cost = cost + weight
+        if u == v:
+            return u
 
-            if new_cost < costs[edge]:
-                costs[edge] = new_cost
-                parents[edge] = vertex
-                heappush(hq, (new_cost, edge))
+        for ki in range(self.k - 1, -1, -1):
+            if parent[ki][u] != parent[ki][v]:
+                u = parent[ki][u]
+                v = parent[ki][v]
 
-    return costs, parents
+        return parent[0][u]
+
+    def calc_dist(self, u: int, v: int) -> int:
+        return self.depth[u] + self.depth[v] - 2 * self.depth[self.lca(u, v)]
+
+    def is_on_path(self, u: int, v: int, a: int) -> bool:
+        return self.calc_dist(u, a) + self.calc_dist(a, v) == self.calc_dist(u, v)
 
 
 def main():
     import sys
-    from collections import deque
 
     input = sys.stdin.readline
 
@@ -68,47 +84,21 @@ def main():
         ai -= 1
         bi -= 1
 
-        graph[ai].append((1, bi))
-        graph[bi].append((1, ai))
+        graph[ai].append(bi)
+        graph[bi].append(ai)
 
-    costs, parents = dijkstra(n, s, graph)
-    # print(costs, parents)
-    pos = t
-    paths = list()
+    # 頂点Sを根とする根付き木を考える
+    # 最小共通祖先の頂点a = LCA(j, T)を求める
+    # パスj→Tまでの最短経路のうち、頂点S→jまでの最短経路にも含まれる頂点集合は、頂点j→頂点aまで
+    tree = Tree(graph=graph, root=s)
+    ans = list()
 
-    while pos != -1:
-        paths.append(pos)
-        pos = parents[pos]
+    for j in range(n):
+        lca = tree.lca(j, t)
+        dist = tree.calc_dist(j, lca)
+        ans.append(dist + 1)
 
-    # print(paths[::-1])
-
-    inf = 10**18
-    d = deque(paths[::-1])
-    # print(d)
-    visited = [False] * n
-    dist = [inf] * n
-
-    for node in paths:
-        dist[node] = 1
-
-    # print(dist)
-
-    while d:
-        cur = d.pop()
-
-        if visited[cur]:
-            continue
-
-        visited[cur] = True
-
-        for _, to in graph[cur]:
-            if visited[to]:
-                continue
-
-            d.append(to)
-            dist[to] = min(dist[to], dist[cur] + 1)
-
-    print(*dist, sep="\n")
+    print(*ans, sep="\n")
 
 
 if __name__ == "__main__":
