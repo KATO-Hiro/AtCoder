@@ -188,7 +188,11 @@ def main():
     n, m, k = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
+    inf = 10**12
     s = SortedSet(a)
+    # 番兵を入れる
+    s.add(-inf)
+    s.add(inf)
     ans = list()
 
     def f(bj, ai):
@@ -197,14 +201,9 @@ def main():
     for bj in b:
         candidate = 0
         ai = s.le(bj)
-
-        if ai is not None:
-            candidate = max(candidate, f(bj, ai))
-
+        candidate = max(candidate, f(bj, ai))
         aj = s.ge(bj)
-
-        if aj is not None:
-            candidate = max(candidate, f(bj, aj))
+        candidate = max(candidate, f(bj, aj))
 
         ans.append(candidate)
 
