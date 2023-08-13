@@ -3,7 +3,6 @@
 
 def main():
     import sys
-    from collections import defaultdict
 
     input = sys.stdin.readline
 
@@ -16,22 +15,29 @@ def main():
         a.append(ai)
 
     x = int(input())
-    d = defaultdict(list)
+    people = list()
+    c_min = 100
 
     for i, ai in enumerate(a, 1):
-        if x in ai:
-            d[len(ai)].append(i)
+        if x not in ai:
+            continue
 
-    size = len(d.keys())
-    # print(d)
+        c = len(ai)
 
-    if size == 0:
-        print(0)
-    else:
-        key_min = min(d.keys())
-        # print(d[key_min])
-        print(len(d[key_min]))
-        print(*sorted(d[key_min]))
+        if c < c_min:
+            c_min = c
+            people = list()
+            people.append(i)
+        elif c == c_min:
+            people.append(i)
+
+        # print(i, c, people)
+
+    size = len(people)
+    print(size)
+
+    if size > 0:
+        print(*people)
 
 
 if __name__ == "__main__":
