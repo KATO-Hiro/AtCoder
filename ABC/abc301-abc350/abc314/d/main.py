@@ -22,12 +22,7 @@ def main():
         if qi[0] != "1":
             id = i
 
-    # print(t, x, c)
-    # print(id)
-
     for i, (ti, xi, ci) in enumerate(zip(t, x, c)):
-        # print(ti, xi, ci)
-
         if i == id and ti != "1":
             if ti == "2":
                 for i in range(n):
