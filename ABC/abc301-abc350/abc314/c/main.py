@@ -8,28 +8,22 @@ def main():
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
-    s = input().rstrip()
+    s = list(input().rstrip())
     c = list(map(int, input().split()))
     d = defaultdict(list)
 
     for i, ci in enumerate(c):
-        d[ci].append([i, s[i]])
+        d[ci].append(i)
 
-    # print(d)
     ans = [""] * n
 
-    for key, values in d.items():
-        size = len(values)
-        # tmp = list()
-        # print(key, values, size)
+    for i in range(1, m + 1):
+        size = len(d[i])
 
-        for i, (id, value) in enumerate(values):
-            # print(id, value)
-            nid = (i + 1) % size
-            ans[values[nid][0]] = value
-            # tmp.append([values[nid][0], value])
+        for j in range(size):
+            before, after = d[i][j], d[i][(j - 1) % size]
+            ans[before] = s[after]
 
-        # print(tmp)
     print("".join(ans))
 
 
