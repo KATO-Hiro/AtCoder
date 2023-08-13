@@ -9,54 +9,36 @@ def main():
     n = int(input())
     s = list(input().rstrip())
     q = int(input())
-    status = -1  # 0: small, 1: large
-    tmp = list()
+    id = -1
+    t, x, c = list(), list(), list()
 
-    for _ in range(q):
+    # クエリ先読み
+    for i in range(q):
         qi = input().rstrip().split()
+        t.append(qi[0])
+        x.append(int(qi[1]) - 1)
+        c.append(qi[2])
 
-        if qi[0] == "1":
-            xi, ci = int(qi[1]) - 1, qi[2]
+        if qi[0] != "1":
+            id = i
+
+    # print(t, x, c)
+    # print(id)
+
+    for i, (ti, xi, ci) in enumerate(zip(t, x, c)):
+        # print(ti, xi, ci)
+
+        if i == id and ti != "1":
+            if ti == "2":
+                for i in range(n):
+                    s[i] = s[i].lower()
+            elif ti == "3":
+                for i in range(n):
+                    s[i] = s[i].upper()
+        elif i != id and ti == "1":
             s[xi] = ci
 
-            if ci.islower():
-                t = 0
-            else:
-                t = 1
-
-            tmp.append((xi, t))
-        elif qi[0] == "2":
-            tmp = list()
-            status = 0
-        else:
-            tmp = list()
-            status = 1
-
-    # print(tmp)
-    ans = list()
-
-    if status == -1:
-        print("".join(s))
-    elif status == 0:
-        for si in s:
-            ans.append(si.lower())
-
-        if len(tmp) > 0:
-            for id, flag in tmp:
-                if flag == 1:
-                    ans[id] = ans[id].upper()
-
-        print("".join(ans))
-    else:
-        for si in s:
-            ans.append(si.upper())
-
-        if len(tmp) > 0:
-            for id, flag in tmp:
-                if flag == 0:
-                    ans[id] = ans[id].lower()
-
-        print("".join(ans))
+    print("".join(s))
 
 
 if __name__ == "__main__":
