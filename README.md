@@ -579,7 +579,7 @@ Represents a repository of accepted results.
 |bcu30 2019|◯|--|None|None|None|None|
 |joi 2006|◯|◯|--|--|--|--|
 |joi 2006 ho|◯|◯|--|--|--|--|
-|joi 2007 qual|◯|◯|◯|--|--|--|
+|joi 2007 qual|◯|◯|◯|--|--|◯|
 |joi 2007|◯|--|--|--|--|--|
 |joi 2008 qual|◯|◯|--|--|--|--|
 |joi 2009 qual|◯|◯|--|--|--|--|
