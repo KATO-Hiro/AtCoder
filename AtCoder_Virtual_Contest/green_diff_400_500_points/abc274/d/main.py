@@ -14,37 +14,27 @@ def main():
     # 移動距離ai = 各軸方向へ1倍 or -1倍
     # 各軸について移動したときに、x、yの位置にいられるか? = 部分和問題っぽい
     # 部分和問題 = DP
-    x_axis = a[::2]
+    x_axis = a[2::2]  # 1回目の移動は必ず正なので、除外
     y_axis = a[1::2]
-    # print(x_axis, y_axis)
+    dp_x = set([a[0]])
+    dp_y = set([0])
 
-    base = 10**4
-    size = 2 * base + 1
-    dp_x = [False] * size
-    dp_y = [False] * size
-    dp_x[base], dp_y[base] = True, True
+    def f(dp, axis):
+        for axis_i in axis:
+            ndp = set()
 
-    def f(axis, dp, is_x):
-        for i, axis_i in enumerate(axis):
-            ndp = [False] * size
-
-            for j in range(size):
-                if not dp[j]:
-                    continue
-
-                if (j - axis_i >= 0) and not (is_x and i == 0):
-                    ndp[j - axis_i] = True
-                if j + axis_i < size:
-                    ndp[j + axis_i] = True
+            for dp_i in dp:
+                ndp.add(dp_i - axis_i)
+                ndp.add(dp_i + axis_i)
 
             dp = ndp
 
         return dp
 
-    results_x = f(x_axis, dp_x, True)
-    results_y = f(y_axis, dp_y, False)
+    results_x = f(dp_x, x_axis)
+    results_y = f(dp_y, y_axis)
 
-    if results_x[x + base] and results_y[y + base]:
+    if x in results_x and y in results_y:
         print("Yes")
     else:
         print("No")
