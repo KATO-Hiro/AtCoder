@@ -9,7 +9,6 @@ def main():
     n = int(input())
     s = input().rstrip()
     si_size = len(s)
-    t = list()
     ans = 0
 
     for _ in range(n):
@@ -19,14 +18,9 @@ def main():
 
         for begin in range(ti_size):
             for delta in range(1, ti_size):
-                u = ""
-
-                for i in range(begin, ti_size, delta):
-                    u += ti[i]
-
-                    if len(u) == si_size and u == s:
-                        ok = True
-                        break
+                if s in "".join(ti[begin::delta]):
+                    ok = True
+                    break
 
         if ok:
             ans += 1
