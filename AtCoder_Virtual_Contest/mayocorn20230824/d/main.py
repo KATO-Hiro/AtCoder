@@ -127,7 +127,8 @@ class UnionFind2D:
         assert 0 <= x2 < self.width
         assert 0 <= y2 < self.height
 
-        return self.uf.is_same_group(self._to_number(x1, y1), self._to_number(x2, y2))
+        # return self.uf.is_same_group(self._to_number(x1, y1), self._to_number(x2, y2))
+        return self.find_root(x1, y1) == self.find_root(x2, y2)
 
     def merge_if_needs(self, x1: int, y1: int, x2: int, y2: int) -> bool:
         assert 0 <= x1 < self.width
@@ -195,7 +196,8 @@ def main():
     # print(candidates)
 
     for (yi, xi), (yj, xj) in combinations(candidates, 2):
-        if uf.find_root(xi, yi) == uf.find_root(xj, yj):
+        # if uf.find_root(xi, yi) == uf.find_root(xj, yj):
+        if uf.is_same_group(xi, yi, xj, yj):
             print("Yes")
             exit()
 
