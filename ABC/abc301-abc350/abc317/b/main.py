@@ -8,14 +8,11 @@ def main():
 
     n = int(input())
     a = sorted(list(map(int, input().split())))
-    prev = a[0]
 
-    for ai in a[1:]:
-        if ai - prev != 1:
-            print(prev + 1)
+    for ai, aj in zip(a, a[1:]):
+        if aj - ai == 2:
+            print(ai + 1)
             exit()
-
-        prev = ai
 
 
 if __name__ == "__main__":
