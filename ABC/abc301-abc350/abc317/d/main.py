@@ -18,9 +18,6 @@ def main():
 
         seats[i] = zi
 
-    # print(costs)
-    # print(seats)
-
     # dp[i][j]: i番目の選挙区でj議席を獲得するのに必要な鞍替えの人数
     # j: 議席数とすべきところを選挙区としていたのが敗因
     inf = 10**18
@@ -43,9 +40,7 @@ def main():
 
         dp = ndp
 
-    # print(dp)
     at_least = sum(seats) // 2 + 1
-    # print(at_least)
     print(min(dp[at_least:]))
 
 
