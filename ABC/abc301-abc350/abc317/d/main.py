@@ -21,27 +21,17 @@ def main():
     # dp[i][j]: i番目の選挙区でj議席を獲得するのに必要な鞍替えの人数
     # j: 議席数とすべきところを選挙区としていたのが敗因
     inf = 10**18
-    size = 10**5 + 1
+    seat_sum = sum(seats) // 2 + 1
+    size = seat_sum + 1
     dp = [inf] * size
     dp[0] = 0
 
     for i, (cost, seat) in enumerate(zip(costs, seats)):
-        ndp = [inf] * size
+        for j in range(size)[::-1]:
+            nj = min(seat_sum, j + seat)
+            dp[nj] = min(dp[nj], dp[j] + cost)
 
-        for j in range(size):
-            if dp[j] == inf:
-                continue
-
-            ndp[j] = min(ndp[j], dp[j])
-            nj = j + seat
-
-            if nj <= size:
-                ndp[nj] = min(ndp[nj], dp[j] + cost)
-
-        dp = ndp
-
-    at_least = sum(seats) // 2 + 1
-    print(min(dp[at_least:]))
+    print(dp[seat_sum])
 
 
 if __name__ == "__main__":
