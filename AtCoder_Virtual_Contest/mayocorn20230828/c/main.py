@@ -23,22 +23,17 @@ def main():
 
     def dfs(cur, parent=-1):
         global ans
-        # print(cur)
+        ans.append(cur + 1)
 
         for to in sorted(graph[cur]):
             if to == parent:
                 continue
 
-            ans.append(cur + 1)
-            # print("1", cur, to)
             dfs(to, cur)
-            # print("2", cur, to)
-            ans.append(to + 1)
-
-        # print(cur)
+            ans.append(cur + 1)
 
     dfs(0)
-    print(*ans, 1)
+    print(*ans)
 
 
 if __name__ == "__main__":
