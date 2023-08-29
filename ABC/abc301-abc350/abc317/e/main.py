@@ -12,84 +12,30 @@ def main():
     a = [list(input().rstrip()) for _ in range(h)]
 
     # 人の視線に入る部分をチェック
-    blocked = [">", "v", "<", "^", "#"]
+    # 共通部分をまとめる
+    dxy = [(-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (1, -1), (-1, 1), (1, 1)]
+    dxy = dxy[:4]
+    dirs = ["<", ">", "^", "v"]
     eye = "!"
 
-    # >
-    for i in range(h):
-        j = 0
+    for (dx, dy), dir in zip(dxy, dirs):
+        for i in range(h):
+            for j in range(w):
+                if a[i][j] != dir:
+                    continue
 
-        while j < w:
-            if a[i][j] == ">":
-                j += 1
+                ny, nx = i, j
 
-                while j < w:
-                    if a[i][j] in blocked:
+                while True:
+                    ny += dy
+                    nx += dx
+
+                    if nx < 0 or nx >= w or ny < 0 or ny >= h:
                         break
-                    elif a[i][j] == ".":
-                        a[i][j] = eye
-
-                    j += 1
-            else:
-                j += 1
-
-    # print(a)
-
-    # <
-    for i in range(h):
-        j = w - 1
-
-        while j >= 0:
-            if a[i][j] == "<":
-                j -= 1
-
-                while j >= 0:
-                    if a[i][j] in blocked:
+                    if not (a[ny][nx] == "." or a[ny][nx] == eye):
                         break
-                    elif a[i][j] == ".":
-                        a[i][j] = eye
 
-                    j -= 1
-            else:
-                j -= 1
-
-    # v
-    for j in range(w):
-        i = 0
-
-        while i < h:
-            if a[i][j] == "v":
-                i += 1
-
-                while i < h:
-                    if a[i][j] in blocked:
-                        break
-                    elif a[i][j] == ".":
-                        a[i][j] = eye
-
-                    i += 1
-            else:
-                i += 1
-
-    # ^
-    for j in range(w):
-        i = h - 1
-
-        while i >= 0:
-            if a[i][j] == "^":
-                i -= 1
-
-                while i >= 0:
-                    if a[i][j] in blocked:
-                        break
-                    elif a[i][j] == ".":
-                        a[i][j] = eye
-
-                    i -= 1
-            else:
-                i -= 1
-
-    # print(a)
+                    a[ny][nx] = eye
 
     # 始点・終点の位置を調べる
     sy, sx, gy, gx = -1, -1, -1, -1
@@ -101,10 +47,8 @@ def main():
             elif a[i][j] == "G":
                 gy, gx = i, j
 
-    # print(sy, sx, gy, gx)
-
     # BFSで始点から終点まで移動
-    blocked.append(eye)
+    blocked = [">", "v", "<", "^", "#", "!"]
 
     def bfs_for_grid(
         grid: List[List[Any]], h: int, w: int, sy: int = 0, sx: int = 0
@@ -148,7 +92,6 @@ def main():
 
     visited, dist = bfs_for_grid(grid=a, h=h, w=w, sy=sy, sx=sx)
 
-    # print(dist)
     print(dist[gy][gx])
 
 
