@@ -9,28 +9,17 @@ def main():
     n = int(input())
     a, b = map(int, input().split())
     c = int(input())
-    pending = -1
-    size = 10**5 + 2 * 10**3
-    dp = [pending] * size
-    dp[a] = c
-    ans = 0
+    d = [int(input()) for _ in range(n)]
+    cal = c
+    cost = a
+    ans = cal // cost
 
-    # DP
-    for i in range(n):
-        di = int(input())
-        ndp = [pending] * size
+    # コストが同じなので、カロリーの高いものから順に選ぶと1ドルあたりのカロリーを高くできる
+    for di in sorted(d, reverse=True):
+        cal += di
+        cost += b
 
-        for j in range(a, size):
-            if dp[j] == pending:
-                continue
-
-            ndp[j] = max(ndp[j], dp[j])
-            ndp[j + b] = max(ndp[j + b], dp[j] + di)
-
-        dp = ndp
-
-        for j in range(a, size):
-            ans = max(ans, dp[j] // j)
+        ans = max(ans, cal // cost)
 
     print(ans)
 
