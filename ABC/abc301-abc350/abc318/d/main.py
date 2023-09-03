@@ -1,18 +1,14 @@
 # -*- coding: utf-8 -*-
 
 
-ans = 0
-
-
 def main():
     import sys
-
-    sys.setrecursionlimit(10**8)
 
     input = sys.stdin.readline
 
     n = int(input())
     d = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+    edges = list()
 
     for i in range(n):
         di = list(map(int, input().split()))
@@ -23,36 +19,21 @@ def main():
             d[i][j] = dij
             d[j][i] = dij
 
-    # print(d)
-    if n % 2 == 1:
-        n += 1  # 頂点が奇数の場合に、ダミーとなる頂点とペアを作ることに相当
+            # 頂点の集合をシフト演算子で表現
+            edges.append((1 << i | 1 << j, d[i][j]))
 
-    used = [False] * n
+    dp = [0] * (1 << n)
 
-    def dfs(cur, weight):
-        global ans
-        ans = max(ans, weight)
-
-        if cur == n:
-            return
-        if used[cur]:
-            dfs(cur + 1, weight)
-            return
-
-        used[cur] = True
-
-        for to in range(cur + 1, n):
-            if used[to]:
+    for bit in range(1 << n):
+        for edge_pair, weight in edges:
+            # 選んだ辺の端点が異なる = 頂点集合の共通部分がない
+            if bit & edge_pair != 0:
                 continue
 
-            used[to] = True
-            dfs(cur + 1, weight + d[cur][to])
-            used[to] = False
+            pos = bit | edge_pair
+            dp[pos] = max(dp[pos], dp[bit] + weight)
 
-        used[cur] = False
-
-    dfs(0, 0)
-    print(ans)
+    print(max(dp))
 
 
 if __name__ == "__main__":
