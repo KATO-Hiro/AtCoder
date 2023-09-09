@@ -334,7 +334,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 315|◯|◯|◯|--|△|--|--|--|
 |AtCoder Beginner Contest 317|◯|◯|△|△|◯|--|--|--|
 |AtCoder Beginner Contest 318|◯|◯|◯|△|△|--|--|--|
-|AtCoder Beginner Contest 319|◯|◯|--|◯|--|--|--|--|
+|AtCoder Beginner Contest 319|◯|◯|△|◯|--|--|--|--|
 |AtCoder Beginner Contest 32x|--|--|--|--|--|--|--|--|
 
 </details>
