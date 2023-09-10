@@ -17,25 +17,16 @@ def main():
         tmp_w = wj
 
         for li in l:
-            if tmp_w - li >= 0:
-                tmp_w -= li
-
-                if tmp_w >= 1:
-                    tmp_w -= 1
-            else:
+            if tmp_w - li < 0:
                 count += 1
                 tmp_w = wj
 
-                if tmp_w - li >= 0:
-                    tmp_w -= li
+            tmp_w -= li
 
-                    if tmp_w >= 1:
-                        tmp_w -= 1
+            if tmp_w >= 1:
+                tmp_w -= 1
 
-        if count <= m:
-            return True
-        else:
-            return False
+        return count <= m
 
     while abs(ok - ng) > 1:
         wj = (ok + ng) // 2
