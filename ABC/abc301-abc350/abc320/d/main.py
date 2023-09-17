@@ -16,11 +16,6 @@ def main():
         ai -= 1
         bi -= 1
 
-        # if ai > bi:
-        #     ai, bi = bi, ai
-        #     xi *= -1
-        #     yi *= -1
-
         graph[ai].append((bi, xi, yi))
         graph[bi].append((ai, -xi, -yi))  # non-directed
 
@@ -45,14 +40,8 @@ def main():
                 nx = xi + xj
                 ny = yi + yj
 
-                if visited[to]:
-                    if to in dist.keys():
-                        x, y = dist[to]
-
-                        if x != nx or y != ny:
-                            dist[to] = (inf, inf)
-
-                        continue
+                if dist[to] != tuple():
+                    continue
 
                 dist[to] = (nx, ny)
                 d.append((to, nx, ny))
@@ -68,11 +57,7 @@ def main():
             continue
 
         xi, yi = dist[i]
-
-        if (xi, yi) == (inf, inf):
-            print("undecidable")
-        else:
-            print(xi, yi)
+        print(xi, yi)
 
 
 if __name__ == "__main__":
