@@ -3,25 +3,19 @@
 
 def main():
     import sys
+    from decimal import Decimal, getcontext
 
     input = sys.stdin.readline
 
+    # See:
+    # https://docs.python.org/ja/3/library/decimal.html
+    getcontext().prec = 1000
+
     d = int(input())
-    a = input().rstrip().split(".")
-    b = input().rstrip().split(".")
-    # print(a)
-    # print(b)
 
-    c = int(a[0]) + int(b[0])
-    e = int(a[1]) + int(b[1])
-
-    if len(list(str(e))) > d:
-        c += 1
-        e = str(e)[1:]
-
-    # print(c)
-    # print(e)
-    print(str(c) + "." + str(e))
+    a = Decimal(input())
+    b = Decimal(input())
+    print(a + b)
 
 
 if __name__ == "__main__":
