@@ -607,6 +607,7 @@ Represents a repository of accepted results.
 |joi 2021 yo 1a|◯|◯|◯|--|--|--|
 |joi 2021 yo 1b|◯|◯|◯|None|None|None|
 |joi 2021 yo 1c|◯|◯|◯|None|None|None|
+|joi 2021 yo 2|◯|--|--|--|--|--|
 |joi 2022 yo 1a|◯|◯|◯|◯|None|None|
 |joi 2022 yo 1b|◯|◯|◯|◯|None|None|
 |joi 2022 yo 2|◯|△|--|--|--|None|
