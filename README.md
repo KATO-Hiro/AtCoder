@@ -591,6 +591,7 @@ Represents a repository of accepted results.
 |joi 2009 qual|◯|◯|--|△|--|--|
 |joi 2010|◯|◯|◯|◯|--|--|
 |joi 2011 qual|◯|◯|--|◯|◯|--|
+|joi 2011 ho|△|--|--|--|--|--|
 |joi 2012 qual|◯|◯|◯|◯|--|--|
 |joi 2013 qual|◯|◯|◯|◯|--|--|
 |joi 2014 qual|◯|◯|--|--|--|--|
