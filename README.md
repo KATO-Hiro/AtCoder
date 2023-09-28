@@ -587,6 +587,7 @@ Represents a repository of accepted results.
 |joi 2006 ho|◯|◯|--|--|--|--|
 |joi 2007 qual|◯|◯|◯|◯|--|◯|
 |joi 2007|◯|--|◯|--|--|--|
+|joi 2007 jsc day4|◯|--|--|--|--|--|
 |joi 2008 qual|◯|◯|◯|◯|--|◯|
 |joi 2008 ho|△|--|--|--|--|--|
 |joi 2009 qual|◯|◯|--|△|--|--|
