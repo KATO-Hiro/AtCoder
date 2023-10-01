@@ -9,19 +9,8 @@ def main():
     n, m = map(int, input().split())
     s = input().rstrip()
     t = input().rstrip()
-    flag1, flag2 = True, True
-
-    for si, ti in zip(s, t):
-        if si != ti:
-            flag1 = False
-            break
-
-    for sj, tj in zip(s[::-1], t[::-1]):
-        if sj != tj:
-            flag2 = False
-            break
-
-    # print(flag1, flag2)
+    flag1 = t.startswith(s)
+    flag2 = t.endswith(s)
 
     if flag1 and flag2:
         print(0)

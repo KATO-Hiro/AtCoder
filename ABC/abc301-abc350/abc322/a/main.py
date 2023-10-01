@@ -10,19 +10,12 @@ def main():
     s = input().rstrip()
     t = "ABC"
 
-    if t not in s:
-        print(-1)
-        exit()
+    index = s.find(t)
 
-    for i in range(n):
-        if i + 3 > n:
-            break
+    if index != -1:
+        index += 1
 
-        u = s[i : i + 3]
-
-        if u == t:
-            print(i + 1)
-            exit()
+    print(index)
 
 
 if __name__ == "__main__":
