@@ -29,7 +29,6 @@ def main():
 
     s = input().rstrip()
     results = run_length_encoding(list(s))
-    # print(results)
     m = len(results)
     ans = 0
 
@@ -37,7 +36,6 @@ def main():
         if i + 2 >= m:
             break
 
-        # print(results[i], results[i + 1], results[i + 2])
         s1, count1 = results[i]
         s2, count2 = results[i + 1]
         s3, count3 = results[i + 2]
