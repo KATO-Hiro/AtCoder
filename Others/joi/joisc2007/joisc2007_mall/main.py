@@ -1,82 +1,36 @@
 # -*- coding: utf-8 -*-
 
 
-def main():
-    import sys
+import sys
 
-    input = sys.stdin.readline
+input = sys.stdin.readline
 
-    w, h = map(int, input().split())
-    a, b = map(int, input().split())
-    c = [list(map(int, input().split())) for _ in range(h)]
-    # print(c)
-    people_count = 0
-    cost = 0
-    inf = 10**18
-    ans = inf
+w, h = map(int, input().split())
+wj, hi = map(int, input().split())
+costs = [[0 for _ in range(w + 1)] for _ in range(h + 1)]
+inf = 10**12
+ans = inf
 
-    def f(candidate, count):
-        if count == 0:
-            return min(ans, candidate)
-        else:
-            return ans
+for i in range(h):
+    ci = list(map(int, input().split()))
 
-    # 一つ目の候補地を全探索 + 差分を考える
-    for i in range(b):
-        for j in range(a):
-            if c[i][j] == -1:
-                people_count += 1
-            else:
-                cost += c[i][j]
+    for j, cij in enumerate(ci):
+        if cij == -1:
+            cij = inf
 
-    ans = f(cost, people_count)
-    cost2 = cost
-    people_count2 = people_count
+        costs[i + 1][j + 1] = costs[i + 1][j] + costs[i][j + 1] - costs[i][j] + cij
 
-    for k in range(a, w):
-        for l in range(b):
-            if c[l][k] == -1:
-                people_count2 += 1
-            else:
-                cost2 += c[l][k]
-                cost2 -= c[l][k - a]
+for i in range(h):
+    for j in range(w):
+        ni = i + hi - 1
+        nj = j + wj - 1
 
-                if c[l][k - a] == -1:
-                    people_count2 -= 1
+        if ni >= h:
+            break
+        if nj >= w:
+            break
 
-        ans = f(cost2, people_count2)
+        cost = costs[ni + 1][nj + 1] - costs[i][nj + 1] - costs[ni + 1][j] + costs[i][j]
+        ans = min(ans, cost)
 
-    for y in range(b, h):
-        for x in range(a):
-            if c[y][x] == -1:
-                people_count += 1
-            else:
-                cost += c[y][x]
-                cost -= c[y - b][x]
-
-                if c[y - b][x] == -1:
-                    people_count -= 1
-
-        ans = f(cost, people_count)
-        print(cost, people_count)
-
-        # cost3 = cost
-
-        # for k in range(a, w):
-        #     for l in range(y - b + 1, y + 1):
-        #         if c[l][k] == -1:
-        #             people_count += 1
-        #         else:
-        #             cost3 += c[l][k]
-        #             cost3 -= c[l][k - a]
-
-        #             if c[l][k - a] == -1:
-        #                 people_count -= 1
-
-        #     ans = f(cost3)
-
-    print(ans)
-
-
-if __name__ == "__main__":
-    main()
+print(ans)
