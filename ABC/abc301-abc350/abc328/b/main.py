@@ -12,16 +12,9 @@ def main():
 
     for i, di in enumerate(d, 1):
         for j in range(1, di + 1):
-            t = set()
+            result = set(str(i) + str(j))
 
-            for ii in list(str(i)):
-                t.add(ii)
-
-            for jj in list(str(j)):
-                t.add(jj)
-
-            if len(t) == 1:
-                # print(i, j, t)
+            if len(result) == 1:
                 ans += 1
 
     print(ans)
