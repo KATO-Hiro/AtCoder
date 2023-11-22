@@ -788,6 +788,7 @@ Represents a repository of accepted results.
 |past 2022 09 open|◯|◯|◯|◯|△|◯|◯|△|--|--|--|--|
 |past 2022 12 open|◯|◯|◯|◯|◯|△|◯|◯|◯|--|--|--|
 |past 2023 03 open|--|◯|◯|△|◯|◯|◯|◯|--|--|--|--|
+|past 2023 06 open|--|--|--|--|◯|--|--|--|--|--|--|--|
 |language test 1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
 |practice 2|◯|◯|◯|--|--|--|◯|--|--|△|--|--|
 |fuka 5th|◯|--|--|--|--|--|--|None|None|None|None|None|
