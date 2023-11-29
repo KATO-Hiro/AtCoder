@@ -8,16 +8,8 @@ def main():
 
     s = input().rstrip()
 
-    if s[0] == "1":
-        if len(s) == 1:
-            print(0)
-        else:
-            t = s[1:]
-
-            if len(set(t)) == 1 and "0" in t:
-                print(len(t))
-            else:
-                print(len(s))
+    if s[0] == "1" and all(si == "0" for si in s[1:]):
+        print(len(s) - 1)
     else:
         print(len(s))
 
