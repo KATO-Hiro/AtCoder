@@ -6,24 +6,16 @@ def main():
 
     input = sys.stdin.readline
 
-    m0, d0 = map(int, input().split())
-    y1, m1, d1 = map(int, input().split())
+    m, d = map(int, input().split())
+    y0, m0, d0 = map(int, input().split())
 
-    dm, d_dash = divmod(d1 + 1, d0)
-
-    if d_dash == 0:
-        dm -= 1
-        d_dash = d0
-
-    dy, m_dash = divmod(m1 + dm, m0)
-
-    if m_dash == 0:
-        dy -= 1
-        m_dash = m0
-
-    y_dash = y1 + dy
-
-    print(y_dash, m_dash, d_dash)
+    # 年末、月末、それ以外
+    if m0 == m and d0 == d:
+        print(y0 + 1, 1, 1)
+    elif d0 == d:
+        print(y0, m0 + 1, 1)
+    else:
+        print(y0, m0, d0 + 1)
 
 
 if __name__ == "__main__":
