@@ -1,6 +1,14 @@
 # -*- coding: utf-8 -*-
 
 
+def f(first, second):
+    # 各頂点に便宜的に整数を割り当てて、円周上の距離を求める
+    dist = abs(get_offset(first) - get_offset(second))
+
+    # 長い辺
+    return dist == 2 or dist == 3
+
+
 def get_offset(alphabet: str, base_alphabet: str = "A") -> int:
     """Get offset between the base_alphabet and alphabet.
 
@@ -20,35 +28,16 @@ def get_offset(alphabet: str, base_alphabet: str = "A") -> int:
 
 def main():
     import sys
-    from collections import Counter
 
     input = sys.stdin.readline
 
-    s = list(input().rstrip())
-    t = list(input().rstrip())
-    c = Counter()
+    s1, s2 = list(input().rstrip())
+    t1, t2 = list(input().rstrip())
 
-    for si, tj in zip(s, t):
-        i = get_offset(si)
-        j = get_offset(tj)
-        c[i] += 1
-        c[j] += 1
-
-    ans = "No"
-
-    if len(c.keys()) == 2:
-        ans = "Yes"
+    if f(s1, s2) == f(t1, t2):
+        print("Yes")
     else:
-        base = c.most_common(1)[0][0]
-
-        others = [key for key in c.keys() if key != base]
-
-        if ((base + 1) % 5 in others) and ((base - 1) % 5 in others):
-            ans = "Yes"
-        elif ((base + 2) % 5 in others) and ((base - 2) % 5 in others):
-            ans = "Yes"
-
-    print(ans)
+        print("No")
 
 
 if __name__ == "__main__":
