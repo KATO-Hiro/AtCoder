@@ -8,17 +8,10 @@ def main():
 
     s = input().rstrip()
 
-    for i, si in enumerate(s, 1):
-        if i == 1:
-            if si.islower():
-                print("No")
-                exit()
-        else:
-            if si.isupper():
-                print("No")
-                exit()
-
-    print("Yes")
+    if s.istitle():
+        print("Yes")
+    else:
+        print("No")
 
 
 if __name__ == "__main__":
