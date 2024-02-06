@@ -12,7 +12,6 @@ def main():
     m = n // 2
     s[m][m] = "T"
     used[m][m] = True
-    # print(s)
     i, j, dir = 0, 0, 0
     dyx = [(0, 1), (1, 0), (0, -1), (-1, 0)]
     dy, dx = dyx[dir]
@@ -35,8 +34,6 @@ def main():
             dy, dx = dyx[dir]
             i += dy
             j += dx
-
-    # print(s)
 
     for si in s:
         print(*si)
