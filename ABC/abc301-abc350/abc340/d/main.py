@@ -63,12 +63,9 @@ def main():
         ai, bi, xi = map(int, input().split())
         xi -= 1
 
-        # ci: cost
-        # bi: edge (0-indexed)
         edges[i].append((ai, i + 1))
         edges[i].append((bi, xi))
 
-    # print(edges)
     dist, _ = dijkstra(vertex_count=n, source=0, edges=edges)
     print(dist[-1])
 
