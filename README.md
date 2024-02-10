@@ -352,7 +352,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 334|◯|◯|--|◯|--|--|--|--|
 |AtCoder Beginner Contest 335|◯|◯|--|◯|--|--|--|--|
 |AtCoder Beginner Contest 336|◯|◯|◯|--|--|--|--|--|
-|AtCoder Beginner Contest 337|◯|◯|◯|--|--|--|--|--|
+|AtCoder Beginner Contest 337|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 338|◯|◯|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 339|◯|◯|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 33x|--|--|--|--|--|--|--|--|
