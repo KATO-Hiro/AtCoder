@@ -356,7 +356,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 338|◯|◯|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 339|◯|◯|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 340|◯|◯|△|◯|--|--|--|--|
-|AtCoder Beginner Contest 341|--|◯|--|--|--|--|--|--|
+|AtCoder Beginner Contest 341|◯|◯|--|--|--|--|--|--|
 |AtCoder Beginner Contest 34x|--|--|--|--|--|--|--|--|
 
 </details>
