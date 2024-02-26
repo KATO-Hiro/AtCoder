@@ -12,13 +12,7 @@ def main():
 
     for _ in range(q):
         ai, bi = map(int, input().split())
-        pos_ai, pos_bi = 0, 0
-
-        for i, pi in enumerate(p):
-            if pi == ai:
-                pos_ai = i
-            elif pi == bi:
-                pos_bi = i
+        pos_ai, pos_bi = p.index(ai), p.index(bi)
 
         if pos_ai < pos_bi:
             ans = ai
