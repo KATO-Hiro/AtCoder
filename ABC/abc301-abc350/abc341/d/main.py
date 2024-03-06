@@ -3,34 +3,31 @@
 
 def main():
     import sys
+    from math import lcm
 
     input = sys.stdin.readline
 
-    n = int(input())
-    a = list(map(int, input().split()))
-    a_max = 2 * 10**5 + 10
-    count = [0] * a_max
-    ans = 0
+    n, m, k = map(int, input().split())
 
-    # √a = dと変形
-    # ルートの内部に残った整数が同じものを数える
-    for ai in a:
-        i = 2
-        bi = ai
+    # k番目の数を決め打ちして、二分探索
+    ng, ok = 0, 10**20
 
-        while i**2 <= bi:
-            while bi % (i**2) == 0:
-                bi //= i**2
+    def f(wj):
+        count = wj // n
+        count += wj // m
+        count -= wj // lcm(n, m) * 2
 
-            i += 1
+        return count >= k
 
-        ans += count[bi]
-        count[bi] += 1
+    while abs(ok - ng) > 1:
+        wj = (ok + ng) // 2
 
-    # ai = 0の場合への対処
-    ans += count[0] * (n - count[0])
+        if f(wj):
+            ok = wj
+        else:
+            ng = wj
 
-    print(ans)
+    print(ok)
 
 
 if __name__ == "__main__":
