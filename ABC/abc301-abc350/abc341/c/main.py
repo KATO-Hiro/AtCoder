@@ -10,7 +10,6 @@ def main():
     t = input().rstrip()
     s = [list(input().rstrip()) for _ in range(h)]
     ans = 0
-    dir = {"L": (0, -1), "R": (0, 1), "U": (-1, 0), "D": (1, 0)}
 
     for y in range(1, h - 1):
         for x in range(1, w - 1):
@@ -22,10 +21,14 @@ def main():
             ny, nx = y, x
 
             for ti in t:
-                dy, dx = dir[ti]
-
-                ny += dy
-                nx += dx
+                if ti == "L":
+                    nx -= 1
+                elif ti == "R":
+                    nx += 1
+                elif ti == "U":
+                    ny -= 1
+                else:
+                    ny += 1
 
                 if not (1 <= ny < h - 1):
                     ok = False
