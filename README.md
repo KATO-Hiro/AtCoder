@@ -813,6 +813,7 @@ Represents a repository of accepted results.
 |gw 2015|◯|--|--|--|--|--|--|--|--|--|None|None|
 |jsc 2021|◯|◯|◯|◯|--|--|--|--|None|None|None|None|
 |nadafes 2022 day2|--|△|--|--|--|--|--|--|--|--|-|-|
+|tupc 2023|◯|--|--|--|--|--|--|--|--|--|--|--|
 
 </details>
 
