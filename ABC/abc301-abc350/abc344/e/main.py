@@ -18,6 +18,9 @@ class DoublyLinkedList:
             self.prev[second] = first
 
     def insert(self, value_left: int, value_mid: int) -> None:
+        assert value_left in self.next.keys() and value_left in self.prev.keys()
+        assert not value_mid in self.next.keys() and not value_mid in self.prev.keys()
+
         value_right = self.next[value_left]
 
         self.next[value_left] = value_mid
@@ -27,10 +30,15 @@ class DoublyLinkedList:
         self.prev[value_mid] = value_left
 
     def remove(self, value_mid: int) -> None:
+        assert value_mid in self.next.keys() and value_mid in self.prev.keys()
+
         value_left, value_right = self.prev[value_mid], self.next[value_mid]
 
         self.next[value_left] = value_right
         self.prev[value_right] = value_left
+
+        del self.next[value_mid]
+        del self.prev[value_mid]
 
     def fetch_all_values(self) -> List:
         results = list()
