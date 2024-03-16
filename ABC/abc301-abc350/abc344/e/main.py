@@ -1,25 +1,56 @@
 # -*- coding: utf-8 -*-
 
+from collections import defaultdict
+from itertools import pairwise
+from typing import List
+
+HEAD, TAIL = 0, -1
+
+
+class DoublyLinkedList:
+
+    def __init__(self, array: List) -> None:
+        self.next = defaultdict(int)
+        self.prev = defaultdict(int)
+
+        for first, second in pairwise([HEAD] + array + [TAIL]):
+            self.next[first] = second
+            self.prev[second] = first
+
+    def insert(self, value_left: int, value_mid: int) -> None:
+        value_right = self.next[value_left]
+
+        self.next[value_left] = value_mid
+        self.next[value_mid] = value_right
+
+        self.prev[value_right] = value_mid
+        self.prev[value_mid] = value_left
+
+    def remove(self, value_mid: int) -> None:
+        value_left, value_right = self.prev[value_mid], self.next[value_mid]
+
+        self.next[value_left] = value_right
+        self.prev[value_right] = value_left
+
+    def fetch_all_values(self) -> List:
+        results = list()
+        pos = HEAD
+
+        while self.next[pos] != TAIL:
+            results.append(self.next[pos])
+            pos = self.next[pos]
+
+        return results
+
 
 def main():
     import sys
-    from collections import defaultdict
 
     input = sys.stdin.readline
 
     n = int(input())
     a = list(map(int, input().split()))
-    next = defaultdict(int)
-    prev = defaultdict(int)
-
-    b = [0] + a + [-1]
-    c = [0] + a[::-1] + [-1]
-
-    for key, value in zip(b, b[1:]):
-        next[key] = value
-
-    for key, value in zip(c, c[1:]):
-        prev[key] = value
+    d = DoublyLinkedList(array=a)
 
     q = int(input())
 
@@ -28,37 +59,12 @@ def main():
 
         if qi[0] == 1:
             _, x, y = qi
-
-            z = next[x]
-            next[y] = z
-            next[x] = y
-
-            prev[y] = x
-            prev[z] = y
+            d.insert(x, y)
         else:
             _, x = qi
+            d.remove(x)
 
-            y, z = prev[x], next[x]
-
-            if y == -1:
-                next[0] = z
-            else:
-                next[y] = z
-
-            if z == -1:
-                prev[0] = y
-            else:
-                prev[z] = y
-
-            del prev[x]
-            del next[x]
-
-    ans = list()
-    pos = 0
-
-    while next[pos] != -1:
-        ans.append(next[pos])
-        pos = next[pos]
+    ans = d.fetch_all_values()
 
     print(*ans)
 
