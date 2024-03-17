@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
 
+def nC2(n: int):
+    return n * (n - 1) // 2
+
+
 def main():
     import sys
     from collections import Counter
@@ -8,21 +12,16 @@ def main():
     input = sys.stdin.readline
 
     s = input().rstrip()
-    t = set(s)
+    n = len(s)
     c = Counter(s)
+    same, diff = 0, 0
 
-    ans = 0
+    for value in c.values():
+        same += nC2(value)
 
-    for si in s:
-        for key, value in c.items():
-            if si == key:
-                continue
+    ans = nC2(n) - same
 
-            ans += value
-
-    ans //= 2
-
-    if len(s) != len(t):
+    if same > 0:
         ans += 1
 
     print(ans)
