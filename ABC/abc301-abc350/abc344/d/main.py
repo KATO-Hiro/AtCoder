@@ -9,41 +9,25 @@ def main():
     t = input().rstrip()
     m = len(t)
     n = int(input())
-    t2 = "?" + t[::-1] + "?" * 110
+    dp = {"": 0}
+    inf = 10**9
 
-    inf = 10**18
-    dp = [inf] * 220
-    dp[0] = 0
-    s = [tuple(map(str, input().split())) for _ in range(n)][::-1]
+    for _ in range(n):
+        ndp = dp.copy()
+        __, *si = list(map(str, input().rstrip().split()))
 
-    for _s in s:
-        _, *si = _s
-        ndp = dp[:]
+        for u, cost in dp.items():
+            for sij in si:
+                nu = u + sij
 
-        for sij in si:
-            sij = sij[::-1]
+                if not t.startswith(nu):
+                    continue
 
-            for start in range(1, m + 1):
-                ok = True
-
-                for k, sijk in enumerate(sij):
-                    if t2[start + k] != sijk:
-                        ok = False
-                        break
-
-                if ok:
-                    size = len(sij)
-                    ndp[start + size - 1] = min(
-                        dp[start - 1] + 1, ndp[start + size - 1]
-                    )
+                ndp[nu] = min(ndp.get(nu, inf), cost + 1)
 
         dp = ndp
 
-    ans = dp[m]
-
-    if ans >= inf:
-        ans = -1
-
+    ans = dp.get(t, -1)
     print(ans)
 
 
