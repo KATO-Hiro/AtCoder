@@ -657,6 +657,7 @@ Represents a repository of accepted results.
 |joig 2022 open|◯|◯|◯|△|--|--|
 |joigsc 2022 |△|--|--|--|--|--|
 |joig 2023 open|◯|◯|◯|--|--|--|
+|joig 2024 open|--|◯|--|--|--|--|
 |caddi2018b|◯|◯|△|△|--|--|
 |hack to the future 2018 qual|◯|None|None|None|None|None|
 |hack to the future 2020 qual|△|None|None|None|None|None|
