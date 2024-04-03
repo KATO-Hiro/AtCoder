@@ -753,6 +753,7 @@ Represents a repository of accepted results.
 |paken camp 2021 day3|◯|◯|--|--|--|--|--|--|--|--|--|--|
 |paken 2022 day1|◯|--|--|--|--|--|--|--|--|--|--|--|
 |paken camp 2023 day1|◯|--|◯|--|--|--|--|--|--|--|--|--|
+|paken camp 2023 day2|◯|--|--|--|--|--|--|--|--|--|--|--|
 |xmascon18|◯|--|--|--|--|--|--|--|--|--|None|None|
 |xmascon21|--|△|--|--|--|--|--|--|--|--|None|None|
 |Educational DP Contest|◯|◯|△|△|△|△|△|△|△|--|△|--|
