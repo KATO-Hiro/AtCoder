@@ -10,13 +10,12 @@ def main():
     s = input().rstrip()
     c = Counter(s)
     d = Counter(c.values())
+    flag = all([value == 2 for value in d.values()])
 
-    for value in d.values():
-        if not (value == 0 or value == 2):
-            print("No")
-            exit()
-
-    print("Yes")
+    if flag:
+        print("Yes")
+    else:
+        print("No")
 
 
 if __name__ == "__main__":
