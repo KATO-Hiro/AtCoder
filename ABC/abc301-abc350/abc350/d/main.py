@@ -98,7 +98,6 @@ class UnionFind:
 
 def main():
     import sys
-    from collections import defaultdict
 
     input = sys.stdin.readline
 
@@ -106,6 +105,7 @@ def main():
     graph = [[] for _ in range(n)]
     uf = UnionFind(n)
 
+    # 各連結成分に対して、取りうる辺の最大数 - 元々の辺の数
     for _ in range(m):
         ai, bi = map(int, input().split())
         ai -= 1
@@ -117,27 +117,14 @@ def main():
         if not uf.is_same_group(ai, bi):
             uf.merge_if_needs(ai, bi)
 
-    d = defaultdict(set)
-
-    for i in range(n):
-        root = uf.find_root(i)
-        d[root].add(i)
-
     ans = 0
 
-    for root, nodes in d.items():
+    for root in uf.get_roots():
         size = uf.get_group_size(root)
-        m = size * (size - 1) // 2
-        count = 0
+        count = size * (size - 1) // 2  # nC2
+        ans += count
 
-        for node in nodes:
-            count += len(graph[node])
-
-        count //= 2
-
-        ans += m - count
-
-    print(ans)
+    print(ans - m)
 
 
 if __name__ == "__main__":
