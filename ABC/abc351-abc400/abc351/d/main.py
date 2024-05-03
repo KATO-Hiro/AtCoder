@@ -15,6 +15,7 @@ class UnionFind:
     https://en.wikipedia.org/wiki/Disjoint-set_data_structure
     https://atcoder.jp/contests/abc120/submissions/4444942
     https://atcoder.jp/contests/abc292/submissions/39410075
+    https://github.com/not522/ac-library-python/blob/master/atcoder/dsu.py
     """
 
     def __init__(self, number_count: int) -> None:
@@ -22,6 +23,7 @@ class UnionFind:
         Args:
             number_count: The size of elements (greater than 2).
         """
+        self.number_count = number_count
         self.parent_numbers = [-1 for _ in range(number_count)]
         self.edge_count = [0 for _ in range(number_count)]
         self.group_count = number_count
@@ -89,6 +91,15 @@ class UnionFind:
     def get_roots(self) -> List[int]:
         return [i for i, x in enumerate(self.parent_numbers) if x < 0]
 
+    def get_groups(self) -> List[List[int]]:
+        roots: List[int] = [self.find_root(i) for i in range(self.number_count)]
+        groups: List[List[int]] = [[] for _ in range(self.number_count)]
+
+        for i in range(self.number_count):
+            groups[roots[i]].append(i)
+
+        return list(filter(lambda g: g, groups))
+
     def get_edge_count(self, number: int) -> int:
         return self.edge_count[number]
 
@@ -140,6 +151,13 @@ class UnionFind2D:
     def get_roots(self) -> List[int]:
         return self.uf.get_roots()
 
+    def get_groups(self) -> List[List[int]]:
+        """
+        Returns:
+            List of trees id (0-index).
+        """
+        return self.uf.get_groups()
+
     def get_edge_count(self, x: int, y: int) -> int:
         assert 0 <= x < self.width
         assert 0 <= y < self.height
@@ -172,7 +190,6 @@ class UnionFind2D:
 
 def main():
     import sys
-    from collections import defaultdict
 
     input = sys.stdin.readline
 
@@ -206,29 +223,15 @@ def main():
                 if 0 <= nx < w and 0 <= ny < h and s[ny][nx] == ".":
                     uf.merge_if_needs(j, i, nx, ny)
 
-    # !を起点として、どの連結成分と隣接しているか調べる
-    roots = defaultdict(int)
-
-    for root in uf.get_roots():
-        y, x = uf._to_yx(root)
-        roots[(y, x)] = uf.get_group_size(x, y)
-
-    groups = defaultdict(set)
-
-    # 連結成分の要素を列挙
-    for i in range(h):
-        for j in range(w):
-            root = uf.find_root(j, i)
-            y, x = uf._to_yx(root)
-            groups[(y, x)].add((i, j))
-
+    # 空きマスの連結成分に対して、周囲にある!の個数を調べる
     ans = 1
 
-    for group in groups.values():
+    for group in uf.get_groups():
         root_yx = set()
 
-        # 空きマスの連結成分に対して、周囲にある!の個数を調べる
-        for y, x in group:
+        for g in group:
+            y, x = uf._to_yx(g)
+
             if s[y][x] != ".":
                 continue
 
@@ -236,9 +239,7 @@ def main():
                 nx, ny = x + dx, y + dy
 
                 if 0 <= nx < w and 0 <= ny < h and s[ny][nx] == "!":
-                    root = uf.find_root(nx, ny)
-                    root_y, root_x = uf._to_yx(root)
-                    root_yx.add((root_y, root_x))
+                    root_yx.add((ny, nx))
 
         # 着目している連結成分のサイズ +  周囲にある!の個数 (重複カウントしないように注意)
         ans = max(ans, len(group) + len(root_yx))
