@@ -159,6 +159,16 @@ class UnionFind2D:
         """
         return x + self.width * y
 
+    def _to_yx(self, number: int) -> tuple[int, int]:
+        """
+        Args:
+            The trees id (0-index).
+
+        Returns:
+            y, x: Coordinates in grid (0-index).
+        """
+        return divmod(number, self.width)
+
 
 def main():
     import sys
@@ -200,7 +210,7 @@ def main():
     roots = defaultdict(int)
 
     for root in uf.get_roots():
-        y, x = divmod(root, w)
+        y, x = uf._to_yx(root)
         roots[(y, x)] = uf.get_group_size(x, y)
 
     groups = defaultdict(set)
@@ -209,28 +219,30 @@ def main():
     for i in range(h):
         for j in range(w):
             root = uf.find_root(j, i)
-            y, x = divmod(root, w)
+            y, x = uf._to_yx(root)
             groups[(y, x)].add((i, j))
 
-    for group in groups.values():
-        for y, x in group:
-            if s[y][x] != "!":
-                continue
+    ans = 1
 
-            root_yx = set()
+    for group in groups.values():
+        root_yx = set()
+
+        # 空きマスの連結成分に対して、周囲にある!の個数を調べる
+        for y, x in group:
+            if s[y][x] != ".":
+                continue
 
             for dx, dy in dxy:
                 nx, ny = x + dx, y + dy
 
-                if 0 <= nx < w and 0 <= ny < h and s[ny][nx] == ".":
+                if 0 <= nx < w and 0 <= ny < h and s[ny][nx] == "!":
                     root = uf.find_root(nx, ny)
-                    root_y, root_x = divmod(root, w)
+                    root_y, root_x = uf._to_yx(root)
                     root_yx.add((root_y, root_x))
 
-            for root_y, root_x in root_yx:
-                roots[(root_y, root_x)] += 1
+        # 着目している連結成分のサイズ +  周囲にある!の個数 (重複カウントしないように注意)
+        ans = max(ans, len(group) + len(root_yx))
 
-    ans = max(roots.values())
     print(ans)
 
 
