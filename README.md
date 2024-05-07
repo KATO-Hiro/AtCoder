@@ -821,7 +821,6 @@ Represents a repository of accepted results.
 |past 2023 09 open|◯|◯|◯|◯|◯|◯|--|--|--|--|--|--|
 |past 2023 12 open|--|--|--|--|◯|--|--|--|--|--|--|--|
 |language test 1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
-|language test 1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
 |practice 2|◯|◯|◯|--|--|--|◯|--|--|△|--|--|
 |fuka 5th|◯|--|--|--|--|--|--|None|None|None|None|None|
 |gw 2015|◯|--|--|--|--|--|--|--|--|--|None|None|
