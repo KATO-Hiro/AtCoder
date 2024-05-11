@@ -18,18 +18,21 @@ def main():
         pi -= 1
         graph[pi].append(i)
 
+    # See:
+    # https://atcoder.jp/contests/past17-open/submissions/53272179
     def dfs(i):
-        for g in graph[i]:
-            dfs(g)
+        if s[i] == "+":
+            a, b = graph[i]
+            result = (dfs(a) + dfs(b)) % mod
+        elif s[i] == "x":
+            a, b = graph[i]
+            result = (dfs(a) * dfs(b)) % mod
+        else:
+            result = int(s[i])
 
-        if len(graph[i]) == 2:
-            if s[i] == "+":
-                s[i] = str((int(s[graph[i][0]]) + int(s[graph[i][1]])) % mod)
-            else:
-                s[i] = str((int(s[graph[i][0]]) * int(s[graph[i][1]])) % mod)
+        return result
 
-    dfs(0)
-    print(int(s[0]))
+    print(dfs(0))
 
 
 if __name__ == "__main__":
