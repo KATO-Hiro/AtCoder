@@ -10,18 +10,11 @@ def main():
     n, m = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-    c = []
+    c = a + b
+    a = set(a)
 
-    for ai in a:
-        c.append((ai, 0))
-
-    for bj in b:
-        c.append((bj, 1))
-
-    c.sort()
-
-    for (ci, i), (cj, j) in pairwise(c):
-        if i == j == 0:
+    for ci, cj in pairwise(sorted(c)):
+        if ci in a and cj in a:
             print("Yes")
             exit()
 
