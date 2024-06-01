@@ -3,7 +3,6 @@
 
 def main():
     import sys
-    from itertools import product
 
     input = sys.stdin.readline
 
@@ -22,19 +21,20 @@ def main():
 
     ans = 0
 
-    for pattern in product([0, 1], repeat=n):
-        matched = 0
+    for bit in range(1 << n):
+        ok = True
 
         for i in range(m):
             count = 0
 
             for aij in a[i]:
-                count += pattern[aij - 1]
+                if bit & (1 << (aij - 1)):
+                    count += 1
 
-            if (count >= k and is_open[i]) or (count < k and not is_open[i]):
-                matched += 1
+            if (count >= k) != is_open[i]:
+                ok = False
 
-        if matched == m:
+        if ok:
             ans += 1
 
     print(ans)
