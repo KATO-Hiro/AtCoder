@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 
-import numpy as np
 
+def f(grid):
+    results = []
+    size = len(grid)
 
-def fractal(s, k, n):
-    if k == n:
-        return s
-    else:
-        s = np.tile(s, (1, 1))
-        array1 = np.hstack((s, s, s))
+    for g in grid:
+        results.append(g * 3)
 
-        white = np.full((s.shape[0], s.shape[1]), ".")
-        array2 = np.hstack((s, white, s))
-        array = np.vstack((array1, array2, array1))
+    for g in grid:
+        results.append(g + ["."] * size + g)
 
-        return fractal(array, k + 1, n)
+    for g in grid:
+        results.append(g * 3)
+
+    return results
 
 
 def main():
@@ -23,11 +23,13 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    s = np.array([["#"]])
-    result = fractal(s, 0, n)
+    s = [["#"]]
 
-    for res in result:
-        print("".join(res))
+    for _ in range(n):
+        s = f(s)
+
+    for si in s:
+        print("".join(si))
 
 
 if __name__ == "__main__":
