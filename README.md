@@ -471,7 +471,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 146|△|--|--|--|--|--|
 |AtCoder Regular Contest 153|◯|--|--|--|--|--|
 |AtCoder Regular Contest 167|◯|--|--|--|--|--|
-|AtCoder Regular Contest 177|◯|--|--|--|--|--|
+|AtCoder Regular Contest 177|◯|◯|--|--|--|--|
 
 </details>
 
