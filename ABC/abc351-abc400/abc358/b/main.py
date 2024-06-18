@@ -9,18 +9,11 @@ def main():
     n, a = map(int, input().split())
     t = list(map(int, input().split()))
     prev = 0
-    ans = list()
 
     for ti in t:
-        if ti >= prev:
-            u = ti + a
-            ans.append(u)
-            prev = u
-        else:
-            prev += a
-            ans.append(prev)
-
-    print("\n".join(map(str, ans)))
+        ans = max(prev, ti) + a
+        print(ans)
+        prev = ans
 
 
 if __name__ == "__main__":
