@@ -467,6 +467,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 131|--|◯|--|--|--|--|
 |AtCoder Regular Contest 132|△|--|--|--|--|--|
 |AtCoder Regular Contest 133|△|--|--|--|--|--|
+|AtCoder Regular Contest 134|◯|--|--|--|--|--|
 |AtCoder Regular Contest 136|△|--|--|--|--|--|
 |AtCoder Regular Contest 144|△|--|--|--|--|--|
 |AtCoder Regular Contest 146|△|--|--|--|--|--|
