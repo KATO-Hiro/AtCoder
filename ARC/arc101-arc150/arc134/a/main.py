@@ -12,7 +12,7 @@ def main():
     input = sys.stdin.readline
 
     n, l, w = map(int, input().split())
-    a = list(map(int, input().split()))
+    a = list(map(int, input().split())) + [l]
     ans = 0
 
     for ai, aj in pairwise(a):
@@ -21,8 +21,6 @@ def main():
 
     if a[0] != 0:
         ans += ceil(a[0], w)
-    if a[-1] != l:
-        ans += ceil(l - (a[-1] + w), w)
 
     print(ans)
 
