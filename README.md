@@ -376,6 +376,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 358|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 359|◯|◯|△|--|--|--|--|--|
 |AtCoder Beginner Contest 360|◯|◯|◯|△|--|--|--|--|
+|AtCoder Beginner Contest 361|--|--|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 36x|--|--|--|--|--|--|--|--|
 
 </details>
