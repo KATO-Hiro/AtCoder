@@ -48,13 +48,7 @@ def main():
         if len(prime) == 1:
             print("No")
         else:
-            for key, value in prime.items():
-                n -= key**value
-
-            if n >= 0:
-                print("Yes")
-            else:
-                print("No")
+            print("Yes")
 
 
 if __name__ == "__main__":
