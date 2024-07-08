@@ -8,11 +8,7 @@ def main():
 
     n, k, x = map(int, input().split())
     a = list(map(int, input().split()))
-
-    if n == k:
-        a = a + [x]
-    else:
-        a = a[:k] + [x] + a[k:]
+    a.insert(k, x)
 
     print(*a)
 
