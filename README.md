@@ -369,7 +369,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 351|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 352|◯|◯|◯|◯|△|--|--|--|
 |AtCoder Beginner Contest 353|◯|◯|△|◯|△|--|--|--|
-|AtCoder Beginner Contest 354|◯|◯|◯|--|--|--|--|--|
+|AtCoder Beginner Contest 354|◯|◯|◯|--|△|--|--|--|
 |AtCoder Beginner Contest 355|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 356|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 357|◯|◯|◯|△|--|--|--|--|
