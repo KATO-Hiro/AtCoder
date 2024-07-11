@@ -4,36 +4,22 @@
 def main():
     import sys
 
+    sys.set_int_max_str_digits(0)
+
     input = sys.stdin.readline
 
     n = int(input())
-    a = input().rstrip()
-    b = input().rstrip()
-    small, large = list(), list()
+    a = list(input().rstrip())
+    b = list(input().rstrip())
 
-    for ai, bi in zip(a, b):
-        if ai > bi:
-            small.append(bi)
-            large.append(ai)
-        else:
-            small.append(ai)
-            large.append(bi)
+    for i in range(n):
+        if a[i] > b[i]:
+            a[i], b[i] = b[i], a[i]
 
     mod = 998244353
-    d1, d2 = 1, 1
-    a2, b2 = 0, 0
-
-    for si in small[::-1]:
-        a2 += d1 * int(si) % mod
-        d1 *= 10
-        d1 %= mod
-
-    for lj in large[::-1]:
-        b2 += d2 * int(lj) % mod
-        d2 *= 10
-        d2 %= mod
-
-    ans = a2 * b2 % mod
+    a = int("".join(a)) % mod
+    b = int("".join(b)) % mod
+    ans = a * b % mod
     print(ans)
 
 
