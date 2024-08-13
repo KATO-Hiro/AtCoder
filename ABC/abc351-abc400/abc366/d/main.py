@@ -44,37 +44,23 @@ def main():
 
     input = sys.stdin.readline
 
-    size = 10**2  # FIXME: Update value if needs.
     n = int(input())
     cs = []
 
     for _ in range(n):
-        array = [[0 for _ in range(size + 10)] for _ in range(size + 10)]
-
-        for y in range(n):
-            ay = list(map(int, input().split()))
-
-            for z, ayz in enumerate(ay):
-                array[y][z] = ayz
-
-        c = CumulativeSum2d(array)
-        cs.append(c)
+        array = [list(map(int, input().split())) for _ in range(n)]
+        cs.append(CumulativeSum2d(array))
 
     q = int(input())
-    ans = list()
 
     for _ in range(q):
         lxi, rxi, lyi, ryi, lzi, rzi = map(int, input().split())
-        candidate = 0
+        ans = 0
 
         for x in range(lxi - 1, rxi):
-            cx = cs[x]
-            candidate += cx.query(lzi - 1, lyi - 1, rzi, ryi)
+            ans += cs[x].query(lzi - 1, lyi - 1, rzi, ryi)
 
-        ans.append(candidate)
-
-    for ans_i in ans:
-        print(ans_i)
+        print(ans)
 
 
 if __name__ == "__main__":
