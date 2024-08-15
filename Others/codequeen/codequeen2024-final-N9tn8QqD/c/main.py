@@ -15,18 +15,15 @@ def main():
 
     for _ in range(k):
         ndp = [inf] * (n + 10)
-        candidate = inf
 
-        for i in range(n + 1):
-            j = i + t
-
-            if dp[i] == inf:
+        # 貰うDP
+        for i in range(t, n + 1):
+            if dp[i - t] == inf:
                 continue
-            if j > n:
-                break
 
-            candidate = min(candidate, dp[i] + q[j] - q[i])
-            ndp[j] = min(ndp[j], candidate)
+            ndp[i] = min(ndp[i], dp[i - t] + q[i] - q[i - t])
+            # 直前の降車時刻の結果と比較
+            ndp[i] = min(ndp[i], ndp[i - 1])
 
         dp = ndp
 
