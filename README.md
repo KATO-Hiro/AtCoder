@@ -755,7 +755,7 @@ Represents a repository of accepted results.
 |monamieHB 2021|△|--|--|--|--|--|
 |genocon 2021|◯|--|--|--|None|None|
 |codequeen2023 final open 2023|◯|◯|◯|--|--|--|
-|codequeen2024 final|--|◯|◯|△|--|--|
+|codequeen2024 final|◯|◯|◯|△|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
