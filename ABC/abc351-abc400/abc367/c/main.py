@@ -10,12 +10,10 @@ input = sys.stdin.readline
 n, k = map(int, input().split())
 r = list(map(int, input().split()))
 
-ans = list()
-
 
 def dfs(a, i):
     if len(a) == n and sum(a) % k == 0:
-        ans.append(a.copy())
+        print(*a)
         return
 
     if i >= n:
@@ -28,6 +26,3 @@ def dfs(a, i):
 
 
 dfs([], 0)
-
-for ans_i in ans:
-    print(*ans_i)
