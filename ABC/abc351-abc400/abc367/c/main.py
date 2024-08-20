@@ -12,11 +12,10 @@ r = list(map(int, input().split()))
 
 
 def dfs(a, i):
-    if len(a) == n and sum(a) % k == 0:
-        print(*a)
-        return
+    if len(a) == n:
+        if sum(a) % k == 0:
+            print(*a)
 
-    if i >= n:
         return
 
     for value in range(1, r[i] + 1):
