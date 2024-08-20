@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-# -*- coding: utf-8 -*-
-
-
 def main():
     import sys
     from itertools import product
