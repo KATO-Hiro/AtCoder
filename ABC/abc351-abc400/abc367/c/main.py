@@ -1,27 +1,23 @@
 # -*- coding: utf-8 -*-
 
 
-import sys
-
-sys.setrecursionlimit(10**8)
-
-input = sys.stdin.readline
-
-n, k = map(int, input().split())
-r = list(map(int, input().split()))
+# -*- coding: utf-8 -*-
 
 
-def dfs(a, i):
-    if len(a) == n:
-        if sum(a) % k == 0:
-            print(*a)
+def main():
+    import sys
+    from itertools import product
 
-        return
+    input = sys.stdin.readline
 
-    for value in range(1, r[i] + 1):
-        a.append(value)
-        dfs(a, i + 1)
-        a.pop()
+    n, k = map(int, input().split())
+    r = list(map(int, input().split()))
+    a = [range(1, ri + 1) for ri in r]
+
+    for pi in product(*a):
+        if sum(pi) % k == 0:
+            print(*pi)
 
 
-dfs([], 0)
+if __name__ == "__main__":
+    main()
