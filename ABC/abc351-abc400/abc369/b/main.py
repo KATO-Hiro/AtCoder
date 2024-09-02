@@ -1,31 +1,38 @@
 # -*- coding: utf-8 -*-
 
 
+def f(array):
+    from itertools import pairwise
+
+    if len(array) <= 1:
+        return 0
+
+    summed = 0
+
+    for ai, aj in pairwise(array):
+        summed += abs(aj - ai)
+
+    return summed
+
+
 def main():
     import sys
 
     input = sys.stdin.readline
 
     n = int(input())
-    b = [tuple(input().rstrip().split()) for _ in range(n)]
-    ans = 10**9
+    left, right = [], []
 
-    for left in range(1, 100 + 1):
-        for right in range(1, 100 + 1):
-            candidate = 0
-            prev_left, prev_right = left, right
+    for _ in range(n):
+        ai, si = input().rstrip().split()
+        ai = int(ai)
 
-            for ai, si in b:
-                ai = int(ai)
+        if si == "L":
+            left.append(ai)
+        else:
+            right.append(ai)
 
-                if si == "L":
-                    candidate += abs(ai - prev_left)
-                    prev_left = ai
-                else:
-                    candidate += abs(ai - prev_right)
-                    prev_right = ai
-
-            ans = min(ans, candidate)
+    ans = f(left) + f(right)
 
     print(ans)
 
