@@ -8,29 +8,27 @@ def main():
 
     n = int(input())
     a = list(map(int, input().split()))
-    # [逃す / 倒す][倒した数 % 2]
+    # [倒した数 % 2]
     inf = 10**18
-    dp = [[-inf for _ in range(2)] for _ in range(2)]
-    dp[0][0] = 0
+    dp = [-inf for _ in range(2)]
+    dp[0] = 0
 
     for ai in a:
-        ndp = [[-inf for _ in range(2)] for _ in range(2)]
+        ndp = [-inf for _ in range(2)]
 
-        # 逃す
-        ndp[0][0] = max(ndp[0][0], dp[0][0], dp[1][0])
-        ndp[0][1] = max(ndp[0][1], dp[0][1], dp[1][1])
+        for j in range(2):
+            # 逃す
+            nj = j
+            ndp[nj] = max(ndp[nj], dp[j])
 
-        # 倒す
-        ndp[1][1] = max(ndp[1][1], max(dp[0][0], dp[1][0]) + ai)
-        ndp[1][0] = max(ndp[1][0], max(dp[0][1], dp[1][1]) + 2 * ai)
+            # 倒す
+            nj = j ^ 1  # xorを使って反転させる
+            x = ai * 2 if nj % 2 == 0 else ai
+            ndp[nj] = max(ndp[nj], dp[j] + x)
 
         dp = ndp
 
-    ans = 0
-
-    for dp_i in dp:
-        ans = max(ans, max(dp_i))
-
+    ans = max(dp)
     print(ans)
 
 
