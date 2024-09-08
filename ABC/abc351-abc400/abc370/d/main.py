@@ -189,6 +189,11 @@ def main():
     rows = [SortedSet(range(w)) for _ in range(h)]
     cols = [SortedSet(range(h)) for _ in range(w)]
 
+    # 共通の処理をまとめておく
+    def discard(row: int, col: int):
+        rows[row].discard(col)
+        cols[col].discard(row)
+
     for _ in range(q):
         ri, ci = map(int, input().split())
         ri -= 1
@@ -197,50 +202,29 @@ def main():
         row, col = rows[ri], cols[ci]
 
         if ci in row:
-            row.discard(ci)
-            col.discard(ri)
+            discard(ri, ci)
         else:
             # 行方向
-            row_lower = row.lt(ci)
-
-            if row_lower is not None:
-                row.discard(row_lower)
-
-                col_lower = cols[row_lower]
-
-                if ri in col_lower:
-                    col_lower.discard(ri)
-
-            row_upper = row.gt(ci)
-
-            if row_upper is not None:
-                row.discard(row_upper)
-
-                col_upper = cols[row_upper]
-
-                if ri in col_upper:
-                    col_upper.discard(ri)
-
-            # 列方向
-            col_lower = col.lt(ri)
+            col_lower = row.lt(ci)
 
             if col_lower is not None:
-                col.discard(col_lower)
+                discard(ri, col_lower)
 
-                row_lower = rows[col_lower]
-
-                if ci in row_lower:
-                    row_lower.discard(ci)
-
-            col_upper = col.gt(ri)
+            col_upper = row.gt(ci)
 
             if col_upper is not None:
-                col.discard(col_upper)
+                discard(ri, col_upper)
 
-                row_upper = rows[col_upper]
+            # 列方向
+            low_lower = col.lt(ri)
 
-                if ci in row_upper:
-                    row_upper.discard(ci)
+            if low_lower is not None:
+                discard(low_lower, ci)
+
+            low_upper = col.gt(ri)
+
+            if low_upper is not None:
+                discard(low_upper, ci)
 
     ans = 0
 
