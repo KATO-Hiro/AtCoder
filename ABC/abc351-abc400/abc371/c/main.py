@@ -1,6 +1,27 @@
 # -*- coding: utf-8 -*-
 
 
+def read_graph(n):
+    from collections import defaultdict
+
+    m = int(input())
+    g = defaultdict(bool)
+
+    for i in range(n):
+        for j in range(n):
+            g[(i, j)] = False
+
+    for _ in range(m):
+        ui, vi = map(int, input().split())
+        ui -= 1
+        vi -= 1
+
+        g[(ui, vi)] = True
+        g[(vi, ui)] = True
+
+    return g
+
+
 def main():
     import sys
     from collections import defaultdict
@@ -9,23 +30,8 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    mg = int(input())
-    uv = set()
-
-    for _ in range(mg):
-        ui, vi = map(int, input().split())
-        ui -= 1
-        vi -= 1
-        uv.add((ui, vi))
-
-    mh = int(input())
-    ab = set()
-
-    for _ in range(mh):
-        ai, bi = map(int, input().split())
-        ai -= 1
-        bi -= 1
-        ab.add((ai, bi))
+    g = read_graph(n)
+    h = read_graph(n)
 
     a = defaultdict(int)
 
@@ -34,8 +40,7 @@ def main():
 
         for j, aij in enumerate(ai, i + 1):
             a[(i, j)] = aij
-
-    # print(a)
+            a[(j, i)] = aij
 
     inf = 10**18
     ans = inf
@@ -43,25 +48,10 @@ def main():
     for pattern in permutations(range(n)):
         cost = 0
 
-        # グラフGのみに存在する場合は、グラフHに辺を追加
-        for ui, vi in uv:
-            pui, pvi = pattern[ui], pattern[vi]
-
-            if pui > pvi:
-                pui, pvi = pvi, pui
-
-            if (pui, pvi) not in ab:
-                cost += a[(pui, pvi)]
-
-        # グラフHのみに存在する場合は、グラフHから辺を削除
-        for ai, bi in ab:
-            index_ai, index_bi = pattern.index(ai), pattern.index(bi)
-
-            if index_ai > index_bi:
-                index_ai, index_bi = index_bi, index_ai
-
-            if (index_ai, index_bi) not in uv:
-                cost += a[(ai, bi)]
+        for i in range(n):
+            for j in range(i + 1, n):
+                if h[(i, j)] != g[(pattern[i], pattern[j])]:
+                    cost += a[(i, j)]
 
         ans = min(ans, cost)
 
