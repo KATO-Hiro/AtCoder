@@ -8,7 +8,7 @@ def main():
 
     s = input().rstrip()
 
-    if s[-3:] == "san":
+    if s.endswith("san"):
         print("Yes")
     else:
         print("No")
