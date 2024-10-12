@@ -7,33 +7,22 @@ def main():
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
-    x = list(map(int, input().split()))
+    x = list(map(lambda xi: int(xi) - 1, input().split()))
     a = list(map(int, input().split()))
 
-    digit = 60  #  k = 10 ** 18 < 2 ** 60
-    dp = [[0 for _ in range(n + 1)] for _ in range(digit)]
+    def prod(x, y):
+        return [y[xi] for xi in x]
 
-    # Doubling
-    for i in range(1, n + 1):
-        dp[0][i] = x[i - 1]  # TODO: Update value.
+    b = list(range(n))
 
-    for d in range(1, digit):
-        for j in range(n + 1):
-            dp[d][j] = dp[d - 1][dp[d - 1][j]]
+    while k > 0:
+        if k & 1:
+            b = prod(b, x)
 
-    ans = list()
+        k >>= 1
+        x = prod(x, x)  # Doubling
 
-    # Find the result of the k-th operation.
-    for j in range(1, n + 1):
-        u = j
-
-        for di in range(digit):
-            if (k >> di) & 1:
-                u = dp[di][u]
-
-        ans.append(a[u - 1])
-
-    print(*ans)
+    print(*prod(b, a))
 
 
 if __name__ == "__main__":
