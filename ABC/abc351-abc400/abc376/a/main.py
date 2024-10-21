@@ -8,14 +8,12 @@ def main():
 
     n, c = map(int, input().split())
     t = list(map(int, input().split()))
-    prev = t[0]
-    ans = 1
+    inf = 10**9
+    prev = -inf
+    ans = 0
 
-    for i, ti in enumerate(t):
-        if i == 0:
-            continue
-
-        if ti - prev >= c:
+    for ti in t:
+        if prev + c <= ti:
             ans += 1
             prev = ti
 
