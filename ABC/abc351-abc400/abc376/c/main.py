@@ -25,14 +25,11 @@ def main():
 
         return flag
 
-    ans = inf
-
     while abs(ok - ng) > 1:
         wj = (ok + ng) // 2
 
         if f(wj):
             ok = wj
-            ans = min(ans, ok)
         else:
             ng = wj
 
