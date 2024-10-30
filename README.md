@@ -392,7 +392,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 374|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 375|◯|◯|◯|△|△|--|--|--|
 |AtCoder Beginner Contest 376|◯|--|△|△|△|--|--|--|
-|AtCoder Beginner Contest 377|--|◯|◯|△|--|--|--|--|
+|AtCoder Beginner Contest 377|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 37x|--|--|--|--|--|--|--|--|
 
 </details>
