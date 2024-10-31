@@ -697,7 +697,7 @@ Represents a repository of accepted results.
 |joi 2024 yo 1c|◯|◯|◯|◯|None|None|
 |joi 2024 yo 2|◯|--|--|--|--|None|
 |joi 2025 yo 1a|--|◯|◯|◯|None|None|
-|joi 2025 yo 1b|--|◯|◯|◯|None|None|
+|joi 2025 yo 1b|◯|◯|◯|◯|None|None|
 |joig 2021 open|◯|◯|◯|△|--|--|
 |joig 2022 open|◯|◯|◯|△|--|--|
 |joigsc 2022 |△|--|--|--|--|--|
