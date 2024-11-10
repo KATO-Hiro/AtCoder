@@ -35,25 +35,12 @@ def main():
 
     n = int(input())
     s = input().rstrip()
-    plus = [0]
-    prev_plus = 0
-    minus = [0]
-    prev_minus = 0
+    prev = 0
+    ans = [0]
 
-    for i, si in enumerate(s):
-        prev_plus += int(si)
-        plus.append(prev_plus)
-
-        prev_minus += int(si) * (n - i - 1)
-        minus.append(prev_minus)
-
-    for i, plus_i in enumerate(plus):
-        plus[i] = plus_i * n
-
-    ans = list()
-
-    for pi, mi in zip(plus, minus):
-        ans.append(pi - mi)
+    for i, si in enumerate(s, 1):
+        prev += int(si) * i
+        ans.append(prev)
 
     ans = carry(n + 1, ans)
     print("".join(map(str, ans)))
