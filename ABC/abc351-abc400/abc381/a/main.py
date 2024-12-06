@@ -1,28 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-from typing import List
-
-
-def run_length_encoding(iterable: list) -> List[list]:
-    """
-    Args:
-        iterable: A list of numbers or strings.
-
-    Returns:
-        A list containing consecutive characters and their count.
-
-    See:
-    https://qiita.com/DaikiSuyama/items/07e237b7372e7c7b3432
-    """
-
-    from itertools import groupby
-
-    results = [[key, len(list(group))] for key, group in groupby(iterable)]
-
-    return results
-
-
 def main():
     import sys
 
@@ -31,24 +9,13 @@ def main():
     n = int(input())
     s = input().rstrip()
 
-    if "/" not in s:
-        print("No")
-        exit()
+    if n % 2 == 1:
+        t = "1" * (n // 2) + "/" + "2" * (n // 2)
 
-    results = run_length_encoding(list(s))
-    m = len(results)
-
-    if m == 1 and results[0][0] == "/":
-        print("Yes")
-    elif (
-        m == 3
-        and results[0][0] == "1"
-        and results[1][0] == "/"
-        and results[2][0] == "2"
-        and results[1][1] == 1
-        and results[0][1] == results[2][1]
-    ):
-        print("Yes")
+        if s == t:
+            print("Yes")
+        else:
+            print("No")
     else:
         print("No")
 
