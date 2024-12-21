@@ -877,6 +877,7 @@ Represents a repository of accepted results.
 |jsc 2021|◯|◯|◯|◯|--|--|--|--|None|None|None|None|
 |nadafes 2022 day2|--|△|--|--|--|--|--|--|--|--|-|-|
 |tupc 2023|◯|--|--|--|--|--|--|--|--|--|--|--|
+|oupc 2023 day1|◯|--|--|--|--|--|--|--|--|--|--|--|
 
 </details>
 
