@@ -27,7 +27,7 @@ def main():
     for ai in a:
         i, _ = bisect_le(a, ai // 2)  # the largest element <= x
 
-        if i is  None:
+        if i is None:
             continue
 
         ans += i + 1
