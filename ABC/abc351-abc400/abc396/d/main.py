@@ -1,44 +1,44 @@
 # -*- coding: utf-8 -*-
 
+inf = 10**20
+ans = inf
+
 
 def main():
     import sys
-    from collections import defaultdict
-    from itertools import pairwise, permutations
+
+    sys.setrecursionlimit(10**8)
 
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
-    inf = 10**20
-    weights = defaultdict(int)
+    graph = [[] for _ in range(n)]
 
     for _ in range(m):
         ai, bi, wi = map(int, input().split())
         ai -= 1
         bi -= 1
+        graph[ai].append((wi, bi))
+        graph[bi].append((wi, ai))
 
-        weights[(ai, bi)] = wi
-        weights[(bi, ai)] = wi
+    visited = [False] * n
 
-    ans = inf
+    def dfs(cur, xor_total):
+        global ans
+        visited[cur] = True
 
-    for size in range(n - 1):
-        for pattern in permutations(range(1, n - 1), size):
-            path = [0] + list(pattern) + [n - 1]
+        if cur == n - 1:
+            ans = min(ans, xor_total)
 
-            candidate = 0
-            ok = True
+        for wi, to in graph[cur]:
+            if visited[to]:
+                continue
 
-            for first, second in pairwise(path):
-                if (first, second) not in weights:
-                    ok = False
-                    break
+            dfs(to, xor_total ^ wi)
 
-                candidate ^= weights[(first, second)]
+        visited[cur] = False
 
-            if ok:
-                ans = min(ans, candidate)
-
+    dfs(0, 0)
     print(ans)
 
 
