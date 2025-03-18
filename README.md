@@ -406,7 +406,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 388|◯|◯|◯|△|△|--|--|--|
 |AtCoder Beginner Contest 389|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 390|◯|△|◯|--|△|--|--|--|
-|AtCoder Beginner Contest 391|◯|◯|◯|◯|--|--|--|--|
+|AtCoder Beginner Contest 391|◯|◯|◯|◯|△|--|--|--|
 |AtCoder Beginner Contest 392|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 393|◯|◯|◯|--|△|--|--|--|
 |AtCoder Beginner Contest 394|◯|◯|◯|◯|△|--|--|--|
