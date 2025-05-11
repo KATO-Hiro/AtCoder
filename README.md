@@ -420,6 +420,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 402|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 403|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 404|◯|◯|△|△|△|--|--|--|
+|AtCoder Beginner Contest 40x|--|--|--|◯|--|--|--|--|
 |AtCoder Beginner Contest 40x|--|--|--|--|--|--|--|--|
 
 </details>
