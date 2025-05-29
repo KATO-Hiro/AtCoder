@@ -7,18 +7,7 @@ def main():
     input = sys.stdin.readline
 
     a, b = map(int, input().split())
-
-    for x in range(10**4):
-        small = b * x
-        large = b * (x + 1)
-
-        if small <= a <= large:
-            if (a - small) < (large - a):
-                print(x)
-            else:
-                print(x + 1)
-
-            exit()
+    print(round(a / b))
 
 
 if __name__ == "__main__":
