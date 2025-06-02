@@ -423,7 +423,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 405|◯|◯|◯|◯|△|--|--|--|
 |AtCoder Beginner Contest 406|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 407|◯|◯|◯|△|--|--|--|--|
-|AtCoder Beginner Contest 408|--|--|◯|--|△|--|--|--|
+|AtCoder Beginner Contest 408|--|◯|◯|--|△|--|--|--|
 |AtCoder Beginner Contest 40x|--|--|--|--|--|--|--|--|
 
 </details>
