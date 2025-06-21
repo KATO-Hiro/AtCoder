@@ -3,7 +3,7 @@
 
 def solve():
     n = int(input())
-    s = list(input().rstrip())
+    s = input().rstrip()
 
     for i in range(1, n):
         first, second = "".join(s[:i]), "".join(s[i:])
