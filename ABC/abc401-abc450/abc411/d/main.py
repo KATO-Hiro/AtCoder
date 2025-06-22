@@ -13,7 +13,7 @@ def main():
         qi = list(input().rstrip().split())
         query, p = int(qi[0]), int(qi[1])
 
-        if qi[0] == "2":
+        if query == 2:
             qs.append((query, p, qi[2][::-1]))
         else:
             qs.append((query, p))
