@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from math import sqrt
+from math import sqrt, isqrt
 
 
 def solve(counts):
     ai = int(input())
-    bi = int(sqrt(ai))
+    bi = isqrt(ai)
 
     while counts[bi] != 2:
         bi -= 1
