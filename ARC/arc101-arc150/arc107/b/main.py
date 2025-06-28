@@ -7,7 +7,7 @@ def main():
     input = sys.stdin.readline
 
     n, k = map(int, input().split())
-    # x = a + b、y = c + d
+    # x = a + b, y = c + d
     # x - y = k
     # x を全探索
     ans = 0
