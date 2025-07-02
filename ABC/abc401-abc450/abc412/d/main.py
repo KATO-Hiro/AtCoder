@@ -18,7 +18,7 @@ def main():
         graph[ai][bi] = 1
         graph[bi][ai] = 1
 
-    edges = list(combinations(range(n), 2))
+    edges = combinations(range(n), 2)
     ans = 10**18
 
     # M本の辺からN本の辺を選ぶ問題、と言い換え
