@@ -1,74 +1,39 @@
 # -*- coding: utf-8 -*-
 
-from bisect import bisect_right
-from typing import List
-
-
-def bisect_gt(sorted_array: List[int], value: int):
-    """Find the smallest element > x and its index, or None if it doesn't exist."""
-
-    if sorted_array[-1] > value:
-        index: int = bisect_right(sorted_array, value)
-
-        return index, sorted_array[index]
-
-    return None, None
-
 
 def main():
     import sys
-    from collections import defaultdict
 
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-    ans = list()
 
-    for k in range(2):
-        d = defaultdict(list)
+    def f(a, b):
+        result = []
+        id = 0
 
         for i, ai in enumerate(a):
-            d[ai].append(i)
+            if b[id] != ai:
+                continue
 
-        id = -1
-        ok = True
-        candidate = []
+            result.append(i)
+            id += 1
 
-        for bj in b:
-            f = d[bj]
+            if len(result) == len(b):
+                return result
 
-            if len(f) == 0:
-                ok = False
-                break
+        return [-1]
 
-            j, value = bisect_gt(f, id)
+    ans1 = f(a, b)
+    ans2 = f(a[::-1], b[::-1])
+    ans2 = [n - 1 - i for i in ans2[::-1]]
 
-            if j is None or value is None:
-                ok = False
-                break
-
-            if k == 0:
-                candidate.append(value)
-            else:
-                candidate.append(n - 1 - value)
-
-            id = value
-
-        if ok:
-            if k == 1:
-                candidate = candidate[::-1]
-
-            ans.append(candidate)
-
-        a = a[::-1]
-        b = b[::-1]
-
-    if len(ans) == 2 and ans[0] != ans[1]:
-        print("Yes")
-    else:
+    if ans1 == [-1] or ans2 == [-1] or ans1 == ans2:
         print("No")
+    else:
+        print("Yes")
 
 
 if __name__ == "__main__":
