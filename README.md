@@ -546,6 +546,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 177|◯|◯|--|--|--|--|
 |AtCoder Regular Contest 179|△|--|--|--|--|--|
 |AtCoder Regular Contest 180|△|--|--|--|--|--|
+|AtCoder Regular Contest 181|△|--|--|--|--|--|
 |AtCoder Regular Contest 195|◯|--|--|--|--|--|
 |AtCoder Regular Contest 198|◯|--|--|--|--|--|
 
