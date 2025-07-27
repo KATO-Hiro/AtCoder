@@ -4,10 +4,13 @@
 def warshall_floyd(dist):
     """
     Args:
-        Distance matrix between two points.
+        dist (list[list[int]]): A 2D matrix where dist[i][j] represents the distance 
+            from vertex i to vertex j in a graph. If there is no direct edge between 
+            i and j, dist[i][j] should be set to a very large value (e.g., infinity).
 
     Returns:
-        Matrix of shortest distance.
+        list[list[int]]: The updated 2D matrix where dist[i][j] contains the shortest 
+            distance from vertex i to vertex j. The input matrix is modified in place.
 
     Landau notation: O(n ** 3).
     """
