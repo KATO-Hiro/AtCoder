@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from heapq import heappush, heappop
-
 
 def solve():
     n, m, x, y = map(int, input().split())
@@ -18,33 +16,41 @@ def solve():
         graph[ai].append(bi)
         graph[bi].append(ai)
 
-    hq = []
-    heappush(hq, [x])
-    visited = [False] * n
+    for g in graph:
+        g.sort()
 
-    while hq:
-        path = heappop(hq)
-        cur = path[-1]
+    visited = [False] * n
+    ans = []
+
+    def dfs(cur, parent=-1):
+        ans.append(cur + 1)
 
         if cur == y:
-            print(*[i + 1 for i in path])
-
-            return
-
-        if visited[cur]:
-            continue
+            return True
 
         visited[cur] = True
 
-        for to in sorted(graph[cur]):
+        for to in graph[cur]:
+            if to == parent:
+                continue
             if visited[to]:
                 continue
 
-            heappush(hq, path + [to])
+            if dfs(to, cur):
+                return True
+
+        ans.pop()
+
+        return False
+
+    dfs(x)
+    print(*ans)
 
 
 def main():
     import sys
+
+    sys.setrecursionlimit(10**6)
 
     input = sys.stdin.readline
 
