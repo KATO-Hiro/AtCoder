@@ -9,22 +9,12 @@ def main():
 
     n = int(input())
     a = list(map(int, input().split()))
-    x, y = [], []  # i + Ai, j - Aj
-
-    for i, ai in enumerate(a):
-        x.append(i + ai)
-        y.append(i - ai)
-
-    y = y[::-1]
-    count = Counter(y)
+    c = Counter()
     ans = 0
 
-    for xi in x[:-1]:
-        prev = y[-1]
-        y.pop()
-        count[prev] -= 1
-
-        ans += count[xi]
+    for i, ai in enumerate(a, 1):
+        ans += c[i - ai]
+        c[i + ai] += 1
 
     print(ans)
 
