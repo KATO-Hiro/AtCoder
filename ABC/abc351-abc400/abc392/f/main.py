@@ -67,7 +67,6 @@ def main():
 
     n = int(input())
     p = list(map(int, input().split()))
-    a = []
 
     bit = BIT(n + 10)
 
