@@ -26,7 +26,7 @@ dependencies = [
     "polars==0.15.15",
     "pulp==2.7.0",
     "pytest>=8.4.1",
-    "scikit-learn==1.2.0",
+    "scikit-learn==1.5.0",
     "scipy==1.10.1",
     "setuptools==78.1.1",
     "shapely==2.0.0",
