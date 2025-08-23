@@ -543,6 +543,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 154|◯|--|--|--|--|--|
 |AtCoder Regular Contest 156|△|--|--|--|--|--|
 |AtCoder Regular Contest 157|△|--|--|--|--|--|
+|AtCoder Regular Contest 158|△|--|--|--|--|--|
 |AtCoder Regular Contest 159|◯|--|--|--|--|--|
 |AtCoder Regular Contest 161|◯|△|--|--|--|--|
 |AtCoder Regular Contest 163|△|--|--|--|--|--|
