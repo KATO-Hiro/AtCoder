@@ -3,7 +3,6 @@
 
 def main():
     import sys
-    from collections import defaultdict
 
     input = sys.stdin.readline
 
@@ -32,14 +31,14 @@ def main():
                 if s[i][j] == "1":
                     count[i] += 1
 
-    d = defaultdict(list)
+    count_max = max(count)
+    ans = []
 
-    for i, ci in enumerate(count, 1):
-        d[ci].append(i)
+    for i in range(n):
+        if count[i] == count_max:
+            ans.append(i + 1)
 
-    d_max = max(d.keys())
-
-    print(*sorted(d[d_max]))
+    print(*ans)
 
 
 if __name__ == "__main__":
