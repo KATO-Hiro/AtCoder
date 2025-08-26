@@ -9,17 +9,12 @@ def main():
 
     n, s = map(int, input().split())
     a = list(map(int, input().split()))
-    c = Counter(a)
+    c = Counter()
     ans = 0
 
-    for key in sorted(c.keys()):
-        if s < key or s > key * 2:
-            continue
-        elif s == key * 2:
-            ci = c[key]
-            ans += ci * (ci - 1) // 2
-        else:
-            ans += c[key] * c[s - key]
+    for ai in a:
+        ans += c[s - ai]
+        c[ai] += 1
 
     print(ans)
 
