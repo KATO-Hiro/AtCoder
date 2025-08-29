@@ -435,7 +435,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 417|--|◯|◯|△|△|△|--|--|
 |AtCoder Beginner Contest 418|◯|◯|◯|△|△|--|--|--|
 |AtCoder Beginner Contest 419|--|◯|△|◯|--|--|--|--|
-|AtCoder Beginner Contest 420|--|◯|--|--|--|--|--|--|
+|AtCoder Beginner Contest 420|--|◯|△|--|--|--|--|--|
 |AtCoder Beginner Contest 42x|--|--|--|--|--|--|--|--|
 
 </details>
