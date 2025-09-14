@@ -531,7 +531,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 129|△|◯|--|--|--|--|
 |AtCoder Regular Contest 130|◯|△|--|--|--|--|
 |AtCoder Regular Contest 131|◯|◯|--|--|--|--|
-|AtCoder Regular Contest 132|△|--|--|--|--|--|
+|AtCoder Regular Contest 132|△|△|--|--|--|--|
 |AtCoder Regular Contest 133|△|--|--|--|--|--|
 |AtCoder Regular Contest 134|◯|--|--|--|--|--|
 |AtCoder Regular Contest 135|◯|--|--|--|--|--|
