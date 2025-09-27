@@ -570,6 +570,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 195|◯|--|--|--|--|--|
 |AtCoder Regular Contest 198|◯|--|--|--|--|--|
 |AtCoder Regular Contest 205|◯|--|--|--|--|--|
+|AtCoder Regular Contest 206|△|--|--|--|--|--|
 
 </details>
 
