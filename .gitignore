@@ -102,15 +102,9 @@ ENV/
 
 # Visual Studio Code
 .history/
-.vscode/
 
 # atcoder_samplecase_localtest
-samplecase/
-compile/
-patcoder.py
-patcoder_virtualdir.py
 login.txt
-setting.ini
 
 # online-judge-tools
 */test/
