@@ -1,4 +1,4 @@
 [tools]
 node = "22"
-python = "3.11.4"
+python = "3.13.7"
 uv = "latest"
