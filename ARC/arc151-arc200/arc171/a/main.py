@@ -3,12 +3,14 @@
 
 def solve():
     n, a, b = map(int, input().split())
-    c = n - a
+    c = min(n - a, (n + 1) // 2)
 
-    if (a > n) or (c**2 < b) or ((c + 1) // 2 * c < b):
+    if a > n:
         print("No")
-    else:
+    elif (n - a) * c >= b:
         print("Yes")
+    else:
+        print("No")
 
 
 def main():
