@@ -779,7 +779,7 @@ Represents a repository of accepted results.
 |joi 2025 yo 1a|◯|◯|◯|◯|None|None|
 |joi 2025 yo 1b|◯|◯|◯|◯|None|None|
 |joi 2025 yo 1c|◯|◯|◯|◯|--|None|
-|joi 2026 yo 1a|--|◯|◯|◯|None|None|
+|joi 2026 yo 1a|◯|◯|◯|◯|None|None|
 |joi 2026 yo 1b|--|◯|◯|◯|None|None|
 |joig 2021 open|◯|◯|◯|△|--|--|
 |joig 2022 open|◯|◯|◯|△|--|--|
