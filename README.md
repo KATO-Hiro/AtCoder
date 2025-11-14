@@ -550,7 +550,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 141|◯|--|--|--|--|--|
 |AtCoder Regular Contest 142|△|--|--|--|--|--|
 |AtCoder Regular Contest 144|△|--|--|--|--|--|
-|AtCoder Regular Contest 145|△|--|--|--|--|--|
+|AtCoder Regular Contest 145|△|◯|--|--|--|--|
 |AtCoder Regular Contest 146|△|--|--|--|--|--|
 |AtCoder Regular Contest 147|△|--|--|--|--|--|
 |AtCoder Regular Contest 148|△|--|--|--|--|--|
