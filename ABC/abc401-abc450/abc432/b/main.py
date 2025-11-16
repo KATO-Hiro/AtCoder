@@ -8,24 +8,16 @@ def main():
     input = sys.stdin.readline
 
     x = list(input().rstrip())
-    m = len(x)
+    ans = 10**18
 
-    patterns = list(permutations(range(m)))
-    candidates = list()
-
-    for pattern in patterns:
-        candidate = list()
-
-        for pi in pattern:
-            candidate += x[pi]
-
-        if candidate[0] == "0":
+    for pattern in permutations(x):
+        if pattern[0] == "0":
             continue
 
-        number = int("".join(candidate))
-        candidates.append(number)
+        candidate = int("".join(pattern))
+        ans = min(ans, candidate)
 
-    print(min(candidates))
+    print(ans)
 
 
 if __name__ == "__main__":
