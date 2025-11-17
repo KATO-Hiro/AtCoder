@@ -950,7 +950,7 @@ Represents a repository of accepted results.
 |past 2023 12 open|◯|--|◯|◯|◯|◯|△|△|◯|◯|--|△|
 |past 18th open|◯|◯|◯|◯|◯|◯|--|△|--|△|--|△|
 |past 19th open|◯|◯|◯|◯|△|◯|--|◯|◯|△|△|--|
-|past 20th open|--|◯|◯|◯|◯|◯|◯|--|--|--|--|--|
+|past 20th open|◯|◯|◯|◯|◯|◯|◯|--|--|--|--|--|
 |language test 1|◯|◯|◯|--|--|--|--|--|--|--|--|--|
 |practice 2|◯|◯|◯|--|--|--|◯|--|--|△|--|--|
 |fuka 5th|◯|--|--|--|--|--|--|None|None|None|None|None|
