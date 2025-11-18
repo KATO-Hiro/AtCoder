@@ -854,6 +854,7 @@ Represents a repository of accepted results.
 |codequeen2023 final open 2023|◯|◯|◯|--|--|--|
 |codequeen2024 final|◯|◯|◯|△|--|--|
 |codequeen2025 final|◯|◯|--|--|--|--|
+|highrate2025 parallell|◯|--|--|--|--|--|
 
 |Contest name\Problems|A|B|C|D|E|F|G|H|I|J|K|L|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
