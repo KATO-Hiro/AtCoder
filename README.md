@@ -444,7 +444,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 426|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 427|◯|◯|△|△|--|--|--|--|
 |AtCoder Beginner Contest 428|◯|◯|◯|--|△|--|--|--|
-|AtCoder Beginner Contest 429|--|◯|◯|--|--|--|--|--|
+|AtCoder Beginner Contest 429|◯|◯|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 430|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 431|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 432|--|◯|--|--|--|--|--|--|
