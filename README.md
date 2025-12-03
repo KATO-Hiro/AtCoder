@@ -440,14 +440,14 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 422|◯|◯|△|△|--|--|--|--|
 |AtCoder Beginner Contest 423|◯|◯|△|△|--|--|--|--|
 |AtCoder Beginner Contest 424|◯|◯|◯|--|--|--|--|--|
-|AtCoder Beginner Contest 425|◯|◯|◯|△|--|--|--|--|
+|AtCoder Beginner Contest 425|◯|◯|◯|△|△|--|--|--|
 |AtCoder Beginner Contest 426|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 427|◯|◯|△|△|--|--|--|--|
 |AtCoder Beginner Contest 428|◯|◯|◯|--|△|--|--|--|
 |AtCoder Beginner Contest 429|◯|◯|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 430|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 431|◯|◯|◯|◯|--|--|--|--|
-|AtCoder Beginner Contest 432|--|◯|--|--|--|--|--|--|
+|AtCoder Beginner Contest 432|--|◯|△|--|--|--|--|--|
 |AtCoder Beginner Contest 433|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 434|--|--|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 43x|--|--|--|--|--|--|--|--|
