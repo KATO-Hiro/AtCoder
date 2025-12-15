@@ -549,7 +549,7 @@ Represents a repository of accepted results.
 |AtCoder Regular Contest 134|◯|--|--|--|--|--|
 |AtCoder Regular Contest 135|◯|--|--|--|--|--|
 |AtCoder Regular Contest 136|△|--|--|--|--|--|
-|AtCoder Regular Contest 137|△|--|--|--|--|--|
+|AtCoder Regular Contest 137|△|△|--|--|--|--|
 |AtCoder Regular Contest 138|△|--|--|--|--|--|
 |AtCoder Regular Contest 139|△|--|--|--|--|--|
 |AtCoder Regular Contest 141|◯|--|--|--|--|--|
