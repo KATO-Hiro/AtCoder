@@ -701,7 +701,7 @@ Represents a repository of accepted results.
 |ddcc2019 qual|◯|◯|--|--|None|None|
 |ddcc2019 machine|△|△|None|None|None|None|
 |ddcc2019 final|◯|--|--|--|--|None|
-|ddcc2020 qual|◯|◯|--|--|--|--|
+|ddcc2020 qual|◯|◯|△|--|--|--|
 |bitflyer2018 qual|◯|◯|--|--|--|None|
 |bitflyer2018 final open|◯|--|--|--|--|--|
 |tenka1 2012 qual A|◯|◯|--|--|None|None|
