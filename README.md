@@ -639,6 +639,7 @@ Represents a repository of accepted results.
 |AtCoder Grand Contest 040|△|--|--|--|--|--|
 |AtCoder Grand Contest 041|△|--|--|--|--|--|
 |AtCoder Grand Contest 046|◯|--|--|--|--|--|
+|AtCoder Grand Contest 063|◯|--|--|--|--|--|
 
 </details>
 
