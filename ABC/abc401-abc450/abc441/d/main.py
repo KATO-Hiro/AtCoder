@@ -3,15 +3,10 @@
 
 def main():
     import sys
-    from collections import defaultdict
-    from itertools import pairwise
-
-    sys.setrecursionlimit(10**8)
 
     input = sys.stdin.readline
 
     n, m, l, s, t = map(int, input().split())
-    costs = defaultdict(int)
     graph = [[] for _ in range(n)]
 
     for i in range(m):
@@ -19,30 +14,30 @@ def main():
         ai -= 1
         bi -= 1
 
-        graph[ai].append((bi, i))
-        costs[(ai, bi, i)] = ci
+        graph[ai].append((bi, ci))
 
-    paths = [(0, 0)]
+    # (next node, total cost)
+    costs = [(0, 0)]
+
+    for _ in range(l):
+        ncosts = []
+
+        while costs:
+            cur, cost = costs.pop()
+
+            for to, add in graph[cur]:
+                ncosts.append((to, cost + add))
+
+        costs = ncosts
+
     ans = set()
 
-    def dfs(cur, prev=-1):
-        if len(paths) == l + 1:
-            total = 0
+    for i, cost in costs:
+        if not (s <= cost <= t):
+            continue
 
-            for (ui, i), (vj, j) in pairwise(paths):
-                total += costs[(ui, vj, j)]
+        ans.add(i + 1)
 
-            if s <= total <= t:
-                ans.add(paths[-1][0] + 1)
-
-            return
-
-        for to, j in graph[cur]:
-            paths.append((to, j))
-            dfs(to, cur)
-            paths.pop()
-
-    dfs(0)
     ans = sorted(ans)
     print(*ans)
 
