@@ -1,9 +1,25 @@
 # -*- coding: utf-8 -*-
 
 
+def get_offset(alphabet: str, base_alphabet: str = "A") -> int:
+    """Get offset between the base_alphabet and alphabet.
+
+    Args:
+        alphabet: The alphabet to use.
+        base_alphabet: The base alphabet to use.
+
+    Returns:
+        difference between the base_alphabet and alphabet.
+
+    See:
+    https://docs.python.org/3.11/library/functions.html?highlight=chr#ord
+    """
+
+    return ord(alphabet) - ord(base_alphabet)
+
+
 def main():
     import sys
-    from itertools import product
 
     input = sys.stdin.readline
 
@@ -12,33 +28,30 @@ def main():
 
     for _ in range(n):
         si, xi = map(str, input().split())
-        sx.append((si, int(xi)))
+        ti = 0
+
+        for sij in si:
+            ti |= 1 << get_offset(sij, "a")
+
+        sx.append((ti, int(xi)))
 
     ans = 0
 
-    for pattern in product([0, 1], repeat=n):
+    for bit in range(1 << n):
         cost = 0
-        t = set()
-        ok = True
+        t = 0
 
-        for i, pi in enumerate(pattern):
-            if pi == 0:
-                continue
+        for i in range(n):
+            if bit & (1 << i):
+                ti, xi = sx[i]
 
-            si, xi = sx[i]
-            cost += xi
-
-            if cost > y:
-                ok = False
-                break
-
-            for sij in si:
-                t.add(sij)
+                t |= ti
+                cost += xi
 
         if cost > y:
-            ok = False
-        if ok:
-            ans = max(ans, len(t))
+            continue
+
+        ans = max(ans, bin(t).count("1"))
 
     print(ans)
 
