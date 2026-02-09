@@ -15,24 +15,7 @@ def main():
                 if i == j or j == k or k == i:
                     continue
 
-                ok = True
-
                 if s[i] + s[j] == s[k]:
-                    pass
-                elif s[j] + s[i] == s[k]:
-                    pass
-                elif s[j] + s[k] == s[i]:
-                    pass
-                elif s[k] + s[j] == s[i]:
-                    pass
-                elif s[k] + s[i] == s[j]:
-                    pass
-                elif s[i] + s[k] == s[j]:
-                    pass
-                else:
-                    ok = False
-
-                if ok:
                     print("Yes")
                     exit()
 
