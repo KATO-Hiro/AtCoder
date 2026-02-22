@@ -12,12 +12,7 @@ def main():
     d = defaultdict(int)
 
     for ai in a:
-        prev = ai - 1
-
-        if prev in d.keys():
-            d[ai] = max(d[ai], d[prev] + 1)
-        else:
-            d[ai] = 1
+        d[ai] = max(d[ai], d[ai - 1] + 1)
 
     ans = max(d.values())
     print(ans)
