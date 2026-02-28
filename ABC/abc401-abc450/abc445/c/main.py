@@ -4,45 +4,17 @@
 def main():
     import sys
 
-    sys.setrecursionlimit(10**8)
-
     input = sys.stdin.readline
 
     n = int(input())
-    a = list(map(int, input().split()))
-    graph = [[] for _ in range(n)]
+    a = list(map(lambda x: int(x) - 1, input().split()))
+    ans = [i for i in range(n)]
 
-    for i, ai in enumerate(a):
-        ai -= 1
-        graph[i].append(ai)
+    for i in range(n - 1, -1, -1):
+        if i != a[i]:
+            ans[i] = ans[a[i]]
 
-    visited = [False] * n
-    pending = -1
-    ans = [pending] * n
-
-    def dfs(cur, prev=-1):
-        if visited[cur]:
-            return
-
-        visited[cur] = True
-
-        for to in graph[cur]:
-            if to == prev:
-                continue
-
-            dfs(to, cur)
-
-            if cur == to:
-                ans[cur] = cur + 1
-            elif ans[to] != pending:
-                ans[cur] = ans[to]
-
-    for i in range(n):
-        if visited[i]:
-            continue
-
-        dfs(i)
-
+    ans = [ans_i + 1 for ans_i in ans]
     print(*ans)
 
 
