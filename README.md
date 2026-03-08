@@ -450,7 +450,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 432|◯|◯|△|--|--|--|--|--|
 |AtCoder Beginner Contest 433|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 434|--|--|◯|◯|--|--|--|--|
-|AtCoder Beginner Contest 435|--|--|◯|◯|--|--|--|--|
+|AtCoder Beginner Contest 435|--|--|◯|◯|△|--|--|--|
 |AtCoder Beginner Contest 436|--|--|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 437|--|--|△|◯|--|--|--|--|
 |AtCoder Beginner Contest 438|--|--|◯|◯|--|--|--|--|
@@ -463,6 +463,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 445|--|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 446|◯|--|△|◯|△|--|--|--|
 |AtCoder Beginner Contest 447|◯|◯|--|◯|△|--|--|--|
+|AtCoder Beginner Contest 448|--|--|--|◯|--|--|--|--|
 |AtCoder Beginner Contest 44x|--|--|--|--|--|--|--|--|
 
 </details>
