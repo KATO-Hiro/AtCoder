@@ -461,7 +461,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 443|--|--|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 444|--|◯|△|◯|--|--|--|--|
 |AtCoder Beginner Contest 445|--|◯|◯|◯|--|--|--|--|
-|AtCoder Beginner Contest 446|◯|--|△|◯|△|--|--|--|
+|AtCoder Beginner Contest 446|◯|◯|△|◯|△|--|--|--|
 |AtCoder Beginner Contest 447|◯|◯|△|◯|△|--|--|--|
 |AtCoder Beginner Contest 448|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 449|--|◯|◯|--|--|--|--|--|
