@@ -106,85 +106,14 @@ class UnionFind:
         return self.group_count
 
 
-class UnionFind2D:
-    """Extends UnionFind to two dimensions.
+# See
+# https://atcoder.jp/contests/abc450/submissions/74271594
+def encode(hi, wj, w):
+    return hi * w + wj
 
-    See:
-    https://atcoder.jp/contests/past202010-open/submissions/21472171
-    """
 
-    def __init__(self, height: int, width: int) -> None:
-        self.height: int = height
-        self.width: int = width
-        self.size: int = height * width
-        self.uf: UnionFind = UnionFind(self.size)
-
-    def find_root(self, x: int, y: int) -> int:
-        assert 0 <= x < self.width
-        assert 0 <= y < self.height
-
-        return self.uf.find_root(self._to_number(x, y))
-
-    def get_group_size(self, x: int, y: int) -> int:
-        assert 0 <= x < self.width
-        assert 0 <= y < self.height
-
-        return self.uf.get_group_size(self._to_number(x, y))
-
-    def is_same_group(self, x1: int, y1: int, x2: int, y2: int) -> bool:
-        assert 0 <= x1 < self.width
-        assert 0 <= y1 < self.height
-        assert 0 <= x2 < self.width
-        assert 0 <= y2 < self.height
-
-        return self.find_root(x1, y1) == self.find_root(x2, y2)
-
-    def merge_if_needs(self, x1: int, y1: int, x2: int, y2: int) -> bool:
-        assert 0 <= x1 < self.width
-        assert 0 <= y1 < self.height
-        assert 0 <= x2 < self.width
-        assert 0 <= y2 < self.height
-
-        return self.uf.merge_if_needs(self._to_number(x1, y1), self._to_number(x2, y2))
-
-    def get_roots(self) -> List[int]:
-        return self.uf.get_roots()
-
-    def get_groups(self) -> List[List[int]]:
-        """
-        Returns:
-            List of trees id (0-index).
-        """
-        return self.uf.get_groups()
-
-    def get_edge_count(self, x: int, y: int) -> int:
-        assert 0 <= x < self.width
-        assert 0 <= y < self.height
-
-        return self.uf.get_edge_count(self._to_number(x, y))
-
-    def get_group_count(self) -> int:
-        return self.uf.get_group_count()
-
-    def _to_number(self, x: int, y: int) -> int:
-        """
-        Args:
-            x, y: Coordinates in grid (0-index).
-
-        Returns:
-            The trees id (0-index).
-        """
-        return x + self.width * y
-
-    def _to_yx(self, number: int) -> tuple[int, int]:
-        """
-        Args:
-            The trees id (0-index).
-
-        Returns:
-            y, x: Coordinates in grid (0-index).
-        """
-        return divmod(number, self.width)
+def decode(n, w):
+    return divmod(n, w)
 
 
 def main():
@@ -194,7 +123,7 @@ def main():
 
     h, w = map(int, input().split())
     s = [list(input().rstrip()) for _ in range(h)]
-    uf = UnionFind2D(height=h, width=w)
+    uf = UnionFind(h * w)
 
     for i in range(h):
         ni = i + 1
@@ -206,33 +135,24 @@ def main():
             nj = j + 1
 
             if nj < w and s[i][nj] == ".":
-                uf.merge_if_needs(j, i, nj, i)
+                uf.merge_if_needs(encode(i, j, w), encode(i, nj, w))
             if ni < h and s[ni][j] == ".":
-                uf.merge_if_needs(j, i, j, ni)
+                uf.merge_if_needs(encode(i, j, w), encode(ni, j, w))
 
-    ng, ok = set(), set()
+    all, ng = set(), set()
 
     for i in range(h):
         for j in range(w):
             if s[i][j] == "#":
                 continue
 
-            root = uf.find_root(j, i)
+            root = uf.find_root(encode(i, j, w))
+            all.add(root)
 
             if i == 0 or j == 0 or i == h - 1 or j == w - 1:
                 ng.add(root)
 
-    for i in range(h):
-        for j in range(w):
-            if s[i][j] == "#":
-                continue
-
-            root = uf.find_root(j, i)
-
-            if root not in ng:
-                ok.add(root)
-
-    ans = len(ok)
+    ans = len(all) - len(ng)
     print(ans)
 
 
