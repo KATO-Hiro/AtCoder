@@ -3,7 +3,6 @@
 
 def main():
     import sys
-    from collections import defaultdict
 
     input = sys.stdin.readline
 
@@ -11,7 +10,7 @@ def main():
     ab = [tuple(map(int, input().split())) for _ in range(n)]
     m = int(input())
     s = [list(input().rstrip()) for _ in range(m)]
-    d = defaultdict(lambda: defaultdict(int))
+    t = set()
 
     for ai, bi in ab:
         for si in s:
@@ -19,11 +18,7 @@ def main():
                 continue
 
             sij = si[bi - 1]
-
-            if sij not in d[(ai, bi)]:
-                d[(ai, bi)][sij] = 1
-            else:
-                d[(ai, bi)][sij] += 1
+            t.add((ai, bi, sij))
 
     ans = []
 
@@ -35,7 +30,7 @@ def main():
         ok = True
 
         for (ai, bi), sij in zip(ab, si):
-            if d[(ai, bi)][sij] == 0:
+            if (ai, bi, sij) not in t:
                 ok = False
                 break
 
