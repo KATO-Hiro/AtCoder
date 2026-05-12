@@ -813,7 +813,7 @@ Represents a repository of accepted results.
 |joi 2025 yo 1a|◯|◯|◯|◯|None|None|
 |joi 2025 yo 1b|◯|◯|◯|◯|None|None|
 |joi 2025 yo 1c|◯|◯|◯|◯|--|None|
-|joi 2025 yo 2|◯|--|--|--|--|None|
+|joi 2025 yo 2|◯|◯|--|--|--|None|
 |joi 2026 yo 1a|◯|◯|◯|◯|None|None|
 |joi 2026 yo 1b|--|◯|◯|◯|None|None|
 |joi 2026 yo 1c|◯|◯|◯|◯|None|None|
