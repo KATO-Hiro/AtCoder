@@ -452,7 +452,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 434|--|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 435|--|◯|◯|◯|△|--|--|--|
 |AtCoder Beginner Contest 436|--|◯|◯|◯|--|--|--|--|
-|AtCoder Beginner Contest 437|--|--|△|◯|--|--|--|--|
+|AtCoder Beginner Contest 437|--|◯|△|◯|--|--|--|--|
 |AtCoder Beginner Contest 438|--|--|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 439|--|--|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 440|--|◯|△|△|--|--|--|--|
