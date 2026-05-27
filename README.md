@@ -474,7 +474,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 456|◯|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 457|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 458|◯|◯|◯|◯|--|--|--|--|
-|AtCoder Beginner Contest 459|◯|◯|◯|--|--|--|--|--|
+|AtCoder Beginner Contest 459|◯|◯|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 46x|--|--|--|--|--|--|--|--|
 
 </details>
