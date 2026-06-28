@@ -8,7 +8,7 @@ def main():
     input = sys.stdin.readline
 
     n, m = map(int, input().split())
-    dab = []
+    ab = [[] for _ in range(m + 1)]
     c = Counter()
 
     for _ in range(n):
@@ -17,26 +17,13 @@ def main():
         if di == 1:
             ai = bi
 
-        dab.append((di, ai, bi))
+        ab[di].append((ai, bi))
         c[ai] += 1
 
-    dab.sort(reverse=True)
-    size = len(c.keys())
-    ans = [size]
+    ans = []
 
     for day in range(1, m + 1):
-        if len(dab) == 0 or day != dab[-1][0]:
-            ans.append(ans[-1])
-            continue
-
-        while True:
-            if len(dab) == 0:
-                break
-
-            if day != dab[-1][0]:
-                break
-
-            _, ai, bi = dab.pop()
+        for ai, bi in ab[day]:
             c[ai] -= 1
 
             if c[ai] == 0:
@@ -46,7 +33,7 @@ def main():
 
         ans.append(len(c.keys()))
 
-    print(*ans[1:], sep="\n")
+    print(*ans, sep="\n")
 
 
 if __name__ == "__main__":
