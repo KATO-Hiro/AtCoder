@@ -479,7 +479,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 461|◯|◯|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 462|--|◯|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 463|--|--|◯|△|--|--|--|--|
-|AtCoder Beginner Contest 464|--|--|◯|--|--|--|--|--|
+|AtCoder Beginner Contest 464|--|--|◯|△|--|--|--|--|
 |AtCoder Beginner Contest 46x|--|--|--|--|--|--|--|--|
 
 </details>
