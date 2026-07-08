@@ -9,24 +9,18 @@ def main():
 
     n = int(input())
     s = input().rstrip()
-    rev_count = 0
+    rev = False
     d = deque()
 
     for i, si in enumerate(s, 1):
-        if si == "o":
-            rev_count += 1
-
-            if rev_count % 2 == 0:
-                d.append(i)
-            else:
-                d.appendleft(i)
+        if rev:
+            d.appendleft(i)
         else:
-            if rev_count % 2 == 0:
-                d.appendleft(i)
-            else:
-                d.append(i)
+            d.append(i)
 
-    if rev_count % 2 == 0:
+        rev ^= si == "o"
+
+    if rev:
         d = list(d)[::-1]
 
     print(*d)
