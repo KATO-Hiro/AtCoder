@@ -8,18 +8,15 @@ def main():
     input = sys.stdin.readline
 
     n = int(input())
-    n -= 1
-    p = list(map(lambda x: int(x) - 1, input().split()))
-    q = list(map(lambda x: int(x) - 1, input().split()))
-    p2 = int("".join(map(str, p)))
-    q2 = int("".join(map(str, q)))
+    p = list(map(int, input().split()))
+    q = list(map(int, input().split()))
 
     ans = 0
 
-    for pattern in permutations(range(n + 1)):
-        candidate = int("".join(list(map(str, pattern))))
+    for pattern in permutations(range(1, n + 1)):
+        candidate = list(pattern)
 
-        if p2 < candidate < q2:
+        if p < candidate < q:
             ans += 1
 
     print(ans)
