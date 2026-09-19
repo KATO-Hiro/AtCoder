@@ -487,6 +487,7 @@ Represents a repository of accepted results.
 |AtCoder Beginner Contest 472|--|◯|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 474|--|--|◯|◯|--|--|--|--|
 |AtCoder Beginner Contest 475|--|◯|--|--|--|--|--|--|
+|AtCoder Beginner Contest 476|--|--|◯|--|--|--|--|--|
 |AtCoder Beginner Contest 47x|--|--|--|--|--|--|--|--|
 
 </details>
