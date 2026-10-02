@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 
 
+def ceil(a: int, b: int) -> int:
+    assert b != 0
+
+    return (a + b - 1) // b
+
+
 def main():
     import sys
 
@@ -9,20 +15,8 @@ def main():
     n, m = map(int, input().split())
     d = list(map(int, input().split()))
     sum_d = sum(d)
-    ng, ok = 0, 10**18
-
-    def f(day):
-        return m * day >= sum_d
-
-    while abs(ok - ng) > 1:
-        wj = (ok + ng) // 2
-
-        if f(wj):
-            ok = wj
-        else:
-            ng = wj
-
-    print(ok)
+    ans = ceil(sum_d, m)
+    print(ans)
 
 
 if __name__ == "__main__":
